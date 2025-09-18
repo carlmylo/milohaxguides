@@ -1,0 +1,54 @@
+/* whole lotta resizing bullshit down here*/
+:root {
+  --sl-sidebar-width: 14rem;
+  --sl-content-width: 50rem;
+}
+
+/* for 1366x768 */
+@media screen and (min-width: 1366px) and (max-width: 1439px) {
+  :root {
+    --sl-sidebar-width: 13rem;
+    --sl-content-width: 60rem;
+  }
+}
+
+/* for 1440x900 and retina mac */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  :root {
+    --sl-sidebar-width: 18rem;
+    --sl-content-width: 50rem;
+  }
+}
+
+/* for 1920x1080 */
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+  :root {
+    --sl-sidebar-width: 15rem;
+    --sl-content-width: 90rem;
+  }
+}
+
+/* for 3840x2160 */
+@media screen and (min-width: 3840px) {
+  :root {
+    --sl-sidebar-width: 22rem;
+    --sl-content-width: 180rem;
+  }
+}
+
+/* end of resizing bullshit */
+
+/* here's some table stuff*/
+
+table td,
+table th {
+  padding: 1.0rem 1.0rem;
+  border: 1px solid var(--sl-color-gray-5);
+  vertical-align: middle;
+}
+
+table tr:nth-child(even) td {
+  background: var(--sl-color-gray-6);
+}
+
+/* end of table stuff*/
