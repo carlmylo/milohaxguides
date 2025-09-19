@@ -1,0 +1,145 @@
+---
+title: "Custom Configuration"
+slug: "en/rb3pc/customconfig/main"
+description: "What to change for Rock Band 3 in RPCS3's Custom Configuration."
+tableOfContents: false
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+This page is for advanced users that want to tweak RPCS3's Rock Band 3 Custom Configuration more than the average user. Some of this stuff can get very technical!
+
+<Tabs>
+  <TabItem label="Changing a Custom Configuration">
+If you're editing a Custom Configuration (like the one you installed from Quick Configuration), **right click on Rock Band 3** in RPCS3, then click on "**`Change Custom Configuration`**".  
+![A screenshot of RPCS3's right click menu, showing "Change Custom Configuration" highlighted](https://rb3pc.milohax.org/images/cust/rpcs3customconfigchange.png "Create Custom Configuration From Default Settings")
+</TabItem>
+  <TabItem label="Creating a Custom Configuration">
+If you don't have a Custom Configuration yet, **right click on Rock Band 3** in RPCS3, then click on "**`Create Custom Configuration From Default Settings`**".  
+![A screenshot of RPCS3's right click menu, showing "Create Custom Configuration From Default Settings" highlighted](https://rb3pc.milohax.org/images/cust/rpcs3customconfig.png "Create Custom Configuration From Default Settings")
+  </TabItem>
+</Tabs>
+
+**Don't forget to click "`Apply`" then "`Save custom configuration`" after adjusting settings!**  
+Keep in mind that you'll have to restart the game for most of these settings.  
+![A screenshot of Rock Band 3's Custom Configuration within RPCS3 with a mouse hovering over "Save custom configuration".](https://rb3pc.milohax.org/images/cust/save.png "Settings: [BLUS30463] Rock Band 3")
+
+## Color Guide
+
+To make things easier, all configuration tweaks have been color coded.  
+**Anything not colored should be left on defaults**.
+
+| COLOR | MEANING |
+|-------|---------|
+| ![A green square with a dashed outline.](https://rb3pc.milohax.org/images/cust/biggreen.png "Green Square") | **REQUIRED** |
+| ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/bigblue.png "Blue Square") | **Performance Tweaks** |
+| ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/bigtan.png "Tan Square") | **Recommended** |
+
+<br/>
+
+## Custom Configuration
+
+<Tabs>
+  <TabItem label="CPU">
+![A screenshot of Rock Band 3's CPU custom settings, showing SPU Block Size, Preferred SPU Threads, and Thread Scheduler highlighted in blue with a dotted outline.](https://rb3pc.milohax.org/images/cust/cpu.png "CPU")
+
+* ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/smallblue.png "Tan Square") **Improved performance, depending on machine**: 
+  * **Change "`SPU Block Size`" to "`Mega`"** - Ties smaller SPU compiled together, which can help machines with fewer cores/threads. Drastically speeds up game startup time on certain machines.
+  * **Change "`Preferred SPU Threads`" to "`1`", "`2`", "`3`", or "`4`"** - May help prevent stutter caused by CPU overloads on systems with fewer cores/threads. **Start at "`4`" and lower it one by one until it improves**.
+  * **Change "`Thread Scheduler`" to "`RPCS3 Scheduler`", or "`RPCS3 Alternative Scheduler`"** - **FOR CPUs WITH 12+ THREADS ONLY!** May help with thread distribution to prevent microstutters.
+</TabItem>
+  <TabItem label="GPU">
+![A screenshot of Rock Band 3's GPU custom settings, highlighting "Write Color Buffers" highlighted in green with a dotted outline, "Framelimit", "Anisotropic Filter", "ZCull Accuracy", "Output Scaling", and "VSync" highlighted in blue with a dotted outline.](https://rb3pc.milohax.org/images/cust/gpu.png "GPU")
+
+* ![A green square with a dashed outline.](https://rb3pc.milohax.org/images/cust/smallgreen.png "Green Square") **REQUIRED**: 
+  * **Enable "`Write Color Buffers`"** - Characters will have severe graphical bugs without this.
+
+* ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/smallblue.png "Blue Square") **Adjust depending on graphics card**: 
+  * **Enable "`VSync`"** - Reduces screen tearing and may lead to a more stable framerate. Slightly increases input latency. **Do not enable this with the frame limiter**.
+  * **Change "`Framelimit`"**
+    * Leave it on "`Auto`" to let RPCS3 set a frame rate.
+    * Set it to "`Off`" **if you're using "`VSync`" or an external frame limiter**.
+    * "`120`" is recommended if you're using a 144Hz (or higher) display.
+    * **DO NOT** set it below "`60`"!
+    * Setting the frame rate to be higher than "`60`" exponentially uses more resources, so this is not recommended for low end machines.
+    * It's suggested to disable VSync within Rock Band 3 Deluxe itself in `Menu > Options > Deluxe Settings > Graphics > VSync`
+  * **Change "`ZCULL Accuracy`" to "`Relaxed`"** - Provides a slight performance improvement at the cost of some accessories looking weird at distances.
+  * **Adjust "`Anisotropic Filter`"** for better texture filtering. Just about every GPU should be able to handle "`x16`".
+  * **Adjust "`Resolution Scale`"** to preference and to what your computer can handle. Increase for sharper graphics at the cost of higher GPU requirements. This forces the game to run at this resolution. Lowering this below 100% isn't worth it as it won't give much, if any, frame rate gains.
+  * **Adjust "`Output Scaling`"** to preference and to what your computer can handle. This affects how the game is "blown up" in size when fitting to your monitor's native resolution. Helpful for those keeping "`Resolution Scale`" (mentioned above) at 100% while playing on a monitor larger than 1280x720.
+    * "`Nearest`" is completely unfiltered and gives you a raw unmodified image. This can cause the game to look pixelated.
+    * "`Bilinear`" uses smoothing to scale the image up. This may cause the game to look blurry.
+    * "`FidelityFX Super Resolution`" (FSR) uses complicated math to sharpen and enhance the image when it gets blown up to your monitor's resolution. This can create odd artifacts in some instances.
+      * You can use "`RCAS Sharpening Strength`" below to adjust the strength of its effect.
+</TabItem>
+  <TabItem label="Audio">
+![A screenshot of Rock Band 3's Audio custom settings, highlighting "Audio Buffer Duration" and "Audio Out" highlighted in blue with a dotted outline, and "Microphone Settings", "Microphone Type" ("Standard"), "Mic1", "Mic2", "Mic3", and "Mic4" in tan with a solid outline.](https://rb3pc.milohax.org/images/cust/audio.png "Audio")
+
+* ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/smallblue.png "Blue Square") **Tweak depending on audio hardware and CPU**: 
+  * **Adjust "`Audio Buffer Duration`"** depending on system.
+    * Set this as low as you can before you hear crackling. `32 ms` is a decent starting point.
+    * Lower values give you less audio latency but use more CPU.
+    * Higher values give you more audio latency but use less CPU.
+    * Vocalists are affected the most by this, as a higher latency creates a distracting echo. Instrument players can use calibration to compensate regardless of audio buffer setting.
+    * You can change this while the game is running, but it will require re-calibrating in Rock Band 3's system settings.
+  * **Change "`Audio Out`" to "`XAudio2`"** - While **most users should stay on "`Cubeb`"**, a couple of people have experienced better performance with XAudio2. Your milage may vary.
+
+* ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **For Vocalists**: 
+  * **Set "`Microphone Type`" to "`Standard`" or "`Rocksmith`"**.
+  * **Select an input device in "`Mic1`", "`Mic2`", and "`Mic3`"** for vocals. If not playing vocals, "`Mic1`" will be used for voice chat.
+</TabItem>
+  <TabItem label="I/O">
+**Make sure your MIDI instrument is connected.**  
+**YOU MAY HAVE TO MAKE THE WINDOW WIDER TO READ THE OPTIONS!**
+
+![A screenshot of Rock Band 3's I/O custom settings, showing "Emulated MIDI Devices", "device type", and "device selection" highlighted in tan with a solid outline, and "Pad Handler Mode" and "Keep Pads Connected" highlighted in blue with a dotted outline.](https://rb3pc.milohax.org/images/cust/io.png "I/O")
+
+* ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/smallblue.png "Tan Square") **Performance Tweaks**: 
+  * **Change "`Pad Handler Mode`" to "`Multi-threaded`"** - May help with thread distribution, which improves performance.
+  * **Enable "`Keep Pads Connected`"** - This can help fix a problem with certain instrument controllers softlocking the game when RPCS3 interfaces, such as the RPCN invites, come up.
+
+* ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **Recommended**: 
+  * 🎹 **[[MIDI Keyboard Players]](https://rb3pc.milohax.org/ctrls_keys_midi): Leave your "`Emulated MIDI type`" on "`Keyboard`" and select your keyboard or MIDI interface in the drop-down menu next to it**.
+  * 🎸 **[[MIDI Pro Guitar Players]](https://rb3pc.milohax.org/ctrls_protar_midi): Change your "`Emulated MIDI type`" from "`Keyboard`" to "`Guitar (17 Frets)`" if you have a Mustang Pro Guitar, or "`Guitar (22 Frets)`" if you have a Squier Pro Guitar, then select your MIDI to USB interface in the drop-down menu next to it**.
+  * 🥁 **[[MIDI Pro Drums Players]](https://rb3pc.milohax.org/ctrls_drums_midi): Change your "`Emulated MIDI type`" from "`Keyboard`" to "`Drums`", then select your MIDI Drum Kit or MIDI to USB interface in the drop-down menu next to it**.
+  * Revisit the [[Controllers page]](https://rb3pc.milohax.org/ctrls) if you need help.
+</TabItem>
+  <TabItem label="Network">
+![A screenshot of Rock Band 3's Network custom settings, highlighting "Network Status (Connected)" in green with a dashed outline, "IP/Hosts switches" (set to rb3ps3live.hmxservices.com=45.33.44.103), "PSN Status" (RPCN), and Enable UPNP (not checked) highlighted in tan with a solid outline.](https://rb3pc.milohax.org/images/cust/network.png "Network")
+
+* ![A green square with a dashed outline.](https://rb3pc.milohax.org/images/cust/smallgreen.png "Green Square") **REQUIRED**: 
+  * **Change the "`Network Status`" to "`Connected`" as highlighted in the picture. If left on "`Disconnected`," the game will temporarily freeze when browsing the song library.**
+
+* ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **For online multiplayer**: 
+  * You can tick **"`Enable UPNP`"** or **forward port 9103 (UDP) in your firewall**.
+  * To play Rock Band 3 online, add Rock Band Enhanced's Server IP.
+    * Set "`IP/Hosts switches`" to `rb3ps3live.hmxservices.com=45.33.44.103`
+</TabItem>
+  <TabItem label="Advanced">
+![A screenshot of Rock Band 3's Advanced custom settings, highlighting "Driver Wake-Up Delay" (20µ) in green with a dashed outline, "Exclusive Fullscreen Mode, and "Maximum Number of SPURS Threads" highlighted in blue with a dotted outline, and "Debug Console Mode" highlighted in tan with a solid outline.](https://rb3pc.milohax.org/images/cust/advanced.png "Advanced")
+
+* ![A green square with a dashed outline.](https://rb3pc.milohax.org/images/cust/smallgreen.png "Green Square") **REQUIRED**: 
+  * **Change "`Driver Wake-up Delay`" to "20µ"** to avoid crashing after a few songs. Increase it to "40µ" if the issue persists. If it keeps happening, keep increasing it by increments of 20.
+
+* ![A blue square with a dotted outline.](https://rb3pc.milohax.org/images/cust/smallblue.png "Tan Square") **Depending on your computer**: 
+  * **Change "`Maximum Number of SPURS Threads`"** - May improve performance on older systems with less cores and threads [[like 4th gen Intel i5 CPUs with 4 cores and 4 threads]](https://github.com/hmxmilohax/rb3-pc/issues/12#issue-1955946005).
+
+* ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **Strongly Suggested**: 
+  * **Enable "`Debug Console Mode`"** - Enabling this and "Large Heap" in Rock Band 3 Deluxe will allow Rock Band 3  to have more memory. This means more songs (up to 16000) and increased stability. Everyone should enable this! [[Click here for more information.]](https://rb3pc.milohax.org/memory)
+  * **Change "`Exclusive Fullscreen Mode`" to "`Prefer borderless fullscreen`"** to prevent potential crashes and audio desync when changing from Rock Band 3 to another program while in fullscreen.
+</TabItem>
+  <TabItem label="Emulator">
+![A screenshot of Rock Band 3's Emulator custom settings, showing "Show trophy popups", "Show RPCN popups", "Show shader compilation hint", "Show PPU compilation hint", "Show mouse and keyboard toggle hint", "Start games in fullscreen mode", and "Use native user interface" highlighted in tan with a solid outline.](https://rb3pc.milohax.org/images/cust/emulator.png "Emulator")
+
+You can leave this as is if you want, but I would consider changing the following options:
+* ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **Optional tweaks**: 
+  * **"`Show trophy popups`"** - Mimics the way Trophy notifications appear on the PS3.
+  * **"`Show RPCN popups`"** - Shows a message on the top left whenever you or your friends connect to RPCN.
+  * **"`Show shader compilation hint`"** - This creates a popup whenever RPCS3 is compiling shaders. When you run PS3 games, it has to compile shaders to "translate" the graphics from a PS3 format to a format your PC can work with. **The game will stutter when this happens**. **This happens on ALL computer systems. When it finishes** compiling an effect, **it will usually never happen again**. **The best way to deal with this is** just **to** **play the game** as it will quickly go away. You can also use Rock Band 3 Deluxe's Autoplay modifier to let it go through a few songs in party shuffle and let it compile a decent amount of shaders.
+  * **"`Show PPU compilation hint`"** - This creates a popup whenever RPCS3 is compiling units for the PPU. This only comes up when launching the game when using suggested settings.
+  * **"`Show mouse and keyboard toggle hint`"** - Shows a message on the top left whenever the keyboard is being used in the native interface, such as the virtual keyboard that comes up when naming things.
+  * **"`Start games in Fullscreen mode`"** - Switches to Fullscreen when you start Rock Band 3.
+  * **"`Use Native Interface`"** - If you disable this, it will remove the pretty displays RPCS3 adds, including notifications and game startup background. It will instead use old school pop-ups. This can also fix a problem with instrument controllers soft locking the game when the keyboard comes up.
+
+</TabItem>
+</Tabs>
