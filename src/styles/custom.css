@@ -52,3 +52,20 @@ table tr:nth-child(even) td {
 }
 
 /* end of table stuff*/
+
+/* keep this so images don't settle above text */
+.sl-markdown-content :is(img, picture, video, canvas, svg, iframe):not(:where(.not-content *)) {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/* end */
+
+.sl-sidebar ul[role="list"] > li[role="listitem"] ul {
+  display: none;
+}
+
+.sl-sidebar ul[role="list"] > li[role="listitem"].is-active ul {
+  display: block;
+}
+
