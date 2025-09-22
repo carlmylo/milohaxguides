@@ -10,7 +10,7 @@ export default defineConfig({
   base: 
     integrations: [starlight({
         title: 'MiloHax Guides',
-        base: '/carlmylo.github.io/'
+        base: '/carlmylo.github.io/',
           social: [
                 { icon: 'seti:firefox', label: 'Website', href: 'https://milohax.org/' },
                 { icon: 'discord', label: 'Discord', href: 'https://discord.gg/milohax' },
