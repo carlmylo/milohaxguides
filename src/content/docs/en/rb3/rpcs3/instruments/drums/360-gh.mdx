@@ -1,0 +1,86 @@
+---
+title: Xbox 360 Guitar Hero Drums
+slug: "en/rb3/controllers/drums/360gh"
+description: "How to setup Xbox 360 Guitar Hero drums on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import GHDrums from '@assets/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/padlegend.png';
+import drms360ghmapping from '@assets/instruments/maps/drms360ghmapping.png';
+import { Image } from 'astro:assets';
+
+<div align="center"> <img src="/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></div>
+
+<div align="center"> <Image src={GHDrums} alt="Controller" /></div>
+
+## NOTES
+
+* This instrument **requires an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
+![Xbox 360 Wireless Gaming Receiver for Windows](/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
+	Need one?
+	* [[Buy one from RetroCultMods (RCM Shop)]](https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc)
+	* [[Buy one from Roll Limitless]](https://rolllimitless.com/xbox-360-wireless-receiver/)
+	* [[Buy one from Amazon]](https://www.amazon.com/dp/B076GZFLR3)
+	* Please note that any generic Xbox 360 Wireless Gaming Receiver should work fine!
+* Velocity sensitivity doesn't seem to work.
+* Can be used to play on Pro Drums to an extent but it's not suggested.
+* Gem colors do not match the pads.
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+
+<details>
+<summary>How do I map my drums?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor." />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Guitar Hero |
+
+## Mapping
+
+**By default, everything is bound correctly. You don't need to remap anything.**
+
+<div align="center"> <Image src={drms360ghmapping} alt="Mapping" /></div>
+
+<details>
+<summary>Advanced Mapping</summary>
+
+### Bindings:
+
+| **RPCS3** | **Drums** |
+|:---:|:---:|
+| Cross | ![Green Pad](/assets/instruments/buttons/drums/gh/gp.png "Green Pad") |
+| Circle | ![Red Pad](/assets/instruments/buttons/drums/gh/rp.png "Red Pad") |
+| Square | ![Blue Pad](/assets/instruments/buttons/drums/gh/bp.png "Blue Pad") |
+| Triangle | ![Yellow Cymbal](/assets/instruments/buttons/drums/gh/yc.png "Yellow Cymbal") |
+| R1  | ![Orange Cymbal](/assets/instruments/buttons/drums/gh/oc.png "Orange Cymbal") |
+| L1  | ![Foot Pedal](/assets/instruments/buttons/drums/gh/kp.png "Foot Pedal") |
+| Cross | ![A Button](/assets/instruments/buttons/360/a.png "A Button") |
+| Circle | ![B Button](/assets/instruments/buttons/360/b.png "B Button") |
+| Square | ![X Button](/assets/instruments/buttons/360/x.png "X Button") |
+| Triangle | ![Y Button](/assets/instruments/buttons/360/y.png "Y Button") |
+| D-Pad | ![D-Pad](/assets/instruments/buttons//xbox/dp.png "D-Pad") |
+| Left Stick | ![Left Stick](/assets/instruments/buttons/360/ls.png "Left Stick") |
+| Start | ![Start Button](/assets/instruments/buttons/360/start.png "Start Button") |
+| Select | ![Back Button](/assets/instruments/buttons/360/back.png "Back Button") |
+| PS Button | ![Home](/assets/instruments/buttons/360/home.png "Home") |
+</details>
+
+Research by [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)
+
+[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
