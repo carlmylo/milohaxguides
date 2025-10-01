@@ -8,7 +8,7 @@ import mdx from '@astrojs/mdx';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://carlmylo.github.io/',
-  base: '/',
+  base: '/milohaxguides/',
     integrations: [starlight({
         title: 'MiloHax Guides',
           social: [
