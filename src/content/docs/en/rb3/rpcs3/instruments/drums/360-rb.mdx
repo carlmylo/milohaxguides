@@ -1,0 +1,120 @@
+---
+title: Xbox 360 Rock Band Drums
+slug: "en/rb3/controllers/drums/360rb"
+description: "How to setup Xbox 360 Rock Band drums on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import x360RBDrums from '@assets/instruments/controller/360rbdrmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/padlegend.png';
+import drmsxboxrbmapping from '@assets/instruments/maps/drmsxboxrbmapping.png';
+import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<div align="center"><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></div>
+
+<div align="center"><Image src={x360RBDrums} alt="Controller" /></div>
+
+## NOTES
+
+* Rock Band 1 Drums can be connected via USB. Rock Band 1 drums are black with grey pads and lack the connectors for cymbals. 
+
+* Rock Band 2 (and later) Drums **require an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
+![Xbox 360 Wireless Gaming Receiver for Windows](/milohaxguides/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
+	Need one?
+	* [[Buy one from RetroCultMods (RCM Shop)]](https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc)
+	* [[Buy one from Roll Limitless]](https://rolllimitless.com/xbox-360-wireless-receiver/)
+	* [[Buy one from Amazon]](https://www.amazon.com/dp/B076GZFLR3)
+	* Please note that any generic Xbox 360 Wireless Gaming Receiver should work fine!
+* Works **with or without** the Pro Cymbal expansions.
+	* Make sure to configure which cymbals are connected within Rock Band 3.
+		* `Menu > Options > Drum Options`
+* Velocity sensitivity doesn't seem to work.
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+
+<details>
+<summary>How do I map my drums?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Rock Band Pro |
+
+## Mapping
+
+By default, XInput has most things bound correctly. You only need to remap the following:
+
+| **RPCS3** | **XInput** | **Drums** |
+|:--------:|:-----------:|:-----------:|
+| R1 | ![Left Stick Click](/milohaxguides/assets/instruments/buttons/360/lsc.png "Left Stick Click") | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") | 
+| L3 | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | Pad Modifier | 
+| R3 | ![Right Bumper](/milohaxguides/assets/instruments/buttons/360/rb.png "Right Bumper") | Cymbal Modifier |
+
+* Rock Band Drums send multiple button presses out at once. For example, a Red pad will send "`B`" and "`Right Stick Click`" (which translates to "`Circle`" and "`L3`".) Keep in mind these are needed to the emulator to tell your cymbals apart.
+	* It's strongly suggested to bind an Xbox controller like the Mapping screenshot below then swapping the Device to your Xbox 360 Rock Band Drums.
+
+<div align="center"><Image src={drmsxboxrbmapping} alt="Mapping" /></div>
+
+<details>
+<summary>Advanced Mapping</summary>
+
+#### Profile
+
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
+><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+
+#### Bindings
+
+* To bind multiple buttons to one RPCS3 button, hold Shift then click on the RPCS3 button you want to assign multiple buttons to.
+
+| **RPCS3** | **Rock Band Drums** |
+|:---:|:---:|
+| Cross | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+| Circle | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| Square | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| Triangle | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
+| R3 | Cymbal Modifier |
+| D-Pad: Up | Yellow Cymbal Modifier |
+| D-Pad: Down | Blue Cymbal Modifier |
+| L3 | Pad Modifier |
+| L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
+| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| Cross | ![A Button](/milohaxguides/assets/instruments/buttons/360/a.png "A Button") |
+| Circle | ![B Button](/milohaxguides/assets/instruments/buttons/360/b.png "B Button") |
+| Square | ![X Button](/milohaxguides/assets/instruments/buttons/360/x.png "X Button") |
+| Triangle | ![Y Button](/milohaxguides/assets/instruments/buttons/360/y.png "Y Button") |
+| D-Pad | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+</details>
+
+[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+
+Mapped by [[gonakil1ya]](https://gonakillya.neocities.org) and [[Jnack]](https://www.youtube.com/@jnackmclain)

@@ -1,0 +1,180 @@
+---
+title: Roll Limitless Drums
+slug: "en/rb3/controllers/drums/rolllimitless"
+description: "How to connect and configure a drum kit connected with a Roll Limitless on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import rolllimitlesscontroller from '@assets/instruments/controller/rolllimitlesscontroller.png';
+import rpcs3nomap from '@assets/instruments/maps/rpcs3nomap.png';
+import fwbutton from '@assets/instruments/setup/rolllimitless/fwbutton.png';
+import startbutton from '@assets/instruments/setup/rolllimitless/startbutton.png';
+import zadiglistall from '@assets/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/instruments/setup/passthrough/zadigdone.png';
+import protaron from '@assets/instruments/setup/passthrough/protaron.png';
+import rb3player from '@assets/instruments/setup/passthrough/rb3player.png';
+import startdevman from '@assets/instruments/setup/passthrough/startdevman.png';
+import devman from '@assets/instruments/setup/passthrough/devman.png';
+import devmanun from '@assets/instruments/setup/passthrough/devmanun.png';
+import joycpl from '@assets/instruments/setup/gen/joycpl.png';
+import rpcs3pad from '@assets/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/padlegend.png';
+import modrldrmsmapping from '@assets/instruments/maps/modrldrmsmapping.png';
+import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<div align="center"><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Platform" title="Platform"></img></div>
+
+<div align="center"><Image src={rolllimitlesscontroller} alt="Controller" /></div>
+
+<Tabs>
+  <TabItem label="Passthrough (Recommended)">
+<div align="center"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" /></div>
+<div align="center"><b>Do NOT map this instrument via the "Pads" menu!</b></div>
+**You will need:**
+
+## Setup
+
+### Initial Setup:
+Put the Roll Limitless Adapter in firmware updating mode. To do this, press and hold the rectangular button on the top of the adapter, near the micro USB port.  
+<Image src={fwbutton} alt="A Roll Limitless adapter, showing the firmware button circled in red." />
+
+* While still holding the button, plug it into your computer. If done successfully, the Roll Limitless will show up as a removable drive.
+* [[Download the latest "Rock Band" firmware for the drums from the official website]](https://rolllimitless.com/september-15th-2024-firmwares/).
+* Place the firmware file on the Roll Limitless device while it's in firmware updating mode (showing up as a removable drive). When it completes, safely remove the device.
+* Plug the Roll Limitless adapter back into your computer while holding down the round Start button.  
+<Image src={startbutton} alt="A Roll Limitless adapter, showing the start button circled in red." />
+
+Now, [**[go to Zadig's website]**](https://zadig.akeo.ie/) and **download the latest version, then open it** up.
+
+Click on **Options** then **List All Devices**.  
+<Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
+
+You should now see devices listed. **Switch it to your Roll Limitless**. In this example, we're using the Mustang Pro Guitar, which shows up as "Harmonix RB3 Mustang Guitar for PlayStation® 3".  
+<Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
+
+**After selecting the right device, you should see the option to replace the driver. _MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE ROLL LIMITLESS!!_** Click Replace Driver.  
+<Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
+
+A warning will appear. **Again, make sure you have selected your Roll Limitless.** After you have made sure, **click** "**Yes**."  
+<Image src={zadigwarning} alt="A screenshot of Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
+
+It will then install the driver. As the program says, it may take a few minutes.  
+<Image src={zadigprogress} alt="A screenshot of Zadig in the middle of a driver install." />
+
+If everything goes well, you will get this message:  
+<Image src={zadigdone} alt="Zadig telling the user that the driver was installed successfully with 'Close' highlighted." />
+
+**Close Zadig** and, **with the dongle** still **connected**, **open up RPCS3** and **open Rock Band 3**.
+
+Turn your controller on and you should see it automatically assign a player number.  
+<Image src={protaron} alt="A Mustang Pro Guitar with the second player LED lit up." />
+
+Likewise, in Rock Band 3, you will see the instrument ready to join.  
+<Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
+
+From this point, you can just connect your Roll Limitless whenever you want without having to repeat this setup process!
+
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) will cause a softlock. You will need an alternative input method to navigate these menus, such as a [[typing keyboard or a gamepad.]](https://rb3pc.milohax.org/ctrls#gamepads)</Aside>
+
+<details>
+<summary>Uninstalling</summary>
+Applying a Zadig driver on a device will make it only work on applications with passthrough. Thankfully, reverting this is very easy.  
+
+Open the Start menu and search for `Device Manager`. Open it.  
+<Image src={startdevman} alt="Windows' Start menu, with a result of 'Device Manager'." />
+
+Scroll down until you find the `Universal Serial Bus devices` category.  
+Expand it and right click the instrument you applied the Zadig driver on and then select `Uninstall device`.  
+In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
+<Image src={devman} alt="Device Manager, with a right click menu that popped up. The cursor is over 'Uninstall Device.'" />
+
+In the next window that pops up, make sure to tick `Attempt to remove the driver for this device.`  
+After that, click `Uninstall` and that's it!  
+
+<Image src={devmanun} alt="The device uninstall prompt. 'Attempt to remove the driver for this device' is ticked and the cursor is over 'Uninstall.'" />
+
+When you disconnect then reconnect the device, it will revert back to the original driver.
+</details>
+</TabItem>
+  <TabItem label="Manual Mapping">
+<Aside>**This requires advanced setup!**</Aside>
+<details>
+<summary>How do I map my drums?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## NOTES
+* Velocity sensitivity doesn't seem to work.
+
+### Additional Setup:
+1. Put the Roll Limitless Adapter in firmware updating mode. To do this, press and hold the rectangular button on the top of the adapter, near the micro USB port.  
+<Image src={fwbutton} alt="A Roll Limitless adapter, showing the firmware button circled in red." />
+2. While still holding the button, plug it into your computer. If done successfully, the Roll Limitless will show up as a removable drive.
+3. [[Download the latest "Universal" firmware for the Roll Limitless from the official website]](https://rolllimitless.com/firmwares/).
+4. Place the firmware file on the Roll Limitless device while it's in firmware updating mode (showing up as a removable drive). When it completes, safely remove the device.
+5. Plug the Roll Limitless adapter back into your computer while holding down the round Start button.  
+<Image src={startbutton} alt="A Roll Limitless adapter, showing the start button circled in red." />
+6. Verify that Windows has detected the Roll Limitless adapter by searching for `joy.cpl` in the Start menu.  
+<Image src={joycpl} alt="Windows showing the search results of joy.cpl." />
+7. If it shows up, it's ready to go. If not, make sure you're plugging it in while holding down the round Start button.
+
+## Mapping
+
+| **RPCS3** | **Drums** |
+|:---------:|:---------:|
+| Cross | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+| Circle | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| Square | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| Triangle | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
+| L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
+| D-Pad | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") |
+| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| R3 | Cymbal Modifier |
+| D-Pad: Up | Yellow Cymbal Modifier |
+| D-Pad: Down | Blue Cymbal Modifier |
+| L3 | Pad Modifier |
+
+## Profile
+
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Roll%20Limitless%20Drums.7z)
+
+<details>
+<summary>How do I use profiles?</summary>
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
+><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+</details>
+
+<div align="center"><div align="center"><Image src={modrldrmsmapping} alt="Mapping" /></div></div>
+</TabItem>
+</Tabs>
+
+
+
+[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+
+Mapped by Uzny

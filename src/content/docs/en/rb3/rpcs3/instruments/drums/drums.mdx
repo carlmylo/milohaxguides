@@ -1,0 +1,62 @@
+---
+title: Unknown Drum Controllers
+slug: "en/rb3/controllers/drums/generic"
+description: "General mapping for unknown drums on RPCS3."
+tableOfContents: false
+---
+import mystcontrollers from '@assets/instruments/controller/mystcontrollers.png';
+import rpcs3pad from '@assets/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/padlegend.png';
+import { Image } from 'astro:assets';
+
+<div align="center"><img src="/milohaxguides/assets/instruments/logos/myst.png" alt="Platform" title="Platform"></img></div>
+
+<div align="center"><Image src={mystcontrollers} alt="Controller" /></div>
+
+## NOTES
+
+* This is for people who have drums that aren't listed. You will have to play around with Handlers and Device Class/Device Subtype until it works.
+
+<details>
+<summary>How do I map my drums?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Unknown | Unknown |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drum | Unknown |
+
+## Mapping
+
+Please note that Rock Band drum kits require modifiers to be bound. If you don't do this, cymbals won't work.
+
+| **RPCS3** | **Rock Band Drums** | **Guitar Hero Drums** |
+|:---------:|:-------------------:|:---------------------:|
+| Cross | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/gh/gp.png "Green Pad") |
+| Circle | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/gh/rp.png "Red Pad") |
+| Square | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/gh/bp.png "Blue Pad") |
+| Triangle | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") | ![Yellow Cymbal](/milohaxguides/assets/instruments/buttons/drums/gh/yc.png "Yellow Cymbal") |
+| L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/gh/kp.png "Foot Pedal") |
+| D-Pad | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") |
+| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") | ![Orange Cymbal](/milohaxguides/assets/instruments/buttons/drums/gh/oc.png "Orange Cymbal") |
+| R3 | Cymbal Modifier | |
+| D-Pad: Up | Yellow Cymbal Modifier | |
+| D-Pad: Down | Blue Cymbal Modifier | |
+| L3 | Pad Modifier | |
+
+[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+
+Research by [[TheNathannator]](https://ko-fi.com/thenathannator) via the [[PlasticBand]](https://github.com/TheNathannator/PlasticBand) project.

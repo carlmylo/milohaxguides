@@ -1,0 +1,139 @@
+---
+title: "Xbox One Rock Band 4 Drums"
+slug: "en/rb3/controllers/drums/xbrb"
+description: "How to setup Xbox One Rock Band drums on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import rb4drmscontroller from '@assets/instruments/controller/rb4drmscontroller.png';
+import rpcs3pad from '@assets/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/instruments/padlegend.png';
+import gameinput from '@assets/instruments/setup/rb4/gameinput.png';
+import drmsxomapping from '@assets/instruments/maps/drmsxomapping.png';
+import drmsxboxrbmapping from '@assets/instruments/maps/drmsxboxrbmapping.png';
+import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<div align="center"><img src="/milohaxguides/assets/instruments/logos/xbx.png" alt="Platform" title="Platform"></img></div>
+
+<div align="center"><Image src={rb4drmscontroller} alt="Controller" /></div>
+
+## NOTES
+
+* Requires installing and running [[**RB4InstrummentMapper**]](https://github.com/TheNathannator/RB4InstrumentMapper/) along with its dependencies.
+* **Linux** users can install [[`xone` kernel drivers]](https://github.com/dlundqvist/xone) to use Xbox One peripherals.
+* You need a Microsoft Xbox Wireless Adapter to connect these drums to your computer.  
+    ![Microsoft Xbox Wireless Adapter for Windows 10](/milohaxguides/instruments/adapters/xbone.png "Microsoft Xbox Wireless Adapter for Windows 10")  
+* Works **with or without** the Pro Cymbal expansions.
+    * Make sure to configure which cymbals are connected within Rock Band 3.
+        * `Menu > Options > Drum Options`
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+
+<details>
+<summary>How do I map my drums?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Rock Band Pro |
+
+## Additional Setup
+
+Please refer to RB4InstrumentMapper's documentation.  
+[[Click here to go there]](https://github.com/TheNathannator/RB4InstrumentMapper/blob/main/README.md).
+
+<details>
+<summary>**Having issues with your Xbox One instrument?**</summary>
+
+1. Go to `Start` > `Settings`  > `Apps` > `Installed apps`
+2. Look for `Microsoft GameInput` and uninstall the latest version.  
+Please note that it may reinstall itself after a reboot. We are looking for better solutions.  
+
+<Image src={gameinput} alt="Microsoft GameInput, being evil and being installed without the user's consent." />
+</details>
+
+## Mapping
+
+### Controller Emulation Mode: ViGEmBus (RPCS3 compatibility)
+
+This is the recommended mode and should not require any mapping. You simply need to assign the Handler, Device, and Device Class/Type.
+
+<div align="center"><Image src={drmsxomapping} alt="Mapping" /></div>
+
+<details>
+<summary>Controller Emulation Mode: ViGEmBus</summary>
+
+This is not suggested as it requires lots of manual mapping. You should instead use **ViGEmBus (RPCS3 compatibility)**.
+
+#### Bindings
+
+By default, XInput has most things bound correctly. You only need to remap the following:
+
+| **RPCS3** | **XInput** | **Drums** |
+|:---:|:---:|:---:|
+| R1  | ![Left Stick Click](/milohaxguides/assets/instruments/buttons/360/lsc.png "Left Stick Click") | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| L3  | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | Pad Modifier |
+| R3  | ![Right Bumper](/milohaxguides/assets/instruments/buttons/360/rb.png "Right Bumper") | Cymbal Modifier |
+
+### Advanced Mapping
+
+* Rock Band Drums send multiple button presses out at once. For example, a Red pad will send “`B`” and “`Right Stick Click`” (which translates to “`Circle`” and “`L3`”.) Keep in mind these are needed to the emulator to tell your cymbals apart.
+    * It’s strongly suggested to bind an Xbox controller like the Mapping screenshot below then swapping the Device to your Xbox 360 Rock Band Drums.
+* To bind multiple buttons to one RPCS3 button, hold Shift then click on the RPCS3 button you want to assign multiple buttons to.
+
+| **RPCS3** | **Drums** |
+|:---:|:---:|
+| Cross | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+| Circle | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| Square | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| Triangle | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
+| R3  | Cymbal Modifier |
+| D-Pad: Up | Yellow Cymbal Modifier |
+| D-Pad: Down | Blue Cymbal Modifier |
+| L3  | Pad Modifier |
+| L1  | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
+| R1  | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| Cross | ![A Button](/milohaxguides/assets/instruments/buttons/360/a.png "A Button") |
+| Circle | ![B Button](/milohaxguides/assets/instruments/buttons/360/b.png "B Button") |
+| Square | ![X Button](/milohaxguides/assets/instruments/buttons/360/x.png "X Button") |
+| Triangle | ![Y Button](/milohaxguides/assets/instruments/buttons/360/y.png "Y Button") |
+| D-Pad | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+
+<Image src={drmsxboxrbmapping} alt="Mapping" />
+
+### Profile
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
+><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+</details>
+
+[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+
+Mapped by [[gonakil1ya]](https://gonakillya.neocities.org)
