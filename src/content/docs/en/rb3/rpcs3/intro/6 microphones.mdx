@@ -3,24 +3,25 @@ title: Setting up Microphones
 slug: "en/rb3pc/intro/mics"
 description: How to set up microphones on RPCS3.
 tableOfContents: false
-order: 6
+sidebar:
+  order: 6
 ---
-
+import rpcs3customconfigchange from '@assets/config/rpcs3customconfigchange.png';
+import audiom from '@assets/config/audiom.png';
+import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
 
 Ready to sing? RPCS3 lets you set up to 3 microphones to sing with.  
 Just about any microphone can be used to sing.
 
 To get started setting up microphones, make sure Rock Band 3 isn't running.  
-[**[Also, make sure you have installed a Quick Configuration Profile from the previous page]**](https://rb3pc.milohax.org/gs_quick_config).  
+**<a href="https://rb3pc.milohax.org/gs_quick_config" target="_blank" rel="noopener noreferrer">[Also, make sure you have installed a Quick Configuration Profile from the previous page]</a>**.  
 
 **Right click on Rock Band 3** in RPCS3, then click on “**`Change Custom Configuration`**”.  
+<Image src={rpcs3customconfigchange} alt="RPCS3's right click menu, showing 'Change Custom Configuration' highlighted" />
 
-![A screenshot of RPCS3's right click menu, showing "Change Custom Configuration" highlighted](https://rb3pc.milohax.org/images/cust/rpcs3customconfigchange.png "Change Custom Configuration")
-
-Switch to the "`Audio`" tab.
-
-![A screenshot of Rock Band 3's Audio custom settings, highlighting "Microphone Settings", "Microphone Type" ("Standard"), "Mic1", "Mic2", "Mic3", and "Mic4" in tan with a solid outline.](https://rb3pc.milohax.org/images/cust/audiom.png "Audio")
+Switch to the "`Audio`" tab.  
+<Image src={audiom} alt="Rock Band 3's Audio custom settings, highlighting 'Microphone Settings', 'Microphone Type' ('Standard'), 'Mic1', 'Mic2', 'Mic3', and 'Mic4' in tan with a solid outline." />
 
 * ![A tan square with a solid outline.](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") **To set microphones up**: 
 	* **Set "`Microphone Type`" to "`Standard`"**.
@@ -29,4 +30,4 @@ Switch to the "`Audio`" tab.
 When you're done, click "`Apply`" then "`Save custom configuration`".  
 You can now open Rock Band 3 and sing to your heart's content.
 
-<Aside type="danger">**Make sure you have [[something set up to control your game]](https://rb3pc.milohax.org/ctrls#gamepads). You can't select a song to sing otherwise.**</Aside>
+<Aside type="danger">**Make sure you have <a href="https://rb3pc.milohax.org/ctrls#gamepads" target="_blank" rel="noopener noreferrer">[something set up to control your game]</a>. You can't select a song to sing otherwise.**</Aside>

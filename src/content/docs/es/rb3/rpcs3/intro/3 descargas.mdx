@@ -1,0 +1,56 @@
+---
+title: Descargas
+slug: "es/rb3pc/intro/downloads"
+description: Lo que necesitas descargar para jugar Rock Band 3 en RPCS3.
+sidebar:
+  order: 3
+---
+import { Aside } from '@astrojs/starlight/components';
+import dl7zipes from '@assets/intro/7zipes.png';
+import mvcpp from '@assets/intro/mvcpp.png';
+import rpcs3dl from '@assets/intro/rpcs3dl.png';
+import extractrpcs3es from '@assets/intro/extractrpcs3es.png';
+import extractdires from '@assets/intro/extractdires.png';
+import fwpagees from '@assets/intro/fwpagees.png';
+import { Image } from 'astro:assets';
+
+Antes de inicar con la instalación, **asegúrate que tus conductores y sistema de operacion estén al dia.**
+
+## Prerrequisitos
+
+**Empezamos descargando 7-Zip**, porque va ayudar abrir mayoría de los archivos que bajamos en esta guía. **Si ya tienes 7-Zip** o una alternativa instalada, **puedes seguir adelante**.
+
+<a href="https://7zip-es.updatestar.com/" target="_blank" rel="noopener noreferrer"><b>[Haz clic aquí para ir a la página de descarga de 7-Zip]</b></a>  
+<a href="https://7zip-es.updatestar.com" target="_blank" rel="noopener noreferrer"><Image src={dl7zipes} alt="La pagina para descargar 7-Zip, con el cursor sobre el instalador .exe de 64 bits" /></a>
+
+**Ahora**, **vamos a instalar Microsoft Visual C++ 2019 Redistributable**, porque es necesario para RPCS3. La mayoría de computadoras ya lo tienen, pero no está mal estar seguro.  
+<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer"><b>[Haz clic aquí para descargar Microsoft Visual C++ 2019 Redistributable]</b></a>
+
+**Cuando se descargue**, **ábrelo y <span title="Install">instálalo</span>**.  
+<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank" rel="noopener noreferrer"><Image src={mvcpp} alt="El instalador de Microsoft Visual C++ 2019 Redistributable, con las condiciones y opción para instalar." /></a>
+
+## RPCS3
+
+**Después, vamos a descargar RPCS3**.
+
+<a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><b>[Haz clic aquí para ir al sitio de descarga de RPCS3]</b></a>.  
+Scroll down a bit and download the Windows version.
+
+<a href="https://rpcs3.net/download" target="_blank" rel="noopener noreferrer"><Image src={rpcs3dl} alt="El sitio de descarga para RPCS3, con el cursor en la versión de Windows." /></a>
+
+**Once it downloads, extract the .7z file.**  
+<Image src={extractrpcs3es} alt="El menú contextual de Windows con el cursor en 'Extraer ficheros...'" />
+
+Es recomendado que extraigas todo a `C:\Games\RPCS3` o en un disco interno adicional para evitar problemas de permisos. También desactiva la opción para crear un subdirectorio, como en la imagen.  
+
+<Aside type="danger">**¡No uses una memoria de USB una carpeta sincronizada (Dropbox, OneDrive, etc.), porque pueden causar inestabilidad y otros problemas!**</Aside>
+
+<Image src={extractdires} alt="La ventana de extracción de 7-zip. Muestra 'Extract to' (Extrae archivos...) como C:\Games\RPCS3 y el cuadro debajo de ella desmarcada." />
+
+## Firmware
+
+Cuando se extraiga, [[descarga el software del sistema de PlayStation 3 del sitio de Sony]](https://www.playstation.com/en-us/support/hardware/ps3/system-software/). **Mira un poco abajo en la página** hasta que llegues a "**Actualizar por computadora**", haz click en eso para expandirlo y luego haz click en "**Descargar la actualización de la PS3**".
+
+_**Si estás utilizando un navegador Chromium como Chrome o Edge, ASEGÚRATE DE HACER click DERECHO Y "Guardar enlace como..." o tu descarga PUEDE FALLAR.**_
+
+<a href="https://www.playstation.com/support/hardware/ps3/system-software" target="_blank" rel="noopener noreferrer"><Image src={fwpagees} alt="La página de 'Cómo actualizar el software del sistema de la consola PS3' de Sony con la subcategoría 'Actualización por computadora' expandida" /></a>

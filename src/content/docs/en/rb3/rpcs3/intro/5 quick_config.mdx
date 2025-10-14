@@ -1,0 +1,113 @@
+---
+title: Quick Configuration
+slug: "en/rb3pc/intro/quickconfig"
+description: The central page for Quick Configurations for RPCS3.
+tableOfContents: false
+sidebar:
+  order: 5
+---
+import quickconf from '@assets/config/quickconf.gif';
+import { Image } from 'astro:assets';
+
+Now that the game is in the library, we'll download some files to adjust RPCS3 for the best experience.  
+Below are the quick configuration files. Download a whichever is best for your computer.  
+
+* [[Recommended settings]](https://rb3pc.milohax.org/downloads/customconfigs/recommended.zip) - These are the settings used for the recommended specs listed in <a href="https://rb3pc.milohax.org/gs_reqs#a-computer" target="_blank" rel="noopener noreferrer">[requirements]</a>.
+* [[Minimum settings]](https://rb3pc.milohax.org/downloads/customconfigs/minimum.zip) - These are the settings used for the minimum specs listed in <a href="https://rb3pc.milohax.org/gs_reqs#a-computer" target="_blank" rel="noopener noreferrer">[requirements]</a>.
+
+## Applying A Profile
+To use these, **click on the settings you want to download then extract the ZIP archives in the folder where you extracted RPCS3**. It should combine folders automatically if you did it right.  
+In the GIF example below, the "Recommended" requirements settings archive (recommended.zip) was downloaded and its contents were moved into RPCS3's folder.
+
+<Image src={quickconf} alt="A GIF of 'config' and 'dev_hdd0' from 'recommended.zip' being moved into its proper location in RPCS3's folder." />
+
+The only things left to do are:
+* **<a href="https://rb3pc.milohax.org/ctrls" target="_blank" rel="noopener noreferrer">[setting up your instruments and controllers]</a>**
+* **<a href="https://rb3pc.milohax.org/gs_mics" target="_blank" rel="noopener noreferrer">[setting up a microphone to sing with]</a>**
+* **<a href="https://rb3pc.milohax.org/rpcn_intro" target="_blank" rel="noopener noreferrer">[creating an RPCN account to play online and use leaderboards]</a>**
+
+<details>
+<summary>Affected Settings</summary>
+If you need any more information about what these settings are changing:
+
+### Recommended
+
+* **CPU**:
+	* SPU Block Size: Mega
+* **GPU**:
+	* Write Color Buffers
+	* Framelimit: Off
+	* Resolution Scale: 150% (1920x1080)
+	* Anisotropic Filter: 16x
+	* ZCULL Accuracy: Precise (Slowest)
+	* VSync Enabled
+* **Audio**:
+	* Audio Buffer Duration: 32 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 20 µs
+* **Emulator**:
+	* Show trophy popups: Off
+
+### Minimum
+
+* **CPU**:
+	* SPU Block Size: Mega
+	* Preferred SPU Threads: 2
+* **GPU**:
+	* Write Color Buffers
+	* Framelimit: Off
+	* ZCULL Accuracy: Relaxed (Fastest)
+* **Audio**:
+	* Audio Buffer Duration: 100 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 40 µs
+* **Emulator**:
+	* Show trophy popups: Off
+
+### Potato
+
+* **CPU**:
+	* SPU Block Size: Mega
+	* Preferred SPU Threads: 2
+* **GPU**:
+	* Renderer: OpenGL
+	* Write Color Buffers
+	* Framelimit: Off
+	* ZCULL Accuracy: Relaxed (Fastest)
+* **Audio**:
+	* Audio Buffer Duration: 100 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 40 µs
+* **Emulator**:
+	* Show trophy popups: Off
+</details>
+
+## Experimental Low End Configuration
+* [[Potato Settings]](https://rb3pc.milohax.org/downloads/customconfigs/potato.zip) - The same as the minimum configuration but using OpenGL, meant for computers with integrated graphics. Double this up with black backgrounds and your potato might boot Rock Band 3 on RPCS3. **This is not recommended!**
