@@ -10,19 +10,20 @@ import rb3useres from '@assets/intro/rb3useres.png';
 import rpcs3user from '@assets/intro/rpcs3user.png';
 import rpcs3rename from '@assets/intro/rpcs3rename.png';
 import rpcs3namepanel from '@assets/intro/rpcs3namepanel.png';
+import { Steps } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 Por defecto, el nombre del usuario en RPCS3 es "`User`" si estas jugando sin conexión al Internet.  
-![Una captura de Rock Band 3, con el nombre del usuario siendo 'User'.](https://rb3pc.milohax.org/images/conf/rb3useres.png "Rock Band 3: User")
+<Image src={rb3useres} alt="Una captura de Rock Band 3, con el nombre del usuario siendo 'User'." />
 
-¡Cambiando esto es muy fácil!
+¡Cambiando esto es fácil!
+<Steps>
+1. En RPCS3, ve a **<span title="Administrar > Cuentas de usuario">"<code>Manage > User Accounts</code>"</span>**.  
+    <Image src={rpcs3user} alt="RPCS3 mostrando 'User Accounts' abajo del menú de 'Manage'." />
 
-En RPCS3, ve a **<span title="Administrar > Cuentas de usuario">"<code>Manage > User Accounts</code>"</span>**.  
-![RPCS3 mostrando 'User Accounts' abajo del menú de 'Manage'.](https://rb3pc.milohax.org/images/conf/rpcs3user.png "RPCS3: User Accounts")
+2. Una vez que estés ahí, dale click en el nombre de usuario predeterminado (00000001 - User) y luego click en **<span title="Renombrar usuario">"<code>Rename user</code>"</span>**.  
+    <Image src={rpcs3rename} alt="'User Manager' de RPCS3, mostrando usuario predeterminado." />
 
-Una vez que estés ahí, dale click en el nombre de usuario predeterminado (00000001 - User) y luego click en **<span title="Renombrar usuario">"<code>Rename user</code>"</span>**.
-
-!['User Manager' de RPCS3, mostrando usuario predeterminado.](https://rb3pc.milohax.org/images/conf/rpcs3rename.png "RPCS3: User Accounts")
-
-**Ahora cámbialo** al nombre que quieras y luego haz click en <span title="Cerrar">"<code>Close</code>"</span>.  
-!['User Manager' de RPCS3, mostrando usuario predeterminado.](https://rb3pc.milohax.org/images/conf/rpcs3namepanel.png "RPCS3: Rename User")
+3. **Ahora cámbialo** al nombre que quieras y luego haz click en <span title="Cerrar">"<code>Close</code>"</span>.  
+    <Image src={rpcs3namepanel} alt="'User Manager' de RPCS3, mostrando usuario predeterminado." />
+</Steps>
