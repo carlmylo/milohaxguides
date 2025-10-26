@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightUtils from '@lorenzo_lewis/starlight-utils';
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
@@ -23,6 +24,26 @@ export default defineConfig({
         { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@MiloHax' },
         { icon: 'twitter', label: 'GitLab', href: 'https://twitter.com/hmxmilohax' },
       ],
+      plugins: [
+        starlightUtils({
+          multiSidebar: {
+            // choose switcherStyle: "horizontalList" or "dropdown" or "hidden"
+            switcherStyle: "hidden"
+          }
+        })
+      ],
+      // define all sidebars here
+      sidebar: [
+        {
+          label: 'PS3 Customs',
+          autogenerate: { directory: '/rb3/ps3customs' },
+        },
+        {
+          label: 'Rock Band 3 + RPCS3',
+          autogenerate: { directory: '/rb3/rpcs3' },
+        },
+      ],
+
       customCss: ['./src/styles/custom.css'],
       defaultLocale: 'en',
       locales: {
