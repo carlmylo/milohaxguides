@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightUtils from '@lorenzo_lewis/starlight-utils';
+import icon from "astro-icon";
 import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
