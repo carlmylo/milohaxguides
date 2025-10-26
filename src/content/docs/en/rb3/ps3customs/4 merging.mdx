@@ -1,112 +1,128 @@
 ---
-title: Merging Song Folders
+title: Merging song folders
 slug: "en/rb3/ps3customs/merge"
 description: "How to merge multiple song folders to reduce startup time."
 tableOfContents: false
-order: 4
+sidebar:
+  order: 4
 ---
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
+import rb3merge from '@assets/customs/rb3merge.png';
+import rb3mergeafter from '@assets/customs/rb3mergeafter.png';
+import rpcs3gamedata from '@assets/customs/rpcs3gamedata.png';
+import onyxhomequick from '@assets/customs/onyxhomequick.png';
+import onyxdraganddropmerge from '@assets/customs/onyxdraganddropmerge.gif';
+import onyxauthormerge from '@assets/customs/onyxauthormerge.png';
+import onyxmakepacksmerge from '@assets/customs/onyxmakepacksmerge.png';
+import onyxoutfoldermerge from '@assets/customs/onyxoutfoldermerge.png';
+import onyxfoldernamerpcs3merge from '@assets/customs/onyxfoldernamerpcs3merge.png';
+import onyxnamepack from '@assets/customs/onyxnamepack.png';
+import onyxmakepackrpcs3merge from '@assets/customs/onyxmakepackrpcs3merge.png';
+import savefolder from '@assets/customs/savefolder.png';
+import onyxcreatedrpcs3merge from '@assets/customs/onyxcreatedrpcs3merge.png';
+import onyxoutpkgmerge from '@assets/customs/onyxoutpkgmerge.png';
+import onyxfoldernamepkgmerge from '@assets/customs/onyxfoldernamepkgmerge.png';
+import onyxmakepackpkgmerge from '@assets/customs/onyxmakepackpkgmerge.png';
+import savepkg from '@assets/customs/savepkg.png';
+import onyxcreatedpkgmerge from '@assets/customs/onyxcreatedpkgmerge.png';
+import { Image } from 'astro:assets';
 
-Over time, you might amass a large amount of customs folders. This is a problem since, the more folders you have, the longer Rock Band 3 takes to count your songs.  
-![A screenshot of Rock Band 3 loading downloaded content. It is loading 94 packages.](https://rb3pc.milohax.org/images/xtra/customs/rb3merge.png "RPCS3")  
-
-
+Over time, you might amass a large amount of customs folders, especially if you're installing individual songs.  
+This is a problem since, the more folders you have, the longer Rock Band 3 takes to count your songs.  
+<Image src={rb3merge} alt="Rock Band 3 loading downloaded content. It is loading 94 packages." />  
 
 Ideally, you should put as many songs as possible into a pack to load things efficiently.  
-![A screenshot of Rock Band 3 loading downloaded content. It is loading 48 packages.](https://rb3pc.milohax.org/images/xtra/customs/rb3mergeafter.png "RPCS3")  
+<Image src={rb3mergeafter} alt="Rock Band 3 loading downloaded content. It is loading 48 packages." />  
 
+Thanks to Onyx, you can do this easily! It is basically the same as the earlier as [[the Xbox 360 CON to PS3/RPCS3 format tutorial]](../360tops3/).  
 
-
-Thanks to Onyx, you can do this easily! It is basically the same as the earlier as [[the Xbox 360 CON to PS3/RPCS3 format tutorial]](https://rb3pc.milohax.org/customs_360toPS3).  
-Before starting, keep in mind that you will temporarily need to have the original separated packs and the merged pack installed.  
-Make sure you have enough space!
+<Aside>Keep in mind that you will temporarily need to have the original separated packs and the merged pack installed.  
+Make sure you have enough space!</Aside>
 
 #### 1.
 Open a file browser and navigate to where your customs are installed.  
 This is normally within `dev_hdd0\game\BLUS30463\USRDIR\`.  
 For PS3, you will have to transfer the folder you want to combine to your computer for processing, which may take a while.  
 If you're on RPCS3, you can get there quickly by right clicking Rock Band 3 within RPCS3 then `Open Folder > Open Game Data Folder`.  
-![A RPCS3 with Open Game Data Folder, within the Open Folder menu, highlighted and with a cursor over it.](https://rb3pc.milohax.org/images/xtra/customs/rpcs3gamedata.png "RPCS3")
+<Image src={rpcs3gamedata} alt="RPCS3 with 'Open Game Data Folder', within the 'Open Folder' menu, highlighted and with a cursor over it." />
 
 #### 2.
-Now, open Onyx Music Game Toolkit and click `Quick convert/pack`.  
-![A screenshot of Onyx's main screen. A cursor hovers over "Quick convert/pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxhomequick.png "Onyx Console")
+Open Onyx Music Game Toolkit and click `Quick convert/pack`.  
+<Image src={onyxhomequick} alt="Onyx's main screen. A cursor hovers over 'Quick convert/pack'." />
 
 #### 3.
 Stay on the `RB quick convert + pack creator` tab.  
-Drag and drop the folders you want to merge or click on `Add Rock Band Song` to select them.  
-![A GIF of folders of customs being dragged and dropped into the "RB quick convert + pack creator" tab of Onyx.](https://rb3pc.milohax.org/images/xtra/customs/onyxdraganddropmerge.gif "Quick Convert")
+You can either drag and drop the files you modified or click on `Add Rock Band Song` to select them.  
+<Image src={onyxdraganddropmerge} alt="Folders of customs being dragged and dropped into the 'RB quick convert + pack creator' tab of Onyx." />
 
 It is also recommended to enable `Author to DTA tag` at the bottom right.  
-![A screenshot of Onyx's Quick Convert screen. "Author to DTA" is highlighted and has a cursor over it.](https://rb3pc.milohax.org/images/xtra/customs/onyxauthormerge.png "Quick Convert")
+<Image src={onyxauthormerge} alt="Onyx's Quick Convert screen. 'Author to DTA' is highlighted and has a cursor over it." />
 
 #### 4.
 Below the first row of gray buttons, click the first menu and select `Make Packs`.  
-`Make Songs` is useless in this context since it will create loose folders.  
-![A screenshot of Onyx's Quick Convert screen. "Make songs: produced a single file for each song" has been clicked and the cursor is over "Make packs: combine songs up to a maximum file size."](https://rb3pc.milohax.org/images/xtra/customs/onyxmakepacksmerge.png "Quick Convert")
+<Image src={onyxmakepacksmerge} alt="Onyx's Quick Convert screen. 'Make songs: produced a single file for each song' has been clicked and the cursor is over 'Make packs: combine songs up to a maximum file size'." />
 
 #### 5.
-At the bottom left, make sure `Encrypt .mid.edat` is enabled, then select between either `PKG (PS3)` or `Folders (PS3)`.  
-* `Folders (PS3)` is recommended for RPCS3 users and PS3 users who know how to use FTP. It is **much** faster than PKG creation. You can also bypass the 4GB folder limit.
-* `PKG (PS3)` is only recommended for PS3 users who can only use USB flash drives to add more songs.
+At the bottom left, pick between either `PKG (PS3)` or `Folders (PS3)`.  
+* `Folders (PS3)` is recommended for RPCS3 users and PS3 users who know how to use FTP.  
+It is **much** faster than PKG creation and can create packs larger than 4GB (4000 MiB).
+* `PKG (PS3)` is only recommended for PS3 users who can only use USB flash drives to add more songs or if you want to share packs.
 
 <Tabs>
   <TabItem label="Folders (PS3)">
-  	![A screenshot of Onyx's Quick Convert screen. The cursor is selecting "Folders (PS3)" and "Encrypted .mid.edat" has been enabled.](https://rb3pc.milohax.org/images/xtra/customs/onyxoutfoldermerge.png "Quick Convert")
+    <Image src={onyxoutfoldermerge} alt="Onyx's Quick Convert screen. The cursor is selecting 'Folders (PS3)' and 'Encrypted .mid.edat' has been enabled." />
+<Aside>**Deluxe users can disable this. This will will require <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>.  
+  It is _MUCH_ faster with this disabled.**</Aside>
 
 #### 6.
-
 _(Optional but highly recommended)_  
 By default, Onyx will generate a folder with a name based on the first (or only) song in the pack, like `OxxxxxSongName`.  
 It's suggested to enter a custom name. Simply change `Combine into one new USRDIR subfolder per pack` to `Custom USRDIR subfolder`.  
-![A screenshot of Onyx's Quick Convert screen. The cursor is selecting "Custom USRDIR subfolder" where "Keep original USRDIR subfolders" once was.](https://rb3pc.milohax.org/images/xtra/customs/onyxfoldernamerpcs3merge.png "Quick Convert")
+<Image src={onyxfoldernamerpcs3merge} alt="Onyx's Quick Convert screen. The cursor is selecting 'Custom USRDIR subfolder' where 'Keep original USRDIR subfolders' once was." />
 
-![A screenshot of Onyx's USRDIR naming popup. The pack has been named "my_custom_pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxnamepack.png "Quick Convert")
+To keep things organized, you should name your packed folder something that makes it easy to find.  
+<Image src={onyxnamepack} alt="Onyx's USRDIR naming popup. The pack has been named 'my_custom_pack'." />
 
 #### 7.
+At the bottom, select the big button labeled `Make pack`.  
+<Image src={onyxmakepackrpcs3merge} alt="Onyx's Quick Convert screen. The cursor is over 'Make 1 pack.'" />
 
-_(Optional but highly recommended)_  
-Since you'll be installing things as loose folders and files, you can easily bypass the 4000 MiB (or 4GB) folder limit. You can use this to pack extra dense folders!  
-Simply change the number at the bottom left to something absurdly high like `99999`  
-![A screenshot of Onyx's Quick Convert screen. "Max Pack Size (MiB)" has been set to "99999".](https://rb3pc.milohax.org/images/xtra/customs/onyxmakepackfilesize.png "Quick Convert")
+If you're on RPCS3, find and select the `dev_hdd0` folder. This is usually in the folder where RPCS3 is installed to.  
+If you’re on PS3, pick whichever folder is the most convenient.  
+<Image src={savefolder} alt="A file browser window. 'dev_hdd0' is selected and the cursor is over 'Select folder'." />
 
-#### 8.
+If you're on RPCS3, it will auto-install into your RPCS3 directory, ready to play.  
+If you're on PS3, you'll have a pack folder ready to transfer to `dev_hdd0/game/BLUS30463/USRDIR` via FTP.  
+<Image src={onyxcreatedrpcs3merge} alt="Onyx's USRDIR naming popup. The pack has been named 'my_custom_pack'." />
 
-At the bottom, select the big button labeled `Make pack` (or `Start` if you used the `Make Songs` option.)  
-![A screenshot of Onyx's Quick Convert screen. The cursor is over "Make 1 pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxmakepackrpcs3merge.png "Quick Convert")
-
-Navigate to your RPCS3 folder and select the `dev_hdd0` folder.  
-If you're going to be installing to a PS3 via FTP, select the most convenient folder.  
-![A screenshot of a file browser window. "dev_hdd0" is selected and the cursor is over "Select folder."](https://rb3pc.milohax.org/images/xtra/customs/savefolder.png "Select Folder")
-
-It should successfully convert and auto-install into your RPCS3 directory, ready to play.  
-If using RB3DX, you can even do this while the game is running. Within RB3, select:  
-`Options > Extras > Refresh Library` to reload your song list.  
-![A screenshot of Onyx's USRDIR naming popup. The pack has been named "my_custom_pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxcreatedrpcs3merge.png "Quick Convert")
+<Aside>Remember to delete the original unmerged folders when you're done!</Aside>
 </TabItem>
   <TabItem label="PKG (PS3)">
-  	![A screenshot of Onyx's Quick Convert screen. The cursor is selecting "PS3 (PS3)" and "Encrypted .mid.edat" has been enabled.](https://rb3pc.milohax.org/images/xtra/customs/onyxoutpkgmerge.png "Quick Convert")
+    <Image src={onyxoutpkgmerge} alt="Onyx's Quick Convert screen. The cursor is selecting 'PS3 (PS3)'' and 'Encrypted .mid.edat' has been enabled." />  
+<Aside>**Deluxe users can disable this. This will will require <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[an up to date version of Rock Band 3 Deluxe]</a>.  
+  It is _MUCH_ faster with this disabled.**</Aside>
 
 #### 6.
-
 _(Optional but highly recommended)_  
 By default, Onyx will generate a PKG that outputs a folder with a name based on the first (or only) song in the pack, like `OxxxxxSongName`.  
 It's suggested to enter a custom name. Simply change `Combine into one new USRDIR subfolder per pack` to `Custom USRDIR subfolder`.  
-![A screenshot of Onyx's Quick Convert screen. The cursor is selecting "Custom USRDIR subfolder" where "Keep original USRDIR subfolders" once was.](https://rb3pc.milohax.org/images/xtra/customs/onyxfoldernamepkgmerge.png "Quick Convert")
+<Image src={onyxfoldernamepkgmerge} alt="Onyx's Quick Convert screen. The cursor is selecting 'Custom USRDIR subfolder' where 'Keep original USRDIR subfolders' once was." />
 
-![A screenshot of Onyx's USRDIR naming popup. The pack has been named "my_custom_pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxnamepack.png "Quick Convert")
+To keep things organized, you should name your packed folder something that makes it easy to find.  
+<Image src={onyxnamepack} alt="Onyx's USRDIR naming popup. The pack has been named 'my_custom_pack'." />
 
 #### 7.
-
 At the bottom, select the big button labeled `Make pack`.  
-![A screenshot of Onyx's Quick Convert screen. The cursor is over "Make 1 pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxmakepackpkgmerge.png "Quick Convert")
+<Image src={onyxmakepackpkgmerge} alt="Onyx's Quick Convert screen. The cursor is over 'Make 1 pack'." />
 
 Select where you would like to save the PKG file and give it a name.  
-![A screenshot of a file browser window. The file name has been set to "my_custom_pack"](https://rb3pc.milohax.org/images/xtra/customs/savepkg.png "Select Folder")
+<Image src={savepkg} alt="A file browser window. The file name has been set to 'my_custom_pack'." />
 
 It should successfully convert and a PKG file will be created, ready to install.  
 Simply install it like any other PKG.  
-![A screenshot of Onyx's USRDIR naming popup. The pack has been named "my_custom_pack."](https://rb3pc.milohax.org/images/xtra/customs/onyxcreatedpkgmerge.png "Quick Convert")
+<Image src={onyxcreatedpkgmerge} alt="Onyx's USRDIR naming popup. The pack has been named 'my_custom_pack'." />
+
+<Aside>Remember to delete the original unmerged folders when you're done!</Aside>
   </TabItem>
 </Tabs>

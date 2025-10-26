@@ -1,0 +1,41 @@
+---
+title: Eliminando canciones de paquetes
+slug: "es/rb3/ps3customs/delete"
+description: "Como eliminar canciones de un paquete."
+tableOfContents: false
+sidebar:
+  order: 5
+  group: "PS3Customs"
+---
+import { Steps } from '@astrojs/starlight/components';
+import rb3delwarnes from '@assets/customs/rb3delwarnes.png';
+import nautilushomepack from '@assets/customs/nautilushomepack.png';
+import findfolder from '@assets/customs/findfolder.png';
+import nautiluspackdrag from '@assets/customs/nautiluspackdrag.gif';
+import packdelfolderes from '@assets/customs/packdelfolderes.png';
+import { Image } from 'astro:assets';
+
+Rock Band 3 puede borrar canciones dentro del juego, pero si la canción es parte de un paquete, también va a borrar el resto del paquete.  
+<Image src={rb3delwarnes} alt="Rock Band 3 advirtiendo que va a borrar 140 temas de la colección." />
+
+La mejor manera de arreglar esto es usando el' <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.
+
+<Steps>
+1. Abre Nautilus y elije <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.
+    <Image src={nautilushomepack} alt="La pantalla principal de Nautilus. El cursor esta sobre 'Quick Pack Editor'." />
+
+2. Abre un explorador de archivos y entra a la carpeta del paquete que tiene las canciones que quieras eliminar. Encuentra el archivo `songs.dta`.  
+(Usualmente va estar en `dev_hdd0\game\BLUS30463\USRDIR\[PACKNAME]\songs`).  
+    <Image src={findfolder} alt="Una captura de un explorador de archivos. `songs.dta` esta seleccionado." />
+
+3. Arrastra y suelta el archivo `songs.dta` dentro de la carpeta en la pantalla de <span title="Editor de paquetes rápido">"<code>Quick Pack Editor</code>"</span>.  
+Elige las canciones que quieres borrar y haz click en <span title="Eliminar elegidas">"<code>Remove selected</code>"</span>.  
+Cuando termines, haz click en <span title="Guardar">"<code>Save</code>"</span> para guardar tus cambios.  
+
+    <Image src={nautiluspackdrag} alt="Una animacion de 'songs.dta' siendo arrastrado al Quick Pack Editor de Nautilus." />
+
+4. Eso que borraste las canciones del archivo `songs.dta` y el juego no las detecta, van a seguir tomando espacio.  
+Tienes que borrar sus carpetas también.  
+
+    <Image src={packdelfolderes} alt="Un explorador de archivos. Varias canciones están seleccionadas y el cursor esta sobre un menú que dice 'Eliminar'." />
+</Steps>

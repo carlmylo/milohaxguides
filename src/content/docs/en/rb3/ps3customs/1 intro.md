@@ -3,15 +3,16 @@ title: Introduction
 slug: "en/rb3/ps3customs/intro"
 description: "How to add custom songs to Rock Band 3."
 tableOfContents: false
-order: 1
+sidebar:
+  order: 1
 ---
-
 Custom songs for Rock Band 3 are generally made with only the Xbox 360 in mind. Likewise, various files of official content (made by Harmonix) will be preserved in this format. They exist as CON files that can be converted to work with the PS3 version of Rock Band 3. This guide will show you how to convert these files to formats that can be used on PS3 and emulator! It will also show you how to convert files from Clone Hero and other clone games into Rock Band.
 
 
 Following the guide will help prevent common issues before they happen. There is also a troubleshooting page to fix customs with problems such as:
 * Infinite loading (caused by improper encryption)
 * Crashes when previewing or playing (caused by quality settings)
+* Incompatibility while playing online and missing leaderboards (caused by wrong ID)
 
 ### Requirements:
 * A modded PS3 console (with a method of transferring files to it) or the <a href="https://rb3pc.milohax.org/gs_disc" target="_blank" rel="noopener noreferrer">[RPCS3 emulator]</a>

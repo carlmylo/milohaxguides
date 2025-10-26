@@ -1,0 +1,137 @@
+---
+title: Convirtiendo customs para Xbox 360 a formato de PS3/RPCS3
+slug: "es/rb3/ps3customs/360tops3"
+description: "Como convertir archivos CON de Xbox 360 a PS3/RPCS3"
+tableOfContents: false
+sidebar:
+  order: 2
+  group: "PS3Customs"
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import rhythmverse from '@assets/customs/rhythmverse.png';
+import nautilushomeps3 from '@assets/customs/nautilushomeps3.png';
+import nautilusps3oneclick from '@assets/customs/nautilusps3oneclick.png';
+import selectconfolderes from '@assets/customs/selectconfolderes.png';
+import nautilusps3fixerdone from '@assets/customs/nautilusps3fixerdone.png';
+import onyxhomequick from '@assets/customs/onyxhomequick.png';
+import onyxdraganddrop from '@assets/customs/onyxdraganddrop.gif';
+import onyxauthor from '@assets/customs/onyxauthor.png';
+import onyxmakepacks from '@assets/customs/onyxmakepacks.png';
+import onyxfoldernamerpcs3 from '@assets/customs/onyxfoldernamerpcs3.png';
+import onyxoutfolderes from '@assets/customs/onyxoutfolderes.png';
+import onyxfoldernamerpcs3es from '@assets/customs/onyxfoldernamerpcs3es.png';
+import onyxfoldernamepkges from '@assets/customs/onyxfoldernamepkges.png';
+import onyxnamepackes from '@assets/customs/onyxnamepackes.png';
+import onyxmakepackrpcs3es from '@assets/customs/onyxmakepackrpcs3es.png';
+import savefolderes from '@assets/customs/savefolderes.png';
+import onyxcreatedrpcs3es from '@assets/customs/onyxcreatedrpcs3es.png';
+import onyxoutpkges from '@assets/customs/onyxoutpkges.png';
+import onyxmakepackpkges from '@assets/customs/onyxmakepackpkges.png';
+import savepkges from '@assets/customs/savepkges.png';
+import onyxcreatedpkges from '@assets/customs/onyxcreatedpkges.png';
+import { Image } from 'astro:assets';
+
+<Aside type="caution">Si quieres convertir canciones oficiales (como DLC de Harmonix), [[brinca al paso 6]](#6). Si no, sigue leyendo:</Aside>
+
+#### 1.
+<a href="https://rhythmverse.co/songfiles/game/rb3xbox" target="_blank" rel="noopener noreferrer">[Descarga las canciones que quieras de RhythmVerse]</a>.  
+<a href="https://rhythmverse.co/songfiles/game/rb3xbox" target="_blank" rel="noopener noreferrer"><Image src={rhythmverse} alt="La pagina de RhythmVerse. El cursor esta sobre el boton de descarga." /></a>
+
+#### 2.
+Abre Nautilus y elije <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>.  
+<Image src={nautilushomeps3} alt="Nautilus. El cursor esta sobre 'PS3 Converter.'" />
+
+#### 3.
+Dentro del menú de <span title="Herramientas">"<code>Tools</code>"</span>, haz click en <span title="Corrector de un click para el PS3">"<code>One-Click Batch PS3 Fixer</code>"</span>.  
+Presiona `OK` en la notificación que sale.  
+<Image src={nautilusps3oneclick} alt="Explorador de archivos. Una carpeta llamada 'Customs' esta resaltada y el cursor esta sobre 'Seleccionar carpeta'" />
+
+#### 4.
+Ahora, ve a la carpeta donde descargaste tus canciones para empezar a procesar las canciones.  
+<Image src={selectconfolderes} alt="El explorador de archivos. Una carpeta llamada 'Customs' esta resaltada y el cursor esta sobre 'Seleccionar carpeta'." />
+
+#### 5.
+Se actualizara cualquier archivo que requiere encriptación o una reducción de calidad.  
+Puedes cerrar Nautilus cuando termine.  
+<Image src={nautilusps3fixerdone} alt="PS3 Converter dentro de Nautilus. Esta procesando canciones." />
+
+#### 6.
+Abre Onyx y haz click en <span title="Convertidor/empaquetador rápido">"<code>Quick convert/pack</code>"</span>.  
+<Image src={onyxhomequick} alt="La pantalla principal de Onyx. El cursor esta sobre 'Quick convert/pack'." />
+
+#### 7.
+Quédate en la pestaña de <span title="Convertidor rápido de RB + Creador de paquetes">"<code>RB quick convert + pack creator</code>"</span> tab.  
+Ahora, arrastra los archivos que acabas de procesar. También puedes usar <span title="Agregar canción de Rock Band">"<code>Add Rock Band Song</code>"</span> para elegirlas.  
+<Image src={onyxdraganddrop} alt="Los archivos CON siendo arrastrados a la pestaña de 'RB quick convert + pack creator' dentro de Onyx." />
+
+Es recomendado que actives la opción de <span title="Etiqueta de autor en DTA">"<code>Author to DTA tag</code>"</span> abajo a la derecha.  
+<Image src={onyxauthor} alt="Quick Convert dentro de Onyx. El cursor esta sobre 'Author to DTA' y esta resaltado." />
+
+#### 8.
+Abajo de la primera línea de botones grises, haz click en el primer menú y luego en <span title="Crear paquetes">"<code>Make Packs</code>"</span> o <span title="Crear canciones">"<code>Make Songs</code>"</span> depende de cómo quieres crear tus PKGs.  
+Es recomendado crear paquetes.  
+<Image src={onyxmakepacks} alt="La de pantalla Quick Convert dentro de Onyx. El cursor presiono 'Make songs: produced a single file for each song' y despues elije 'Make packs: combine songs up to a maximum file size'." /> 
+
+#### 9.
+Abajo a la izquierda, elige entre `PKG (PS3)` o <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span>
+  * <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span> compila las canciones a un carpeta sin crear un archivo PKG. Esta opción es recomendada si usas RPCS3 o un PS3 con FTP.  
+  Es **mucho mas** rápido que hacer PKGs y puedes hacer carpetas que pesan mas de 4GB (4000 MiB).
+  * `PKG (PS3)` compila un archivo PKG. Esto solo es recomendado si tienes un PS3 con cual tienes que usar una memoria USB para agregar canciones o si quieres compartir paquetes.
+
+<Tabs>
+  <TabItem label="Folders (PS3)">
+  	<Image src={onyxoutfolderes} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Folders (PS3)'' y 'Encrypted .mid.edat' esta activado." />
+<Aside>**Usuarios de Deluxe no necesitan esto activado. Esto requiere <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
+Es _mas_ rapido si lo desactivas.  
+¡Mantén esto activo si vas a compartir un paquete!**</Aside>
+
+#### 10.
+_(Opcional pero recomendado)_  
+Por defecto, Onyx va a generar una carpeta con un nombre basado en la primera (o única) canción en el paquete, como `OxxxxxNombreDeCancion`.  
+Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"<code>Combine into one new USRDIR subfolder per pack</code>"</span> a la de <span title="Subfolder de USRDIR personalizado">"<code>Custom USRDIR subfolder</code>"</span>.  
+<Image src={onyxfoldernamerpcs3es} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Custom USRDIR subfolder' en vez de 'Keep original USRDIR subfolders'." />
+
+Puedes hacer esto si solo es una canción también. Esto ayuda demasiado si quieres ser organizado y encontrar una canción entre las carpetas.  
+<Image src={onyxnamepackes} alt="Onyx con su pantalla de nombrar el paquete. El paquete fue nombrado 'paquete_de_customs'." />
+
+#### 11.
+Abajo, elige el botón verde que dice <span title="Crear paquete">"<code>Make Pack</code>"</span> (o <span title="Iniciar">"<code>Start</code>"</span> si elegiste la opción de <span title="Crear canciones">"<code>Make Songs</code>"</span>.)  
+<Image src={onyxmakepackrpcs3es} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Make 1 pack'." />
+
+Si estas en RPCS3, ve a donde tienes tu carpeta de `dev_hdd0`. Usualmente está en la carpeta de RPCS3.  
+Si vas a transferir la carpeta a un PS3 por FTP, elije cualquier carpeta que te conviene mas.  
+<Image src={savefolderes} alt="Un explorador de archivos. La carpeta de 'dev_hdd0' esta elegida y el cursor esta sobre 'Seleccionar carpeta'." />
+
+Si estas en RPCS3, tu paquete se auto-instalara y estará listo para jugar.  
+Si estas en PS3, tendrás una carpeta, lista para transferir por FTP a `dev_hdd0/game/BLUS30463/USRDIR`.  
+<Image src={onyxcreatedrpcs3es} alt="Onyx terminando con el exporte. El paquete ha sido llamado 'paquete_de_customs' y salio a la carpeta de RPCS3." />
+</TabItem>
+  <TabItem label="PKG (PS3)">
+  	<Image src={onyxoutpkges} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta en 'PS3 (PS3)' y 'Encrypted .mid.edat' esta activado." />
+
+<Aside>**Usuarios de Deluxe no necesitan esto activado. Esto requiere <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.  
+Es _mas_ rapido si lo desactivas.  
+¡Mantén esto activo si vas a compartir un paquete!**</Aside>
+
+#### 10.
+_(Opcional pero recomendado)_  
+Por defecto, Onyx va a generar un PKG que instala una carpeta con un nombre basado en la primera (o única) canción en el paquete, como `OxxxxxNombreDeCancion`.  
+Es recomendando usar un nombre personalizado. Simplemente, cambia la opción de <span title="Combinar a una subcarpeta de USRDIR nueva por paquete">"<code>Combine into one new USRDIR subfolder per pack</code>"</span> a la de <span title="Subfolder de USRDIR personalizado">"<code>Custom USRDIR subfolder</code>"</span>.  
+<Image src={onyxfoldernamepkges} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Custom USRDIR subfolder' en vez de 'Keep original USRDIR subfolders'." />
+
+Puedes hacer esto si solo es una canción también. Esto ayuda demasiado si quieres ser organizado y encontrar una canción entre las carpetas.  
+<Image src={onyxnamepackes} alt="Onyx con su pantalla de nombrar el paquete. El paquete fue nombrado 'paquete_de_customs'." />
+
+#### 11.
+Abajo va ver un un botón verde que dice <span title="Crear paquete">"<code>Make Pack</code>"</span> (o <span title="Iniciar">"<code>Start</code>"</span> si elegiste la opción de <span title="Crear canciones">"<code>Make Songs</code>"</span>.)  
+<Image src={onyxmakepackpkges} alt="La pantalla de Quick Convert dentro de Onyx. El cursor esta sobre 'Make 1 pack'." />
+
+Elige una carpeta para poner el archivo PKG file y dale un nombre.  
+<Image src={savepkges} alt="El explorador de archivos. El archivo ha sido llamado 'paquete_de_customs'." />
+
+Se creara un archivo PKG cuando termine.  
+Puedes instalar este archivo como cualquier otro PKG.  
+<Image src={onyxcreatedpkges} alt="Onyx terminando con el exporte del PKG. El paquete ha sido llamado 'paquete_de_customs' y salio a la carpeta de Descargas." />
+  </TabItem>
+</Tabs>

@@ -1,0 +1,112 @@
+---
+title: Problemas y soluciones
+slug: "es/rb3/ps3customs/troubleshoot"
+description: "Como resolver problemas comúnes con customs."
+next: false
+sidebar:
+  order: 6
+  group: "PS3Customs"
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import missingsonges from '@assets/trbl/online/missingsonges.png';
+import nautilushomeps3 from '@assets/customs/nautilushomeps3.png';
+import nautilusps3batchid from '@assets/customs/nautilusps3batchid.png';
+import nautilusps3batchselectes from '@assets/customs/nautilusps3batchselectes.png';
+import nautilusps3batchdone from '@assets/customs/nautilusps3batchdone.png';
+import nautilusps3batchloop from '@assets/customs/nautilusps3batchloop.png';
+import nautilusps3batchloopproc from '@assets/customs/nautilusps3batchloopproc.png';
+import ps3grey from '@assets/customs/ps3grey.png';
+import ps3parentales from '@assets/customs/ps3parentales.png';
+import nautilushomecrypt from '@assets/customs/nautilushomecrypt.png';
+import nautiluscryptdecrypt from '@assets/customs/nautiluscryptdecrypt.png';
+import nautiluscryptdecryptmogg from '@assets/customs/nautiluscryptdecryptmogg.gif';
+import findmogg from '@assets/customs/findmogg.png';
+import moggreplace from '@assets/customs/moggreplace.gif';
+import { Image } from 'astro:assets';
+
+## Canciones no salen en línea / Puntajes no se guardan
+Rock Band 3 solo puede guardar puntajes para canciones con IDs que contienen números y nada mas. Si una canción tiene letras en el ID, el juego va a crear un ID nuevo cada vez que inicies. Esto significa que tus puntajes nunca se guardaran.
+
+Igualmente, tendrás problemas jugando en línea con customs por la misma razón. Si el ID tiene letras, la canción va a aparecer en tu biblioteca en gris.
+<Image src={missingsonges} alt="Rock Band 3 mostrando canciones con un color mas oscuro porque no están disponibles." />
+
+Puedes resolver este problema con Nautilus.
+### Arreglar los IDs antes de instalar
+<Steps>
+1. Simplemente sigue el [[tutorial de Xbox 360 a PS3]](../360tops3).  
+Esta diseñado para evitar que pase esto.
+</Steps>
+
+### Arreglando IDs de customs que ya están instaladas
+<Steps>
+1. Abre Nautilus y elije <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>.  
+    <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
+
+2. Arriba de la pantalla de <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>, ve a:  
+<span title="Opciones de IDs numéricos > Remplazo de IDs por lotes">"<code>Numeric ID Options > Batch replace song IDs</code>"</span>  
+    <Image src={nautilusps3batchid} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch replace song IDs' bajo el menu de 'Numeric ID Options'." />
+
+3. En PS3 o RPCS3, entra a la carpeta de la canción/paquete que tenga un ID incorrecto (usualmente es `dev_hdd0\game\BLUS30463\USRDIR\[nombre de paquete]\songs`).  
+Busca el archivo que se llama `songs.dta` dentro de la carpeta.  
+    <Image src={nautilusps3batchselectes} alt="Un explorador de archivos. 'dev_hdd0' esta elegido y el cursor esta sobre 'Open'." />
+
+4. Espera que termine de procesar las canciones de la carpeta. Cuando termine, puedes compartir el archivo `songs.dta` con tus amigos para finalmente poder jugar las canciones juntos.  
+    <Image src={nautilusps3batchdone} alt="PS3 Converter dentro de Nautilus. Acababa de terminar con el procesamiento de canciones con IDs malos." />
+</Steps>
+
+## Canciones se quedan atoradas al final
+A veces, algunas canciones se pueden quedar atoradas al final, repitiendo el último segundo de la canción sin fin.  
+* **¡Necesitas eliminar la canción de tu colección. Revisa <a href="../delete/" target="_blank" rel="noopener noreferrer">[la guía de como eliminar canciones]</a> si necesitas!**
+* **¡Necesitas el archivo CON original para arreglar este problema!**
+* **¡No metas canciones que no tengan este problema, porque el sonido de la canción va ser procesado otra vez y va perder un poco de calidad!**
+
+<Steps>
+1. Abre Nautilus y ve a <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span>.  
+    <Image src={nautilushomeps3} alt="La pantalla principal de Nautilus. El cursor esta sobre 'PS3 Converter'." />
+
+2. Arriba de la pantalla de <span title="Convertidor de PS3">"<code>PS3 Converter</code>"</span> ve a:  
+<span title="Herramientas > Arreglar canciones con bucle por lotes">"<code>Tools > Batch fix looping songs</code>"</span>  
+    <Image src={nautilusps3batchloop} alt="PS3 Converter dentro de Nautilus. El cursor esta sobre 'Batch fix looping songs' bajo el menu de 'Tools'." />
+
+3. Va la carpeta donde esta el CON con problemas y elige la carpeta.  
+Espera que termine.  
+    <Image src={nautilusps3batchloopproc} alt="PS3 Converter dentro de Nautilus. Esta procesando un archivo." />
+
+4. Cuando termine, puedes continuar a la cuarta parte del [[tutorial principal]](../360tops3).
+</Steps>
+
+## PS3: Canciones grises
+Por defecto, el control paterno del PlayStation 3 esta en nivel 9.  
+Esto no te va dejar tocar canciones que tienen el dato de `Sin Calificación`, y aparecerán grises.  
+<Image src={ps3grey} alt="La collecion musical de Rock Band mostrando una cancion gris." />
+
+Si elijes una de estas canciones, el juego va a crashear.  
+Para arreglar esto, cambia el `Control paterno` a `No` en:  
+XMB: [ **Ajustes** ] -> [ **Ajustes de seguridad** ] -> [ **Control paterno** ] -> [ **No** ]  
+<Image src={ps3parentales} alt="El menu de control paterno en el menu de XMB del PlayStation 3. El nivel esta en 'No'." />
+
+## Canciones siguen atoradas cargando
+En casos raros, algunas canciones tendrán problemas cargando, aún si seguiste todos los pasos anteriores.  
+Esto se puede arreglar con la opción de <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span> en Nautilus.  
+
+<Aside>**Esto requiera <a href="https://rb3dx.milohax.org" target="_blank" rel="noopener noreferrer">[una versión actual de Rock Band 3 Deluxe]</a>.**</Aside>
+<Steps>
+1. Abre Nautilus y elige <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span>.  
+    <Image src={nautilushomecrypt} alt="La pantalla principal de Nautilus con el cursor sobre 'Batch Cryptor'." />
+
+2. Cambia a la opción de <span title="Desencriptar">"<code>Decrypt</code>"</span> abajo de la pantalla.  
+    <Image src={nautiluscryptdecrypt} alt="Batch Cryptor con la opcion cambiada a 'Decrypt'." />
+
+3. Ve a la carpeta donde está la canción que quieres arreglar.  
+Usualmente va estar en `dev_hdd0\game\BLUS30463\USRDIR\[Nombre de paquete]\songs\[Canción con problemas]`.  
+    <Image src={findmogg} alt="Un explorador de archivos con un archivo de mogg elegido." />
+
+4. Arrastra el archivo `.mogg` en la pantalla de <span title="Criptór por lote">"<code>Batch Cryptor</code>"</span> y haz click en <span title="Iniciar">"<code>Begin</code>"</span>.  
+    <Image src={nautiluscryptdecryptmogg} alt="Un animacion de un archivo de .mogg siendo arrastrado a 'Batch Cryptor' y el archivo siendo desencriptado." />
+
+5. Una carpeta llamada `decrypted` va a aparecer cuando termine.  
+Entra a la carpeta de `decrypted` y corta el archivo `.mogg` adentro.  
+Regresa una carpeta para atrás y pega el archivo `.mogg`, remplazando el original.  
+    <Image src={moggreplace} alt="Una animación de un archivo .mogg dentro de la carpeta de 'decrypted' siendo cortada y luego pegada a la carpeta anterior. Reemplaza el archivo .mogg viejo." />
+</Steps>

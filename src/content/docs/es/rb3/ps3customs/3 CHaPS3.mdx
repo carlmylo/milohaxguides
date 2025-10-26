@@ -1,0 +1,109 @@
+---
+title: Convirtiendo customs para Clone Hero/YARG a formato de PS3/RPCS3
+slug: "es/rb3/ps3customs/chtops3"
+description: "Como convertir canciones de Clone Hero/YARG a PS3/RPCS3"
+tableOfContents: false
+sidebar:
+  order: 3
+  group: "PS3Customs"
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import onyxbatch from '@assets/customs/onyxbatch.png';
+import onyxbatchprefs from '@assets/customs/onyxbatchprefs.png';
+import onyxbatchprefsrb from '@assets/customs/onyxbatchprefsrb.png';
+import onyxbatchwarn from '@assets/customs/onyxbatchwarn.png';
+import onyxbatchprefsaud from '@assets/customs/onyxbatchprefsaud.png';
+import onyxbatchdrag from '@assets/customs/onyxbatchdrag.gif';
+import onyxbatchparts from '@assets/customs/onyxbatchparts.png';
+import onyxbatchfolders from '@assets/customs/onyxbatchfolders.png';
+import savefolderes from '@assets/customs/savefolderes.png';
+import onyxbatchfinish from '@assets/customs/onyxbatchfinish.png';
+import onyxbatchpkg from '@assets/customs/onyxbatchpkg.png';
+import savepkgfolderes from '@assets/customs/savepkgfolderes.png';
+import { Image } from 'astro:assets';
+
+<Aside type="caution">LEE ESTO ANTES DE TODO</Aside>
+  ¡Solo has esto como **último recurso** y si las canciones que quieres solo existen para juegos que son clones (Clone Hero/YARG). Si la canción originalmente existió en un formato para Rock Band (de manera oficial o por custom), **usa esa versión antes de todo y lee [[la guía principal]](../360tops3)!**
+
+Toma esto en cuenta porque **si no lo haces, la canción va a perder muchos datos**, como:
+* Incompatibilidad con mejoras/actualizaciones por Rock Band 3 Deluxe
+* Armonías, teclado, guitarra/bajo PRO e arreglos de canciones para canciones que no las tenían
+* Su identidad propia para poder jugar en linea y tener tableros de calificaciones
+* Animaciones propias y "lipsync" serán perdidos
+
+Si lo haces como quiera, **no te podemos ayudar con ningún problema** causado por ignorar esta advertencia.
+**!No digas que no te advertimos!**
+
+<Aside type="caution">**!No digas que no te advertimos!**</Aside>
+
+#### 1.
+Después de descargar las canciones que quieras usar, entra a Onyx y elige <span title="Procesamiento por lotes">"<code>Batch recompile</code>"</span>.  
+<Image src={onyxbatch} alt="La pantalla principal de Onyx. El cursor esta sobre 'Batch recompile'." />
+
+#### 2.
+Arriba de la pantalla de <span title="Procesamiento por lotes">"<code>Batch recompile</code>"</span>, haz click en <span title="Editar">"<code>Edit</code>"</span> y luego <span title="Preferencias">"<code>Preferences</code>"</span>.  
+<Image src={onyxbatchprefs} alt="La pantalla de Batch Recompile en Onyx. El menu de 'Edit' ha sido expandido y el cursor esta sobre 'Preferences'." />
+
+#### 3.
+Entra a la pestaña de `Rock Band` tab. 
+Cambia a <span title="Magma opcional">"<code>Magma optional</code>"</span>.  
+<Image src={onyxbatchprefsrb} alt="La pantalla de Preferences en Onyx. Bajo la pestaña de 'Rock Band' tab, 'Magma optional' fue elegido." />
+
+#### 4.
+Te dará una advertencia.  
+Haz click en `OK`.  
+<Image src={onyxbatchwarn} alt="Una advertencia de Onyx. Advierte que desactivando Magma puede crashear Rock Band." />
+
+#### 5.
+Cambia a la pestaña de `Audio` tab. 
+Baja a la barra de <span title="Calidad de OGG Vorbis">"<code>OGG Vorbis quality</code>"</span> a `3.00`.  
+Después, haz click en <span title="Guardar">"<code>Save</code>"</span>.  
+<Image src={onyxbatchprefsaud} alt="La pantalla de Preferences en Onyx. Bajo la pestaña de 'Audio' tab, 'Magma optional' fue elegido." />
+
+#### 6.
+Arrastra la(s) carpeta(s) que contiene(n) las canciones que quieres convertir a la pantalla de <span title="Procesamiento por lotes">"<code>Batch recompile</code>"</span>.  
+<Image src={onyxbatchdrag} alt="Customs en el formato de Clone Hero siendo arrastradas a la pestaña de en'Songs' en el menu de Batch Recompile en Onyx." />
+
+#### 7.
+Cambia a la pestaña de `RB3`.  
+*(Opcional)* Muchas customs hechas para Clone Hero solo tienen una parte de guitarra. Es posible duplicar las partes para que mas personas puedan jugar la canción al mismo tiempo.  
+Haz click en <span title="Configuración de partes predeterminada">"<code>Default part configuration</code>"</span>.
+* `Fill empty parts with first guitar, then drums` - Llena partes vacías con guitarra y luego batería
+* `Copy guitar to bass/keys/drums` - Copia guitarra a bajo/teclado/bater
+<Image src={onyxbatchparts} alt="La pantalla de Batch Recompile en Onyx. Bajo la pestaña de 'RB3', 'Fill empty parts with first guitar, then drums' fue elegido." />
+
+#### 8.
+Abajo a la izquierda, elige entre `PKG (PS3)` o <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span>
+  * <span title="Carpetas (PS3)">"<code>`Folders (PS3)`</code>"</span> compila las canciones a un carpeta sin crear un archivo PKG. Esta opción es recomendada si usas RPCS3 o un PS3 con FTP.  
+  Es **mucho mas** rápido que hacer PKGs y puedes hacer carpetas que pesan mas de 4GB (4000 MiB).
+  * `PKG (PS3)` compila un archivo PKG. Esto solo es recomendado si tienes un PS3 con cual tienes que usar una memoria USB para agregar canciones o si quieres compartir paquetes.
+ packs.
+
+<Tabs>
+  <TabItem label="Folders (PS3)">
+    <Image src={onyxbatchfolders} alt="La pantalla de Batch Recompile en Onyx. Bajo la pestaña de 'RB3', 'Create PS3/RPCS3 folders' fue elegido." />
+
+#### 9.
+Si estas en RPCS3, ve a donde tienes tu carpeta de `dev_hdd0`. Usualmente está en la carpeta de RPCS3.  
+Si vas a transferir la carpeta a un PS3 por FTP, elije cualquier carpeta que te conviene mas.  
+<Image src={savefolderes} alt="Un explorador de archivos. La carpeta de 'dev_hdd0' esta elegida y el cursor esta sobre 'Seleccionar carpeta'." />
+
+#### 10.
+Si estas en RPCS3, tu paquete se auto-instalara y estará listo para jugar.  
+Si estas en PS3, tendrás una carpeta, lista para transferir por FTP a `dev_hdd0/game/BLUS30463/USRDIR`.  
+<Image src={onyxbatchfinish} alt="La pantalla de tareas de Batch Recompile en Onyx. Esta en medio-proceso de exportar." />
+</TabItem>
+  <TabItem label="PKG (PS3)">
+    <Image src={onyxbatchpkg} alt="La pantalla de Batch Recompile en Onyx. Bajo la pestaña de 'RB3', 'Create PKG' fue elegido." />
+
+#### 9.
+Elige una carpeta para poner el archivo PKG file y dale un nombre.  
+<Image src={savepkgfolderes} alt="Un explorador de archivos. La carpeta de 'dev_hdd0' esta elegida y el cursor esta sobre 'Seleccionar carpeta'." />
+
+#### 10.
+Se creara un archivo PKG cuando termine.  
+Puedes instalar este archivo como cualquier otro PKG.  
+<Image src={onyxbatchfinish} alt="La pantalla de Batch Recompile en Onyx mostrando una conversion en progreso." />
+  </TabItem>
+</Tabs>
