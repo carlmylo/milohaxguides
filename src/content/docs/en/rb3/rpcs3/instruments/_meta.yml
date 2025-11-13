@@ -1,0 +1,5 @@
+label: Instruments and Controllers
+collapsed: true
+cascade:
+  - collapsed
+order: 2
