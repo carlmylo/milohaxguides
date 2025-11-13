@@ -1,44 +1,48 @@
 ---
 title: "PlayStation 4 Rock Band 4 Drums"
-slug: "en/rb3/controllers/drums/ps4rb"
+slug: "en/rb3pc/controllers/drums/ps4rb"
 description: "How to setup PS4 Rock Band drums on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 5
+  label: PS4 Rock Band 4
 ---
-import rb4drmscontroller from '@assets/instruments/controller/rb4drmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drmsxomapping from '@assets/instruments/maps/drmsxomapping.png';
-import pydl from '@assets/advanced/rpc/pydl.png';
-import pyinstall from '@assets/advanced/rpc/pyinstall.png';
-import mina1 from '@assets/instruments/setup/rb4/mina1.png';
-import mina2 from '@assets/instruments/setup/rb4/mina2.png';
-import mina3 from '@assets/instruments/setup/rb4/mina3.png';
-import mina4 from '@assets/instruments/setup/rb4/mina4.png';
-import mina5 from '@assets/instruments/setup/rb4/mina5.png';
-import ps41 from '@assets/instruments/setup/rb4/ps41.png';
-import ps42 from '@assets/instruments/setup/rb4/ps42.png';
-import ps43 from '@assets/instruments/setup/rb4/ps43.png';
-import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import { Aside } from '@astrojs/starlight/components';
+import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmsxomapping from '@assets/rb3/rpcs3/instruments/maps/drmsxomapping.png';
+import pydl from '@assets/rb3/rpcs3/advanced/rpc/pydl.png';
+import pyinstall from '@assets/rb3/rpcs3/advanced/rpc/pyinstall.png';
+import mina1 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina1.png';
+import mina2 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina2.png';
+import mina3 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina3.png';
+import mina4 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina4.png';
+import mina5 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina5.png';
+import ps41 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps41.png';
+import ps42 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps42.png';
+import ps43 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps43.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/ps4.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/ps4.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={rb4drmscontroller} alt="Controller" /></center>
 
-<div align="center"><Image src={rb4drmscontroller} alt="Controller" /></div>
-
-## NOTES
-
-* Requires installing and running the latest [Minatsuki](https://github.com/yanagiragi/Minatsuki/) and [Minatsuki-Pro-Drums-Plus](https://github.com/stefman69/Minatsuki-Pro-Drums-Plus) files.
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* Requires installing and running the latest <a href="https://github.com/yanagiragi/Minatsuki/" target="_blank" rel="noopener noreferrer">[Minatsuki]</a> and <a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus" target="_blank" rel="noopener noreferrer">[Minatsuki-Pro-Drums-Plus]</a> files.
 * You need a Bluetooth receiver to connect these drums to your computer.
     * Latency may be an issue depending on your Bluetooth receiver. This may make it difficult to calibrate.
 * Works **with or without** the Pro Cymbal expansions.
     * Make sure to configure which cymbals are connected within Rock Band 3.
         * `Menu > Options > Drum Options`
-* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
 
 <details>
 <summary>How do I map my drums?</summary>
-**Click on the Pads icon at the top of RPCS3**.  
+**Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
 It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
@@ -66,7 +70,7 @@ Once it finishes downloading, open the installer.
 In the installer:  
 1. Activate `Add python.exe to PATH`
 2. Click `Install now`  
-<Image src={pyinstall} alt="Python's download website. A cursor hovers over 'Download Python 3.12.6.'" />
+<Image src={pyinstall} alt="Python's installer. 'Add Python.exe to PATH' has been highlighted and enabled and a cursor hovers over 'Install now.'" />
 
 Now, go to <a href="https://github.com/yanagiragi/Minatsuki" target="_blank" rel="noopener noreferrer">[Minatsuki's Github page]</a> and download the code ZIP.  
 <a href="https://github.com/yanagiragi/Minatsuki/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer"><Image src={mina1} alt="Minatsuki's Github page. The green 'Code' button was clicked and the cursor is over the 'Download ZIP' option." /></a>
@@ -84,31 +88,31 @@ In the command line, type in `pip install -r requirements.txt` then press Enter.
 <Image src={mina4} alt="A Windows command line. The command 'pip install -r requirements.txt' was typed in and entered and it downloaded." />
 
 After it installs, type in `pip install vgamepad` then press Enter.  
-<Image src={mina5} alt="A screenshot of a Windows command line. The command 'pip install vgamepad' was typed in and entered and it downloaded." />
+<Image src={mina5} alt="A Windows command line with the command 'pip install vgamepad' typed in and entered and it downloaded." />
 
 You may have to install ViGEm Bus. You can download that from <a href="https://vigembusdriver.com/download/" target="_blank" rel="noopener noreferrer">[here]</a>.
 
 ### Usage
 Synchronize your drums to your computer's Bluetooth receiver.
-<Image src={ps41} alt="A screenshot of a Windows' Bluetooth devices. It shows a Mad Catz Rock Band 4 Drum Set." />
+<Image src={ps41} alt="Windows' Bluetooth devices showing a Mad Catz Rock Band 4 Drum Set." />
 
 Double click the `main_xinput.py` file.  
 <Image src={ps42} alt="Windows Explorer with the cursor over 'main_xinput.py' and it is highlighted." />
 
 When the command line window opens, type in the number of your drum kit and press Enter. Sometimes, it might show up as multiple inputs but it's fine. Just pick one and press Enter.  
-<Image src={ps43} alt="A screenshot of a command line running the 'main_xinput.py' script. It shows the Rock Band 4 kit drum kit along with other controllers in the selection. The Rock Band kit's number was selected and Enter was pressed." />
+<Image src={ps43} alt="A command line running the 'main_xinput.py' script. It shows the Rock Band 4 kit drum kit along with other controllers in the selection. The Rock Band kit's number was selected and Enter was pressed." />
 
-Minimize this command line window. Make sure it stays running in the background.
+Minimize this command line window. **Make sure it stays running in the background**.
 
 ## Mapping
 
 You simply need to assign the Handler, Device, and Device Class/Type.
 
-<div align="center"><Image src={drmsxomapping} alt="Mapping" /></div>
+<center><Image src={drmsxomapping} alt="Mapping" /></center>
 
 
 <details>
-<summary>"I refuse to use Python"</summary>
+<summary>"I refuse to use Python."</summary>
 
 If you refuse to set up Python, you won’t have access to cymbals and it will provide an overall worse experience.
 
@@ -143,8 +147,20 @@ If you refuse to set up Python, you won’t have access to cymbals and it will p
 ## Profile
 
 [[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Drums.7z)
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
+><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
 </details>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Mapped by [[gonakil1ya]](https://gonakillya.neocities.org)
+Mapped by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

@@ -1,0 +1,105 @@
+---
+title: Batería de Guitar Hero para PlayStation 3
+slug: "es/rb3pc/controllers/drums/ps3gh"
+description: "Como configurar tu batería de Guitar Hero para PlayStation 3 en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 13
+  label: PS3 Guitar Hero
+---
+import { Aside } from '@astrojs/starlight/components';
+import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmsps3ghmapping from '@assets/rb3/rpcs3/instruments/maps/drmsps3ghmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={ghdrmscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Las baterías de Guitar Hero World Tour **requieren su receptor propio para conectarse**. Las baterías de Guitar Hero World Tour tienen el modulo de control arriba.  
+![Receptor de batería de Guitar Hero World Tour para PlayStation 3](/milohaxguides/assets/instruments/adapters/ps3drumsgh.png "Receptor de batería de Rock Band para PlayStation 3")
+* Las baterías de Guitar Hero 5/Band Hero **requieren su receptor propio para conectarse.** Las baterías de Guitar Hero 5/Band Hero tienen el modulo de control abajo.  
+![Receptor de batería de Guitar Hero 5/Band Hero para PlayStation 3](/milohaxguides/assets/instruments/adapters/ps3drumsbh.png "Receptor de batería de The Beatles: Rock Band para PlayStation 3")  
+Por favor nota que los receptores de GH World Tour y de GH5/Band Hero no son intercambiables.
+* La detección de velocidad (intensidad) no funciona.
+* Los colores de notas no son iguales a los parches de este control.
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+
+| Handlers | Devices |
+|:---------:|:------:|
+| MMJoystick | Joystick |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Guitar Hero |
+
+## Mapeo
+
+* Los instrumentos de Guitar Hero **pueden ser problemáticas para mapear. Si tratas de asignar un botón y todo sale con “U+”, haz click en <span title="Filtrar ruido">"<code>Filter Noise</code>"</span>** en el lado izquierdo abajo de la ventana de configuración **y luego intenta mapear otra vez**.
+
+| **RPCS3** | **Batería de Guitar Hero** |
+|:--------:|:-----------------:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/gh/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/gh/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/gh/bp.png "Parche Azul") |
+| Triangle | ![Platillo Amarillo](/milohaxguides/assets/instruments/buttons/drums/gh/yc.png "Platillo Amarillo") |
+| R1 | ![Platillo Naranja](/milohaxguides/assets/instruments/buttons/drums/gh/oc.png "Platillo Naranja") |
+| L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/gh/kp.png "Pedal") |
+| Cross | ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") |
+| Circle | ![Botón Circle (Circulo)](/milohaxguides/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") |
+| Square | ![Botón Square (Cuadro)](/milohaxguides/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") |
+| Triangle | ![Botón Triangle (Triangulo)](/milohaxguides/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons/ps3/dp.png "Cruceta") |
+| Left Stick | ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/ps3/ls.png "Palanca Izquierda") |
+| Start | ![Botón Start](/milohaxguides/assets/instruments/buttons/ps3/sta.png "Botón Start") |
+| Select | ![Botón Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Botón Select") |
+| PS Button | ![Botón Home](/milohaxguides/assets/instruments/buttons/ps3/home.png "Botón Home") |
+
+<center><Image src={drmsps3ghmapping} alt="Mapping" /></center>
+
+## Perfil
+
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS3%20Guitar%20Hero%20Drums.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+
+1. Extrae el archivo .7z.
+2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)

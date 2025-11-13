@@ -1,32 +1,39 @@
 ---
 title: PlayStation 3 Guitar Hero Drums
-slug: "en/rb3/controllers/drums/ps3gh"
+slug: "en/rb3pc/controllers/drums/ps3gh"
 description: "How to setup PS3 Guitar Hero drums on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 11
+  label: PS3 Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
-import ghdrmscontroller from '@assets/instruments/controller/ghdrmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drmsps3ghmapping from '@assets/instruments/maps/drmsps3ghmapping.png';
-import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmsps3ghmapping from '@assets/rb3/rpcs3/instruments/maps/drmsps3ghmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={ghdrmscontroller} alt="Controller" /></center>
 
-<div align="center"><Image src={ghdrmscontroller} alt="Controller" /></div>
-
-## NOTES
-
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* Guitar Hero World Tour Drums **require their respective drum dongles to connect to your computer**. Guitar Hero World Tour Drums have the controller module at the top.  
+![Nintendo Wii Rock Band Drums Dongle](/milohaxguides/assets/instruments/adapters/ps3drumsgh.png "Nintendo Wii Rock Band Drums Dongle")
+* Guitar Hero 5/Band Hero Drums **require their respective drum dongles to connect to your computer**. Guitar Hero 5/Band Hero Drums have the controller module at the bottom.  
+![Nintendo Wii The Beatles: Rock Band Drums Dongle](/milohaxguides/assets/instruments/adapters/ps3drumsbh.png "Nintendo Wii The Beatles: Rock Band Drums Dongle")  
+Please note that GH World Tour and GH5/Band Hero dongles are **not** interchangable or compatible.
 * Velocity sensitivity doesn't seem to work.
 * Gem colors do not match the pads.
-* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
 
 <details>
 <summary>How do I map my drums?</summary>
-**Click on the Pads icon at the top of RPCS3**.  
+**Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
 It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
@@ -67,7 +74,7 @@ Follow the instructions and/or match the assignments below.
 | Select | ![Select Button](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Select Button") |
 | PS Button | ![Home Button](/milohaxguides/assets/instruments/buttons/ps3/home.png "Home Button") |
 
-<div align="center"><Image src={drmsps3ghmapping} alt="Mapping" /></div>
+<center><Image src={drmsps3ghmapping} alt="Mapping" /></center>
 
 ## Profile
 
@@ -84,12 +91,12 @@ After downloading the profile,
 2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
 ><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
-3. After that, you can select the profile in the **“Pads”** menu.  
+3. After that, you can select the profile in the `Pads` menu.  
 ><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
 
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Mapped by [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)
+Mapped by <a href="https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g" target="_blank" rel="noopener noreferrer">[GamerPerson22]</a>

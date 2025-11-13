@@ -1,39 +1,42 @@
 ---
 title: MIDI Drums
-slug: "en/rb3/controllers/drums/midi"
+slug: "en/rb3pc/controllers/drums/midi"
 description: How to setup a MIDI Drum Kit on RPCS3.
+prev: false
+next: false
+sidebar:
+  order: 1
+  label: MIDI
 ---
-import mididrumscontroller from '@assets/instruments/controller/mididrumscontroller.png';
-import rpcs3nomap from '@assets/instruments/maps/rpcs3nomap.png';
-import usbdrums from '@assets/instruments/setup/midi/usbdrums.png';
-import mididrums from '@assets/instruments/setup/midi/mididrums.png';
-import miditousb from '@assets/instruments/setup/midi/miditousb.png';
-import midifs from '@assets/instruments/setup/midi/midifs.png';
-import rpcs3customconfigchange from '@assets/config/rpcs3customconfigchange.png';
-import iod from '@assets/config/iod.png';
+import { Aside } from '@astrojs/starlight/components';
+import mididrumscontroller from '@assets/rb3/rpcs3/instruments/controller/mididrumscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import usbdrums from '@assets/rb3/rpcs3/instruments/setup/midi/usbdrums.png';
+import mididrums from '@assets/rb3/rpcs3/instruments/setup/midi/mididrums.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iod from '@assets/rb3/rpcs3/config/iod.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={mididrumscontroller} alt="Controller" /></center>
 
-<div align="center"><Image src={mididrumscontroller} alt="Controller" /></div>
-
-## NOTES
-<div align="center"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" /></div>
-
-<div align="center"><b>Do NOT map this instrument via the "Pads" menu!</b></div>
-
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 * Your MIDI Drum Kit needs to:
 	* **be set to MIDI Channel 10.**
 	* **be set to standard GM mapping.**  
 These should be default settings but consult the manual for your MIDI Drum Kit to make sure.
 * D-Pad: Left and D-Pad: Right cannot be used. This makes slowing down practice mode and cycling through trainers impossible.
-	* You can get a [[Roll Limitless]](https://rolllimitless.com/roll-limitless/) to avoid this.
-		* You can also get the [[Roll Limitless Mini]](https://rolllimitless.com/roll-limitless-mini/) if you don't need MIDI connections.
-	* You can also get a [[RetroCultMods ACE Adapter]](https://shop.retrocultmods.com/products/ace-midi-usb-adapter-for-rock-band-and-guitar-hero) to avoid this.
-		* [[Alternate Etsy link]](https://www.etsy.com/listing/1884328942)
-* RPCN Menus (for sending or accepting online invites) will cause a softlock. You will need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+	* You can get a <a href="https://rolllimitless.com/roll-limitless/" target="_blank" rel="noopener noreferrer">[Roll Limitless]</a> to avoid this.
+		* You can also get the <a href="https://rolllimitless.com/roll-limitless-mini/" target="_blank" rel="noopener noreferrer">[Roll Limitless Mini]</a> if you don't need MIDI connections.
+	* You can also get a <a href="https://shop.retrocultmods.com/products/ace-midi-usb-adapter-for-rock-band-and-guitar-hero" target="_blank" rel="noopener noreferrer">[RetroCultMods ACE Adapter]</a> to avoid this.
+		* <a href="https://www.etsy.com/listing/1884328942" target="_blank" rel="noopener noreferrer">[Alternate Etsy link]</a>
 
-## Instructions
+## Setting Up
 
 **If your MIDI Drum Kit has a USB port**, all you need to do is **plug it into your computer**.  
 ><Image src={usbdrums} alt="A MIDI Drum Kit's module, showing a USB port." />
@@ -41,29 +44,35 @@ These should be default settings but consult the manual for your MIDI Drum Kit t
 **If your MIDI Drum Kit only has a MIDI output, you will need a MIDI to USB interface**.  
 ><Image src={mididrums} alt="A MIDI Drum Kit's module, showing a 5-DIN MIDI output highlighted in blue with a dotted blue outline." />
 
-Here's an example of a MIDI to USB interface. Most will come with an LED indicator to show activity. **To check that you've plugged it in correctly, you should see "MIDI In" blinking when you hit a pad**.  
+Here's an example of a MIDI to USB interface. Most will come with an LED indicator to show activity.  
+**To check that you've plugged it in correctly, you should see "MIDI In" blinking when you hit a pad**.  
 ><Image src={miditousb} alt="A MIDI to USB interface." />
 
-**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs. For example, this Scarlett has MIDI connections in the back.  
+**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs.  
+For example, this Scarlett has MIDI connections in the back.  
 ><Image src={midifs} alt="A Focusrite Scarlett's rear, showing a USB port, and 5-DIN MIDI input and output." />
 
 Find whichever way is the most convenient for you then connect your MIDI Drum Kit to your computer.
 
-After that, **right click on Rock Band 3** in RPCS3, then click on “**`Change Custom Configuration`**”.  
+After that, **right click on Rock Band 3** in RPCS3, then click on `Change Custom Configuration`.  
 <Image src={rpcs3customconfigchange} alt="RPCS3's right click menu, showing 'Change Custom Configuration' highlighted." />
 
-After that, go to the "`I/O`" tab.
+After that, go to the `I/O` tab.
 
 <Image src={iod} alt="A screenshot of Rock Band 3's I/O custom settings, showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline." />  
-* ![A tan square with a solid outline](https://rb3pc.milohax.org/images/cust/smalltan.png "Tan Square") : 
-	* 🥁 **Change your "`Emulated MIDI type`" from "`Keyboard`" to "`Drums`", then select your MIDI Drum Kit or MIDI to USB interface in the drop-down menu next to it**.
+* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square") : 
+	* 🥁 **Change your `Emulated MIDI type` from `Keyboard` to `Drums`, then select your MIDI Drum Kit or MIDI to USB interface in the drop-down menu next to it**.
 
-## Mapping
-Default Mapping:
-* `START`: Hihat Pedal, Hihat Pedal, Hihat Pedal, Snare
-* `SELECT`: Hihat Pedal, Hihat Pedal, Hihat Pedal, Snare Rim
-* Song select shortcuts: Hihat Pedal, Hihat Pedal, Hihat Pedal, Kick
+## Combos
+Since your drum kit has no joypad buttons, you have to use combos to access important menus.  
+Do these combos quickly to access the following menus:
+* `START`: Close Hi-Hat Pedal, Close Hi-Hat Pedal, Close Hi-Hat Pedal, Snare
+* `SELECT`: Close Hi-Hat Pedal, Close Hi-Hat Pedal, Close Hi-Hat Pedal, Snare Rim
+* Song select shortcut: Close Hi-Hat Pedal, Close Hi-Hat Pedal, Close Hi-Hat Pedal, Kick
 
+If you want to change these, please refer to the [[additional setup section]](#additional-setup)
+
+## MIDI Reference
 | **MIDI Note#** | **Trigger Type** | **In-Game Action** |
 |:--------:|:-------------------:|:-----------------:|
 | **38**, 31, 34, 37, 39, 40 | Snare | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
@@ -77,31 +86,30 @@ Default Mapping:
 | **44** | Hi-Hat Pedal | Hi-Hat Pedal |
 | **CC#4 (Foot controller)** | Hi-Hat Pedal Position | Allows Hi-Hat pedal to be held closed |
 
-### Additional Setup
-
-You can adjust a variety of options in the `rb3drums.yml` file, located within the `config` folder inside your RPCS3 installation folder.
-Below are the defaults and what each option does.
+## Additional Setup
+You can adjust a variety of options in the `rb3drums.yml` file, located within the `config` folder inside your RPCS3 installation folder.  
+Below are the defaults and what each option does. You will have to reboot the game to apply the settings.
 
 | **Setting** | **Description** |
 |:--------:|:-------------------:|
 | `Pulse width ms: 30` | How long each drum pad hit is "held" for. **You should leave this alone.** |
-| `Minimum velocity: 10` | The minimum velocity (how hard a pad is hit) needed for a signal to be sent. Anything below this number will not send a signal. |
-| `Combo window in milliseconds: 2000` | Determines how long you have to press the Combos for Start, Select, and Kick Hold. |
-| `Stagger cymbal hits: true` | If you hit two cymbals at the same time, one will be delayed by the "Pulse width ms" above. **You should leave this alone.** |
-| `Midi id to note override: ""` | Allows you to remap what each MIDI note does. Read [[Remapping]](#remapping) for more information. |
-| `Combo Start: HihatPedal,HihatPedal,HihatPedal,Snare` | Defines what combo will trigger the Start button |
-| `Combo Select: HihatPedal,HihatPedal,HihatPedal,SnareRim` | Defines what combo will trigger the Select button |
-| `Combo Toggle Hold Kick: HihatPedal,HihatPedal,HihatPedal,Kick` | Defines what combo will trigger the Hold Kick action, for library navigation. |
-| `Midi CC status: 176` | Defines the status byte. Can be notated as `0xB0` as well. **You should leave this alone.** |
-| `Midi CC control number: 4` | Defines the number of the Continuous Controller (CC), which acts as the hi-hat pedal. **You should leave this alone.** |
+| `Minimum velocity: 10` | The minimum velocity (how hard a pad is hit) needed for a signal to be sent.<br>Anything below this number will not send a signal.</br>|
+| `Combo window in milliseconds: 2000` | Determines how long you have to press the Combos for Start, Select, and Kick Hold.<br>Values are in milliseconds. Read [[Combos]](#combos) for more information.</br>|
+| `Stagger cymbal hits: true` | If you hit two cymbals at the same time, one will be delayed by the "Pulse width ms" above.<br>**You should leave this alone.**</br>|
+| `Midi id to note override: ""` | Allows you to remap what each MIDI note does.<br>Read [[Remapping]](#remapping) for more information.</br>|
+| `Combo Start: HihatPedal,HihatPedal,HihatPedal,Snare` | Defines what combo will trigger the Start button.<br>Read [[Combos]](#combos) for more information.</br>|
+| `Combo Select: HihatPedal,HihatPedal,HihatPedal,SnareRim` | Defines what combo will trigger the Select button.<br>Read [[Combos]](#combos) for more information.</br>|
+| `Combo Toggle Hold Kick: HihatPedal,HihatPedal,HihatPedal,Kick` | Defines what combo will trigger the Hold Kick action, for library navigation.<br>Read [[Combos]](#combos) for more information.</br>|
+| `Midi CC status: 176` | Defines the status byte. Can be notated as `0xB0` as well.<br>**You should leave this alone.**</br>|
+| `Midi CC control number: 4` | Defines the number of the Continuous Controller (CC), which acts as the hi-hat pedal.<br>**You should leave this alone.**</br>|
 | `Midi CC threshold: 64` | Defines the middle point the hi-pedal pedal goes from closed to open. |
 | `Midi CC invert threshold: false` | Inverts the range for the hi-hat pedal, mentioned above. |
 
 ### Remapping
 If your MIDI Drum Kit has incompatible mapping, you can remap using `Midi id to note override: ""` with the corrected notes.
 * To do this:
-	* Go to [MIDI Monitor](https://www.midimonitor.com/)
-	* Play the pad you want to replace to find its MIDI Note number ("Note #[number]").
+	* Go to <a href="https://www.midimonitor.com/" target="_blank" rel="noopener noreferrer">[MIDI Monitor]</a>
+	* Play the pad you want to replace to find its MIDI Note number (`Note #[number]`).
 
 The file uses the following note names:
 
@@ -123,9 +131,7 @@ Examples of common replacements:
 * You want to map Open Hi-Hat to Blue cymbal.
 	* `Midi id to note override: "46=Ride"`
 
-In `rb3drums.yml`, you will find `Combo Start`, `Combo Select`, `Combo Toggle Hold Kick`, which allow you to customize the combos to activate their respective buttons.
+[[Back to Controllers]](../../main/)
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
-
-Research by [[Linos]](https://www.youtube.com/@LinosMelendi)  
-Implemented by [[nswarm]](https://github.com/nswarm)
+Implemented by <a href="https://github.com/nswarm" target="_blank" rel="noopener noreferrer">[nswarm]</a>  
+Research by <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>

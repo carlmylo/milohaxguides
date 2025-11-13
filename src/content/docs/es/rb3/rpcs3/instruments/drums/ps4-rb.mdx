@@ -1,0 +1,169 @@
+---
+title: "Batería de Rock Band 4 para PlayStation 4"
+slug: "es/rb3pc/controllers/drums/ps4rb"
+description: "Como configurar tu batería de Rock Band 4 para PS4 en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 5
+  label: PS4 Rock Band 4
+---
+import { Aside } from '@astrojs/starlight/components';
+import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmsxomapping from '@assets/rb3/rpcs3/instruments/maps/drmsxomapping.png';
+import pydl from '@assets/rb3/rpcs3/advanced/rpc/pydl.png';
+import pyinstall from '@assets/rb3/rpcs3/advanced/rpc/pyinstall.png';
+import mina1 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina1.png';
+import mina2 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina2.png';
+import mina3 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina3.png';
+import mina4 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina4.png';
+import mina5 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina5.png';
+import ps41 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps41.png';
+import ps42 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps42.png';
+import ps43 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps43.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/ps4.png" alt="Sistema" title="Sistema"></img></center>
+<center><Image src={rb4drmscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Requiere que descargues y uses los archivos de <a href="https://github.com/yanagiragi/Minatsuki/" target="_blank" rel="noopener noreferrer">[Minatsuki]</a> y <a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus" target="_blank" rel="noopener noreferrer">[Minatsuki-Pro-Drums-Plus]</a>.
+* Necesitas un un receptor de Bluetooth para conectar esta batería a tu computadora.
+    * La latencia puede ser un problema dependiendo de tu receptor de Bluetooth. Puede ser difícil encontrar una calibración buena.
+* Funciona **con o sin** platillos PRO.
+    * Recuerda configurar cuales platillos tienes conectados dentro de Rock Band 3.
+        * `Menu > Opciones > Opciones de Batería`
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Rock Band Pro |
+
+### Configuración inicial
+Primero, vamos a descargar la versión mas actual de <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">[Python 3]</a>.  
+<a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">[Haz click aquí para ir a la pagina de Python 3]</a>.  
+<a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer"><Image src={pydl} alt="La pagina de descarga para Python. El cursor esta sobre 'Download Python 3.12.6.'" /></a>
+
+Cuando termine, abre el instalador.  
+En el instalador:  
+1. Activa <span title="Agregar python.exe a PATH (ruta)">"<code>Add python.exe to PATH</code>"</span>
+2. Click <span title="Instalar ahora">"<code>Install now</code>"</span>  
+<Image src={pyinstall} alt="El instalador de Python. 'Add Python.exe to PATH' ha sido resaltado e activado y el cursor esta sobre 'Install now.'" />
+
+Ahora, ve al <a href="https://github.com/yanagiragi/Minatsuki" target="_blank" rel="noopener noreferrer">[Github de Minatsuki]</a> y descarga el ZIP que contiene el código.  
+<a href="https://github.com/yanagiragi/Minatsuki/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer"><Image src={mina1} alt="La pagina de Minatsuki. El botón de 'Code' fue presionado y el cursor esta sobre la opción de 'Download ZIP.'" /></a>
+Extrae el archivo `.zip` a una carpeta.  
+
+Después de eso, ve al <a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus" target="_blank" rel="noopener noreferrer">[Github de Minatsuki-Pro-Drums-Plus]</a> y descarga el ZIP que contiene el código.  
+<a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer"><Image src={mina2} alt="La pagina de Minatsuki-Pro-Drums-Plus'. El botón de 'Code' fue presionado y el cursor esta sobre la opción de 'Download ZIP.'" /></a>
+
+Combina los archivos de Minatsuki-Pro-Drums-Plus con los archivos de Minatsuki.  
+Después de eso, haz click arriba en la barra de direcciones del Explorador de archivos y escribe `cmd`. Presiona Enter.  
+<Image src={mina3} alt="Una carpeta que tiene los archivos de Minatsuki y Minatsuki-Pro-Drums-Plus combinados. La barra de direcciones dice 'cmd'." />
+
+
+En el intérprete de comandos, escribe `pip install -r requirements.txt` y presiona Enter.
+<Image src={mina4} alt="El intérprete de comandos de Windows. El comando de 'pip install -r requirements.txt' fue escrito y se descargaron los requisitos." />
+
+Después de que se instale eso, escribe `pip install vgamepad` y presiona Enter.  
+<Image src={mina5} alt="El intérprete de comandos de Windows. El comando de 'pip install vgamepad' fue escrito y se descargo" />
+
+Puede ser que también necesitas instalar ViGEm Bus. Puedes descargar esto de <a href="https://vigembusdriver.com/download/" target="_blank" rel="noopener noreferrer">[aquí]</a>.
+
+### Uso
+Sincroniza tu batería al receptor de Bluetooth de tu computadora.
+<Image src={ps41} alt="El menu de Windows para dispositivos de Bluetooth. Muestra una batería de Mad Catz para Rock Band 4." />
+
+Haz doble click en `main_xinput.py`.  
+<Image src={ps42} alt="La carpeta que tiene los archivos de Minatsuki y Minatsuki-Pro-Drums-Plus combinados. El cursor esta sobre el archivo de 'main_xinput.py' y esta elegido" />
+
+Cuando se abra el intérprete de comandos, escribe el numero de tu batería y presiona Enter. Aveces, la batería sale varias veces pero no hay problema. Solo elige una y presiona Enter.  
+<Image src={ps43} alt="El intérprete de comandos de Windows con la script de 'main_xinput.py' abierta. Muestra la batería de Rock Band 4 y otros controles. Un numero de la batería esta escrito y Enter fue presionado." />
+
+Minimiza este programa. **Asegúrate que se quede abierto mientras estas jugando**.
+
+## Mapeo
+
+Solo necesitas elegir la información de control correcta (Handler, Device y Device Class/Type).
+
+<center><Image src={drmsxomapping} alt="Mapping" /></center>
+
+
+<details>
+<summary>"No quiero usar Python."</summary>
+
+Si no quieres usar Python, los platillos no funcionaran y tendrás una experiencia peor.
+
+## Información de control
+
+| Handlers | Devices |
+|:---:|:---:|
+| MMJoystick | Joystick |
+
+| Device Class | Device Subtype |
+|:---:|:---:|
+| Drums | Rock Band Pro |
+
+## Mapeo
+
+|**RPCS3**|**Batería de Rock Band**|
+|:---:|:---:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| L1  | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| Cross | ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons//ps4/x.png "Botón Cross (Cruz)") |
+| Circle | ![Botón Circle (Circulo)](/milohaxguides/assets/instruments/buttons//ps4/o.png "Botón Circle (Circulo)") |
+| Square | ![Botón Square (Cuadro)](/milohaxguides/assets/instruments/buttons//ps4/s.png "Botón Square (Cuadro)") |
+| Triangle | ![Botón Triangle (Triangulo)](/milohaxguides/assets/instruments/buttons//ps4/t.png "Botón Triangle (Triangulo)") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons//ps4/dp.png "Cruceta") |
+| Start | ![Botón de Options](/milohaxguides/assets/instruments/buttons//ps4/opt.png "Botón de Options") |
+| Select | ![Botón de Share](/milohaxguides/assets/instruments/buttons//ps4/shr.png "Botón de Share") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+
+## Perfil
+
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Drums.7z)
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+
+1. Extrae el archivo .7z.
+2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+
+</details>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

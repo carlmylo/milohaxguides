@@ -1,0 +1,196 @@
+---
+title: Baterías con Roll Limitless
+slug: "es/rb3pc/controllers/drums/rolllimitless"
+description: "Como configurar tu batería con un Roll Limitless en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 3
+  label: Roll Limitless
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import rolllimitlesscontroller from '@assets/rb3/rpcs3/instruments/controller/rolllimitlesscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import fwbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/fwbutton.png';
+import startbutton from '@assets/rb3/rpcs3/instruments/setup/rolllimitless/startbutton.png';
+import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
+import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
+import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
+import zadigwarning from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigwarning.png';
+import zadigprogress from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigprogress.png';
+import zadigdone from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigdone.png';
+import protaron from '@assets/rb3/rpcs3/instruments/setup/passthrough/protaron.png';
+import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3playeres.png';
+import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevmanes.png';
+import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanes.png';
+import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanunes.png';
+import joycpl from '@assets/rb3/rpcs3/instruments/setup/gen/joycpl.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import modrldrmsmapping from '@assets/rb3/rpcs3/instruments/maps/modrldrmsmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Sistema" title="Sistema"></img></center>
+<center><Image src={rolllimitlesscontroller} alt="Control" /></center>
+
+<Tabs>
+  <TabItem label="Passthrough (Recomendado)">
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de <span title="Controles">"<code>Pads</code>"</span>!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+	Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+## Configuración
+<Steps>
+1. Pon el adaptador Roll Limitless en modo de actualizar firmware. Necesitas presionar y sostener el botón rectangular que esta mas cercas al puerto de micro USB arriba del adaptador.  
+    <Image src={fwbutton} alt="Un Roll Limitless con el botón de firmware circulado en rojo." />
+
+2. Sigue sosteniendo el botón mientras conectas el adaptador a tu computadora. Si lo hiciste bien, sera detectado como un disco extraíble. 
+
+3. <a href="https://https://rolllimitless.com/september-15th-2024-firmwares/#PS3::~:text=PS3%3A,work" target="_blank" rel="noopener noreferrer">[Descarga la firmware para "PS3" del sitio de Roll Limitless]</a>.
+
+4. Coloca el archivo de firmware en el adaptador mientras esta en modo de actualizar (se mira como un disco extraíble.) Cuando termine de transferir, quita el adaptador de la computadora **seguramente**.
+
+5. Conecta el adaptador de vuelta a la computadora pero, esta vez, presiona y sostén el botón de inicio redondo que esta mas cercas al puerto de USB A.
+    <Image src={startbutton} alt="Un Roll Limitless con el botón de Start circulado en rojo." />
+
+6. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
+
+7. Haz click en <span title="Opciones">"<code>Options</code>"</span> y luego en <span title="Listar todos los dispositivos">"<code>List All Devices</code>"</span>.  
+    <Image src={zadiglistall} alt="Zadig mostrando 'List All Devices' resaltado bajo 'Options'." />
+
+8. Deberías ver una lista de dispositivos ahora. **Elige el Roll Limitless**.  
+En este ejemplo, sale la Guitarra Mustang Pro (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
+    <Image src={zadigsel} alt="Zadig mostrando 'Harmonix RB3 Mustang Guitar for PlayStation® 3' resaltado en la lista de dispositivos." />
+
+9. **Después de seleccionar el dispositivo correcto, deberías ver la opción para reemplazar el controlador.  
+_¡ASEGÚRATE DE QUE SOLO ESTÁS REEMPLAZANDO EL CONTROLADOR DEL INSTRUMENTO PRO DE ROCK BAND 3!_**  
+Haz click en <span title="Reemplazar controlador">"<code>Replace Driver</code>"</span>.  
+    <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
+
+10. Va a parecer una advertencia. **Otra vez, asegúrate que solo estés eligiendo tu Roll Limitless.** Después de haberlo verificado, **haz click en <span title="Si">"<code>Yes</code>"</span>**.  
+    <Image src={zadigwarning} alt="Zadig advirtiendo al usuario que está a punto de modificar un controlador del sistema, con 'Yes' resaltado." />
+
+11. Se instalará el controlador. Como dice el programa, esto puede llevar algunos minutos.  
+    <Image src={zadigprogress} alt="Zadig en medio de una instalando un controlador." />
+
+12. Si todo sale bien, verás este mensaje:  
+    <Image src={zadigdone} alt="Zadig indicando que el controlador se instaló correctamente, con 'Close' resaltado." />
+
+13. **Cierra Zadig** y, con el Roll Limitless todavía conectado, **abre RPCS3** y **abre Rock Band 3**.
+Enciende tu controlador y deberías ver que automáticamente se le asigna un número de jugador.  
+    <Image src={protaron} alt="Una Mustand con el LED del segundo jugador activado" />
+</Steps>
+
+Del mismo modo, en Rock Band 3, verás el instrumento listo para unirse.  
+<Image src={rb3player} alt="Rock Band 3 con una Guitarra Pro lista para unirse." />
+
+Ahora, puedes conectar tu Roll Limitless cuando quieras sin tener que repetir este este proceso.
+
+<details>
+<summary>Desinstalando</summary>
+Aplicando un controlador de Zadig restringirá a aplicaciones que usen Passthrough. Lo bueno es que es fácil revertir esto.
+<Steps>
+1. Abre el menú de Inicio y busca el `Administrador de dispositivos`.  
+Ábrelo.  
+    <Image src={startdevman} alt="El menú de Inicio con un resultado de 'Administrador de dispositivos'." />
+
+2. Baja a la categoría de `Dispositivos de bus seria universal (USB)` y haz click para expandirla.  
+Haz click en el instrumento a cual le modificaste el controlador con Zadig y luego a `Desinstalar dispositivo`.  
+En el ejemplo abajo, se uso la Guitarra Pro (`Harmonix RB3 Mustang Guitar for PlayStation 3®`).  
+    <Image src={devman} alt="El Administrador de dispositivos con un menú despegable abierto. El cursor esta sobre 'Desinstalar dispositivo'." />
+
+3. En la pantalla que se abre, asegúrate de hacer click en `Intenta quitar el controlador para este dispositivo.`  
+4. Después de eso, haz click en `Desinstalar` y eso es todo.  
+    <Image src={devmanun} alt="La pantalla para Desinstalar el dispositivo. 'Intenta quitar el controlador para este dispositivo' esta activado y el cursor esta sobre 'Desinstalar'." />
+</Steps>
+Cuando desconectes y vuelvas a conectar el instrumento, regresara al controlador original.
+
+</details>
+</TabItem>
+  <TabItem label="Mapeo manual">
+<Aside>**¡Se requiere configuración avanzada!**</Aside>
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+* La detección de velocidad (intensidad) no funciona.
+
+### Configuración
+<Steps>
+1. Pon el adaptador Roll Limitless en modo de actualizar firmware. Necesitas presionar y sostener el botón rectangular que esta mas cercas al puerto de micro USB arriba del adaptador.  
+    <Image src={fwbutton} alt="Un Roll Limitless con el botón de firmware circulado en rojo." />
+
+2. Sigue sosteniendo el botón mientras conectas el adaptador a tu computadora. Si lo hiciste bien, sera detectado como un disco extraíble. 
+
+3. <a href="https://rolllimitless.com/firmwares/" target="_blank" rel="noopener noreferrer">[Descarga la firmware "Universal" del sitio de Roll Limitless]</a>.
+
+4. Coloca el archivo de firmware en el adaptador mientras esta en modo de actualizar (se mira como un disco extraíble.) Cuando termine de transferir, quita el adaptador de la computadora **seguramente**.
+
+5. Conecta el adaptador de vuelta a la computadora pero, esta vez, presiona y sostén el botón de inicio redondo que esta mas cercas al puerto de USB A.
+    <Image src={startbutton} alt="Un Roll Limitless con el botón de Start circulado en rojo." />
+
+6. Verifica que Windows detecto el adaptador Roll Limitless correctamente. La manera mas fácil es buscar "Mando" en el menú de Inicio y abrir este panel de control.  
+    <Image src={joycpl} alt="Windows mostrando el panel de control para configurar dispositivos de juego USB." />
+
+7. Si no la detecto, asegúrate que presionaste el Botón de inicio redondo en el adaptador y intenta otra vez.
+</Steps>
+## Mapeo
+Baterías de Rock Band mandan mas de un botón a la vez. Por ejemplo, el Parche Rojo manda `Circle` y `L3`. Toma en cuenta que esto se requiere para que funcionen los platillos correctamente.
+
+| **RPCS3** | **Batería** |
+|:---------:|:---------:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") |
+| R1 | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
+| R3 | Modificador de platillos |
+| D-Pad: Up | Modificador de platillo amarillo |
+| D-Pad: Down | Modificador de platillo azul |
+| L3 | Modificador de parche |
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Roll%20Limitless%20Drums.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+
+1. Extrae el archivo .7z.
+2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<center><Image src={modrldrmsmapping} alt="Mapeo" /></center>
+</TabItem>
+</Tabs>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por Uzny

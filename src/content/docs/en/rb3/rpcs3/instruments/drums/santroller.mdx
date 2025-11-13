@@ -1,48 +1,54 @@
 ---
 title: Santroller Powered Drums
-slug: "en/rb3/controllers/drums/santroller"
+slug: "en/rb3pc/controllers/drums/santroller"
 description: "How to connect and configure your drums using Santroller on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 2
+  label: Santroller
 ---
 import { Aside } from '@astrojs/starlight/components';
-import sancontroller from '@assets/instruments/controller/sancontroller.png';
-import rpcs3nomap from '@assets/instruments/maps/rpcs3nomap.png';
-import initdrms from '@assets/instruments/setup/santroller/initdrms.png';
-import consetdrums from '@assets/instruments/setup/santroller/consetdrums.png';
-import savesan from '@assets/instruments/setup/santroller/savesan.png';
-import rpcs3customconfigchange from '@assets/config/rpcs3customconfigchange.png';
-import iod from '@assets/config/iod.png';
+import sancontroller from '@assets/rb3/rpcs3/instruments/controller/sancontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import initdrms from '@assets/rb3/rpcs3/instruments/setup/santroller/initdrms.png';
+import consetdrums from '@assets/rb3/rpcs3/instruments/setup/santroller/consetdrums.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iod from '@assets/rb3/rpcs3/config/iod.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/santroller.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/santroller.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={sancontroller} alt="Controller" /></center>
 
-<div align="center"><Image src={sancontroller} alt="Controller" /></div>
-
-## NOTES
-<div align="center"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" /></div>
-<div align="center"><b>Do NOT map this instrument via the "Pads" menu!</b></div>
-
-* **Please note that your Santroller Configurator may have different settings, depending on how your drums were connected/modded.** If you purchased your drums pre-modded, contact the seller for more information.
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* **Please note that your Santroller Configurator may have different settings, depending on how your drums were connected/modded.**  
+If you purchased your drums pre-modded or adapter pre-made, contact the seller for more information.
 
 ## Setup
 <Aside>Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
 
-Be sure to [[download the latest version of Santroller]](https://github.com/santroller/santroller/releases/latest).
+Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.
 
 After that, start up Santroller.
 
-In the start screen, select your "`Device to program`", "`Connection Method`", and "`Device to Emulate`". This will depend on what device you're using for your drums. In the tutorial screenshots, it was a "`Raspberry Pi Pico`", "`USB Adapter`", and "`Rock Band Drums`"  respectively.  
+In the start screen, select your `Device to program`, `Connection Method`, and `Device to Emulate`. This will depend on what device you're using for your drums.  
+In the tutorial screenshots, it was a `Raspberry Pi Pico`, `USB Adapter`, and `Rock Band Drums`  respectively.  
 After selecting your options, click on `Configure`.
 
-<Image src={initdrms} alt="Santroller's initial screen. 'Selected Device' is set to Raspberry Pi Pico and Input Type is set to 'Directly Wired'." />
+<Image src={initdrms} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Rock Band Drums'." />
 
-In "`Controller Settings`", change the following:
-* Set "`Device to Emulate`" to "`Rock Band Drums`"
-* Enable "`Use USB Passthrough with RPCS3`"
+In `Controller Settings`, change the following:
+* Set `Device to Emulate` to `Rock Band Drums`
+* Enable `Use USB Passthrough with RPCS3`
 
 <Image src={consetdrums} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
 
-**MAKE SURE YOU CLICK ON "`Save Settings`" before closing the program or you will lose progress!**
+**MAKE SURE YOU CLICK ON `Save Settings` before closing the program or you will lose progress!**
 
 <Image src={savesan} alt="Santroller with a cursor is hovering over 'Save Settings'." />
 
@@ -52,7 +58,7 @@ You can now launch Rock Band 3!
 
 <Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your drums will not connect!!!</Aside>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Research by [[Lynxeption]](https://www.youtube.com/@Lynxeption), [[gonakil1ya]](https://gonakillya.neocities.org), and [[SquidBoy425 (Team Oceanman)]](https://www.youtube.com/@teamOceanman343/videos).  
-Special thanks to [[@amphobius]](https://twitter.com/amphobius) for additional pictures.
+Research by <a href="https://www.youtube.com/@Lynxeption" target="_blank" rel="noopener noreferrer">[Lynxeption]</a>, <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>, and <a href="https://www.youtube.com/@teamOceanman343/videos" target="_blank" rel="noopener noreferrer">[SquidBoy425 (Team Oceanman)]</a>.  
+Special thanks to <a href="https://twitter.com/amphobius" target="_blank" rel="noopener noreferrer">[@amphobius]</a> for additional pictures.

@@ -1,38 +1,42 @@
 ---
 title: Nintendo Wii Guitar Hero Drums (Raphnet)
-slug: "en/rb3/controllers/drums/wiighraph"
+slug: "en/rb3pc/controllers/drums/wiighraph"
 description: "How to setup Wii Guitar Hero drums on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 12
+  label: Wii Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
-import ghdrmscontroller from '@assets/instruments/controller/ghdrmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drmswiighmapping from '@assets/instruments/maps/drmswiighmapping.png';
-import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmswiighmapping from '@assets/rb3/rpcs3/instruments/maps/drmswiighmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
 
 <div align="center">![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
 
-<div align="center"><Image src={ghdrmscontroller} alt="Controller" /></div>
+<center><Image src={ghdrmscontroller} alt="Controller" /></center>
 
-## NOTES
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 <Aside>**Please don't buy new Raphnets in 2025!** They are no longer the go-to solution.</Aside>
 * Velocity sensitivity doesn't seem to work.
 * Can be used to play on Pro Drums to an extent but it's not suggested.
 * Gem colors do not match the pads.
 * This was tested with a Raphnet "Classic controller to USB adapter".
-	* If the controller doesn't work at all, try installing [[Raphnet's management tool]](https://www.raphnet-tech.com/products/adapter_manager/index.php).
+	* If the controller doesn't work at all, try installing <a href="https://www.raphnet-tech.com/products/adapter_manager/index.php" target="_blank" rel="noopener noreferrer">[Raphnet's management tool]</a>.
 * It is strongly recommended to get a V3 adapter instead.
-	* [[Buy one from RetroCultMods (RCM Shop).]](https://shop.retrocultmods.com/products/v3-wii-adapter-for-clone-hero-and-rb4-rock-band-4)
-	* [[Buy one from Etsy.]](https://www.etsy.com/listing/1536358024/)
-* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+	* <a href="https://shop.retrocultmods.com/products/v3-wii-adapter-for-clone-hero-and-rb4-rock-band-4" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (RCM Shop).]</a>
+	* <a href="https://www.etsy.com/listing/1536358024/" target="_blank" rel="noopener noreferrer">[Buy one from Etsy.]</a>
 
 <details>
 <summary>How do I map my drums?</summary>
-**Click on the Pads icon at the top of RPCS3**.  
+**Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
 It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
@@ -73,7 +77,7 @@ Follow the instructions and/or match the assignments below.
 | Select | ![Minus Button](/milohaxguides/assets/instruments/buttons//wii/min.png "Minus Button") |
 | PS Button | ![Home](/milohaxguides/assets/instruments/buttons//wii/home.png "Home") |
 
-<div align="center"><Image src={drmswiighmapping} alt="Mapping" /></div>
+<center><Image src={drmswiighmapping} alt="Mapping" /></center>
 
 ## Profile
 
@@ -90,12 +94,12 @@ After downloading the profile,
 2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
 ><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
-3. After that, you can select the profile in the **“Pads”** menu.  
+3. After that, you can select the profile in the `Pads` menu.  
 ><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
 
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Mapped by [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)
+Mapped by <a href="https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g" target="_blank" rel="noopener noreferrer">[GamerPerson22]</a>

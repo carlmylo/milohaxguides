@@ -1,0 +1,5 @@
+label: Drums
+collapsed: true
+cascade:
+  - collapsed
+order: 1

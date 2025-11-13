@@ -1,0 +1,67 @@
+---
+title: Batería desconocida
+slug: "es/rb3pc/controllers/drums/generic"
+description: "Mapeo general para baterías desconocidas en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 15
+  label: Desconocida
+---
+import mystcontrollers from '@assets/rb3/rpcs3/instruments/controller/mystcontrollers.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/myst.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={mystcontrollers} alt="Control" /></center>
+
+## Notas
+
+* Esta pagina es para baterías desconocidas. Trata diferente Handlers hasta que tu batería se detecte.
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Desconocido | Desconocido |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drum | Desconocido |
+
+## Mapeo
+
+Please note that Rock Band drum kits require modifiers to be bound. If you don't do this, cymbals won't work.
+
+| **RPCS3** | **Batería de Rock Band** | **Batería de Guitar Hero** |
+|:---------:|:-------------------:|:---------------------:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/gh/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/gh/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/gh/bp.png "Parche Azul") |
+| Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") | ![Platillo Amarillo](/milohaxguides/assets/instruments/buttons/drums/gh/yc.png "Platillo Amarillo") |
+| L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/gh/kp.png "Pedal") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") |
+| R1 | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") | ![Platillo Naranja](/milohaxguides/assets/instruments/buttons/drums/gh/oc.png "Platillo Naranja") |
+| R3 | Modificador de platillos | |
+| D-Pad: Up | Modificador de platillo amarillo | |
+| D-Pad: Down | Modificador de platillo azul | |
+| L3 | Modificador de parche | |
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado por [[TheNathannator]](https://ko-fi.com/thenathannator) por parte del proyecto de [[PlasticBand]](https://github.com/TheNathannator/PlasticBand).

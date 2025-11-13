@@ -1,0 +1,114 @@
+---
+title: Configuración rapida
+slug: "es/rb3pc/intro/quickconfig"
+description: La pagina central para configuraciones rápida de RPCS3.
+tableOfContents: false
+sidebar:
+  order: 6
+---
+import quickconf from '@assets/rb3/rpcs3/config/quickconf.gif';
+import { Image } from 'astro:assets';
+
+Ahora que el juego esta en la biblioteca de RPCS3, vamos a descargar unos archivos para mejorar la experiencia.  
+Abajo están los archivos para instalar una configuración rápida. Descarga lo que queda bien con tu computadora.
+
+* [[Configuración recomendada]](/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/recommended_es.zip) - Esta configuración es para computadoras que son igual (o mejor) que [los requisitos recomendados](../requirements#una-computadora).
+    * <a href="/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/recommended.zip" target="_blank" rel="noopener noreferrer">[Configuración recomendada (Ingles)]</a> - Lo mismo que arriba pero el juego estará en Ingles.
+* <a href="/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/minimum_es.zip" target="_blank" rel="noopener noreferrer">[Configuración mínima]</a> - Esta configuración es para computadoras que son igual (o mejor) que [los requisitos mínimos](../requirements#una-computadora).
+    * <a href="/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/minimum.zip" target="_blank" rel="noopener noreferrer">[Configuración mínima (Ingles)]</a> - Lo mismo que arriba pero el juego estará en Ingles.
+
+## Como aplicar el perfil
+Para usar estos archivos, **haz click en las configuración que quieres bajar y luego extrae los archivos en la carpeta donde esta RPCS3**. Las carpetas se combinaran si lo hiciste bien.  
+El ejemplo abajo enseña la configuración recomendada (`recommended.zip`) siendo instalada.  
+<Image src={quickconf} alt="Una animación de 'config' y 'dev_hdd0' de 'recommended.zip' siendo arrastrado a la carpeta de RPCS3." />
+
+<details>
+<summary>Detalles de Configuraciones</summary>
+Si quieres saber mas de los ajustes que hacen estas configuraciones:
+### Recomendada
+
+* **CPU**:
+	* SPU Block Size: Mega
+* **GPU**:
+	* Write Color Buffers
+	* Framelimit: Off
+	* Resolution Scale: 150% (1920x1080)
+	* Anisotropic Filter: 16x
+	* ZCULL Accuracy: Precise (Slowest)
+	* VSync Enabled
+* **Audio**:
+	* Audio Buffer Duration: 32 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 20 µs
+* **Emulator**:
+	* Show trophy popups: Off
+
+### Mínima
+
+* **CPU**:
+	* SPU Block Size: Mega
+	* Preferred SPU Threads: 2
+* **GPU**:
+	* Write Color Buffers
+	* Framelimit: Off
+	* ZCULL Accuracy: Relaxed (Fastest)
+* **Audio**:
+	* Audio Buffer Duration: 100 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 40 µs
+* **Emulator**:
+	* Show trophy popups: Off
+
+### Potato
+
+* **CPU**:
+	* SPU Block Size: Mega
+	* Preferred SPU Threads: 2
+* **GPU**:
+	* Renderer: OpenGL
+	* Write Color Buffers
+	* Framelimit: Off
+	* ZCULL Accuracy: Relaxed (Fastest)
+* **Audio**:
+	* Audio Buffer Duration: 100 ms
+* **I/O**
+	* Keyboard Handler: Basic
+* **Network**:
+	* Network Status: Connected
+	* IP Hosts/Switches: `rb3ps3live.hmxservices.com=45.33.44.103`
+	* PSN Status: RPCN
+	* Enable UPNP: On
+* **Advanced**:
+	* Debug Console Mode: On
+	* Exclusive Fullscreen Mode: Prefer Borderless fullscreen
+	* Driver Wake-Up Delay: 40 µs
+* **Emulator**:
+	* Show trophy popups: Off
+</details>
+
+Ahora solo falta:
+* **<a href="../../controllers/main" target="_blank" rel="noopener noreferrer">[configurar tus instrumentos y controles]</a>**
+* **<a href="../mics" target="_blank" rel="noopener noreferrer">[configurar micrófonos para cantar]</a>**
+* **<a href="../../online/intro" target="_blank" rel="noopener noreferrer">[crear una cuenta de RPCN para jugar en linea y ver/subir clasificaciones]</a>**
+
+## Configuración de baja gama experimental
+* [[Configuración de baja gama]](/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/potato_es.zip) - Esta configuración es la misma que la mínima pero usa OpenGL, diseñada para computadoras que tengan gráficas integradas. Combina esta configuración con fondos negros y sin escenarios para ver si tu computadora puede con Rock Band 3 en RPCS3. **¡No se recomienda al menos que quieras probar!**
+    * [[Configuración de baja gama (Ingles)]](/../../milohaxguides/downloads/rb3/rpcs3/customconfigs/potato.zip) - Lo mismo que arriba pero el juego estará en Ingles.

@@ -1,0 +1,139 @@
+---
+title: Batería MIDI
+slug: "es/rb3pc/controllers/drums/midi"
+description: Como configurar una batería MIDI en RPCS3.
+prev: false
+next: false
+sidebar:
+  order: 1
+  label: MIDI
+---
+import { Aside } from '@astrojs/starlight/components';
+import mididrumscontroller from '@assets/rb3/rpcs3/instruments/controller/mididrumscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import usbdrums from '@assets/rb3/rpcs3/instruments/setup/midi/usbdrums.png';
+import mididrums from '@assets/rb3/rpcs3/instruments/setup/midi/mididrums.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iod from '@assets/rb3/rpcs3/config/iod.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Sistema" title="Sistema"></img></center>
+<center><Image src={mididrumscontroller} alt="Control" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+¡NO mapeés este instrumento por el menú de <span title="Controles">"<code>Pads</code>"</span>!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+	Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Tu batería MIDI necesita estar:
+	* **en canal de MIDI 10.**
+	* **estar configurada a el mapeo de GM.**  
+Esto debe de ser lo que viene por defecto con mayoría de las baterías MIDI. Consulta el manual de tu batería para estar seguro.
+* <span title="Cruceta">"<code>D-Pad</code>"</span>: Izquierda y <span title="Cruceta">"<code>D-Pad</code>"</span>: Derecha no funcionan y no pueden ser usadas. Por esto, no vas a poder ajustar la velocidad de modo de practica o navegar por los entrenadores.
+	* Puedes comprar <a href="https://rolllimitless.com/roll-limitless/" target="_blank" rel="noopener noreferrer">[Roll Limitless]</a> para evitar esto.
+		* Igual puedes conseguir un <a href="https://rolllimitless.com/roll-limitless-mini/" target="_blank" rel="noopener noreferrer">[Roll Limitless Mini]</a> si no necesitas una conexión de MIDI.
+	* También puedes conseguir un <a href="https://shop.retrocultmods.com/products/ace-midi-usb-adapter-for-rock-band-and-guitar-hero" target="_blank" rel="noopener noreferrer">[adaptador ACE de RetroCultMods]</a> para evitar esto.
+		* <a href="https://www.etsy.com/listing/1884328942" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+
+## Instrucciones
+
+**Si tu batería MIDI tiene un puerto de USB**, solo necesitas **conectarla a tu computadora**.  
+><Image src={usbdrums} alt="El cerebro de la batería MIDI, mostrando un puerto de USB" />
+
+**Si tu batería MIDI tiene un puerto de USB**, solo necesitas **conectarla a tu computadora**.  
+><Image src={mididrums} alt="El cerebro de la batería MIDI, mostrando un puerto MIDI estilo DIN de cinco pines." />
+
+Aquí esta un ejemplo de un adaptador de MIDI a USB. Mayoría tiene una luz LED integrada para mostrar activad.  
+**Para verificar que esta todo enchufado correctamente, debes de ver <span title="Entrada de MIDI">"MIDI In"</span> parpadeando cuando le pegues a un parche**.  
+><Image src={miditousb} alt="Una interfaz de MIDI a USB" />
+
+**Si tienes una interfaz de audio, puede ser que ya tengas un puerto de MIDI** para tu computadora, ya que unas interfaces tienen puertos de MIDIs integrados.  
+Por ejemplo, esta Scarlett tiene conexiones MIDI por detrás.  
+><Image src={midifs} alt="El posterior de una Focusrite Scarlett, mostrando un puerto de USB y un salida/entrada MIDI por puerto DIN de cinco pines." />
+
+Decide cual manera es mas conveniente para ti y conecta tu batería MIDI a tu computadora.
+
+Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en <span title="Cambiar configuración personalizada">"<code>Change Custom Configuration</code>"</span>**.  
+<Image src={rpcs3customconfigchange} alt="El menú de clic derecho de RPCS3, mostrando 'Change Custom Configuration' resaltado." />
+
+After that, go to the `I/O` tab.
+
+<Image src={iod} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />  
+* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square") : 
+	* 🥁 **Cambia el <span title="Tipo de MIDI emulado">"<code>Emulated MIDI type</code>"</span>** **de <span title="Teclado">"<code>Keyboard</code>"</span>** **a <span title="Batería">"<code>Drums</code>"</span>** **y selecciona tu batería o interfaz MIDI en el menú desplegable junto a él**.
+
+## Combos
+Ya que baterías no tienen botones de mandos, necesitas usar ciertos combos para poder entrar a menús importantes.  
+Aquí están los combos:
+* `START`: Cierra el Hi-Hat, cierra el Hi-Hat, cierra el Hi-Hat, tarola
+* `SELECT`: Cierra el Hi-Hat, cierra el Hi-Hat, cierra el Hi-Hat, aro de tarola
+* Atajo para escoger canciones: cierra el Hi-Hat, cierra el Hi-Hat, cierra el Hi-Hat, bombo
+
+Si quieres cambiar esto, mira la [[sección de configuración adicional]](#configuración-adicional)
+
+## Referencia MIDI
+| **Numero de nota MIDI** | **Parte de batería** | **Acción en Rock Band** |
+|:--------:|:-------------------:|:-----------------:|
+| **38**, 31, 34, 37, 39, 40 | Tarola | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| **48**, 50 | Tom Alto | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| **45**, 50 | Tom Bajo | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| **41**, 43 | Tom de piso | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| **22**, 26, 42, 46, 54 | Platillo Hi-Hat | ![Platillo Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yc.png "Platillo Amarillo") |
+| **51**, 53, 56, 59 | Platillo Ride | ![Platillo Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bc.png "Platillo Azul") |
+| **49**, 52, 55, 57 | Platillo Crash | ![Platillo Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gc.png "Platillo Verde") |
+| **33**, 35, 36 | Pedal de bombo | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| **44** | Pedal de Hi-Hat | Pedal de Hi-Hat |
+| **CC#4 (Control de pie)** | Posición del pedal de Hi-Hat | Deja cerrar/abrir la Hi-Hat |
+
+## Configuración adicional
+Puedes ajustar varias cosas en el archivo `rb3drums.yml`, que esta colocado en la carpeta llamada `config` dentro de donde tienes RPCS3.  
+Abajo esta lo que hace cada opción. Necesitaras reiniciar el juego para que tus ajustes tomen efecto.
+
+| **Ajuste** | **Descripción** |
+|:----------:|:---------------:|
+| `Pulse width ms: 30` | Duración (en MS) de cada nota en la batería. **Deja esto como esta.** |
+| `Minimum velocity: 10` | La velocidad (intensidad) mínima para que una nota sea detectada.<br>Cualquier nota con velocidad menos de este valor no va ser contada.</br>|
+| `Combo window in milliseconds: 2000` | Cuanto tiempo tienes para completar los combos de `START`, `SELECT` y el atajo para escocer canciones.<br>Valores están en milisegundos. Lee [[Combos]](#combos) para mas información.</br>|
+| `Stagger cymbal hits: true` | Si le pegas a dos platillos al mismo tiempo, uno va ser demorado por el tiempo que tiene puesto en `Pulse width ms`.<br>**Deja esto como esta.**</br>|
+| `Midi id to note override: ""` | Esto es para remapear lo que hace cada nota MIDI.<br>Lee [[Remapeando]](#remapeando) para mas información.</br>|
+| `Combo Start: HihatPedal,HihatPedal,HihatPedal,Snare` | Este es el combo que emula el botón `START`.<br>Lee [[Combos]](#combos) para mas información.</br>|
+| `Combo Select: HihatPedal,HihatPedal,HihatPedal,SnareRim` | Este es el combo que emula el botón `SELECT`.<br>Lee [[Combos]](#combos) para mas información.</br>|
+| `Combo Toggle Hold Kick: HihatPedal,HihatPedal,HihatPedal,Kick` | Este es el combo que emula el atajo para escocer canciones.<br>Lee [[Combos]](#combos) para mas información.</br>|
+| `Midi CC status: 176` | El byte que determina el estatus. Puede ser notado como `0xB0`.<br>**Deja esto como esta.**</br>|
+| `Midi CC control number: 4` | El control continuo (CC) que esta a cargo del pedal de Hi-Hat.<br>**Deja esto como esta.**</br>|
+| `Midi CC threshold: 64` | Esto es el punto medio del pedal de Hi-Hat, que separa si esta cerrado o abierto. |
+| `Midi CC invert threshold: false` | Si lo cambias a `true`, invierte el punto de pedal mencionado arriba. |
+
+### Remapeando
+Si tu batería tiene partes que necesitan ser cambiadas, puedes usar `Midi id to note override: ""` para corregir notas.
+* Para hacer esto:
+	* Ve al sitio <a href="https://www.midimonitor.com/" target="_blank" rel="noopener noreferrer">[MIDI Monitor]</a>
+	* Toca la parte que quieres re-configurar para encontrar su numero de nota MIDI (`Note #[numero]`).
+
+El archivo usa estos nombres para notas:
+
+<span title="Bombo">"<code>Kick</code>"</span>  
+<span title="Pedal de Hi-Hat">"<code>HihatPedal</code>"</span>  
+<span title="Tarola">"<code>Snare</code>"</span>  
+<span title="Aro de tarola">"<code>SnareRim</code>"</span>  
+<span title="Tom alto">"<code>HiTom</code>"</span>  
+<span title="Tom bajo">"<code>LowTom</code>"</span>  
+<span title="Tom de piso">"<code>FloorTom</code>"</span>  
+<span title="Pedal de Hi-Hat abierto">"<code>HihatWithPedalUp</code>"</span>  
+`Hihat`  
+`Ride`  
+`Crash`
+
+Ejemplos de cambios comunes:
+* El platillo azul esta configurado a `Note #51` y el platillo verde esta configurado a `Note #49` pero tu batería los tiene al revés.
+	* `Midi id to note override: "49=Ride,51=Crash"` va a reversar los platillos para que estén sean mejor para Rock Band 3.
+* Quieres usar tu Hi-Hat cerrada para amarillo y Hi-Hat abierta para azul.
+	* `Midi id to note override: "46=Ride"`
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Implementado por <a href="https://github.com/nswarm" target="_blank" rel="noopener noreferrer">[nswarm]</a>  
+Investigación por <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>

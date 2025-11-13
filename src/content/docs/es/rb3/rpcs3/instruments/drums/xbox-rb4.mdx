@@ -1,0 +1,143 @@
+---
+title: "Batería de Rock Band 4 para Xbox One"
+slug: "es/rb3pc/controllers/drums/xbrb"
+description: "Como configurar tu batería de Rock Band 4 para Xbox One en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 4
+  label: Xbox One Rock Band 4
+---
+import { Aside } from '@astrojs/starlight/components';
+import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import gameinput from '@assets/rb3/rpcs3/instruments/setup/rb4/gameinput.png';
+import drmsxomapping from '@assets/rb3/rpcs3/instruments/maps/drmsxomapping.png';
+import drmsxboxrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxboxrbmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/xbx.png" alt="Sistema" title="Sistema"></img></center>
+<center><Image src={rb4drmscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Requiere que descargues y instales **<a href="https://github.com/TheNathannator/RB4InstrumentMapper/blob/main/README.es.md" target="_blank" rel="noopener noreferrer">[RB4InstrumentMapper]</a>** con ViGEmBus.
+* Usuarios de **Linux** pueden instalar los <a href="https://github.com/dlundqvist/xone" target="_blank" rel="noopener noreferrer">[controladores de kernel de `xone`]</a> para usar periféricos de Xbox One. Toma nota que esta pagina y sus instrucciones están en Ingles.
+* Necesitas un Adaptador de Xbox inalámbrico para Windows para conectar esta batería a tu computadora.  
+    ![Adaptador inalámbrico para Windows](/milohaxguides/assets/instruments/adapters/xbone.png "Adaptador inalámbrico para Windows")  
+* Funciona **con o sin** platillos PRO.
+    * Recuerda configurar cuales platillos tienes conectados dentro de Rock Band 3.
+        * `Menu > Opciones > Opciones de Batería`
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Rock Band Pro |
+
+## Configuración adicional
+
+Por favor lee la documentación de RB4InstrumentMapper.  
+<a href="https://github.com/TheNathannator/RB4InstrumentMapper/blob/main/README.md" target="_blank" rel="noopener noreferrer">[Haz click aquí para leerla]</a>.
+
+<details>
+<summary>**¿Tienes problemas conectando tu instrumento para Xbox One?**</summary>
+
+1. Ve a `Inicio` > `Configuración`  > `Aplicaciones` > `Aplicaciones instaladas`  
+2. Busca `Microsoft GameInput` y desinstala la versión mas actual.  
+Toma en cuenta que se puede reinstalar después de un reinicio. Estamos buscando soluciones mejores.  
+
+<Image src={gameinput} alt="Microsoft GameInput en la lista de aplicaciones instaladas, siendo malo y rompiendo instrumentos." />
+</details>
+
+## Mapeo
+
+### Controller Emulation Mode: ViGEmBus (RPCS3 compatibility)
+
+Este es el modo recomendado porque no requiere configuración adicional. Solo requiere que elijes la información de control correcta (Handler, Device y Device Class/Type).
+
+<center><Image src={drmsxomapping} alt="Mapping" /></center>
+
+<details>
+<summary>Controller Emulation Mode: ViGEmBus</summary>
+
+Esto no es recomendado porque requiere muchos ajustes manuales. Deberías usar el modo **ViGEmBus (RPCS3 compatibility)**.
+
+#### Mapeo
+
+By default, XInput has most things bound correctly. You only need to remap the following:
+
+| **RPCS3** | **XInput** | **Batería** |
+|:---:|:---:|:---:|
+| R1  | ![Palanca izquierda presionada](/milohaxguides/assets/instruments/buttons/360/lsc.png "Palanca izquierda presionada") | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
+| L3  | ![Palanca derecha presionada](/milohaxguides/assets/instruments/buttons/360/rsc.png "Palanca derecha presionada") | Modificador de parche |
+| R3  | ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Botón Bumper Derecho") | Modificador de platillos |
+
+### Mapeo avanzado
+
+* Baterías de Rock Band mandan mas de un botón a la vez. Por ejemplo, el Parche rojo manda "`B`" y "`Palanca izquierda presionada`" (que se convierten a "`Circle`" y "`L3`".) Toma en cuenta que esto se requiere para que funcionen los platillos correctamente.
+    * Recomendamos que uses un mando de Xbox para mapear todo y después que cambies el XInput Device a tu batería de Rock Band para Xbox One.
+* Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
+
+| **RPCS3** | **Batería** |
+|:---:|:---:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| R3  | Modificador de platillos |
+| D-Pad: Up | Modificador de platillo amarillo |
+| D-Pad: Down | Modificador de platillo azul |
+| L3  | Modificador de parche |
+| L1  | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| R1  | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
+| Cross | ![Botón A](/milohaxguides/assets/instruments/buttons/xbox/a.png "Botón A") |
+| Circle | ![Botón B](/milohaxguides/assets/instruments/buttons/xbox/b.png "Botón B") |
+| Square | ![Botón X](/milohaxguides/assets/instruments/buttons/xbox/x.png "Botón X") |
+| Triangle | ![Botón Y](/milohaxguides/assets/instruments/buttons/xbox/y.png "Botón Y") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+
+<Image src={drmsxboxrbmapping} alt="Mapping" />
+
+### Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+
+1. Extrae el archivo .7z.
+2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

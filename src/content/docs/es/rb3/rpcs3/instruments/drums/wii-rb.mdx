@@ -1,0 +1,110 @@
+---
+title: Batería de Rock Band para Nintendo Wii
+slug: "es/rb3pc/controllers/drums/wiirb"
+description: "Como configurar tu batería de Rock Band para Nintendo Wii en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 8
+  label: Wii Rock Band
+---
+import { Aside } from '@astrojs/starlight/components';
+import wiirbdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmswiirbmapping from '@assets/rb3/rpcs3/instruments/maps/drmswiirbmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
+
+<center><Image src={wiirbdrmscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Las baterías de Rock Band 1 pueden ser conectadas por USB. Las baterías de Rock Band 1 son blancas con parches grises y no tienen conectores para platillos. 
+* Las baterías de Rock Band 2 (y después) **requieren su receptor propio para conectarse.**  
+Los receptores de Rock Band 2 y The Beatles: Rock Band son intercambiables y compatible con sus revisiones.  
+![Receptor de batería de Rock Band para Nintendo Wii](/milohaxguides/assets/instruments/adapters/wiidrumsrb2.png "Receptor de batería de Rock Band para Nintendo Wii")
+![Receptor de batería de The Beatles: Rock Band para Nintendo Wii](/milohaxguides/assets/instruments/adapters/wiidrumsbeatles.png "Receptor de batería de The Beatles: Rock Band para Nintendo Wii")
+* Los adaptadores de Rock Band MIDI PRO para Nintendo Wii pueden ser conectados por USB.
+* Funciona **con o sin** platillos PRO.
+	* Recuerda configurar cuales platillos tienes conectados dentro de Rock Band 3.
+		* `Menu > Opciones > Opciones de Batería`
+* La detección de velocidad (intensidad) no funciona.
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de controls
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Rock Band Pro |
+
+## Mapeo
+
+* Baterías de Rock Band mandan mas de un botón a la vez. Toma en cuenta que esto se requiere para que funcionen los platillos correctamente.
+* Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
+
+| **RPCS3**    | **Batería de Rock Band** |
+|:--------:|:-------------------:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| R3 | Modificador de platillos |
+| L3 | Modificador de parche |
+| L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| R1 | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
+| Cross | ![Botón A](/milohaxguides/assets/instruments/buttons//wii/a.png "Botón A") |
+| Circle | ![Botón B](/milohaxguides/assets/instruments/buttons//wii/b.png "Botón B") |
+| Square | ![Botón 1](/milohaxguides/assets/instruments/buttons//wii/1.png "Botón 1") |
+| Triangle | ![Botón 2](/milohaxguides/assets/instruments/buttons//wii/2.png "Botón 2") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons//wii/dpad.png "Cruceta") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+| Start | ![Botón Plus](/milohaxguides/assets/instruments/buttons//wii/plu.png "Botón Plus") |
+| Select | ![Botón Minus](/milohaxguides/assets/instruments/buttons//wii/min.png "Botón Minus") |
+
+<center><Image src={drmswiirbmapping} alt="Mapping" /></center>
+
+## Perfil
+
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Wii%20Rock%20Band%20Drums.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+
+1. Extrae el archivo .7z.
+2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://bsky.app/profile/shny-scott.is.sqrk.ing" target="_blank" rel="noopener noreferrer">[scott0852]</a>

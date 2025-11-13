@@ -1,0 +1,91 @@
+---
+title: Batería de Guitar Hero para Xbox 360
+slug: "es/rb3pc/controllers/drums/360gh"
+description: "Como configurar tu batería de Guitar Hero para Xbox 360 en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 12
+  label: Xbox 360 Guitar Hero
+---
+import { Aside } from '@astrojs/starlight/components';
+import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drms360ghmapping from '@assets/rb3/rpcs3/instruments/maps/drms360ghmapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={ghdrmscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* Esta batería **requieren un Receptor USB Inalámbrico Gamepad PC Adaptador Para Xbox 360 para conectarse a la computadora.**  
+![Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360](/milohaxguides/assets/instruments/adapters/360.png "Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360")
+	¿Necesitas uno?
+	* [[Compra uno de RetroCultMods (RCM Shop)]](https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc)
+	* <a href="https://rolllimitless.com/xbox-360-wireless-receiver/" target="_blank" rel="noopener noreferrer">[Compra uno de Roll Limitless]</a>
+	* [[Compra uno de Amazon]](https://www.amazon.com/dp/B076GZFLR3)
+	* ¡Mayoría de los Receptores USB Inalámbrico Gamepad PC Adaptador Para Xbox 360 funcionan!
+* La detección de velocidad (intensidad) no funciona.
+* Es posible jugar Batería PRO, pero no se recomienda.
+* Los colores de notas no son iguales a los parches de este control.
+
+<details>
+<summary>¿Como configuro mi batería?</summary>
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Drums | Guitar Hero |
+
+## Mapeo
+
+**Todo esta configurado bien por defecto. No tienes que remapear nada.**
+
+<center><Image src={drms360ghmapping} alt="Mapping" /></center>
+
+<details>
+<summary>Mapeo avanzado</summary>
+
+### Mapeo:
+
+| **RPCS3** | **Batería** |
+|:---:|:---:|
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/gh/gp.png "Parche Verde") |
+| Circle | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/gh/rp.png "Parche Rojo") |
+| Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/gh/bp.png "Parche Azul") |
+| Triangle | ![Platillo Amarillo](/milohaxguides/assets/instruments/buttons/drums/gh/yc.png "Platillo Amarillo") |
+| R1  | ![Platillo Naranja](/milohaxguides/assets/instruments/buttons/drums/gh/oc.png "Platillo Naranja") |
+| L1  | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/gh/kp.png "Pedal") |
+| Cross | ![Botón A](/milohaxguides/assets/instruments/buttons/360/a.png "Botón A") |
+| Circle | ![Botón B](/milohaxguides/assets/instruments/buttons/360/b.png "Botón B") |
+| Square | ![Botón X](/milohaxguides/assets/instruments/buttons/360/x.png "Botón X") |
+| Triangle | ![Botón Y](/milohaxguides/assets/instruments/buttons/360/y.png "Botón Y") |
+| D-Pad | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") |
+| Left Stick | ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/360/ls.png "Palanca Izquierda") |
+| Start | ![Botón Start](/milohaxguides/assets/instruments/buttons/360/start.png "Botón Start") |
+| Select | ![Botón Back](/milohaxguides/assets/instruments/buttons/360/back.png "Botón Back") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
+</details>
+
+Mapeado por [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)
+
+[[Regresar a la lista de instrumentos]](../../main/)

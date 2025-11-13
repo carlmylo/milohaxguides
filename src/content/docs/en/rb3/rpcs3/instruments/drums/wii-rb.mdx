@@ -1,25 +1,35 @@
 ---
 title: Nintendo Wii Rock Band Drums
-slug: "en/rb3/controllers/drums/wiirb"
+slug: "en/rb3pc/controllers/drums/wiirb"
 description: "How to setup Wii Rock Band drums on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 8
+  label: Wii Rock Band
 ---
 import { Aside } from '@astrojs/starlight/components';
-import wiirbdrmscontroller from '@assets/instruments/controller/wiirbdrmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drmswiirbmapping from '@assets/instruments/maps/drmswiirbmapping.png';
-import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import wiirbdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmswiirbmapping from '@assets/rb3/rpcs3/instruments/maps/drmswiirbmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
 
 <div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
 
-<div align="center"><Image src={wiirbdrmscontroller} alt="Controller" /></div>
+<center><Image src={wiirbdrmscontroller} alt="Controller" /></center>
 
-## NOTES
-
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* Rock Band 1 Drums can be connected via USB. Rock Band 1 drums are white with grey pads and lack the connectors for cymbals. 
+* Rock Band 2 (and later) Drums **require their respective drum dongles to connect to your computer.**  
+Rock Band 2 and The Beatles: Rock Band drum dongles are compatible with either revisions.  
+![Nintendo Wii Rock Band Drums Dongle](/milohaxguides/assets/instruments/adapters/wiidrumsrb2.png "Nintendo Wii Rock Band Drums Dongle")
+![Nintendo Wii The Beatles: Rock Band Drums Dongle](/milohaxguides/assets/instruments/adapters/wiidrumsbeatles.png "Nintendo Wii The Beatles: Rock Band Drums Dongle")
+* Rock Band MIDI PRO Adapters for Wii can be connected via USB.
 * Works **with or without** the Pro Cymbal expansions.
 	* Make sure to configure which cymbals are connected within Rock Band 3.
 		* `Menu > Options > Drum Options`
@@ -27,7 +37,7 @@ import { Image } from 'astro:assets';
 
 <details>
 <summary>How do I map my drums?</summary>
-**Click on the Pads icon at the top of RPCS3**.  
+**Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
 It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
@@ -49,6 +59,7 @@ Follow the instructions and/or match the assignments below.
 ## Mapping
 
 * Rock Band Drums send multiple button presses out at once. Keep in mind these are needed to the emulator to tell your cymbals apart.
+* To bind multiple buttons to one RPCS3 button, hold Shift then click on the RPCS3 button you want to assign multiple buttons to.
 
 | **RPCS3**    | **Rock Band Drums** |
 |:--------:|:-------------------:|
@@ -59,7 +70,7 @@ Follow the instructions and/or match the assignments below.
 | R3 | Cymbal Modifier |
 | L3 | Pad Modifier |
 | L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
-| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Second Foot Pedal") |
 | Cross | ![A Button](/milohaxguides/assets/instruments/buttons//wii/a.png "A Button") |
 | Circle | ![B Button](/milohaxguides/assets/instruments/buttons//wii/b.png "B Button") |
 | Square | ![1 Button](/milohaxguides/assets/instruments/buttons//wii/1.png "1 Button") |
@@ -69,7 +80,7 @@ Follow the instructions and/or match the assignments below.
 | Start | ![Plus Button](/milohaxguides/assets/instruments/buttons//wii/plu.png "Plus Button") |
 | Select | ![Minus Button](/milohaxguides/assets/instruments/buttons//wii/min.png "Minus Button") |
 
-<div align="center"><Image src={drmswiirbmapping} alt="Mapping" /></div>
+<center><Image src={drmswiirbmapping} alt="Mapping" /></center>
 
 ## Profile
 
@@ -86,12 +97,12 @@ After downloading the profile,
 2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
 ><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
-3. After that, you can select the profile in the **“Pads”** menu.  
+3. After that, you can select the profile in the `Pads` menu.  
 ><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
 
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Mapped by [[scott0852]](https://bsky.app/profile/shny-scott.is.sqrk.ing)
+Mapped by <a href="https://bsky.app/profile/shny-scott.is.sqrk.ing" target="_blank" rel="noopener noreferrer">[scott0852]</a>

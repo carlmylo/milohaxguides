@@ -1,0 +1,5 @@
+label: Empezando
+collapsed: true
+cascade:
+  - collapsed
+order: 1

@@ -1,43 +1,48 @@
 ---
 title: Xbox 360 Rock Band Drums
-slug: "en/rb3/controllers/drums/360rb"
+slug: "en/rb3pc/controllers/drums/360rb"
 description: "How to setup Xbox 360 Rock Band drums on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 7
+  label: Xbox 360 Rock Band
 ---
 import { Aside } from '@astrojs/starlight/components';
-import x360RBDrums from '@assets/instruments/controller/360rbdrmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drmsxboxrbmapping from '@assets/instruments/maps/drmsxboxrbmapping.png';
-import instrepoinstall from '@assets/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/instruments/rpcs3padprofile.png';
+import x360RBDrums from '@assets/rb3/rpcs3/instruments/controller/360rbdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drmsxboxrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxboxrbmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={x360RBDrums} alt="Controller" /></center>
 
-<div align="center"><Image src={x360RBDrums} alt="Controller" /></div>
-
-## NOTES
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
 * Rock Band 1 Drums can be connected via USB. Rock Band 1 drums are black with grey pads and lack the connectors for cymbals. 
 
 * Rock Band 2 (and later) Drums **require an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
 ![Xbox 360 Wireless Gaming Receiver for Windows](/milohaxguides/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
 	Need one?
-	* [[Buy one from RetroCultMods (RCM Shop)]](https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc)
-	* [[Buy one from Roll Limitless]](https://rolllimitless.com/xbox-360-wireless-receiver/)
-	* [[Buy one from Amazon]](https://www.amazon.com/dp/B076GZFLR3)
+	* <a href="https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (RCM Shop)]</a>
+	* <a href="https://rolllimitless.com/xbox-360-wireless-receiver/" target="_blank" rel="noopener noreferrer">[Buy one from Roll Limitless]</a>
+	* <a href="https://www.amazon.com/dp/B076GZFLR3" target="_blank" rel="noopener noreferrer">[Buy one from Amazon]</a>
 	* Please note that any generic Xbox 360 Wireless Gaming Receiver should work fine!
+* Rock Band MIDI PRO Adapters for Xbox 360 can be connected via USB.
 * Works **with or without** the Pro Cymbal expansions.
 	* Make sure to configure which cymbals are connected within Rock Band 3.
 		* `Menu > Options > Drum Options`
 * Velocity sensitivity doesn't seem to work.
-* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as <a href="https://rb3pc.milohax.org/ctrls#gamepads" target="_blank" rel="noopener noreferrer">[a typing keyboard or a gamepad]</a>.
 
 <details>
 <summary>How do I map my drums?</summary>
-**Click on the Pads icon at the top of RPCS3**.  
+**Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
 It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
@@ -62,20 +67,17 @@ By default, XInput has most things bound correctly. You only need to remap the f
 
 | **RPCS3** | **XInput** | **Drums** |
 |:--------:|:-----------:|:-----------:|
-| R1 | ![Left Stick Click](/milohaxguides/assets/instruments/buttons/360/lsc.png "Left Stick Click") | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") | 
+| R1 | ![Left Stick Click](/milohaxguides/assets/instruments/buttons/360/lsc.png "Left Stick Click") | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Second Foot Pedal") | 
 | L3 | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | Pad Modifier | 
 | R3 | ![Right Bumper](/milohaxguides/assets/instruments/buttons/360/rb.png "Right Bumper") | Cymbal Modifier |
 
-* Rock Band Drums send multiple button presses out at once. For example, a Red pad will send "`B`" and "`Right Stick Click`" (which translates to "`Circle`" and "`L3`".) Keep in mind these are needed to the emulator to tell your cymbals apart.
+* Rock Band Drums send multiple button presses out at once. For example, a Red pad will send `B` and `Right Stick Click` (which translates to `Circle` and `L3`.) Keep in mind these are needed to the emulator to tell your cymbals apart.
 	* It's strongly suggested to bind an Xbox controller like the Mapping screenshot below then swapping the Device to your Xbox 360 Rock Band Drums.
 
-<div align="center"><Image src={drmsxboxrbmapping} alt="Mapping" /></div>
+<center><Image src={drmsxboxrbmapping} alt="Mapping" /></center>
 
 <details>
-<summary>Advanced Mapping</summary>
-
-#### Profile
-
+<summary>Profile</summary>
 [[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
 
 <Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
@@ -90,9 +92,10 @@ After downloading the profile,
 ><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
 
 Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+</details>
 
-#### Bindings
-
+<details>
+<summary>Advanced Mapping</summary>
 * To bind multiple buttons to one RPCS3 button, hold Shift then click on the RPCS3 button you want to assign multiple buttons to.
 
 | **RPCS3** | **Rock Band Drums** |
@@ -106,7 +109,7 @@ Most of the time, these controller profiles should work out of the box. If they 
 | D-Pad: Down | Blue Cymbal Modifier |
 | L3 | Pad Modifier |
 | L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
-| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Second Foot Pedal") |
+| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Second Foot Pedal") |
 | Cross | ![A Button](/milohaxguides/assets/instruments/buttons/360/a.png "A Button") |
 | Circle | ![B Button](/milohaxguides/assets/instruments/buttons/360/b.png "B Button") |
 | Square | ![X Button](/milohaxguides/assets/instruments/buttons/360/x.png "X Button") |
@@ -115,6 +118,6 @@ Most of the time, these controller profiles should work out of the box. If they 
 | PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
 </details>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
 
-Mapped by [[gonakil1ya]](https://gonakillya.neocities.org) and [[Jnack]](https://www.youtube.com/@jnackmclain)
+Mapped by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a> and <a href="https://www.youtube.com/@jnackmclain" target="_blank" rel="noopener noreferrer">[Jnack]</a>

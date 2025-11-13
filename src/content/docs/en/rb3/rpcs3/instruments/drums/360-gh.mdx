@@ -1,22 +1,26 @@
 ---
 title: Xbox 360 Guitar Hero Drums
-slug: "en/rb3/controllers/drums/360gh"
+slug: "en/rb3pc/controllers/drums/360gh"
 description: "How to setup Xbox 360 Guitar Hero drums on RPCS3."
 tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 10
+  label: Xbox 360 Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
-import ghdrmscontroller from '@assets/instruments/controller/ghdrmscontroller.png';
-import rpcs3pad from '@assets/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/instruments/rpcs3padprofadd.png';
-import padlegend from '@assets/instruments/padlegend.png';
-import drms360ghmapping from '@assets/instruments/maps/drms360ghmapping.png';
+import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import drms360ghmapping from '@assets/rb3/rpcs3/instruments/maps/drms360ghmapping.png';
 import { Image } from 'astro:assets';
 
-<div align="center"><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></div>
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={ghdrmscontroller} alt="Controller" /></center>
 
-<div align="center"><Image src={ghdrmscontroller} alt="Controller" /></div>
-
-## NOTES
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
 * This instrument **requires an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
 ![Xbox 360 Wireless Gaming Receiver for Windows](/milohaxguides/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
@@ -55,7 +59,7 @@ Follow the instructions and/or match the assignments below.
 
 **By default, everything is bound correctly. You don't need to remap anything or download a profile.**
 
-<div align="center"><Image src={drms360ghmapping} alt="Mapping" /></div>
+<center><Image src={drms360ghmapping} alt="Mapping" /></center>
 
 <details>
 <summary>Advanced Mapping</summary>
@@ -81,6 +85,6 @@ Follow the instructions and/or match the assignments below.
 | PS Button | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
 </details>
 
-Research by [[GamerPerson22]](https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g)
+Research by <a href="https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g" target="_blank" rel="noopener noreferrer">[GamerPerson22]</a>
 
-[[Back to Controllers]](https://rb3pc.milohax.org/ctrls#instrument-list)
+[[Back to Controllers]](../../main/)
