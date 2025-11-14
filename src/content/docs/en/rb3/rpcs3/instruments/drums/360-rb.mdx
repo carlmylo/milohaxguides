@@ -10,6 +10,7 @@ sidebar:
   label: Xbox 360 Rock Band
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import x360RBDrums from '@assets/rb3/rpcs3/instruments/controller/360rbdrmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
@@ -84,14 +85,17 @@ By default, XInput has most things bound correctly. You only need to remap the f
 
 After downloading the profile,
 
+<Steps>
 1. Extract the .7z file.
-2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
-><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+    <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
 3. After that, you can select the profile in the **“Pads”** menu.  
-><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
-
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+    <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+  
+</Steps>
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
 <details>

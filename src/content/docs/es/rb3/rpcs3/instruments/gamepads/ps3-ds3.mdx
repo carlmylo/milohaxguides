@@ -1,0 +1,97 @@
+---
+title: DualShock 3/SixAxis de PlayStation 3
+slug: "es/rb3pc/controllers/pads/ps3"
+description: "Como configurar mandos DualShock 3 y SixAxis de PS3 en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 4
+  label: PS3 DualShock 3
+---
+import ps3ds3controller from '@assets/rb3/rpcs3/instruments/controller/ps3ds3controller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import padps3mapping from '@assets/rb3/rpcs3/instruments/maps/padps3mapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={ps3ds3controller} alt="Control" /></center>
+
+* Mandos DualShock 3 de PlayStation 3 pueden ser conectados por USB o por Bluetooth. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora.
+* Esto solo ha sido probado con  **DsHidMini. ¡NO INSTALES A ScpToolKit PORQUE ES OBSOLETO!**
+	* Mas informacion (en Ingles) esta en la <a href="https://wiki.rpcs3.net/index.php?title=Help:Controller_Configuration#Using_DualShock_3_controller" target="_blank" rel="noopener noreferrer">[pagina de ayuda de RPCS3]</a>.
+* No existe un perfil porque la configuración es por defecto.
+* Este control tiene auto-strum (auto-rasguea).
+* Necesitas Rock Band 3 Deluxe si quieres tocar Guitarra/Bajo/Teclado/Batería con mando (Padtar).
+	- También puedes cambiar el mapeo dentro del juego por Deluxe.  
+	`Menú > Opciones > Configuración Deluxe > Avanzado > Controlador > Re-Mapeo de Control`
+
+<details>
+<summary>¿Como configuro mi mando?</summary>
+
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Sigue las instrucciones y/o copia el mapeo de la lista para tu mando.
+
+<Image src={gamepadlegend} alt="La pagina de un instrumento siendo usado como referencia." />
+</details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| DualShock 3 | DS3 Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+## Guitarra/Bajo/Teclado
+
+| **DS3** | **Rock Band** |
+|:-------:|:-------------:|
+| ![Gatillo L2](/milohaxguides/assets/instruments/buttons/ps3/l2.png "Gatillo L2") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| ![Botón L1](/milohaxguides/assets/instruments/buttons/ps3/l1.png "Botón L1") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| ![Boton R1](/milohaxguides/assets/instruments/buttons/ps3/r1.png "Boton R1") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| ![Gatillo R2](/milohaxguides/assets/instruments/buttons/ps3/r2.png "Gatillo R2") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/ps3/ls.png "Palanca Izquierda") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| ![Botón Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Botón Select") | Sobrecarga |
+
+## Batería
+
+| **DS3** | **Rock Band** |
+|:-------:|:-------------:|
+| ![Gatillo L2](/milohaxguides/assets/instruments/buttons/ps3/l2.png "Gatillo L2") | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| ![Botón L1](/milohaxguides/assets/instruments/buttons/ps3/l1.png "Botón L1") | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| ![Boton R1](/milohaxguides/assets/instruments/buttons/ps3/r1.png "Boton R1") | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| ![Gatillo R2](/milohaxguides/assets/instruments/buttons/ps3/r2.png "Gatillo R2") | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+
+
+## Vocales
+
+| **PlayStation (DS3)** | **Uso** | **Uso alternativo** |
+|:---------------------:|:-------:|:-----------:|
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/ps3/ls.png "Palanca Izquierda") | Navegación | |
+| ![D-Pad (Cruceta)](/milohaxguides/assets/instruments/buttons/ps3/dp.png "D-Pad (Cruceta)") | Navegación | |
+| ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons/ps3/x.png "Botón Cross (Cruz)") | Elegir | |
+| ![Botón Circle (Circulo)](/milohaxguides/assets/instruments/buttons/ps3/o.png "Botón Circle (Circulo)") | Atrás | Volumen micro 3 (Canción) |
+| ![Botón Square (Cuadro)](/milohaxguides/assets/instruments/buttons/ps3/s.png "Botón Square (Cuadro)") | Volumen micro 1 (Canción) | |
+| ![Botón Triangle (Triangulo)](/milohaxguides/assets/instruments/buttons/ps3/t.png "Botón Triangle (Triangulo)") | Ver Más Información (Biblioteca) | Volumen micro 2 (Canción) |
+| ![Botón Start](/milohaxguides/assets/instruments/buttons/ps3/sta.png "Botón Start") | Opciones | Pausa (Canción) |
+| ![Botón Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Botón Select") | Filtros (Biblioteca) | Sobrecarga (Canción) |
+| ![Botón L1](/milohaxguides/assets/instruments/buttons/ps3/l1.png "Botón L1") | Selección de Parte de Guía (Práctica) | |
+| ![Gatillo L2](/milohaxguides/assets/instruments/buttons/ps3/l2.png "Gatillo L2") | Chat de voz | Selección de Parte Vocal (Práctica) |
+| ![Boton R1](/milohaxguides/assets/instruments/buttons/ps3/r1.png "Boton R1") | Volumen de Pista Vocal (Canción) | |
+| ![Gatillo R2](/milohaxguides/assets/instruments/buttons/ps3/r2.png "Gatillo R2") | Corrección de Tono (Canción) | |
+
+<center><Image src={padps3mapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado por [SlothDemon](https://www.youtube.com/@SlothDemon1991)

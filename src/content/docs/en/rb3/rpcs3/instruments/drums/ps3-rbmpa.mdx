@@ -13,6 +13,7 @@ import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import ps3mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ps3mpadrmscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import mpadrm from '@assets/rb3/rpcs3/instruments/setup/mpa/mpadrm.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
 import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
@@ -38,8 +39,9 @@ Do NOT map this instrument via the `Pads` menu!
 
 ### Setup
 <Steps>
-1. Connect your RB3 MIDI PRO Adapter and switch it to Drum mode. Simply set the middle switch to `D` position.  
-Please note that you need to do this even if you already did it for the other two modes.
+1. Connect your RB3 MIDI PRO Adapter and switch it to Drum mode. Simply set the middle switch to left-most `D` position.  
+Please note that you need to do this even if you already did it for the other two modes.  
+    <Image src={mpadrm} alt="A MIDI PRO Adapter with the middle switch set to 'D'." />
 
 2. Now, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[go to Zadig's website]</a>** and **download the latest version, then open it** up.
 

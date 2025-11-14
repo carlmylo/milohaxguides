@@ -1,0 +1,5 @@
+label: Mandos
+collapsed: true
+cascade:
+  - collapsed
+order: 3

@@ -10,6 +10,7 @@ sidebar:
   label: Wii Rock Band
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import wiirbdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbdrmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
@@ -70,7 +71,7 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 | Square | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
 | Triangle | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
 | R3 | Modificador de platillos |
-| L3 | Modificador de parche |
+| L3 | Modificador de parches |
 | L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
 | R1 | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
 | Cross | ![Botón A](/milohaxguides/assets/instruments/buttons//wii/a.png "Botón A") |
@@ -82,7 +83,7 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 | Start | ![Botón Plus](/milohaxguides/assets/instruments/buttons//wii/plu.png "Botón Plus") |
 | Select | ![Botón Minus](/milohaxguides/assets/instruments/buttons//wii/min.png "Botón Minus") |
 
-<center><Image src={drmswiirbmapping} alt="Mapping" /></center>
+<center><Image src={drmswiirbmapping} alt="Mapeo" /></center>
 
 ## Perfil
 
@@ -94,14 +95,15 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 <Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
 
 Después de descargar el perfil,
-
+<Steps>
 1. Extrae el archivo .7z.
-2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
-><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
 3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
-><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
-
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
 La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 </details>
 

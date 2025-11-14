@@ -1,0 +1,246 @@
+---
+title: PC Keyboard
+slug: "en/rb3pc/controllers/pads/keyboard"
+description: How to setup PC Keyboards on RPCS3.
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 1
+  label: PC Keyboard
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import pckeyboardcontroller from '@assets/rb3/rpcs3/instruments/controller/pckeyboardcontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import padpckbdefmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbdefmapping.png';
+import padpckbfnfmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbfnfmapping.png';
+import padpckbfnfpromapping from '@assets/rb3/rpcs3/instruments/maps/padpckbfnfpromapping.png';
+import padpckbghmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbghmapping.png';
+import padpckbghdrmsmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbghdrmsmapping.png';
+import padpckbpdrmsmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbpdrmsmapping.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/pc.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={pckeyboardcontroller} alt="Controller" /></center>
+
+* To bind multiple keys to one button, hold Shift then click on the button you want to assign multiple keys to.
+* **You will need to set the "Stick Multiplier" and "Stick Interpolation" for Left and Right to `0.90` for whammy to function correctly.**
+* To play Guitar/Bass/Keys/Drums parts on a Controller (Padtar), you will need Rock Band 3 Deluxe.
+	- You can also rebind your controller within Deluxe.  
+	`Menu > Options > Deluxe Settings > Advanced > Controller > Pad Button Remap`
+
+<details>
+<summary>How do I map my keyboard?</summary>
+**Click on the Pads icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+<Tabs>
+  <TabItem label="Default">
+## Default Mapping
+These are the default keyboard mappings that come with RPCS3.
+* This profile is strictly for menus and for vocalists that lack a proper controller.
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Keyboard | Keyboard |
+
+| Device Class | Device Subtype |
+|:--------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+| **RPCS3** | **Keyboard** | **Alt Use 1** | **Alt Use 2** |
+|:---:|:---:|:---:|:---:|
+| Cross | `X` | Select | |
+| Circle | `C` | Back | Mic 3 Volume (Song) |
+| Square | `Z` | Mic 1 Volume (Song) | |
+| Triangle | `V` | View More Info (Library) | Mic 2 Volume (Song) |
+| D-Pad | `Up`, `Down`, `Left`, and `Right` | Navigation | |
+| Left Stick | `W`, `A`, `S`, and `D` | Navigation | |
+| Start | `Return` | Options | Pause (Song) |
+| Select | `Space` | Overdrive | |
+| L1 | `Q` | Guide Part Selection (Practice) | |
+| L2 | `R` | Vocal Part Selection (Practice) | |
+| R1 | `E` | Vocal Track Volume (Song) | |
+| R2 | `T` | Pitch Correction (Song) | |
+
+<center><Image src={padpckbdefmapping} alt="Mapping" /></center>
+  </TabItem>
+  <TabItem label="Autostrum/FNFest">
+## Autostrum
+A profile heavily inspired by Fortnite Festival’s keyboard scheme. Modified by lunalawl.
+* This profile does not require strumming.
+* To bind multiple keys to one button, hold Shift then click on the button you want to assign multiple keys to.
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Keyboard | Keyboard |
+
+| Device Class | Device Subtype |
+|:--------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+| **RPCS3** | **Keyboard** | **Guitars/Bass/Keys** | **Alt Use 1** | **Alt Use 2** |
+|:---:|:---:|:---:|:---:|:---:|
+| L1 | `F`, and `Q` | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") | Guide Part Selection (Practice) | |
+| L2 | `D`, and `R` | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") | Vocal Part Selection (Practice) | |
+| R1 | `E`, and `J` | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") | Vocal Track Volume (Song) | |
+| R2 | `K`, and `T` | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") | Pitch Correction (Song) | |
+| Cross | `L`, and `X` | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") | Select | |
+| Circle | `C` | | Back | Mic 3 Volume (Song) |
+| Square | `Z` | | Mic 1 Volume (Song) |     |
+| Triangle | `V` | | View More Info (Library) | Mic 2 Volume (Song) |
+| Left Stick:<br>Up</br> | `W`, <br>and `Left Shift`</br> | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") | Navigation | |
+| Left Stick:<br>Left</br> | `A` | | Navigation | |
+| Left Stick:<br>Down</br> | `S` | | Navigation | |
+| Left Stick:<br>Right</br> | `D` | | Navigation | |
+| D-Pad:<br>Up</br> | `Up` | Navigation | | |
+| Start | `Return` | | Options | Pause (Song) |
+| Select | `Space` | Overdrive | | Pause (Song) |
+
+<center><Image src={padpckbfnfmapping} alt="Mapping" /></center>
+  </TabItem>
+  <TabItem label="Manual Strum">
+## Manual Strum Guitars/Bass/Keys
+A profile inspired by both Fortnite Festival’s Pro bindings and Frets on Fire. Modified by Doom05 to work a bit better with Rock Band 3.
+* This profile requires strumming. While holding a fret, press the strum buttons.
+* To bind multiple keys to one button, hold Shift then click on the button you want to assign multiple keys to.
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Keyboard | Keyboard |
+
+| Device Class | Device Subtype |
+|:--------------:|:--------------:|
+| Guitar | Guitar Hero |
+
+| **RPCS3** | **Keyboard** | **Guitars/Bass/Keys** |
+|:---:|:---:|:---:|
+| Cross | `1` | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| Circle | `2` | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| Square | `3` | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| Triangle | `4` | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| L1  | `5` | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| D-Pad: Up | `L`, and `Up Arrow` | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| D-Pad: Down | `P`, and `Left Arrow` | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") |
+| D-Pad: Up | `W` | Navigation |
+| D-Pad: Left | `A` | Navigation |
+| D-Pad: Down | `S` | Navigation |
+| D-Pad: Right | `D` | Navigation |
+| Right Stick: Right | `;`, and `Down Arrow` | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| Select | `'`, and `Right Arrow` | Overdrive |
+
+<center><Image src={padpckbfnfpromapping} alt="Mapping" /></center>
+  </TabItem>
+  <TabItem label="Linos Binds">
+## Linos’ Profile
+A profile used by MiloHax’s favorite keyboard player. Has plenty of alt-keys for acceptable drumming as well as guitar playing.
+* This profile does not require strumming.
+* To bind multiple keys to one button, hold Shift then click on the button you want to assign multiple keys to.
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Keyboard | Keyboard |
+
+| Device Class | Device Subtype |
+|:--------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+| **RPCS3** | **Keyboard** | **Guitars/Bass/Keys** | **Drums** | **Alt Use 1** | **Alt Use 2** |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| L1  | `2`, `8`, `A`, and `W` | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") | Guide Part Selection (Practice) |     |
+| L2  | `1`, `7`, `Q`, and `SPACE` | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") | Vocal Part Selection (Practice) |     |
+| R1  | `3`, `9`, `E`, and `S` | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") | Vocal Track Volume (Song) |     |
+| R2  | `0`, `4`, `D`, and `R` | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") | Pitch Correction (Song) |     |
+| Cross | `-`, `5`, `F`, and `T` | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") | Select |     |
+| Circle | `C` |     |     | Back | Mic 3 Volume (Song) |
+| Square | `Z` |     |     | Mic 1 Volume (Song) |     |
+| Triangle | `V` |     |     | View More Info (Library) | Mic 2 Volume (Song) |
+| D-Pad: Up | `Up` |     |     | Navigation |     |
+| D-Pad: Left | `Left` |     |     | Navigation |     |
+| D-Pad: Down | `Down` |     |     | Navigation |     |
+| D-Pad: Right | `Right` |     |     | Navigation |     |
+| Select | `Shift Right` | Overdrive | Overdrive | Filters (Library) |     |
+
+<center><Image src={padpckbghmapping} alt="Mapping" /></center>
+<center><Image src={padpckbghdrmsmapping} alt="Mapping" /></center>
+  </TabItem>
+  <TabItem label="PRO Drums">
+## Ashun Pro Drums
+A profile used by our favorite Colombian key-drummer, Ashun. Scientists are still questioning how anyone could use this profile.
+* To bind multiple keys to one button, hold Shift then click on the button you want to assign multiple keys to.
+* If you don’t bind all modifiers, **you will have dropped notes**.
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Keyboard | Keyboard |
+
+| Device Class | Device Subtype |
+|:--------------:|:--------------:|
+| Drum | Rock Band Pro |
+
+| **RPCS3** | **Keyboard** | **Drums** |
+|:---:|:---:|:---:|
+| Circle | `A` | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| Triangle | `S` | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
+| Square | `O` | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| Cross | `P` | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+| Triangle | `W` | ![Yellow Cymbal](/milohaxguides/assets/instruments/buttons/drums/rb/yc.png "Yellow Cymbal") |
+| Square | `0` | ![Blue Cymbal](/milohaxguides/assets/instruments/buttons/drums/rb/bc.png "Blue Cymbal") |
+| Cross | `-` | ![Green Cymbal](/milohaxguides/assets/instruments/buttons/drums/rb/gc.png "Green Cymbal") |
+| L1  | `,` and `Space` | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
+| R1  | `C` | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Foot Pedal") |
+| L3  | `A`, `O`, `P`, and `S` | Pad Modifier |
+| R3  | `W`, `0`, and `-` | Cymbal Modifier |
+| D-Pad: Up | `W` | Yellow Cymbal Modifier |
+| D-Pad: Down | `0` | Blue Cymbal Modifier |
+
+<center><Image src={padpckbpdrmsmapping} alt="Mapping" /></center>
+  </TabItem>
+</Tabs>
+
+
+## Profiles
+
+[[Download Profiles]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PC%20Keyboard.7z)
+
+<details>
+<summary>How do I use profiles?</summary>
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+<Steps>
+1. Extract the .7z file.
+
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+    <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+    <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+  
+</Steps>
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
+</details>
+
+[[Back to Controllers]](../../main/)
+
+Research by [[Linos]](https://www.youtube.com/@LinosMelendi)
+
+Alternative mapping schemes by [[lunalawl]](https://github.com/lunalawl), [[Doom05]](https://www.youtube.com/channel/UCZBzTTsPrK_gXF0ZvHkR3jA), and [[Ashun]](https://www.twitch.tv/ashun_)

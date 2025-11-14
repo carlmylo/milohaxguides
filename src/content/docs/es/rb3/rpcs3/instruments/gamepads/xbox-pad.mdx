@@ -1,0 +1,98 @@
+---
+title: "Mando de Xbox One/Series"
+slug: "es/rb3pc/controllers/pads/xbox"
+description: "Como configurar mandos de Xbox en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 6
+  label: Xbox One/Series
+---
+import xbxcontroller from '@assets/rb3/rpcs3/instruments/controller/xbxcontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import padxboxmapping from '@assets/rb3/rpcs3/instruments/maps/padxboxmapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/xbx.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={xbxcontroller} alt="Control" /></center>
+
+* Mandos de Xbox One/Series pueden ser conectados por USB o por Bluetooth/receptor inalámbrico. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora. **Versiones anteriores** de los mandos de Xbox One **requiere un adaptador inalámbrico para Windows**.
+
+![Adaptador inalámbrico para Windows](/milohaxguides/assets/instruments/adapters/xbone.png "Adaptador inalámbrico para Windows")
+
+* Usuarios de **Linux** pueden instalar los <a href="https://github.com/dlundqvist/xone" target="_blank" rel="noopener noreferrer">[controladores de kernel de `xone`]</a> para usar periféricos de Xbox One. Toma nota que esta pagina y sus instrucciones están en Ingles.
+* No existe un perfil porque la configuración es por defecto.
+* Este control tiene auto-strum (auto-rasguea).
+* Necesitas Rock Band 3 Deluxe si quieres tocar Guitarra/Bajo/Teclado/Batería con mando (Padtar).
+	- También puedes cambiar el mapeo dentro del juego por Deluxe.  
+	`Menú > Opciones > Configuración Deluxe > Avanzado > Controlador > Re-Mapeo de Control`
+
+<details>
+<summary>¿Como configuro mi mando?</summary>
+
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Sigue las instrucciones y/o copia el mapeo de la lista para tu mando.
+
+<Image src={gamepadlegend} alt="La pagina de un instrumento siendo usado como referencia." />
+</details>
+
+## Información de control
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+## Guitarra/Bajo/Teclado
+
+| **Xbox One/Series Controller** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Gatillo Izquierdo") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| ![Botón Bumper Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Botón Bumper Izquierdo") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Botón Bumper Derecho") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| ![Gatillo Derecho](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Gatillo Derecho") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| ![Botón A](/milohaxguides/assets/instruments/buttons/xbox/a.png "Botón A") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| ![D-Pad (Cruceta)](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad (Cruceta)") | Navegación |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Palanca Izquierda") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| ![Botón de View](/milohaxguides/assets/instruments/buttons/xbox/viw.png "Botón de View") | Sobrecarga |
+
+## Batería
+
+| **Xbox One/Series Controller** | **Rock Band** |
+|:----------------------:|:---------------------:|
+| ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Gatillo Izquierdo") | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
+| ![Botón Bumper Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Botón Bumper Izquierdo") | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| ![Gatillo Derecho](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Gatillo Derecho") | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Pedal") |
+| ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Botón Bumper Derecho") | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| ![Botón A](/milohaxguides/assets/instruments/buttons/xbox/a.png "Botón A") | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+| ![D-Pad (Cruceta)](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad (Cruceta)") | Navegación |
+
+## Vocales
+
+| **Xbox One/Series Controller** | **Uso** | **Uso alternativo** |
+|:---------------------:|:----------------:|:-----------:|
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Palanca Izquierda") | Navegación |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad (Cruceta)") | Navegación |
+| ![Botón A](/milohaxguides/assets/instruments/buttons/xbox/a.png "Botón A") | Select |
+| ![Botón B](/milohaxguides/assets/instruments/buttons/xbox/b.png "Botón B") | Atrás | Volumen micro 3 (Canción) |
+| ![Botón X](/milohaxguides/assets/instruments/buttons/xbox/x.png "Botón X") | Volumen micro 1 (Canción) |
+| ![Botón Y](/milohaxguides/assets/instruments/buttons/xbox/y.png "Botón Y") | Ver Más Información (Biblioteca) | Volumen micro 2 (Canción) |
+| ![Botón de Options](/milohaxguides/assets/instruments/buttons/xbox/opt.png "Botón de Options") | Opciones | Pausa (Canción) |
+| ![Botón de View](/milohaxguides/assets/instruments/buttons/xbox/viw.png "Botón de View") | Filtros (Biblioteca) | Sobrecarga (Canción) |
+| ![Botón Bumper Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Botón Bumper Izquierdo") | Selección de Parte de Guía (Práctica) |
+| ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Gatillo Izquierdo") | Chat de voz | Selección de Parte Vocal (Práctica) |
+| ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Botón Bumper Derecho") | Volumen de Pista Vocal (Canción) |
+| ![Gatillo Derecho](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Gatillo Derecho") | Corrección de Tono (Canción) |
+
+<center><Image src={padxboxmapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)

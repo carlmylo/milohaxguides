@@ -10,6 +10,7 @@ sidebar:
   label: Xbox One Rock Band 4
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
@@ -77,7 +78,7 @@ Toma en cuenta que se puede reinstalar después de un reinicio. Estamos buscando
 
 Este es el modo recomendado porque no requiere configuración adicional. Solo requiere que elijes la información de control correcta (Handler, Device y Device Class/Type).
 
-<center><Image src={drmsxomapping} alt="Mapping" /></center>
+<center><Image src={drmsxomapping} alt="Mapeo" /></center>
 
 <details>
 <summary>Controller Emulation Mode: ViGEmBus</summary>
@@ -91,7 +92,7 @@ By default, XInput has most things bound correctly. You only need to remap the f
 | **RPCS3** | **XInput** | **Batería** |
 |:---:|:---:|:---:|
 | R1  | ![Palanca izquierda presionada](/milohaxguides/assets/instruments/buttons/360/lsc.png "Palanca izquierda presionada") | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
-| L3  | ![Palanca derecha presionada](/milohaxguides/assets/instruments/buttons/360/rsc.png "Palanca derecha presionada") | Modificador de parche |
+| L3  | ![Palanca derecha presionada](/milohaxguides/assets/instruments/buttons/360/rsc.png "Palanca derecha presionada") | Modificador de parches |
 | R3  | ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Botón Bumper Derecho") | Modificador de platillos |
 
 ### Mapeo avanzado
@@ -109,7 +110,7 @@ By default, XInput has most things bound correctly. You only need to remap the f
 | R3  | Modificador de platillos |
 | D-Pad: Up | Modificador de platillo amarillo |
 | D-Pad: Down | Modificador de platillo azul |
-| L3  | Modificador de parche |
+| L3  | Modificador de parches |
 | L1  | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
 | R1  | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
 | Cross | ![Botón A](/milohaxguides/assets/instruments/buttons/xbox/a.png "Botón A") |
@@ -127,14 +128,15 @@ By default, XInput has most things bound correctly. You only need to remap the f
 <Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
 
 Después de descargar el perfil,
-
+<Steps>
 1. Extrae el archivo .7z.
-2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
-><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
 3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
-><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
-
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
 La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 </details>
 

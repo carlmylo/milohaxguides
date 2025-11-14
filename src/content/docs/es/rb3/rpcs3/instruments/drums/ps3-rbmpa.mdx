@@ -13,6 +13,7 @@ import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import ps3mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ps3mpadrmscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import mpadrm from '@assets/rb3/rpcs3/instruments/setup/mpa/mpadrm.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
 import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
@@ -39,7 +40,8 @@ import { Image } from 'astro:assets';
 
 <Steps>
 1. Conecta tu Adaptador MIDI PRO de RB3 y cámbialo a modo de batería. Simplemente mueve el switch en el medio a la posición de `D`.  
-Toma en cuenta que necesitas repetir esto si ya lo hiciste para los otro dos modos.
+Toma en cuenta que necesitas repetir esto si ya lo hiciste para los otro dos modos.  
+    <Image src={mpadrm} alt="Un adaptador MIDI PRO con el switch del medio en la opcion izquierda con la letra 'D'." />
 
 2. Ahora, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[ve al sitio de Zadig]</a>** y **descarga la versión mas actual**.
 

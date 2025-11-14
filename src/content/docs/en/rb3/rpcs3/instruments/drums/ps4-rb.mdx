@@ -10,6 +10,7 @@ sidebar:
   label: PS4 Rock Band 4
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
@@ -151,14 +152,17 @@ If you refuse to set up Python, you won’t have access to cymbals and it will p
 
 After downloading the profile,
 
+<Steps>
 1. Extract the .7z file.
-2. Drag the `input configs` folder into the `configs` folder where you have RPCS3 in.  
-><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+    <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
 3. After that, you can select the profile in the **“Pads”** menu.  
-><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
-
-Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in “`Devices`”, next to the “`Refresh`” button until it receives an input. You can edit this while the game is running.
+    <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+  
+</Steps>
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
 [[Back to Controllers]](../../main/)

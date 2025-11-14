@@ -1,0 +1,99 @@
+---
+title: Nintendo Switch Pro Controller
+slug: "en/rb3pc/controllers/pads/switchpro"
+description: "How to setup Nintendo Switch Pro Controller gamepads on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 8
+  label: Nintendo Switch Pro
+---
+import swiprocontroller from '@assets/rb3/rpcs3/instruments/controller/swiprocontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import padswipromapping from '@assets/rb3/rpcs3/instruments/maps/padswipromapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/switch.png" alt="Platform" title="Platform"></img></center>
+
+<center><Image src={swiprocontroller} alt="Controller" /></center>
+
+## NOTES
+
+* Nintendo Switch Pro controllers can be connected via USB or wirelessly via Bluetooth. For Bluetooth, you need a Bluetooth receiver to connect to your computer.
+* Nintendo Switch Pro controllers have a Japanese layout. This may cause problems with muscle memory.
+	* To make the your experience more comfortable, the mapping information below reverses A/B and X/Y.
+* There is no binding file as all controls are default.
+* This controller auto-strums like god intended.
+* To play Guitar/Bass/Keys/Drums parts on a Controller (Padtar), you will need Rock Band 3 Deluxe.
+	- You can also rebind your controller within Deluxe.  
+	`Menu > Options > Deluxe Settings > Advanced > Controller > Pad Button Remap`
+
+<details>
+<summary>How do I set my gamepad up?</summary>
+
+**Click on the Pads icon at the top of RPCS3**.
+
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+Follow the instructions and/or match the assignments below.
+
+<Image src={gamepadlegend} alt="An instrument page being used as a reference to map it in RPCS3." />
+</details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+## Default Guitars/Bass/Keys
+
+| **Switch Pro Controller** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![ZL Trigger](/milohaxguides/assets/instruments/buttons//swi/zl.png "ZL Trigger") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| ![L Button](/milohaxguides/assets/instruments/buttons//swi/l.png "L Button") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| ![R Button](/milohaxguides/assets/instruments/buttons//swi/r.png "R Button") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| ![ZR Trigger](/milohaxguides/assets/instruments/buttons//swi/zr.png "RL Trigger") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| ![B Button](/milohaxguides/assets/instruments/buttons//swi/b.png "B Button") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons//swi/ls.png "Left Stick") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| ![Minus Button](/milohaxguides/assets/instruments/buttons//swi/minus.png "Minus Button") | Overdrive |
+
+## Default Drums
+
+| **Switch Pro Controller** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![ZL Trigger](/milohaxguides/assets/instruments/buttons//swi/zl.png "ZL Trigger") | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
+| ![L Button](/milohaxguides/assets/instruments/buttons//swi/l.png "L Button") | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| ![R Button](/milohaxguides/assets/instruments/buttons//swi/r.png "R Button") | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
+| ![ZR Trigger](/milohaxguides/assets/instruments/buttons//swi/zr.png "RL Trigger") | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| ![B Button](/milohaxguides/assets/instruments/buttons//swi/b.png "B Button") | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+
+## Vocals
+
+| **Switch Pro Controller** | **Use** | **Alt Use** |
+|:---------------------:|:-----------:|:-----------:|
+| ![Left Stick](/milohaxguides/assets/instruments/buttons//swi/ls.png "Left Stick") | Navigation | |
+| ![D-Pad](/milohaxguides/assets/instruments/buttons//swi/dpad.png "D-Pad") | Navigation | |
+| ![B Button](/milohaxguides/assets/instruments/buttons//swi/b.png "B Button") | Select | |
+| ![A Button](/milohaxguides/assets/instruments/buttons//swi/a.png "A Button") | Back | Mic 3 Volume (Song) |
+| ![Y Button](/milohaxguides/assets/instruments/buttons//swi/y.png "Y Button") | Mic 1 Volume (Song) | |
+| ![X Button](/milohaxguides/assets/instruments/buttons//swi/x.png "X Button") | View More Info (Library) | Mic 2 Volume (Song) |
+| ![Plus Button](/milohaxguides/assets/instruments/buttons//swi/plus.png "Plus Button") | Options | Pause (Song) |
+| ![Minus Button](/milohaxguides/assets/instruments/buttons//swi/minus.png "Minus Button") | Filters (Library) | Overdrive (Song) |
+| ![L Button](/milohaxguides/assets/instruments/buttons//swi/l.png "L Button") | Guide Part Selection (Practice) | |
+| ![ZL Trigger](/milohaxguides/assets/instruments/buttons//swi/zl.png "ZL Trigger") | Voice Chat | Vocal Part Selection (Practice) |
+| ![R Button](/milohaxguides/assets/instruments/buttons//swi/r.png "R Button") | Vocal Track Volume (Song) | |
+| ![ZR Trigger](/milohaxguides/assets/instruments/buttons//swi/zr.png "RL Trigger") | Pitch Correction (Song) | |
+
+<center><Image src={padswipromapping} alt="Mapping" /></center>
+
+[[Back to Controllers]](../../main/)
+
+Mapped by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

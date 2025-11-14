@@ -10,6 +10,7 @@ sidebar:
   label: PS3 Guitar Hero
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import ghdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ghdrmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
@@ -77,7 +78,7 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 | Select | ![Botón Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Botón Select") |
 | PS Button | ![Botón Home](/milohaxguides/assets/instruments/buttons/ps3/home.png "Botón Home") |
 
-<center><Image src={drmsps3ghmapping} alt="Mapping" /></center>
+<center><Image src={drmsps3ghmapping} alt="Mapeo" /></center>
 
 ## Perfil
 
@@ -89,14 +90,15 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 <Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
 
 Después de descargar el perfil,
-
+<Steps>
 1. Extrae el archivo .7z.
-2. Arrastra la carpeta `input configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
-><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
 3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
-><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
-
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
 La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 </details>
 

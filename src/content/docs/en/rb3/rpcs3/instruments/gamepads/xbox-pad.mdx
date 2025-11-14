@@ -1,0 +1,99 @@
+---
+title: "Xbox One/Series Controller"
+slug: "en/rb3pc/controllers/pads/xbox"
+description: "How to setup Xbox gamepads on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 6
+  label: Xbox One/Series
+---
+import xbxcontroller from '@assets/rb3/rpcs3/instruments/controller/xbxcontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import padxboxmapping from '@assets/rb3/rpcs3/instruments/maps/padxboxmapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/xbx.png" alt="Platform" title="Platform"></img></center>
+
+<center><Image src={xbxcontroller} alt="Controller" /></center>
+
+* Xbox One/Series controllers can be connected via USB or wirelessly via Bluetooth/Wireless Receiver. For Bluetooth, you need a Bluetooth receiver to connect to your computer. **Earlier** Xbox One controllers **require a Microsoft Xbox Wireless Adapter for Windows 10.**
+
+![Microsoft Xbox Wireless Adapter for Windows 10](/milohaxguides/assets/instruments/adapters/xbone.png "Microsoft Xbox Wireless Adapter for Windows 10")
+
+* **Linux** users can install <a href="https://github.com/dlundqvist/xone" target="_blank" rel="noopener noreferrer">[`xone` kernel drivers]</a> to use Xbox One peripherals.
+* There is no binding file as all controls are default.
+* This controller auto-strums like god intended.
+* To play Guitar/Bass/Keys/Drums parts on a Controller (Padtar), you will need Rock Band 3 Deluxe.
+	- You can also rebind your controller within Deluxe.  
+	`Menu > Options > Deluxe Settings > Advanced > Controller > Pad Button Remap`
+
+<details>
+<summary>How do I set my gamepad up?</summary>
+
+**Click on the Pads icon at the top of RPCS3**.
+
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+Follow the instructions and/or match the assignments below.
+
+<Image src={gamepadlegend} alt="An instrument page being used as a reference to map it in RPCS3." />
+</details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+## Default Guitar/Bass/Keys
+
+| **Xbox One/Series Controller** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Left Trigger](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Left Trigger") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| ![Left Bumper](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Left Bumper") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| ![Right Bumper](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Right Bumper") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| ![Right Trigger](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Right Trigger") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| ![A Button](/milohaxguides/assets/instruments/buttons/xbox/a.png "A Button") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") | Navigation |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Left Stick") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| ![View Button](/milohaxguides/assets/instruments/buttons/xbox/viw.png "View Button") | Overdrive |
+
+## Default Drums
+
+| **Xbox One/Series Controller** | **Rock Band** |
+|:----------------------:|:---------------------:|
+| ![Left Trigger](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Left Trigger") | ![Kick Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Kick Pedal") |
+| ![Left Bumper](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Left Bumper") | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
+| ![Right Trigger](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Right Trigger") | ![Yellow Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Kick Pedal") |
+| ![Right Bumper](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Right Bumper") | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
+| ![A Button](/milohaxguides/assets/instruments/buttons/xbox/a.png "A Button") | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
+| ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") | Navigation |
+
+## Vocals
+
+| **Xbox One/Series Controller** | **Use** | **Alt Use** |
+|:---------------------:|:----------------:|:-----------:|
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Left Stick") | Navigation |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") | Navigation |
+| ![A Button](/milohaxguides/assets/instruments/buttons/xbox/a.png "A Button") | Select |
+| ![B Button](/milohaxguides/assets/instruments/buttons/xbox/b.png "B Button") | Back | Mic 3 Volume (Song) |
+| ![X Button](/milohaxguides/assets/instruments/buttons/xbox/x.png "X Button") | Mic 1 Volume (Song) |
+| ![Y Button](/milohaxguides/assets/instruments/buttons/xbox/y.png "Y Button") | View More Info (Library) | Mic 2 Volume (Song) |
+| ![Options Button](/milohaxguides/assets/instruments/buttons/xbox/opt.png "Options Button") | Options | Pause (Song) |
+| ![View Button](/milohaxguides/assets/instruments/buttons/xbox/viw.png "View Button") | Filters (Library) | Overdrive (Song) |
+| ![Left Bumper](/milohaxguides/assets/instruments/buttons/xbox/lb.png "Left Bumper") | Guide Part Selection (Practice) |
+| ![Left Trigger](/milohaxguides/assets/instruments/buttons/xbox/lt.png "Left Trigger") | Voice Chat | Vocal Part Selection (Practice) |
+| ![Right Bumper](/milohaxguides/assets/instruments/buttons/xbox/rb.png "Right Bumper") | Vocal Track Volume (Song) |
+| ![Right Trigger](/milohaxguides/assets/instruments/buttons/xbox/rt.png "Right Trigger") | Pitch Correction (Song) |
+
+<center><Image src={padxboxmapping} alt="Mapping" /></center>
+
+[[Back to Controllers]](../../main/)
