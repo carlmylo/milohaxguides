@@ -1,0 +1,167 @@
+---
+title: "CRKD NEO S Wave"
+slug: "es/rb3pc/controllers/pads/doohickey"
+description: "Como configurar mandos CRKD NEO S en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 9
+  label: CRKD Neo S
+---
+import swineoscontroller from '@assets/rb3/rpcs3/instruments/controller/swineoscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import defaultmap from '@assets/rb3/rpcs3/instruments/setup/doohickey/default.jpg';
+import custom from '@assets/rb3/rpcs3/instruments/setup/doohickey/custom.jpg';
+import padswipromapping from '@assets/rb3/rpcs3/instruments/maps/padswipromapping.png';
+import padswineopro from '@assets/rb3/rpcs3/instruments/maps/padswineopro.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/switch.png" alt="Sistema" title="Sistema"></img></center>
+
+<center><Image src={swineoscontroller} alt="Control" /></center>
+
+* Mandos CRKD NEO S Wave pueden ser conectados por USB o por Bluetooth/receptor inalámbrico. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora.
+* Para cambiar la configuración de tu mando, necesitas usar la aplicación de CRKD en tu teléfono (iOS/Android).
+* Necesitas Rock Band 3 Deluxe si quieres tocar Guitarra/Bajo/Teclado/Batería con mando (Padtar).
+	- También puedes cambiar el mapeo dentro del juego por Deluxe.  
+	`Menú > Opciones > Configuración Deluxe > Avanzado > Controlador > Re-Mapeo de Control`
+
+<details>
+<summary>¿Como configuro mi mando?</summary>
+
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Sigue las instrucciones y/o copia el mapeo de la lista para tu mando.
+
+<Image src={gamepadlegend} alt="La pagina de un instrumento siendo usado como referencia." />
+</details>
+
+## Mapeo
+Estas configuraciones están aquí solo para los que quieren ideas para su mando. Puedes dejar todo en lo predeterminado y ajusta dentro de Deluxe.
+
+### Guitarra/Bajo/Teclado
+Esta es la configuración que viene defecto con este control.
+
+#### Configuración de la app de CRKD
+
+<Image src={defaultmap} alt="La aplicación de CRKD. Easy/Medium/Hard, Expert y Pro estan desactivados. Custom esa activado." />
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | Izquierda |
+| Lane 2 | Derecha |
+| Lane 3 | X |
+| Lane 4 | B |
+| Lane 5 | Y |
+
+#### Información de control
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+#### Mapeo
+
+| **Lane** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Left D-Pad (Cruceta)](/milohaxguides/assets/instruments/buttons/360/dleft.png "Left D-Pad (Cruceta)") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Right D-Pad (Cruceta)](/milohaxguides/assets/instruments/buttons/360/dright.png "Right D-Pad (Cruceta)") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![Botón X](/milohaxguides/assets/instruments/buttons/xbox/x.png "Botón X") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![Botón B](/milohaxguides/assets/instruments/buttons/xbox/b.png "Botón B") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Botón Y](/milohaxguides/assets/instruments/buttons/xbox/y.png "Botón Y") |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Palanca Izquierda") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| ![Botón de View](/milohaxguides/assets/instruments/buttons/xbox/viw.png "Botón de View") | Sobrecarga |
+
+<center><Image src={padswipromapping} alt="Mapeo" /></center>
+
+### Guitarra/Bajo/Teclado retro
+* Esta configuración ajusta la configuración de botones los trastes que usan Guitar Hero 1, 2, 80s, 3 y Aerosmith para Padtar.
+
+#### Configuración de la app de CRKD
+
+<Image src={custom} alt="La aplicación de CRKD. Easy/Medium/Hard, Expert y Pro estan desactivados. Custom esa activado." />
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | LT |
+| Lane 2 | LB |
+| Lane 3 | RB |
+| Lane 4 | RT |
+| Lane 5 | A |
+
+#### Información de control
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+#### Mapeo
+
+| **Lane** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Palanca Izquierda") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| ![Botón de View](/milohaxguides/assets/instruments/buttons/xbox/viw.png "Botón de View") | Sobrecarga |
+
+<center><Image src={padswipromapping} alt="Mapeo" /></center>
+
+### Guitarra/bajo Pro
+* Esta configuración requiere rasguear. ¡Presiona el botón de rasgueo mientras mantienes el del carril!
+
+#### Configuración de la app de CRKD
+
+<Image src={custom} alt="La aplicación de CRKD. Easy/Medium/Hard, Expert y Pro estan desactivados. Custom esa activado." />
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | LT |
+| Lane 2 | LB |
+| Lane 3 | RB |
+| Lane 4 | RT |
+| Lane 5 | A |
+
+#### Información de control
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Guitar Hero |
+
+#### Mapeo
+
+| **Lane** | **Rock Band** |
+|:--------:|:-------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| ![D-Pad (Cruceta) Up](/milohaxguides/assets/instruments/buttons/xbox/dup.png "D-Pad (Cruceta) Arriba") | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| ![D-Pad (Cruceta) Down](/milohaxguides/assets/instruments/buttons/xbox/ddown.png "D-Pad (Cruceta) Abajo") | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo para arriba") |
+| ![Palanca Izquierda](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Palanca Izquierda") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| ![Botón de View](/milohaxguides/assets/instruments/buttons/xbox/viw.png "Botón de View") | Sobrecarga |
+
+<center><Image src={padswineopro} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://www.twitch.tv/qtipman64" target="_blank" rel="noopener noreferrer">[qtipman64]</a>

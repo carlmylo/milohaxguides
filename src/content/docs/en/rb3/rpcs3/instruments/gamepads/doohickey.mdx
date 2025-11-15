@@ -1,0 +1,168 @@
+---
+title: "CRKD NEO S Wave"
+slug: "en/rb3pc/controllers/pads/doohickey"
+description: "How to setup CRKD NEO S doohickeys with on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 9
+  label: CRKD Neo S
+---
+import swineoscontroller from '@assets/rb3/rpcs3/instruments/controller/swineoscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import defaultmap from '@assets/rb3/rpcs3/instruments/setup/doohickey/default.jpg';
+import custom from '@assets/rb3/rpcs3/instruments/setup/doohickey/custom.jpg';
+import padswipromapping from '@assets/rb3/rpcs3/instruments/maps/padswipromapping.png';
+import padswineopro from '@assets/rb3/rpcs3/instruments/maps/padswineopro.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/switch.png" alt="Platform" title="Platform"></img></center>
+
+<center><Image src={swineoscontroller} alt="Controller" /></center>
+
+* CRKD NEO S Wave controllers can be connected via USB or wirelessly via Bluetooth. For Bluetooth, you need a Bluetooth receiver to connect to your computer.
+* To rebind the controller, use the CRKD app on your phone (iOS/Android).
+* To play Guitar/Bass/Keys/Drums parts on a Controller (Padtar), you will need Rock Band 3 Deluxe.
+	- You can also rebind your controller within Deluxe.  
+	`Menu > Options > Deluxe Settings > Advanced > Controller > Pad Button Remap`
+
+<details>
+<summary>How do I set my gamepad up?</summary>
+
+**Click on the Pads icon at the top of RPCS3**.
+
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+Follow the instructions and/or match the assignments below.
+
+<Image src={gamepadlegend} alt="An instrument page being used as a reference to map it in RPCS3." />
+</details>
+
+## Bindings
+These bindings are here in case you need ideas on how to configure your device. You can leave the binding on default and just remap within Deluxe as mentioned above.
+
+### Default Guitars/Bass/Keys
+* This is the out-of-the-box experience.
+
+#### CRKD App Setup
+
+<Image src={defaultmap} alt="The CRKD CTRL application. Easy/Medium/Hard, Expert, and Pro are set to off. Custom is switched to on." />
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | Left |
+| Lane 2 | Right |
+| Lane 3 | X |
+| Lane 4 | B |
+| Lane 5 | Y |
+
+#### Pad Information
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+#### Bindings
+
+| **Lane** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Left D-Pad](/milohaxguides/assets/instruments/buttons/360/dleft.png "Left D-Pad") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Right D-Pad](/milohaxguides/assets/instruments/buttons/360/dright.png "Right D-Pad") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![X Button](/milohaxguides/assets/instruments/buttons/xbox/x.png "X Button") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![B Button](/milohaxguides/assets/instruments/buttons/xbox/b.png "B Button") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Y Button](/milohaxguides/assets/instruments/buttons/xbox/y.png "Y Button") |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Left Stick") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| ![View Button](/milohaxguides/assets/instruments/buttons/xbox/viw.png "View Button") | Overdrive |
+
+<center><Image src={padswipromapping} alt="Mapping" /></center>
+
+### Retro Guitars/Bass/Keys
+* This configuration sets the fret buttons to mimic the padtar buttons from Guitar Hero 1, 2, 80s, 3, and Aerosmith.
+
+#### CRKD App Setup
+
+<Image src={custom} alt="The CRKD CTRL application. Easy/Medium/Hard, Expert, and Pro are set to off. Custom is switched to on. Lane 1 is set to LT. Lane 2 is set to LB. Lane 3 is set to RB. Lane 4 is set to RT. Lane 5 is set to A." />
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | LT |
+| Lane 2 | LB |
+| Lane 3 | RB |
+| Lane 4 | RT |
+| Lane 5 | A |
+
+#### Pad Information
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+#### Bindings
+
+| **Lane** | **Rock Band** |
+|:------------------:|:---------------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Left Stick") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| ![View Button](/milohaxguides/assets/instruments/buttons/xbox/viw.png "View Button") | Overdrive |
+
+<center><Image src={padswipromapping} alt="Mapping" /></center>
+
+### Pro Guitar/Bass
+* This configuration requires you to strum after holding down frets.
+
+#### CRKD App Setup
+
+![A screenshot of the CRKD CTRL application. Easy/Medium/Hard, Expert, and Pro are set to off. Custom is switched to on. Lane 1 is set to LT. Lane 2 is set to LB. Lane 3 is set to RB. Lane 4 is set to RT. Lane 5 is set to A.](https://rb3pc.milohax.org/images/instruments/xtra/doohickey/custom.jpg "CRKD CTRL")
+
+| Lane | Button |
+|:------:|:--:|
+| Lane 1 | LT |
+| Lane 2 | LB |
+| Lane 3 | RB |
+| Lane 4 | RT |
+| Lane 5 | A |
+
+#### Pad Information
+
+| Handlers | Devices |
+|:--------:|:-----------------:|
+| SDL | Nintendo Switch Pro Controller |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Guitar Hero |
+
+#### Bindings
+
+| **Lane** | **Rock Band** |
+|:--------:|:-------------:|
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l1.png "Lane 1") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l2.png "Lane 2") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l3.png "Lane 3") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l4.png "Lane 4") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| ![Lane 1](/milohaxguides/assets/instruments/buttons/doohickey/l5.png "Lane 5") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| ![D-Pad Up](/milohaxguides/assets/instruments/buttons/xbox/dup.png "D-Pad Up") | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| ![D-Pad Down](/milohaxguides/assets/instruments/buttons/xbox/ddown.png "D-Pad Down") | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Up") |
+| ![Left Stick](/milohaxguides/assets/instruments/buttons/xbox/ls.png "Left Stick") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| ![View Button](/milohaxguides/assets/instruments/buttons/xbox/viw.png "View Button") | Overdrive |
+
+<center><Image src={padswineopro} alt="Mapping" /></center>
+
+[[Back to Controllers]](../../main/)
+
+Mapped by <a href="https://www.twitch.tv/qtipman64" target="_blank" rel="noopener noreferrer">[qtipman64]</a>
