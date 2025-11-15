@@ -1,0 +1,83 @@
+---
+title: Mandos desconocidos
+slug: "es/rb3pc/controllers/pads/generic"
+description: "Mapeo general para mandos desconocidos en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 10
+  label: Desconocido
+---
+import mystcontrollers from '@assets/rb3/rpcs3/instruments/controller/mystcontrollers.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import gamepadlegend from '@assets/rb3/rpcs3/instruments/gamepadlegend.png';
+import padps3mapping from '@assets/rb3/rpcs3/instruments/maps/padps3mapping.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/myst.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={mystcontrollers} alt="Controller" /></center>
+
+* Esta pagina es para mandos desconocidos. Trata diferente Handlers hasta que tu mando se detecte.
+* Necesitas Rock Band 3 Deluxe si quieres tocar Guitarra/Bajo/Teclado/Batería con mando (Padtar).
+	- También puedes cambiar el mapeo dentro del juego por Deluxe.  
+	`Menú > Opciones > Configuración Deluxe > Avanzado > Controlador > Re-Mapeo de Control`
+
+<details>
+<summary>¿Como configuro mi mando?</summary>
+
+**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Sigue las instrucciones y/o copia el mapeo de la lista para tu mando.
+
+<Image src={gamepadlegend} alt="La pagina de un instrumento siendo usado como referencia." />
+</details>
+
+## Información de control
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Standard (Pad) | PS3 Controller |
+
+### Guitarra/Bajo/Teclado:
+
+| **RPCS3**          | **Rock Band** |
+|:------------------:|:---------------------:|
+| L2 | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| L1 | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| R1 | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| R2 | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| Cross | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Left Stick | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Select | Sobrecarga |
+
+### Batería: 
+
+| **RPCS3**    | **Batería de Rock Band** |
+|:--------:|:-------------------:|
+| L2 | ![Pedal/Kick](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal/Kick") |
+| L1 | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
+| R1 | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| R2 | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
+| Cross | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
+
+### Vocales:
+
+| **RPCS3** | **Uso** | **Uso alternativo** |
+|:---------------------:|:-------------------------------:|:-------------------:|
+| Left Stick:<br> Up/Down/Left/Right</br> | Navegación | |
+| D-Pad:<br> Up/Down/Left/Right</br> | Navegación | |
+| Cross | Seleccionar | |
+| Circle | Atrás | Volumen micro 3 (Canción) |
+| Square | Volumen micro 1 (Canción) | |
+| Triangle | Ver Más Información (Biblioteca) | Volumen micro 2 (Canción) |
+| Start | Opciones | Pausa (Canción) |
+| Select | Filtros (Biblioteca) | Sobrecarga (Canción) |
+| L1 | Selección de Parte de Guía (Práctica) | |
+| L2 | Selección de Parte Vocal (Práctica) | |
+| R1 | Volumen de Pista Vocal (Canción) | |
+| R2 | Corrección de Tono (Canción) | |
+
+[[Regresar a la lista de instrumentos]](../../main/)
