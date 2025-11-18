@@ -1,0 +1,5 @@
+label: Guitars
+collapsed: true
+cascade:
+  - collapsed
+order: 2

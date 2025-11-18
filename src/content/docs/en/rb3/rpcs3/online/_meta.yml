@@ -1,0 +1,5 @@
+label: Playing Online
+collapsed: true
+cascade:
+  - collapsed
+order: 3

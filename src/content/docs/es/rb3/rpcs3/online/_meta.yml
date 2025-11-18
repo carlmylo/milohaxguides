@@ -1,0 +1,5 @@
+label: Jugando en linea
+collapsed: true
+cascade:
+  - collapsed
+order: 3

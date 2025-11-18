@@ -1,0 +1,5 @@
+label: Avanzado
+collapsed: true
+cascade:
+  - collapsed
+order: 4
