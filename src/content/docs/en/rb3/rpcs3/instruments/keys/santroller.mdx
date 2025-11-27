@@ -1,0 +1,56 @@
+---
+title: Santroller Powered Keyboards
+slug: "en/rb3pc/controllers/keys/santroller"
+description: "How to connect and configure your keyboards using Santroller on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import sancontroller from '@assets/rb3/rpcs3/instruments/controller/sancontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import initkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/initkeys.png';
+import consetkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/consetkeys.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/santroller.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={sancontroller} alt="Controller" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* **Please note that your Santroller Configurator may have different settings, depending on how your keyboard was connected/modded.**  
+If you purchased your keyboard pre-modded or adapter pre-made, contact the seller for more information.
+
+## Setup
+<Aside>Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
+
+Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
+After that, start up Santroller.
+
+In the start screen, select your `Device to program`, `Connection Method`, and `Device to Emulate`. This will depend on what device you're using for your keyboard.  
+In the tutorial screenshots, it was a `Raspberry Pi Pico`, `USB Adapter`, and `Pro Keys`  respectively.  
+After selecting your options, click on `Configure`.
+
+<Image src={initkeys} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Pro Keys'." />
+
+In `Controller Settings`, change the following:
+* Set `Device to Emulate` to `Pro Keys`
+* Enable `Use USB Passthrough with RPCS3`
+
+<Image src={consetkeys} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
+
+**MAKE SURE YOU CLICK ON `Save Settings` before closing the program or you will lose progress!**
+
+<Image src={savesan} alt="Santroller with a cursor is hovering over 'Save Settings'." />
+
+When you're done, close Santroller.
+
+You can now launch Rock Band 3!
+
+<Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your keyboard will not connect!!!</Aside>
+
+[[Back to Controllers]](../../main/)
+
+Research by [[Lynxeption]](https://www.youtube.com/@Lynxeption), <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>, and [[SquidBoy425 (Team Oceanman)]](https://www.youtube.com/@teamOceanman343/videos).  
+Special thanks to [[@amphobius]](https://twitter.com/amphobius) for additional pictures.
