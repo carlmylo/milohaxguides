@@ -1,0 +1,227 @@
+---
+title: Nintendo Wii Rock Band Wireless Keyboard
+slug: "en/rb3pc/controllers/keys/wii"
+description: "How to connect and configure Nintendo Wii Wireless keyboards on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 5
+  label: Wii
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import wiirbkeyscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbkeyscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarn.png';
+import initkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/initkeys.png';
+import consetkeys from '@assets/rb3/rpcs3/instruments/setup/santroller/consetkeys.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
+import midictrlloopMIDIdl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIdl.png';
+import midictrlloopMIDIinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIinst.png';
+import rbkeysoctshift from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeysoctshift.gif';
+import midictrlloopMIDIaddport from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlloopMIDIaddport.png';
+import midictrlfreepnodl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnodl.png';
+import midictrlfreepnodir from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnodir.png';
+import midictrlfreepnopreset from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnopreset.png';
+import midictrlfreepnoselpres from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoselpres.png';
+import midictrlfreepnoout from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoout.png';
+import midictrlfreepnoback from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlfreepnoback.png';
+import midictrlmidioxdl from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxdl.png';
+import midictrlmidioxinst from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxinst.png';
+import midictrlmidioxopts from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxopts.png';
+import midictrlmidioxcombo from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlmidioxcombo.png';
+import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs3.png';
+import rbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeys.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iok from '@assets/rb3/rpcs3/config/iok.png';
+import { Image } from 'astro:assets';
+
+<div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
+<center><Image src={wiirbkeyscontroller} alt="Controller" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+
+## Instructions
+There are two different ways to connect this keyboard. If you don't have the Rock Band Keyboard Receiver for Nintendo Wii, you will need to use MIDI to USB.  
+Pick whichever is the most convenient for you:
+
+<Tabs>
+  <TabItem label="Santroller Adapter + RB3 Keyboard Receiver for Wii (Recommended)">
+This is the recommended method because the keyboard will work as expected.
+
+**You will need:**
+
+* a Santroller based adapter to connect to your computer.  
+    > ![MiniHost USB Adapter by RetroCultMods](/milohaxguides/assets/instruments/adapters/minihost.png "MiniHost")
+    Need one?  
+        * [[Buy one from RetroCultMods here! (RCM Shop)]](https://shop.retrocultmods.com/products/minihost-usb-adapter-by-retrocultmods)
+        * [[Buy one from RetroCultMods (Etsy)]](https://www.etsy.com/listing/1901404449)
+        * [[Buy one from AliExpress (as a last resort)]](https://www.aliexpress.com/i/3256808312456163.html)
+
+* an Nintendo Wii Wireless Keyboard Receiver to connect to the Santroller based adapter.  
+> ![Nintendo Wii Wireless Receiver](/milohaxguides/assets/instruments/buttons//wii/reckeys.png "Nintendo Wii Wireless Keyboard Receiver")  
+
+## Setup
+<Aside type="caution">Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
+
+Connect the Nintendo Wii Wireless Keyboard Receiver to your Santroller based adapter, then connect the Santroller based adapter to your computer.
+
+Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
+After that, start up Santroller.
+
+If you're using a premade adapter (like the RetroCultMods MiniHost), you may receive a warning from Santroller in the start screen.   
+All this means is that you can't ask for support on the official Santroller Discord.  
+You can tick the checkbox and focus on the rest of the configuration.  
+> <Image src={sanwarn} alt="Santroller warning the user that their device is not designed to be programmed with it." />
+
+Select your `Device to program`, `Connection Method`, and `Device to Emulate`.  
+This will usually be `Raspberry Pi Pico`, `USB Adapter`, and `Pro Keys` respectively.  
+After selecting your options, click on `Configure`.  
+> <Image src={initkeys} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Pro Keys'" />
+
+In `Controller Settings`, change the following:
+* Set `Device to Emulate` to `Pro Keys`
+* Enable `Use USB Passthrough with RPCS3`
+> <Image src={consetkeys} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
+
+**MAKE SURE YOU CLICK ON `Save Settings` before closing the program or you will lose progress!**  
+> <Image src={savesan} alt="Santroller with a cursor is hovering over 'Save Settings'." />
+
+When you're done, close Santroller.
+
+You can now launch Rock Band 3 and don't need to touch this anymore!
+
+<Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your keyboard will not connect!!!</Aside>
+</TabItem>
+  <TabItem label="MIDI to USB interface">
+<Aside>None of the controller buttons will work as intended as the keyboard will be in MIDI mode.</Aside>
+
+You will need to connect to your keyboard via the MIDI port on the side.  
+> <Image src={rbkeys} alt="Rock Band 3's Wireless Keyboard, showing a 5-DIN MIDI input and output highlighted in blue with a dotted white outline." />
+
+**For this, you will need a MIDI to USB interface**.  
+Here’s an example of a MIDI to USB interface. Most will come with an LED indicator to show activity. **To check that you’ve plugged it in correctly, you should see “MIDI In” blinking when you press a key**.  
+> <Image src={miditousb} alt="A MIDI to USB interface." />
+
+**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs. For example, this Scarlett has MIDI connections in the back.  
+> <Image src={midifs} alt="The back of a Focusrite Scarlett showing a USB port, and 5-DIN MIDI input and output." />
+
+After that, **right click on Rock Band 3** in RPCS3, **then click on `Change Custom Configuration`**.  
+> <Image src={rpcs3customconfigchange} alt="RPCS3's right click menu, showing 'Change Custom Configuration' highlighted." />
+
+After that, go to the `I/O` tab.  
+> <Image src={iok} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline." />
+
+* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square"):  
+    * 🎹 **Leave your `Emulated MIDI type` on `Keyboard` and select your MIDI interface in the drop-down menu next to it.**
+
+### Additional Information
+Since the keyboard controller buttons don't function like they do when connected with a dongle, you will have to shift octaves to control the menus.  
+You can shift octaves with the 1 and B buttons.  
+> <Image src={rbkeysoctshift} alt="A Rock Band 3 keyboard. When 1 is pressed, a yellow highlight, showing which notes are being used, shifts down to C2 to C4. When B is pressed, it shifts up to C3 to C5." /> 
+
+| **Note** | **Button** |
+|:--------:|:-------------------:|
+| C2 | ![Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Select") |
+| D2 | ![D-Pad Left](/milohaxguides/assets/instruments/buttons/ps3/dl.png "D-Pad Left") |
+| E2 | ![D-Pad Right](/milohaxguides/assets/instruments/buttons/ps3/dr.png "D-Pad Right") |
+| F2 | ![D-Pad Up](/milohaxguides/assets/instruments/buttons/ps3/du.png "D-Pad Up") |
+| G2 | ![D-Pad Down](/milohaxguides/assets/instruments/buttons/ps3/dd.png "D-Pad Down") |
+| A2 | Deploy Overdrive |
+| C#2 | ![Triangle](/milohaxguides/assets/instruments/buttons/ps3/t.png "Triangle") |
+| D#2 | ![Square](/milohaxguides/assets/instruments/buttons/ps3/s.png "Square") |
+| F#2 | ![Circle](/milohaxguides/assets/instruments/buttons/ps3/o.png "Circle") |
+| G#2 | ![Cross](/milohaxguides/assets/instruments/buttons/ps3/x.png "Cross") |
+| A#2 | ![Start](/milohaxguides/assets/instruments/buttons/ps3/sta.png "Start") |
+| Modwheel | Deploy Overdrive |
+| Sustain | Deploy Overdrive |
+| Pitch Wheel | Whammy/Touch Strip |
+
+<details>
+<summary>[Using a computer keyboard along with a 25 key keyboard]</summary>
+
+<Aside>**This requires advanced setup!**</Aside>
+
+You can use your regular computer keyboard and convert its key presses to the MIDI notes that correspond to the game buttons in case you want to avoid swapping octaves constantly.
+
+First, <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer">[download loopMIDI]</a>.  
+> <a href="https://www.tobias-erichsen.de/software/loopmidi.html" target="_blank" rel="noopener noreferrer"><Image src={midictrlloopMIDIdl} alt="loopMIDI's download page. The cursor is over 'download loopMIDI.'" /></a>
+
+Install loopMIDI.  
+**Launch it after it finishes.**  
+> <Image src={midictrlloopMIDIinst} alt="loopMIDI's installer." />
+
+Add two new ports by clicking on the `+` button in the bottom. You should name the ports, too. They’ve been named “Pro Keys” and “Gamepad” in this example.  
+> <Image src={midictrlloopMIDIaddport} alt="loopMIDI with a mouse cursor over the Plus symbol for 'Add Port'. Additionally, 'New port name' is highlighted in blue with a dotted outline, with 'Pro Keys' typed out in the text field." />
+
+Now, download <a href="https://freepiano.tiwb.com/en/" target="_blank" rel="noopener noreferrer">[the `.zip` archive that contains the win64 version of FreePiano]</a>.  
+> <a href="https://freepiano.tiwb.com/en" target="_blank" rel="noopener noreferrer"><Image src={midictrlfreepnodl} alt="FreePiano's download page'" /></a>
+
+Extract the `.zip` archive somewhere you can easily find it.  
+It was extracted to `C:\Games\freepiano` in this example.
+
+Go to where you extracted FreePiano and run the `freepiano` executable.  
+> <Image src={midictrlfreepnodir} alt="The FreePiano executable highlighted in a folder." />
+
+Assign the keys to your liking as shown in the [**[#Additional Information]**](#additional-information) section above.  
+There is also a premade profile if you’d like, which you can [**[download here]**](/../../milohaxguides/downloads/rb3/rpcs3/instrument-repo/rb3gamekeys.map). 
+
+To use the preset, place the `rb3gamekeys.map` file in the `keymap` folder located where you extracted FreePiano.  
+> <Image src={midictrlfreepnopreset} alt="A highlighted profile named rb3gamekeys.map in the keymap folder." />
+
+Select `rb3gamekeys.map` in the `Keymap` dropdown button to load the premade profile.  
+Likewise, if you made your own profile or edited the premade profile, you can click on **`Save`** to save your profile.  
+> <Image src={midictrlfreepnoselpres} alt="FreePiano with the rb3gamekeys.map profile selected." />
+
+The premade profile is mapped like this:
+| **Key** | **Action** |
+|:---:|:---:|
+| `Enter` | ![Start](/milohaxguides/assets/instruments/buttons/ps3/sta.png "Start") |
+| `Shift` | ![Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Select") |
+| `Up` | ![D-Pad Up](/milohaxguides/assets/instruments/buttons/ps3/du.png "D-Pad Up") |
+| `Down` | ![D-Pad Down](/milohaxguides/assets/instruments/buttons/ps3/dd.png "D-Pad Down") |
+| `Left` | ![D-Pad Left](/milohaxguides/assets/instruments/buttons/ps3/dl.png "D-Pad Left") |
+| `Right` | ![D-Pad Right](/milohaxguides/assets/instruments/buttons/ps3/dr.png "D-Pad Right") |
+| `A` | ![Cross](/milohaxguides/assets/instruments/buttons/ps3/x.png "Cross") |
+| `S` | ![Circle](/milohaxguides/assets/instruments/buttons/ps3/o.png "Circle") |
+| `D` | ![Square](/milohaxguides/assets/instruments/buttons/ps3/s.png "Square") |
+| `F` | ![Triangle](/milohaxguides/assets/instruments/buttons/ps3/t.png "Triangle") |
+
+Once you are done mapping, click on `Instrument` at the top of Freepiano’s window and select the `Gamepad` MIDI output, which you made with loopMIDI earlier.  
+> <Image src={midictrlfreepnoout} alt="FreePiano's Instrument dropdown menu with 'Gamepad MIDI' selected." />
+
+It’s suggested you enable `Background input mode`, located within the `Options` tab which is accessed by pressing the Wrench icon in the top right side of FreePiano.  
+> <Image src={midictrlfreepnoback} alt="FreePiano with the 'Background input mode' enabled." />
+
+Now, <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer">[download MIDI-OX]</a>.  
+> <a href="http://www.midiox.com/moxdown.htm" target="_blank" rel="noopener noreferrer"><Image src={midictrlmidioxdl} alt="MIDI-OX's website with the proper download highlighted in blue with a dotted outline" /></a>
+
+Install MIDI-OX.  
+> <Image src={midictrlmidioxinst} alt="MIDI-OX's installer." />
+
+Open MIDI-OX then navigate to **`Options` > `MIDI Devices`**  
+> <Image src={midictrlmidioxopts} alt="MIDI-OX with the mouse hovering over the MIDI Devices menu, under the Options menu." />
+
+In the `MIDI Devices` menu, select your keyboard and the port you made in loopMIDI (“Gamepad”) for FreePiano in the `MIDI Inputs` section.  
+Select the other port you made in loopMIDI (“Pro Keys”) in `MIDI Outputs`. This will combine both MIDI inputs into a single output.  
+> <Image src={midictrlmidioxcombo} alt="MIDI-OX's MIDI Devices with a keyboard and the Gamepad selected in the MIDI Inputs section and Pro Keys selected in the MIDI Outputs section." />
+
+Finally, in RPCS3, go to Rock Band 3’s Custom Configuration then go to the `I/O` tab.  
+Select the port that you selected as your output in MIDI-OX (“Pro Keys”).  
+> <Image src={midictrlrpcs3} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline. It is set to 'Keyboard - Pro Keys 3.'" />
+
+That’s it. Remember to close all **three different programs** when you’re not using them because they may cause issues with certain shortcuts on Windows.  
+You will have to reopen these programs every time you want to play.
+</details>
+</TabItem>
+</Tabs>
+
+[[Back to Controllers]](../../main/)
+
+Research by [[Linos]](https://www.youtube.com/@LinosMelendi)
