@@ -10,6 +10,7 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import missingsonges from '@assets/rb3/rpcs3/troubleshoot/online-missingsonges.png';
+import nautilusidclash from '@assets/rb3/ps3customs/nautilusidclash.png';
 import nautilushomeps3 from '@assets/rb3/ps3customs/nautilushomeps3.png';
 import nautilusps3batchid from '@assets/rb3/ps3customs/nautilusps3batchid.png';
 import nautilusps3batchselectes from '@assets/rb3/ps3customs/nautilusps3batchselectes.png';
@@ -25,13 +26,17 @@ import findmogg from '@assets/rb3/ps3customs/findmogg.png';
 import moggreplace from '@assets/rb3/ps3customs/moggreplace.gif';
 import { Image } from 'astro:assets';
 
-## Canciones no salen en línea / Puntajes no se guardan
-Rock Band 3 solo puede guardar puntajes para canciones con IDs que contienen números y nada mas. Si una canción tiene letras en el ID, el juego va a crear un ID nuevo cada vez que inicies. Esto significa que tus puntajes nunca se guardaran.
+## Canciones no están en mi colección/ no salen en línea / Puntajes no se guardan
+Rock Band 3 solo puede guardar puntajes para canciones con IDs que contienen números **únicos** y nada mas. Si una canción tiene letras en el ID, el juego va a crear un ID nuevo cada vez que inicies. Esto significa que tus puntajes nunca se guardaran.
 
 Igualmente, tendrás problemas jugando en línea con customs por la misma razón. Si el ID tiene letras, la canción va a aparecer en tu biblioteca en gris.
 <Image src={missingsonges} alt="Rock Band 3 mostrando canciones con un color mas oscuro porque no están disponibles." />
 
-Puedes resolver este problema con Nautilus.
+Si tienes canciones con IDs duplicados, una de ellas no saldrá.
+<Image src={nautilusidclash} alt="Nautilus mostrando dos canciones con el mismo ID." />
+
+Puedes resolver ambos problemas con Nautilus.
+
 ### Arreglar los IDs antes de instalar
 <Steps>
 1. Simplemente sigue el [[tutorial de Xbox 360 a PS3]](../360tops3).  

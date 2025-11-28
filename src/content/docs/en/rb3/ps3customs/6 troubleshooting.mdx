@@ -9,6 +9,7 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import missingsong from '@assets/rb3/rpcs3/troubleshoot/online-missingsong.png';
+import nautilusidclash from '@assets/rb3/ps3customs/nautilusidclash.png';
 import nautilushomeps3 from '@assets/rb3/ps3customs/nautilushomeps3.png';
 import nautilusps3batchid from '@assets/rb3/ps3customs/nautilusps3batchid.png';
 import nautilusps3batchselect from '@assets/rb3/ps3customs/nautilusps3batchselect.png';
@@ -24,15 +25,19 @@ import findmogg from '@assets/rb3/ps3customs/findmogg.png';
 import moggreplace from '@assets/rb3/ps3customs/moggreplace.gif';
 import { Image } from 'astro:assets';
 
-## Customs not working online / Scores not saving
-Rock Band 3 can only remember scores for numeric song IDs. If you didn't follow [[the main Xbox 360 to PS3 guide]](../360tops3), chances are you will bump into songs that have letters in the song ID.  
-Those songs will generate a new ID and wipe your score every time the game starts.
+## Customs not showing up/working online / Scores not saving
+Rock Band 3 can only remember scores for **unique** numeric song IDs. If you didn't follow [[the main Xbox 360 to PS3 guide]](../360tops3) or have an outdated version of <a href="https://nemosnautilus.com/nautilus" target="_blank" rel="noopener noreferrer">[Nautilus]</a>, chances are you will bump into songs with problematic IDs.  
+Songs with alphabetic IDs will generate a new ID and wipe your score every time the game starts.
 
 While online, these songs will grey even if you and other players have the same song installed. To avoid this, the song needs to have a numeric ID.  
 <Image src={missingsong} alt="Rock Band 3 showing songs with a darker color as they are disabled." />
 
-You can solve this issue by correcting the IDs with Nautilus.
+If the songs have a duplicate ID, one of them will never show up.  
+<Image src={nautilusidclash} alt="Nautilus showing two songs with duplicate IDs." />
+
+You can solve both of these issues by correcting the IDs with Nautilus.
 ### Fixing IDs Before Installing
+
 <Steps>
 1. Simply follow [[the main Xbox 360 to PS3 guide]](../360tops3).  
 This is automatically fixed.
@@ -44,8 +49,8 @@ This is automatically fixed.
     <Image src={nautilushomeps3} alt="Nautilus' main screen. A cursor hovers over 'PS3 Converter'." />
 
 2. At the top of the `PS3 Converter` window, go to:  
-`Numeric ID Options > Batch replace song IDs`  
-    <Image src={nautilusps3batchid} alt="Nautilus's PS3 Converter. A cursor hovers over 'Batch replace song IDs' under the 'Numeric ID Options' menu." />
+`Song ID Options > Batch correct song IDs`  
+    <Image src={nautilusps3batchid} alt="Nautilus's PS3 Converter. A cursor hovers over 'Batch correct song IDs' under the 'Song ID Options' menu." />
 
 3. On either PS3 or RPCS3, navigate to song/pack containing the song with the bad ID (normally within `dev_hdd0\game\BLUS30463\USRDIR\[SONGNAME]\songs`).  
 After finding it, select the `songs.dta` file within the folder.  
