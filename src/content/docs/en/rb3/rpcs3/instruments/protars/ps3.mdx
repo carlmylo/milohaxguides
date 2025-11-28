@@ -1,19 +1,19 @@
 ---
-title: PlayStation 3 Rock Band MIDI PRO Adapter Keyboard
-slug: "en/rb3pc/controllers/keys/ps3mpa"
-description: "How to connect and configure a keyboard connected with a PS3 MPA on RPCS3."
+title: PlayStation 3 Rock Band 3 Fender Mustang Pro Guitar
+slug: "en/rb3pc/controllers/protars/ps3"
+description: "How to connect and configure PlayStation 3 Mustang Pro Guitars on RPCS3."
 tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 2
-  label: PS3 Rock Band MPA
+  order: 1
+  label: PS3
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
-import ps3mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/ps3mpadrmscontroller.png';
+import rbprotar from '@assets/rb3/rpcs3/instruments/controller/rbprotar.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import mpakey from '@assets/rb3/rpcs3/instruments/setup/mpa/mpakey.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
 import zadigreplace from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigreplace.png';
@@ -25,39 +25,50 @@ import rb3player from '@assets/rb3/rpcs3/instruments/setup/passthrough/rb3player
 import startdevman from '@assets/rb3/rpcs3/instruments/setup/passthrough/startdevman.png';
 import devman from '@assets/rb3/rpcs3/instruments/setup/passthrough/devman.png';
 import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanun.png';
+import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iog from '@assets/rb3/rpcs3/config/iog.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={ps3mpadrmscontroller} alt="Controller" /></center>
+<center><Image src={rbprotar} alt="Controller" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
-* Nintendo Wii MIDI Pro Adapters can be converted to PlayStation 3. This requires hardware modification and will not be covered here.
+## Instructions
+There are two different ways to connect this Pro Guitar. If you don't have the Rock Band Mustang Receiver for PlayStation 3, you will need to use MIDI to USB.  
+Pick whichever is the most convenient for you:
 
-### Setup
+<Tabs>
+  <TabItem label="RB3 Mustang Receiver for PlayStation 3 (Recommended)">
+
+**You will need:**
+
+* a PlayStation 3 Wireless Mustang Receiver to connect to the Santroller based adapter.  
+> ![Dongle for the RB3 Mustang Guitar](/milohaxguides/assets/instruments/buttons/ps3/recprotar.png "Dongle for the RB3 Mustang Guitar")
+
 <Steps>
-1. Connect your RB3 MIDI PRO Adapter and switch it to Keyboard mode. Simply set the middle switch to center `K` position.  
-Please note that you need to do this even if you already did it for the other two modes.  
-    <Image src={mpakey} alt="A MIDI PRO Adapter with the middle switch set to 'K'." />
+1. Connect your RB3 Wireless Mustang Receiver for PlayStation 3 to your computer.
 
 2. Now, **<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">[go to Zadig's website]</a>** and **download the latest version, then open it** up.
 
 3. Click on `Options` then `List All Devices`.  
     <Image src={zadiglistall} alt="Zadig showing 'List All Devices' under 'Options' highlighted." />
 
-4. You should now see devices listed. **Switch it to your RB3 MIDI Pro Adapter**.  
-In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStation® 3`).  
+4. You should now see devices listed. **Switch it to `Harmonix RB3 Mustang Guitar for PlayStation® 3`**.  
     <Image src={zadigsel} alt="Zadig showing 'Harmonix RB3 Mustang Guitar for PlayStation® 3' highlighted in the devices listed." />
 
 5. **After selecting the right device, you should see the option to replace the driver.  
-_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE RB3 MIDI PRO ADAPTER!!_**  
+_MAKE SURE YOU ARE REPLACING THE DRIVER ONLY FOR THE RB3 WIRELESS MUSTANG RECEIVER!!_**  
 Click `Replace Driver`.  
     <Image src={zadigreplace} alt="Zadig with 'Replace Driver' highlighted." />
 
-6. A warning will appear. **Again, make sure you have selected your RB3 MIDI PRO Adapter.** After you have made sure, **click** **`Yes`**.  
+6. A warning will appear. **Again, make sure you have selected your RB3 Wireless Mustang receiver.** After you have made sure, **click** **`Yes`**.  
     <Image src={zadigwarning} alt="Zadig warning the user that they're about to modify a system driver, with 'Yes' highlighted" />
 
 7. It will then install the driver. As the program says, it may take a few minutes.  
@@ -74,8 +85,7 @@ Turn your controller on and you should see it automatically assign a player numb
 You will see the instrument ready to join in Rock Band 3, .  
 <Image src={rb3player} alt="Rock Band 3 with a Pro Guitar ready to join." />
 
-
-From this point, you can just connect your RB3 MIDI Pro Adapter whenever you want without having to repeat this setup process!
+From this point, you can just connect your RB3 Wireless Mustang receiver whenever you want without having to repeat this setup process!
 
 <details>
 <summary>Uninstalling</summary>
@@ -95,7 +105,42 @@ In this example, it's the Pro Guitar (`Harmonix RB3 Mustang Guitar for PlayStati
 </Steps>
 When you disconnect then reconnect the device, it will revert back to the original driver.
 </details>
+</TabItem>
+  <TabItem label="MIDI to USB interface">
+## SYSEX Notice
+
+<Aside type="caution">**You need a MIDI to USB Interface that has SYSEX support!  
+Consult your MIDI to USB interface's manual or manufacturer for more details.**</Aside>
+
+| Verified<br>MIDI to USB interfaces</br> |
+|:------------------:|
+| **CME**<br>C2MIDI Pro</br> |
+| **CME**<br>U2MIDI Pro</br> |
+| **Focusrite**<br>Scarlett (4i4 and higher) [3rd Gen]</br> |
+| **M-Audio**<br>Midisport Uno</br> |
+| **MOTU**<br>M2/M4</br> |
+| **Roland**<br>UM-ONE mk2</br> |
+| **SSL**<br>+2 MKII</br> |
+
+## Instructions
+Since you can't use the dongle, you will need to connect Rock Band 3 Pro Guitar via the MIDI port on the bottom.  
+> <Image src={midimustang} alt="A Rock Band 3 Mustang Pro Guitar showing a 5-DIN MIDI output highlighted in blue with a dotted white outline." />
+
+**For this, you will need a MIDI to USB interface**.  
+Here’s an example of a MIDI to USB interface. Most will come with an LED indicator to show activity. **To check that you’ve plugged it in correctly, you should see “MIDI In” blinking when you press a key**.  
+> <Image src={miditousb} alt="A MIDI to USB interface." />
+
+**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs. For example, this Scarlett has MIDI connections in the back.  
+> <Image src={midifs} alt="The back of a Focusrite Scarlett showing a USB port, and 5-DIN MIDI input and output." />
+
+After that, **right click on Rock Band 3** in RPCS3, **then click on `Change Custom Configuration`**.  
+> <Image src={iog} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline." />
+
+* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square"):  
+    * 🎸 **Change your “Emulated MIDI type” from “Keyboard” to “Guitar (17 Frets)” if you have a Mustang Pro Guitar, or “Guitar (22 Frets)” if you have a Squier Pro Guitar, then select your MIDI to USB interface in the drop-down menu next to it.**
+</TabItem>
+</Tabs>
 
 [[Back to Controllers]](../../main/)
 
-Research by <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>
+Implementation by <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>
