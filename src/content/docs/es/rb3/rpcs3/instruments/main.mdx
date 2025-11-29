@@ -8,16 +8,20 @@ sidebar:
   order: 1
   label: Controlando a Rock Band 3
 ---
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
 import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
 
-Puedes usar varios controles e instruments con RPCS3 cuando juegas Rock Band 3. Para hacer todo mas fácil, creamos una colección de documentación para instrumentos que funcionan y como configurarlos.
+Puedes usar varios controles e instrumentos con RPCS3 cuando juegas Rock Band 3. Para hacer todo mas fácil, creamos una colección de documentación para instrumentos que funcionan y como configurarlos.
 
 La lista fue organizada por dificultad y compatibilidad. Cada instrumento tiene una calificación, depende de que les falta o cuanto esfuerzo se toma para configúralo.
 
 Toma en cuenta:
 * Si van a jugar varias personas, **tienes que configurar cada instrumento en un puerto diferente** (Player 1, Player 2, etc).
 * Guitarras y baterías de Rock Band para el PlayStation 3 no requieren configuración manual. **¡NO LOS CONFIGURES!**
-* Si tu control mapeado no se detecta, haz click en <span title="Actualizar">"<code>Refresh</code>"</span> dentro de la pantalla de <span title="Controles">"<code>Pads</code>"</span>. Si eso no lo arregla, reinicia RPCS3.
+* Si tu control mapeado no se detecta, haz click en <span title="Actualizar">"<code>Refresh</code>"</span> dentro de la pantalla de `Mandos`. Si eso no lo arregla, reinicia RPCS3.
 
 Cuando termines de configurar algo, **asegúrate hacer click en <span title="Guardar">"<code>Save</code>"</span>**.
 
@@ -132,43 +136,42 @@ Cuando termines de configurar algo, **asegúrate hacer click en <span title="Gua
 
 
 ## Usando perfiles
-<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
 
-Profiles are premade setup files made by the community. They are drag and drop files which have preconfigured mappings for various instruments.
+Perfiles son archivos de configuraciones pre-hechas por la comunidad. Simplemente arrastra y suelta los archivo y debe de funcionar para mayoría de personas
 
-1. Download the .7z file in the folder for the instrument(s) you want to use.
-2. Extract the .7z file.
-3. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
 
-![A GIF of a user dragging the Wii Rock Band Guitar configuration into their RPCS3 folder.](https://rb3pc.milohax.org/images/instruments/instrepoinstall.gif "Installing a configuration from the Instrument Repo")
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
-After that, you can select the profile in the **"Pads"** menu.
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 
-![A screenshot of RPCS3's Gamepad Settings, showing the cursor over a profile.](https://rb3pc.milohax.org/images/instruments/rpcs3padprofile.png "Gamepad Settings")
+Toma en cuenta que estos perfiles están hechos para solo un instrumento. Puedes usar las páginas de los instrumentos para agregar más instrumentos.
 
-Most of the time, these controller profiles should work out of the box. If they don't, try changing the controller listed in "`Devices`", next to the <span title="Actualizar">"<code>Refresh</code>"</span> button until it receives an input. You can edit this while the game is running.
-
-Keep in mind that the profiles are formatted for single players. You will need to add all instruments needed.
-
-Alternatively, you can combine multiple files if you know your way around text editors like Notepad++ or Sublime Text.
-Select everything from line 2 to the end of line 86 in the `Default.yml` file of the instrument you want to add, then copy it. 
-Paste it into:
-* Line 88 to 172 for Player 2
-* Line 174 to 258 for Player 3
-* Line 260 to 344 for Player 4
-* Line 346 to 430 for Player 5
-* Line 432 to 516 for Player 6
-* Line 518 to 602 for Player 7
+Si le sabes, puedes combinar perfiles si editas los archivos con un programa como Notepad++ o Sublime Text.  
+Selecciona todo desde línea 2 hasta línea 86 para los perfiles que quieres combinar en el archivo `.yml` con en el instrumento que quieras agregar.  
+Págalo entre:
+* Línea 88 a 172 para Jugador 2
+* Línea 174 a 258 para Jugador 3
+* Línea 260 a 344 para Jugador 4
+* Línea 346 a 430 para Jugador 5
+* Línea 432 a 516 para Jugador 6
+* Línea 518 a 602 para Jugador 7
 
 ## Contribuyendo
-
-Do you have a controller we don't have documentation on? Want to help expand this list further? Contact us on [**[the MiloHax discord]**](https://discord.gg/milohax) or [[open an issue]](https://github.com/hmxmilohax/rb3-pc/issues/new).  
-The following information is needed:
-* Instrument brand and model (Guitar Hero Les Paul)
-* Adapter(s) used (RetroCultMods V3 Adapter)
-* Platform for instrument (Nintendo Wii)
-* Written bindings for everBotón Y (Traste Verde = Cross)
-* The bindings file
-	* (`RPCS3\config\input_configs\global\ProfileName.yml`) if it's with the global "Pads" menu
-	* (`RPCS3\config\input_configs\BLUS30463\Default.yml`) if it's made in "Custom Gamepad Configuration"
-* A screenshot of the Gamepad Configuration
+¿Tienes un instrumento que no tenemos documentado? ¿Quieres ayudar a extender esta lista? Ponte en contacto por **[[el Discord de MiloHax]](https://discord.gg/milohax)** o [[abre un asunto en GitHub]](https://github.com/hmxmilohax/rb3-pc/issues/new).  
+Se necesita esta información:
+* Modelo y marca de instrumento (Les Paul de Guitar Hero)
+* Adaptador(es) que usaste (Adaptador V3 de RetroCultMods)
+* De que sistema es (Nintendo Wii)
+* Configuración escrita para cada botón (Traste verde = Cross (Cruz))
+* Los archivos de configuración
+	* Esta en `RPCS3\config\input_configs\global\ProfileName.yml`) si lo creaste por el menú de `Mandos`
+	* Esta en `RPCS3\config\input_configs\BLUS30463\Default.yml`) si lo creaste en la `Configuración de mandos personalizada`
+* Una captura de la configuración

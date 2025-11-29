@@ -12,12 +12,12 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import wiirbdrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiirbdrmscontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
 import drmswiirbmapping from '@assets/rb3/rpcs3/instruments/maps/drmswiirbmapping.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
 import { Image } from 'astro:assets';
 
 <div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
@@ -40,10 +40,10 @@ Los receptores de Rock Band 2 y The Beatles: Rock Band son intercambiables y com
 
 <details>
 <summary>¿Como configuro mi batería?</summary>
-**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
 <Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
 
-Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de `Mandos`.  
 Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
 <Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
 Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
@@ -51,13 +51,13 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 
 ## Información de controls
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
 | MMJoystick | Joystick |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:------------:|:--------------:|
-| Drums | Rock Band Pro |
+| Batería | Rock Band Pro |
 
 ## Mapeo
 
@@ -101,10 +101,10 @@ Después de descargar el perfil,
 2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
     <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
-3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
     <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
 </Steps>
-La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 </details>
 
 [[Regresar a la lista de instrumentos]](../../main/)

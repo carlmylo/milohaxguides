@@ -13,8 +13,8 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 import pckeyboardcontroller from '@assets/rb3/rpcs3/instruments/controller/pckeyboardcontroller.png';
-import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
-import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
 import padpckbdefmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbdefmapping.png';
 import padpckbfnfmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbfnfmapping.png';
@@ -23,7 +23,7 @@ import padpckbghmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbghmappin
 import padpckbghdrmsmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbghdrmsmapping.png';
 import padpckbpdrmsmapping from '@assets/rb3/rpcs3/instruments/maps/padpckbpdrmsmapping.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
-import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/milohaxguides/assets/instruments/logos/pc.png" alt="Platform" title="Platform"></img></center>
@@ -37,10 +37,10 @@ import { Image } from 'astro:assets';
 
 <details>
 <summary>¿Como configuro mi teclado?</summary>
-**Haz click en el icono de <span title="Controles">"<code>Pads</code>"</span> hacia arriba de RPCS3**.  
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
 <Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
 
-Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de <span title="Controles">"<code>Pads</code>"</span>.  
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de `Mandos`.  
 Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
 <Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
 Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
@@ -53,13 +53,13 @@ Esta es la configuración que viene por defecto con RPCS3.
 Solo se recomienda **solamente** para controlar menús y para vocalistas que no tengan un mando propio.
 ## Información de control
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
-| Keyboard | Keyboard |
+| Teclado | Teclado |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:--------------:|:--------------:|
-| Standard (Pad) | PS3 Controller |
+| Estándar (mando) | Mando de PS3 |
 
 | **RPCS3** | **Teclado** | **Uso** | **Uso alt.** |
 |:---:|:---:|:---:|:---:|
@@ -85,13 +85,13 @@ Este perfil esta inspirado por la configuración de Fortnite Festival. Modificad
 * Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
 ## Información de control
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
-| Keyboard | Keyboard |
+| Teclado | Teclado |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:--------------:|:--------------:|
-| Standard (Pad) | PS3 Controller |
+| Estándar (mando) | Mando de PS3 |
 
 | **RPCS3** | **Teclado** | **Guitarra/Bajo/Teclado** | **Uso** | **Uso alt.** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -120,13 +120,13 @@ Este perfil es inspirado por la configuración Pro de Fortnite Festival y Frets 
 * Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
 ## Información de control
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
-| Keyboard | Keyboard |
+| Teclado | Teclado |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:--------------:|:--------------:|
-| Guitar | Guitar Hero |
+| Guitarra | Guitar Hero |
 
 | **RPCS3** | **Teclado** | **Guitarra/Bajo/Teclado** |
 |:---:|:---:|:---:|
@@ -153,13 +153,13 @@ Un perfil usado por el tecladista favorito de MiloHax. Tiene suficiente teclas p
 * Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
 ## Información de control
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
-| Keyboard | Keyboard |
+| Teclado | Teclado |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:--------------:|:--------------:|
-| Standard (Pad) | PS3 Controller |
+| Estándar (mando) | Mando de PS3 |
 
 | **RPCS3** | **Teclado** | **Guitarra/Bajo/Teclado** | **Batería** | **Uso** | **Uso alt.** |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -187,13 +187,13 @@ Este perfil fue creado por nuestro tecla- baterista Colombiano favorito. Los cie
 * Si no mapeas todos los modificadores, **vas a tener notas perdidas**.
 ## Información de control
 
-| Handlers | Devices |
+| Controladores | Dispositivos |
 |:--------:|:-------:|
-| Keyboard | Keyboard |
+| Teclado | Teclado |
 
-| Device Class | Device Subtype |
+| Clase de dispositivo | Subclase de dispositivo |
 |:--------------:|:--------------:|
-| Drum | Rock Band Pro |
+| Batería | Rock Band Pro |
 
 | **RPCS3** | **Teclado** | **Batería** |
 |:---:|:---:|:---:|
@@ -231,10 +231,10 @@ Después de descargar el perfil,
 2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
     <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
 
-3. Después de eso, puedes seleccionar el perfil en el menú de <span title="Controles">"<code>Pads</code>"</span>.  
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
     <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
 </Steps>
-La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en <span title="Dispositivo">"<code>Devices</code>"</span>, al lado del botón de <span title="Actualiza">"<code>Refresh</code>"</span> hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
 </details>
 
 [[Regresar a la lista de instrumentos]](../../main/)

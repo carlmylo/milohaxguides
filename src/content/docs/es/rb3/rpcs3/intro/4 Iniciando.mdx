@@ -7,19 +7,20 @@ sidebar:
 ---
 import { Aside } from '@astrojs/starlight/components';
 import rpcs3init from '@assets/rb3/rpcs3/intro/rpcs3init.png';
-import rpcs3fwdnd from '@assets/rb3/rpcs3/intro/rpcs3fwdnd.gif';
-import fwinstall from '@assets/rb3/rpcs3/intro/fwinstall.png';
-import rpcs3fw from '@assets/rb3/rpcs3/intro/rpcs3fw.png';
-import rpcs3fwdone from '@assets/rb3/rpcs3/intro/rpcs3fwdone.png';
-import rpcs3fwcomp from '@assets/rb3/rpcs3/intro/rpcs3fwcomp.png';
+import rpcs3español from '@assets/rb3/rpcs3/intro/rpcs3español.png';
+import rpcs3fwdnd from '@assets/rb3/rpcs3/intro/rpcs3fwdndes.gif';
+import fwinstall from '@assets/rb3/rpcs3/intro/fwinstalles.png';
+import rpcs3fw from '@assets/rb3/rpcs3/intro/rpcs3fwes.png';
+import rpcs3fwdone from '@assets/rb3/rpcs3/intro/rpcs3fwdonees.png';
+import rpcs3fwcomp from '@assets/rb3/rpcs3/intro/rpcs3fwcompes.png';
 import rpcs3rb3dnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dnd.gif';
-import rpcs3refresh from '@assets/rb3/rpcs3/intro/rpcs3refresh.gif';
+import rpcs3refresh from '@assets/rb3/rpcs3/intro/rpcs3refreshes.gif';
 import rb3dxdles from '@assets/rb3/rpcs3/intro/rb3dxdles.png';
 import rb3dxextes from '@assets/rb3/rpcs3/intro/rb3dxextes.png';
-import rpcs3rb3dxdnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dxdnd.gif';
-import rpcs3gamedataicon from '@assets/rb3/rpcs3/intro/rpcs3gamedataicon.png';
-import rpcs3pkg from '@assets/rb3/rpcs3/intro/rpcs3pkg.png';
-import rpcs3rb3dxicon from '@assets/rb3/rpcs3/intro/rpcs3rb3dxicon.png';
+import rpcs3rb3dxdnd from '@assets/rb3/rpcs3/intro/rpcs3rb3dxdndes.gif';
+import rpcs3gamedataicon from '@assets/rb3/rpcs3/intro/rpcs3gamedataicones.png';
+import rpcs3pkg from '@assets/rb3/rpcs3/intro/rpcs3pkges.png';
+import rpcs3rb3dxicon from '@assets/rb3/rpcs3/intro/rpcs3rb3dxicones.png';
 import { Image } from 'astro:assets';
 
 Ahora, **ve a la carpeta donde extrajiste a RPCS3 y ábrelo.** Deja esta carpeta abierta en el fondo.  
@@ -34,59 +35,58 @@ Ahora, **ve a la carpeta donde extrajiste a RPCS3 y ábrelo.** Deja esta carpeta
 
 
 Después de eso, **haz click en** <span title="Continuar">"<code>Continue</code>"</span>.  
-<Image src={rpcs3init} alt="La pantalla de RPCS3 dando la bienvenida al usuario." />
+> <Image src={rpcs3init} alt="La pantalla de RPCS3 dando la bienvenida al usuario." />
+
+Ahora, arriba, entra a <span title="Ayuda">"<code>Help</code>"</span> `>` <span title="Lenguaje">"<code>Language</code>"</span> `>` <span title="Español">"<code>Spanish</code>"</span> para cambiar la interfaz a Español.  
+> <Image src={rpcs3español} alt="RPCS3 en el submenu de 'Language' cambiando el lenguaje." />
 
 ## Firmware
-
 **Arrastra el archivo PS3UPDAT.PUP** que acabas de descargar del sitio de Sony **a RPCS3**.
-
-<Image src={rpcs3fwdnd} alt="PS3UPDAT.PUP siendo instalado en RPCS3." />
+> <Image src={rpcs3fwdnd} alt="PS3UPDAT.PUP siendo instalado en RPCS3." />
 
 **Haz click en <span title="Si">"<code>Yes</code>"</span>** cuando el programa te pregunte si quieres instalar el archivo.  
-<Image src={fwinstall} alt="El instalador de software del sistema de RPCS3 preguntándole al usuario si quiere instalar la software del sistema llamado 'PS3UPDAT.PUP'." />
+> <Image src={fwinstall} alt="El instalador de software del sistema de RPCS3 preguntándole al usuario si quiere instalar la software del sistema llamado 'PS3UPDAT.PUP'." />
 
 **Déjalo instalar**.  
-<Image src={rpcs3fw} alt="El instalador del software del sistema de RPCS3 después de una instalación exitosa del software del sistema y los módulos LLE." />
+> <Image src={rpcs3fw} alt="El instalador del software del sistema de RPCS3 después de una instalación exitosa del software del sistema y los módulos LLE." />
 
 **Cuando termine, haz click en `OK`**.  
-<Image src={rpcs3fwdone} alt="El instalador de firmware de RPCS3 después de una exitosa instalación del firmware de PS3 y los módulos LLE." />
+> <Image src={rpcs3fwdone} alt="El instalador de firmware de RPCS3 después de una exitosa instalación del firmware de PS3 y los módulos LLE." />
 
 Comenzará a compilar módulos para cargar la XMB de PS3 en el emulador. Esto puede tardar unos minutos. **Puedes dejar que haga su trabajo o puedes cerrarlo.**  
-<Image src={rpcs3fwcomp} alt="RPCS3 compilando módulos PPU con una barra de progreso en 1/4 de finalización." />
+> <Image src={rpcs3fwcomp} alt="RPCS3 compilando módulos PPU con una barra de progreso en 1/4 de finalización." />
 
 ## Rock Band 3
-
 Ahora, **en una pantalla de archivos nueva, ve a la carpeta donde tienes tu copia de Rock Band 3 y muévela a un lado.  
 Arrastra la carpeta de Rock Band 3 a la carpeta llamada "`games`" adentro de la carpeta de RPCS3**.  
 De nuevo, no puedo darte una link debido a leyes locales. Usa una PS3 con HEN of CFW para crear una copia o <a href="https://youtu.be/74_A1J1Nmqw" target="_blank" rel="noopener noreferrer"><b>["PS3 Disc Dumper"]</b></a> si no tienes una consola.  
-<Image src={rpcs3rb3dnd} alt="La carpeta de Rock Band 3 siendo arrastrada a RPCS3, lo que actualiza RPCS3 para mostrar Rock Band 3 en la lista de juegos." />
+> <Image src={rpcs3rb3dnd} alt="La carpeta de Rock Band 3 siendo arrastrada a RPCS3, lo que actualiza RPCS3 para mostrar Rock Band 3 en la lista de juegos." />
 
-Después de mover la carpeta de Rock Band 3, haz clic en <span title="Actualizar">"<code>Refresh</code>"</span> en RPCS3 para actualizar tu biblioteca de juegos. Rock Band 3 debe de aparecer en tu biblioteca de juegos.  
-<Image src={rpcs3refresh} alt="Presionando el botón de 'Refresh' en RPCS3, que actualiza la lista de juegos para mostrar Rock Band 3." />
+Después de mover la carpeta de Rock Band 3, haz click en <span title="Actualizar">"<code>Refresh</code>"</span> en RPCS3 para actualizar tu biblioteca de juegos. Rock Band 3 debe de aparecer en tu biblioteca de juegos.  
+> <Image src={rpcs3refresh} alt="Presionando el botón de 'Refresh' en RPCS3, que actualiza la lista de juegos para mostrar Rock Band 3." />
 
 ## Rock Band 3 Deluxe
-
 Ahora, vamos a descargar a <a href="https://rb3dx.milohax.org/es/" target="_blank" rel="noopener noreferrer"><b>[Rock Band 3 Deluxe]</b></a>.
 
 Rock Band 3 Deluxe es una modificación que arregla problemas con Rock Band 3 en RPCS3. También incluye <a href="https://rb3dx.milohax.org/es/features" target="_blank" rel="noopener noreferrer"><b>[muchas funciones para mejorar tu juego]</b></a>.
 
-**<a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer">[Haz clic aquí para bajar Rock Band 3 Deluxe]</a>**.
+**<a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer">[Haz click aquí para bajar Rock Band 3 Deluxe]</a>**.
 
 Descarga la versión de PS3.
-<a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer"><Image src={rb3dxdles} alt="La carpeta .zip de Rock Band 3 Deluxe en la bandeja de descarga de Edge." /></a>
+> <a href="https://rb3dx.milohax.org/es/downloads/" target="_blank" rel="noopener noreferrer"><Image src={rb3dxdles} alt="La carpeta .zip de Rock Band 3 Deluxe en la bandeja de descarga de Edge." /></a>
 
 **Cuando se baje, extrae el archivo**.  
-<Image src={rb3dxextes} alt="El menú contextual de Windows con el cursor en 'Extraer ficheros...') en la categoría de 7-Zip." />
+> <Image src={rb3dxextes} alt="El menú contextual de Windows con el cursor en 'Extraer ficheros...') en la categoría de 7-Zip." />
 
 **Cuando termine de extraer, arrastra el archivo PKG a RPCS3 y haz click en <span title="Si">"<code>Yes</code>"</span>** como con el archivo de `PS3UPDAT.PUP`.  
-<Image src={rpcs3rb3dxdnd} alt="El archivo PKG siendo arrastrado en RPCS3." />
+> <Image src={rpcs3rb3dxdnd} alt="El archivo PKG siendo arrastrado en RPCS3." />
 
-<Image src={rpcs3pkg} alt="El Decrypter/Installer de RPCS3 preguntando si el usuario desea instalar el archivo de paquete de Rock Band 3 Deluxe." />
+> <Image src={rpcs3pkg} alt="El Decrypter/Installer de RPCS3 preguntando si el usuario desea instalar el archivo de paquete de Rock Band 3 Deluxe." />
 
 La mejor manera de confirmar que se instalo correctamente es activar <span title="Preferir iconos de datos del juego">"<code>Prefer Game Data Icon</code>"</span> dentro del menú de <span title="Ver > Iconos de la lista de juegos">"<code>View > Game List Icons</code>"</span>.  
-<Image src={rpcs3gamedataicon} alt="La biblioteca de RPCS3, activando 'Prefer Game Data Icon'." />
+> <Image src={rpcs3gamedataicon} alt="La biblioteca de RPCS3, activando 'Prefer Game Data Icon'." />
 
 Si se instalo correctamente, el icono de Rock Band 3 va a cambiar.  
-<Image src={rpcs3rb3dxicon} alt="La biblioteca de RPCS3, enseñando el icono de Rock Band 3 usando un icono nuevo de Rock Band 3 Deluxe." />
+> <Image src={rpcs3rb3dxicon} alt="La biblioteca de RPCS3, enseñando el icono de Rock Band 3 usando un icono nuevo de Rock Band 3 Deluxe." />
 
 Puedes renombrar el juego a "Rock Band 3 Deluxe" si quieres. Solo necesitas hacer click derecho en "Rock Band 3" y selecciona a <span title="Renombrar en lista de juegos">"<code>Rename in Gamelist</code>"</span>.

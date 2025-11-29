@@ -12,7 +12,7 @@ sidebar:
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
-import rbprotar from '@assets/rb3/rpcs3/instruments/controller/rbprotar.png';
+import rbmustangpro from '@assets/rb3/rpcs3/instruments/controller/rbmustangpro.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
 import zadiglistall from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadiglistall.png';
 import zadigsel from '@assets/rb3/rpcs3/instruments/setup/passthrough/zadigsel.png';
@@ -28,15 +28,15 @@ import devmanun from '@assets/rb3/rpcs3/instruments/setup/passthrough/devmanunes
 import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
-import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
-import iog from '@assets/rb3/rpcs3/config/iog.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchangees.png';
+import iog from '@assets/rb3/rpcs3/config/ioges.png';
 import { Image } from 'astro:assets';
 
 <center><img src="/milohaxguides/assets/instruments/logos/ps3.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={rbprotar} alt="Control" /></center>
+<center><Image src={rbmustangpro} alt="Control" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
-¡NO mapeés este instrumento por el menú de <span title="Controles">"<code>Pads</code>"</span>!
+¡NO mapeés este instrumento por el menú de `Mandos`!
 </Aside>
 <Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
   Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
@@ -143,14 +143,14 @@ Por ejemplo, esta Scarlett tiene conexiones MIDI por detrás.
 
 Decide cual manera es mas conveniente para ti y conecta tu guitarra a tu computadora.
 
-Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en <span title="Cambiar configuración personalizada">"<code>Change Custom Configuration</code>"</span>**.  
+Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en `Cambiar configuración personalizada`**.  
 <Image src={rpcs3customconfigchange} alt="El menú de clic derecho de RPCS3, mostrando 'Change Custom Configuration' resaltado." />
 
-Ahora, ve a la pestaña de `I/O`.  
+Ahora, ve a la pestaña de `E/S`.  
 > <Image src={iog} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />
 
 * ![Un cuadro bronceado con un contorno solido.](/milohaxguides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
-    * 🎸 **Cambia el <span title="Tipo de MIDI emulado">"<code>Emulated MIDI type</code>"</span> de <span title="Teclado">"<code>Keyboard</code>"</span> a <span title="Guitarra (17 trastes)">"<code>Guitar (17 Frets)</code>"</span> si tienes una guitarra PRO Mustang, o <span title="Guitarra (22 trastes)">"<code>Guitar (22 Frets)</code>"</span> si tienes una guitarra PRO Squier, luego elige tu la interfaz MIDI con cual la tienes conectada en el menú desplegable junto a él**
+    * 🎸 **Cambia el `Dispositivo MIDI emulado` de `Teclado` a `Guitarra (17 trastes)` si tienes una guitarra PRO Mustang, o `Guitarra (22 trastes)` si tienes una guitarra PRO Squier, luego elige tu la interfaz MIDI con cual la tienes conectada en el menú desplegable junto a él**.
 </TabItem>
 </Tabs>
 

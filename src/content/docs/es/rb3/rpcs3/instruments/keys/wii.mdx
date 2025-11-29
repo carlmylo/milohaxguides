@@ -35,15 +35,15 @@ import midictrlrpcs3 from '@assets/rb3/rpcs3/instruments/setup/midi/midictrlrpcs
 import rbkeys from '@assets/rb3/rpcs3/instruments/setup/midi/rbkeys.png';
 import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
 import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
-import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
-import iok from '@assets/rb3/rpcs3/config/iok.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchangees.png';
+import iok from '@assets/rb3/rpcs3/config/iokes.png';
 import { Image } from 'astro:assets';
 
 <div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
 <center><Image src={wiirbkeyscontroller} alt="Control" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
-¡NO mapeés este instrumento por el menú de <span title="Controles">"<code>Pads</code>"</span>!
+¡NO mapeés este instrumento por el menú de `Mandos`!
 </Aside>
 <Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
   Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
@@ -117,14 +117,14 @@ Por ejemplo, esta Scarlett tiene conexiones MIDI por detrás.
 
 Decide cual manera es mas conveniente para ti y conecta tu teclado MIDI a tu computadora.
 
-Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en <span title="Cambiar configuración personalizada">"<code>Change Custom Configuration</code>"</span>**.  
+Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en `Cambiar configuración personalizada`**.  
 <Image src={rpcs3customconfigchange} alt="El menú de clic derecho de RPCS3, mostrando 'Change Custom Configuration' resaltado." />
 
-Ahora, ve a la pestaña de `I/O`.  
+Ahora, ve a la pestaña de `E/S`.  
 > <Image src={iok} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />
 
 * ![Un cuadro bronceado con un contorno solido.](/milohaxguides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
-    * 🎹 **Deja <span title="Tipo de MIDI emulado">"<code>Emulated MIDI type</code>"</span> en <span title="Teclado">"<code>Keyboard</code>"</span> y elige tu teclado o interfaz MIDI en el menú desplegable junto a él.**
+    * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige tu teclado o interfaz MIDI en el menú desplegable junto a él.**
 
 ### Información adicional
 Los botones del teclado no van a funcionar como funcionan cuando esta conectado a su consola propia. Por eso vas a tener que cambiar de octava para acceder a los botones de control.  
@@ -218,11 +218,11 @@ En el menú de <span title="Dispositivos de MIDI">"<code>MIDI Devices</code>"</s
 Elige el otro puerto que creaste en loopMIDI ("Pro Keys") en la sección de <span title="Salidas de MIDI">"<code>MIDI Outputs</code>"</span>. Esto combinara las entradas de MIDI a una sola salida.  
 > <Image src={midictrlmidioxcombo} alt="MIDI Devices dentro de MIDI-OX, que muestra un teclado y el puerto de Gamepad seleccionado en la sección de MIDI Inputs y Pro Keys seleccionada en la sección de MIDI Outputs." />
 
-Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `I/O`.  
+Finalmente, en RPCS3, ve a la configuración personalizada de Rock Band 3 y entra a la pestaña de `E/S`.  
 > <Image src={midictrlrpcs3} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos. La primera ranura esta en 'Keyboard - Pro Keys 3'"/>
 
 * ![Un cuadro bronceado con un contorno solido.](/milohaxguides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
-    * 🎹 **Deja <span title="Tipo de MIDI emulado">"<code>Emulated MIDI type</code>"</span> en <span title="Teclado">"<code>Keyboard</code>"</span> y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**
+    * 🎹 **Deja `Dispositivo MIDI emulado` en `Teclado` y elige el puerto que seleccionaste como la salida en MIDI-OX ("Pro Keys")**
 
 Eso es todo. Recuerda que tienes que cerrar los **tres programas distintos** cuando no los estés usando, porque pueden causar problemas con los atajos de Windows.  
 Tienes que abrirlos cada vez que quieras jugar.
