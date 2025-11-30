@@ -1,0 +1,72 @@
+---
+title: Rock Band 3 Pro Guitars
+slug: "en/rb3pc/controllers/protars/midi"
+description: "How to connect and configure Rock Band 3 Pro Guitars on RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 4
+  label: MIDI
+---
+import { Aside } from '@astrojs/starlight/components';
+import rbprotars from '@assets/rb3/rpcs3/instruments/controller/rbprotars.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
+import midisquier from '@assets/rb3/rpcs3/instruments/setup/midi/midisquier.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
+import iog from '@assets/rb3/rpcs3/config/iog.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/midi.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={rbprotars} alt="Controller" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+<Aside>Rock Band 3 does not use audio to note MIDI tracking, which is what most MIDI guitar kits use. It uses fret sensing and strum detection for notes.  
+Don't expect your MIDI guitar to work unless it was made for Rock Band 3.</Aside>
+
+
+## SYSEX Notice
+
+<Aside type="caution">**You need a MIDI to USB Interface that has SYSEX support!**</Aside>
+
+Consult your MIDI to USB interface's manual or manufacturer for more details.
+
+| Verified<br>MIDI to USB interfaces</br> |
+|:------------------:|
+| **CME**<br>C2MIDI Pro</br> |
+| **CME**<br>U2MIDI Pro</br> |
+| **Focusrite**<br>Scarlett (4i4 and higher) [3rd Gen]</br> |
+| **M-Audio**<br>Midisport Uno</br> |
+| **MOTU**<br>M2/M4</br> |
+| **Roland**<br>UM-ONE mk2</br> |
+| **SSL**<br>+2 MKII</br> |
+
+## Instructions
+
+To connect your Rock Band 3 Pro Guitar, you will need to connect to the MIDI port on the bottom.  
+> <Image src={midimustang} alt="A Rock Band 3 Mustang Pro Guitar showing a 5-DIN MIDI output highlighted in blue with a dotted white outline." />
+
+> <Image src={midisquier} alt="A Rock Band 3 Squier Stratocaster Pro Guitar showing a 5-DIN MIDI output highlighted in blue with a dotted white outline." />  
+
+**For this, you will need a MIDI to USB interface**.  
+Here’s an example of a MIDI to USB interface. Most will come with an LED indicator to show activity. **To check that you’ve plugged it in correctly, you should see “MIDI In” blinking when you press a key**.  
+> <Image src={miditousb} alt="A MIDI to USB interface." />
+
+**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs. For example, this Scarlett has MIDI connections in the back.  
+> <Image src={midifs} alt="The back of a Focusrite Scarlett showing a USB port, and 5-DIN MIDI input and output." />
+
+After that, **right click on Rock Band 3** in RPCS3, **then click on `Change Custom Configuration`**.  
+> <Image src={iog} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline." />
+
+* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square"):  
+    * 🎸 **Change your `Emulated MIDI type` from `Keyboard` to `Guitar (17 Frets)` if you have a Mustang Pro Guitar, or `Guitar (22 Frets)` if you have a Squier Pro Guitar, then select your MIDI to USB interface in the drop-down menu next to it.**
+
+[[Back to Controllers]](../../main/)
+
+Implementation by <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>

@@ -1,46 +1,34 @@
 ---
-title: Nintendo Wii Rock Band 3 Fender Mustang Pro Guitar
-slug: "en/rb3pc/controllers/protars/wii"
+title: Nintendo Wii Xbox 360 Rock Band MIDI PRO Adapter Guitars (Santroller)
+slug: "en/rb3pc/controllers/protars/wiimpa"
 description: "How to connect and configure Nintendo Wii Mustang Pro Guitars on RPCS3."
 tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 3
-  label: Nintendo Wii
+  order: 7
+  label: Nintendo Wii MPA
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import rbmustangpro from '@assets/rb3/rpcs3/instruments/controller/rbmustangpro.png';
+import wiimpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/wiimpadrmscontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import mpagtr from '@assets/rb3/rpcs3/instruments/setup/mpa/mpagtr.png';
 import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarn.png';
 import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmust.png';
 import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmust.png';
 import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
-import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
-import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
-import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
-import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchange.png';
-import iog from '@assets/rb3/rpcs3/config/iog.png';
 import { Image } from 'astro:assets';
 
-
 <center><img src="/milohaxguides/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={rbmustangpro} alt="Controller" /></center>
+<center><Image src={wiimpadrmscontroller} alt="Controller" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
-## Instructions
-There are two different ways to connect this Pro Guitar. Pick whichever is the most convenient for you:
-<Tabs>
-  <TabItem label="Santroller Adapter + RB3 Keyboard Receiver for Wii (Recommended)">
-This is the recommended method because the guitar will work as expected and will be wireless.
-
 **You will need:**
-
 * a Santroller based adapter to connect to your computer.  
     > ![MiniHost USB Adapter by RetroCultMods](/milohaxguides/assets/instruments/adapters/minihost.png "MiniHost")
     Need one?  
@@ -48,13 +36,13 @@ This is the recommended method because the guitar will work as expected and will
         * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (Etsy)]</a>
         * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Buy one from AliExpress (as a last resort)]</a>
 
-* a Nintendo Wii Wireless Pro Guitar receiver to connect to the Santroller based adapter.  
-> ![Nintendo Wii Wireless Receiver](/milohaxguides/assets/instruments/adapters/wiimustang.png "Nintendo Wii Wireless Pro Guitar Receiver")  
-
 ## Setup
 <Aside type="caution">Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
 
-Connect the Nintendo Wii Wireless Pro Guitar receiver to your Santroller based adapter, then connect the Santroller based adapter to your computer.
+Switch your RB3 MIDI PRO Adapter and switch it to Guitar mode. Simply set the middle switch to rightmost `G` position.  
+> <Image src={mpagtr} alt="A MIDI PRO Adapter with the middle switch set to 'G'." />
+
+Connect the Nintendo Wii MIDI Pro Adapter to your Santroller based adapter, then connect the Santroller based adapter to your computer.
 
 Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
 After that, start up Santroller.
@@ -65,12 +53,12 @@ You can tick the checkbox and focus on the rest of the configuration.
 > <Image src={sanwarn} alt="Santroller warning the user that their device is not designed to be programmed with it." />
 
 Select your `Device to program`, `Connection Method`, and `Device to Emulate`.  
-This will usually be `Raspberry Pi Pico`, `USB Adapter`, and `Pro Keys` respectively.  
+This will usually be `Raspberry Pi Pico`, `USB Adapter`, and `Pro Guitar (Mustang)` or `Pro Guitar (Squier)` respectively.  
 After selecting your options, click on `Configure`.  
 > <Image src={initmust} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Pro Keys'" />
 
 In `Controller Settings`, change the following:
-* Set `Device to Emulate` to `Pro Keys`
+* Set `Device to Emulate` to `Pro Guitar (Mustang)` or `Pro Guitar (Squier)`
 * Enable `Use USB Passthrough with RPCS3`
 > <Image src={consetmust} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
 
@@ -82,44 +70,8 @@ When you're done, close Santroller.
 You can now launch Rock Band 3 and don't need to touch this anymore!
 
 <Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your Pro Guitar will not connect!!!</Aside>
-</TabItem>
-  <TabItem label="MIDI to USB interface">
-## SYSEX Notice
-
-<Aside type="caution">**You need a MIDI to USB Interface that has SYSEX support!  
-Consult your MIDI to USB interface's manual or manufacturer for more details.**</Aside>
-
-| Verified<br>MIDI to USB interfaces</br> |
-|:------------------:|
-| **CME**<br>C2MIDI Pro</br> |
-| **CME**<br>U2MIDI Pro</br> |
-| **Focusrite**<br>Scarlett (4i4 and higher) [3rd Gen]</br> |
-| **M-Audio**<br>Midisport Uno</br> |
-| **MOTU**<br>M2/M4</br> |
-| **Roland**<br>UM-ONE mk2</br> |
-| **SSL**<br>+2 MKII</br> |
-
-## Instructions
-Since you can't use the dongle, you will need to connect Rock Band 3 Pro Guitar via the MIDI port on the bottom.  
-> <Image src={midimustang} alt="A Rock Band 3 Mustang Pro Guitar showing a 5-DIN MIDI output highlighted in blue with a dotted white outline." />
-
-**For this, you will need a MIDI to USB interface**.  
-Here’s an example of a MIDI to USB interface. Most will come with an LED indicator to show activity. **To check that you’ve plugged it in correctly, you should see “MIDI In” blinking when you press a key**.  
-> <Image src={miditousb} alt="A MIDI to USB interface." />
-
-**If you have an audio interface, you may already have a way to plug in MIDI** to your computer, as some audio interfaces come with MIDI inputs. For example, this Scarlett has MIDI connections in the back.  
-> <Image src={midifs} alt="The back of a Focusrite Scarlett showing a USB port, and 5-DIN MIDI input and output." />
-
-After that, **right click on Rock Band 3** in RPCS3, **then click on `Change Custom Configuration`**.  
-> <Image src={iog} alt="Rock Band 3's I/O custom settings showing Emulated MIDI Devices, device type, and device selection highlighted in tan with a solid outline." />
-
-* ![A tan square with a solid outline](/milohaxguides/assets/rb3pc/config/smalltan.png "Tan Square"):  
-    * 🎸 **Change your `Emulated MIDI type` from `Keyboard` to `Guitar (17 Frets)` if you have a Mustang Pro Guitar, or `Guitar (22 Frets)` if you have a Squier Pro Guitar, then select your MIDI to USB interface in the drop-down menu next to it.**
-</TabItem>
-</Tabs>
 
 [[Back to Controllers]](../../main/)
 
 Research by <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>  
-Santroller screenshots by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>  
-Implementation by <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>
+Santroller screenshots by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>
