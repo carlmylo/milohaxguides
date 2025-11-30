@@ -1,0 +1,42 @@
+---
+title: Objetos teleportandose
+slug: "es/rb3/teleport"
+description: "Como evitar problemas visuales en Rock Band 3."
+tableOfContents: false
+sidebar:
+    hidden: true
+template: splash
+---
+import { Aside } from '@astrojs/starlight/components';
+import flyinst from '@assets/rb3/rpcs3/troubleshoot/teleport/flyinst.png';
+import patchfldr from '@assets/rb3/rpcs3/troubleshoot/teleport/patchfldr.png';
+import patchextr from '@assets/rb3/rpcs3/troubleshoot/teleport/patchextr.png';
+import patchgames from '@assets/rb3/rpcs3/troubleshoot/teleport/patchgames.png';
+import patchinstall from '@assets/rb3/rpcs3/troubleshoot/teleport/patchinstall.gif';
+import { Image } from 'astro:assets';
+import { Steps } from '@astrojs/starlight/components';
+
+¿Has estado jugando y luego ve que una guitarra, cabello o sombrero decidieron tomarse un vuelo de la nada?
+<Image src={flyinst} alt="Rock Band 3 con un personaje que tiene problemas con sus accesorios." />
+
+Puedes eliminar estos problemas visuales instalando un parche.
+<Steps>
+1. Descarga el parche llamado [[`rb3_ps3_guitar_glitch_fix.7z`]](https://github.com/hmxmilohax/rock-band-3-deluxe/raw/develop/dependencies/ps3_patcher/rb3_ps3_guitar_glitch_fix.7z).  
+    <Image src={patchfldr} alt="El archivo rb3_ps3_guitar_glitch_fix.7z en la bandeja de descarga." />
+
+2. Extrae el archivo `rb3_ps3_guitar_glitch_fix.7z`.  
+Mueve esta pantalla para un lado y déjala abierta.  
+    <Image src={patchextr} alt="El archivo rb3_ps3_guitar_glitch_fix.7z siendo extraído." />
+
+3. Ahora, ve a la carpeta donde esta tu disco.  
+Si estas en RPCS3, haz click derecho en Rock Band 3 y después en <span title="Abrir carpeta > Abrir carpeta del juego en formato disco">"<code>Open Folder > Open Disc Game Folder</code>"</span>.  
+Arrastra esta pantalla para la izquierda.  
+    <Image src={patchgames} alt="RPCS3 con el cursor sobre 'Open Game Folder', dentro del menú despegable de 'Open Folder'." />
+
+4. Arrastra la carpeta de `PS3_GAME`, que estaba adentro de la carpeta de `rb3_ps3_guitar_glitch_fix`, a la carpeta que contiene tu copia de Rock Band 3.  
+Si te pregunta si quieres reemplazar archivos, dile que si.  
+    <Image src={patchinstall} alt="Una animación de los archivos siendo reemplazados." />
+</Steps>
+¡Eso es todo!
+
+<Aside type="danger">**Si el juego se vuelve inestable, ¡activa el modo de memoria expandida! [[Haz click para mas información]](https://rb3pc.milohax.org/memory)**.</Aside>
