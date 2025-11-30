@@ -1,13 +1,13 @@
 ---
-title: Xbox 360 Rock Band 3 Fender Mustang Pro Guitar
-slug: "en/rb3pc/controllers/protars/360"
-description: "How to connect and configure Xbox 360 Mustang Pro Guitars on RPCS3."
+title: Nintendo Wii Rock Band 3 Fender Mustang Pro Guitar
+slug: "en/rb3pc/controllers/protars/wii"
+description: "How to connect and configure Nintendo Wii Mustang Pro Guitars on RPCS3."
 tableOfContents: false
 prev: false
 next: false
 sidebar:
-  order: 2
-  label: Xbox 360
+  order: 3
+  label: Nintendo Wii
 ---
 import { Aside } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
@@ -24,7 +24,8 @@ import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigc
 import iog from '@assets/rb3/rpcs3/config/iog.png';
 import { Image } from 'astro:assets';
 
-<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+
+<center><img src="/milohaxguides/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
 <center><Image src={rbmustangpro} alt="Controller" /></center>
 
 <Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
@@ -32,13 +33,14 @@ Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 
-There's two ways to connect this guitar. Pick whichever is the most convenient for you:
-
+## Instructions
+There are two different ways to connect this Pro Guitar. Pick whichever is the most convenient for you:
 <Tabs>
-  <TabItem label="Santroller Adapter + Xbox 360 Wireless Gaming Receiver (Recommended)">
+  <TabItem label="Santroller Adapter + RB3 Keyboard Receiver for Wii (Recommended)">
 This is the recommended method because the guitar will work as expected and will be wireless.
 
 **You will need:**
+
 * a Santroller based adapter to connect to your computer.  
     > ![MiniHost USB Adapter by RetroCultMods](/milohaxguides/assets/instruments/adapters/minihost.png "MiniHost")
     Need one?  
@@ -46,18 +48,13 @@ This is the recommended method because the guitar will work as expected and will
         * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (Etsy)]</a>
         * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Buy one from AliExpress (as a last resort)]</a>
 
-* an Xbox 360 Wireless Gaming Receiver for Windows to connect to the Santroller based adapter.  
-    > ![Xbox 360 Wireless Gaming Receiver for Windows](/milohaxguides/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
-    Need one?
-        * <a href="https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (RCM Shop)]</a>
-        * <a href="https://rolllimitless.com/xbox-360-wireless-receiver/" target="_blank" rel="noopener noreferrer">[Buy one from Roll Limitless]</a>
-        * <a href="https://www.amazon.com/dp/B076GZFLR3" target="_blank" rel="noopener noreferrer">[Buy one from Amazon]</a>
-        * Please note that any generic Xbox 360 Wireless Gaming Receiver should work fine!
+* a Nintendo Wii Wireless Pro Guitar receiver to connect to the Santroller based adapter.  
+> ![Nintendo Wii Wireless Receiver](/milohaxguides/assets/instruments/adapters/wiimustang.png "Nintendo Wii Wireless Pro Guitar Receiver")  
 
 ## Setup
 <Aside type="caution">Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
 
-Connect the Xbox 360 Wireless Receiver to your Santroller based adapter, then connect the Santroller based adapter to your computer.
+Connect the Nintendo Wii Wireless Pro Guitar receiver to your Santroller based adapter, then connect the Santroller based adapter to your computer.
 
 Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
 After that, start up Santroller.

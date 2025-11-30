@@ -1,0 +1,133 @@
+---
+title: Guitarra Pro Fender Mustang de Rock Band 3 para Nintendo Wii
+slug: "es/rb3pc/controllers/protars/wii"
+description: "Como configurar guitarras Fender Mustang Pro para Nintendo Wii en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 3
+  label: Nintendo Wii
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import rbmustangpro from '@assets/rb3/rpcs3/instruments/controller/rbmustangpro.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarnes.png';
+import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmustes.png';
+import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmustes.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
+import midimustang from '@assets/rb3/rpcs3/instruments/setup/midi/midimustang.png';
+import miditousb from '@assets/rb3/rpcs3/instruments/setup/midi/miditousb.png';
+import midifs from '@assets/rb3/rpcs3/instruments/setup/midi/midifs.png';
+import rpcs3customconfigchange from '@assets/rb3/rpcs3/config/rpcs3customconfigchangees.png';
+import iog from '@assets/rb3/rpcs3/config/ioges.png';
+import { Image } from 'astro:assets';
+
+
+<center><img src="/milohaxguides/assets/instruments/logos/wii.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={rbmustangpro} alt="Control" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+  Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+## Instrucciones
+Hay dos maneras para conectar esta guitarra. Elige la que es mas conveniente para ti:
+<Tabs>
+  <TabItem label="Adaptador de Santroller + receptor para la guitarra PRO inalámbrica de Wii (Recommendado)">
+Esto se recomienda porque la guitarra se mantiene inalámbrica.
+
+**Vas a necesitar:**
+
+* un adaptador que usa Santroller para conectar a tu computadora.  
+    > ![Adaptador de USB MiniHost de RetroCultMods](/milohaxguides/assets/instruments/adapters/minihost.png "MiniHost")
+    ¿Necesitas uno?  
+        * <a href="https://shop.retrocultmods.com/products/minihost-usb-adapter-by-retrocultmods" target="_blank" rel="noopener noreferrer">[Compra uno de la tienda de RetroCultMods (RCM)]</a>
+        * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+        * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Compra uno de AliExpress (como último recurso)]</a>
+
+* un receptor para la guitarra PRO inalámbrica de Wii para conectarse al adaptador que usa Santroller.  
+> ![Receptor para la guitarra PRO inalámbrica de Nintendo Wii](/milohaxguides/assets/instruments/adapters/wiimustang.png "Receptor para la guitarra PRO inalámbrica de Nintendo Wii")  
+
+## Configuración
+<Aside>Antes de empezar, **termina la emulación de Rock Band 3 en RPCS3**.</Aside>
+
+Conecta el receptor para la guitarra PRO inalámbrica de Wii al adaptador con Santroller y luego conecta el adaptador con Santroller a tu computadora.
+
+Asegúrate de <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[descargar la versión actual de Santroller]</a>.  
+Después de eso, abre Santroller.
+
+Si estas usando un adaptador preconstruido (como el MiniHost de RetroCultMods), puede que Santroller te advierte en la pantalla de inicio.  
+Esto solo significa que no podrás pedir ayuda del Discord de Santroller oficial.  
+Activa la casilla y continua con el resto de la configuración.  
+> <Image src={sanwarn} alt="Santroller advirtiendo que el adaptador no esta diseñado para usarse con Santroller." />
+
+Elije el `Dispositivo a programar`, `Método de Conexión` y `Control a Emular` depende de que tipo de modificación tienes.  
+En las capturas, fue un `Raspberry Pi Pico`, `Adaptador USB` y `Guitarra Pro (Mustang)`.  
+Después de eso, haz click en `Configurar`.  
+> <Image src={initmust} alt="La pantalla inicial de Santroller. 'Dispositivo a programar' esta en 'Raspberry Pi Pico', 'Método de Conexión' esta en 'Adaptador USB' y 'Control a Emular' esta en 'Guitarra Pro (Mustang)'." />
+
+Haz estos cambios a `Ajustes de Control`:
+* Cambia `Control a Emular` a `Guitarra Pro (Mustang)`
+* Activa `Usar 'Passthrough' por USB con RPCS3`
+> <Image src={consetmust} alt="Los ajustes de control en Santroller. Tiene los ajustes de arriba aplicados." />
+
+**¡ASEGÚRATE DE HACER CLICK EN `Guardar Ajustes` ANTES DE CERRAR EL PROGRAMA O PERDERÁS TUS CAMBIOS!**  
+> <Image src={savesan} alt="Santroller con el cursor sobre 'Guardar Ajustes'." />
+
+Cuando termines, cierra Santroller.
+
+¡Ahora puedes abrir Rock Band 3!
+
+<Aside type="caution">**¡¡¡Asegúrate que Santroller no este abierto cuando inicies Rock Band 3!!! Si esta abierto Santroller cuando inicies Rock Band 3, ¡el modo 'Passthrough' no se activara y tu guitarra PRO no funcionara!!!**</Aside>
+</TabItem>
+  <TabItem label="Interfaz de MIDI a USB">
+## Advertencia de SYSEX
+
+<Aside type="caution">**¡Necesitas una interfaz de MIDI a USB que tome datos SYSEX!  
+Consulta el manual o el fabricante de tu interfaz para mas detalles.**</Aside>
+
+| Interfaces de MIDI a USB<br>verificadas</br> |
+|:------------------:|
+| **CME**<br>C2MIDI Pro</br> |
+| **CME**<br>U2MIDI Pro</br> |
+| **Focusrite**<br>Scarlett (4i4 o mejor) [Gen 3a]</br> |
+| **M-Audio**<br>Midisport Uno</br> |
+| **MOTU**<br>M2/M4</br> |
+| **Roland**<br>UM-ONE mk2</br> |
+| **SSL**<br>+2 MKII</br> |
+
+## Instrucciones
+
+Como no puedes conectar la guitarra con el receptor, necesitas conectarla con el puerto de MIDI por abajo.  
+> <Image src={midimustang} alt="Una guitarra Mustang de Rock Band 3, con un puerto de MIDI estilo DIN con cinco pines resaltado en cuadro azul con contorno punteado." />
+
+**Se requiere una interfaz de MIDI a USB para conectar tu guitarra**.
+
+Aquí esta un ejemplo de un adaptador de MIDI a USB. Mayoría tiene una luz LED integrada para mostrar activad.  
+**Para verificar que esta todo enchufado correctamente, debes de ver <span title="Entrada de MIDI">"MIDI In"</span> parpadeando cuando le pegues a un parche**.  
+><Image src={miditousb} alt="Una interfaz de MIDI a USB" />
+
+**Si tienes una interfaz de audio, puede ser que ya tengas un puerto de MIDI** para tu computadora, ya que unas interfaces tienen puertos de MIDIs integrados.  
+Por ejemplo, esta Scarlett tiene conexiones MIDI por detrás.  
+><Image src={midifs} alt="El posterior de una Focusrite Scarlett, mostrando un puerto de USB y un salida/entrada MIDI por puerto DIN de cinco pines." />
+
+Decide cual manera es mas conveniente para ti y conecta tu guitarra a tu computadora.
+
+Después de eso, **haz click derecho en Rock Band 3** en RPCS3 **y luego en `Cambiar configuración personalizada`**.  
+<Image src={rpcs3customconfigchange} alt="El menú de clic derecho de RPCS3, mostrando 'Change Custom Configuration' resaltado." />
+
+Ahora, ve a la pestaña de `E/S`.  
+> <Image src={iog} alt="La configuración personalizada de I/O de Rock Band 3, mostrando 'Emulated MIDI Devices', tipo de dispositivo y selección de dispositivos resaltados en cuadros bronceados con contornos sólidos." />
+
+* ![Un cuadro bronceado con un contorno solido.](/milohaxguides/assets/rb3pc/config/smalltan.png "Cuadro bronceado"):  
+    * 🎸 **Cambia el `Dispositivo MIDI emulado` de `Teclado` a `Guitarra (17 trastes)` si tienes una guitarra PRO Mustang, o `Guitarra (22 trastes)` si tienes una guitarra PRO Squier, luego elige tu la interfaz MIDI con cual la tienes conectada en el menú desplegable junto a él**.
+</TabItem>
+</Tabs>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Implementado por <a href="https://dark.ski/" target="_blank" rel="noopener noreferrer">[Dark]</a>
