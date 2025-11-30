@@ -1,0 +1,78 @@
+---
+title: Guitarra PRO por adaptador MIDI PRO de Rock Band para Xbox 360
+slug: "es/rb3pc/controllers/protars/360mpa"
+description: "Como configurar tu guitarra PRO con un Adaptador MIDI PRO de Xbox 360 en RPCS3."
+tableOfContents: false
+prev: false
+next: false
+sidebar:
+  order: 6
+  label: Xbox 360 MPA
+---
+import { Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import x360mpadrmscontroller from '@assets/rb3/rpcs3/instruments/controller/360mpadrmscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import mpagtr from '@assets/rb3/rpcs3/instruments/setup/mpa/mpagtr.png';
+import sanwarn from '@assets/rb3/rpcs3/instruments/setup/santroller/sanwarnes.png';
+import initmust from '@assets/rb3/rpcs3/instruments/setup/santroller/initmustes.png';
+import consetmust from '@assets/rb3/rpcs3/instruments/setup/santroller/consetmustes.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={x360mpadrmscontroller} alt="Control" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+**Vas a necesitar:**
+
+* un adaptador que usa Santroller para conectar a tu computadora.  
+    > ![Adaptador de USB MiniHost de RetroCultMods](/milohaxguides/assets/instruments/adapters/minihost.png "MiniHost")
+    ¿Necesitas uno?  
+        * <a href="https://shop.retrocultmods.com/products/minihost-usb-adapter-by-retrocultmods" target="_blank" rel="noopener noreferrer">[Compra uno de la tienda de RetroCultMods (RCM)]</a>
+        * <a href="https://www.etsy.com/listing/1901404449" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+        * <a href="https://www.aliexpress.com/i/3256808312456163.html" target="_blank" rel="noopener noreferrer">[Compra uno de AliExpress (como último recurso)]</a>
+
+
+## Configuración
+<Aside>Antes de empezar, **termina la emulación de Rock Band 3 en RPCS3**.</Aside>
+
+Conecta tu Adaptador MIDI PRO de RB3 y cámbialo a modo de batería. Simplemente mueve el switch en el medio a la posición de `G`.  
+> <Image src={mpagtr} alt="Un adaptador MIDI PRO con el switch del medio en la opcion derecha con la letra 'G'." />
+
+Asegúrate de <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[descargar la versión actual de Santroller]</a>.  
+Después de eso, abre Santroller.
+
+Si estas usando un adaptador preconstruido (como el MiniHost de RetroCultMods), puede que Santroller te advierte en la pantalla de inicio.  
+Esto solo significa que no podrás pedir ayuda del Discord de Santroller oficial.  
+Activa la casilla y continua con el resto de la configuración.  
+> <Image src={sanwarn} alt="Santroller advirtiendo que el adaptador no esta diseñado para usarse con Santroller." />
+
+Elije el `Dispositivo a programar`, `Método de Conexión` y `Control a Emular` depende de que tipo de modificación tienes.  
+En las capturas, fue un `Raspberry Pi Pico`, `Adaptador USB` y `Guitarra Pro (Mustang)` o `Guitarra Pro (Squier)`.  
+Después de eso, haz click en `Configurar`.  
+> <Image src={initmust} alt="La pantalla inicial de Santroller. 'Dispositivo a programar' esta en 'Raspberry Pi Pico', 'Método de Conexión' esta en 'Adaptador USB' y 'Control a Emular' esta en 'Guitarra Pro (Mustang)'." />
+
+Haz estos cambios a `Ajustes de Control`:
+* Cambia `Control a Emular` a `Guitarra Pro (Mustang)` o `Guitarra Pro (Squier)`
+* Activa `Usar 'Passthrough' por USB con RPCS3`
+> <Image src={consetmust} alt="Los ajustes de control en Santroller. Tiene los ajustes de arriba aplicados." />
+
+**¡ASEGÚRATE DE HACER CLICK EN `Guardar Ajustes` ANTES DE CERRAR EL PROGRAMA O PERDERÁS TUS CAMBIOS!**  
+> <Image src={savesan} alt="Santroller con el cursor sobre 'Guardar Ajustes'." />
+
+Cuando termines, cierra Santroller.
+
+¡Ahora puedes abrir Rock Band 3!
+
+<Aside type="caution">**¡¡¡Asegúrate que Santroller no este abierto cuando inicies Rock Band 3!!! Si esta abierto Santroller cuando inicies Rock Band 3, ¡el modo 'Passthrough' no se activara y tu guitarra PRO no funcionara!!!**</Aside>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado por <a href="https://www.youtube.com/@LinosMelendi" target="_blank" rel="noopener noreferrer">[Linos]</a>  
+Capturas de Santroller por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>
