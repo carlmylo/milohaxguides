@@ -1,0 +1,151 @@
+---
+title: Xplorers de Guitar Hero para Xbox 360
+slug: "es/rb3pc/controllers/guitars/xplorer"
+description: "Como configurar Xplorers de Guitar Hero para Xbox 360 en RPCS3."
+tableOfContents: false
+---
+import xplorercontroller from '@assets/rb3/rpcs3/instruments/controller/xplorercontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import joycpl from '@assets/rb3/rpcs3/instruments/setup/gen/joycples.png';
+import joy1 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy1es.png';
+import joy2 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy2es.png';
+import joy3 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy3es.png';
+import joy4 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy4es.png';
+import joy5 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy5es.png';
+import joy6 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy6es.png';
+import joy7 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy7es.png';
+import joy8 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy8es.png';
+import gtr45 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr45.png';
+import gtr90 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr90.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import gtr360ghxpmapping from '@assets/rb3/rpcs3/instruments/maps/gtr360ghxpmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={xplorercontroller} alt="Control" /></center>
+
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+<Aside>**¡Se requiere configuración avanzada!**</Aside>
+
+* ¿Quieres modear tu guitarra?
+	* Puedes comprar el [[KIT DE REVITALIZACIÓN SIN SOLDADURA para controladores de Guitar Hero de RetroCultMods]](https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods).
+		* [[[Enlace de Etsy]]](https://www.etsy.com/listing/1830743563)
+	* Puedes comprar un [[Kit de modificación de controlador RGB GH sin soldadura PhunkyCustoms]](https://www.etsy.com/listing/1710908167).
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de <span title="Agregar configuración">"<code>Add Configuration</code>"</span> hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Rock Band |
+
+### Configuración inicial
+* Para la mejor experiencia:
+<Steps>
+1. Ve al menú principal de Windows y busca `Configurar dispositivos de juego USB` y ábrelo.  
+	> <Image src={joycpl} alt="Windows mostrando los resultados de 'Mando'." />
+
+2. Elige la `Guitar Hero X-plorer` y haz click en `Propiedades`.  
+	> <Image src={joy1} alt="Windows en el panel de Dispositivos de juego mostrando una lista de mandos." />
+
+3. Entra a la pestaña de `Configuración`.  
+	> <Image src={joy2} alt="El panel de configuracion de la X-plorer. El cursor esta sobre 'Configuración'." />
+
+4. Sostén la guitarra en un angulo de 45 grados. Esto es entre levantándola completa y dejándola a nivel.  
+	> <Image src={gtr45} alt="Una X-plorer siendo mantenida a un anuglo de 45 grados." />
+
+5. Mantén la guitarra en este angulo y haz click en click `Calibrar`.  
+	> <Image src={joy3} alt="Las propiedades de la X-plorer con el cursor en 'Calibrar'." />
+
+6. En la primera pantalla, no presiones ningún botón y haz click en `Siguiente`.  
+	> <Image src={joy5} alt="La calibración de X-plorer en la pagina de 'Buscar punto central' con el cursor en 'Siguiente'." />
+
+7. En la pantalla siguiente, presiona la palanca whammy hacia adentro completamente y déjala ir y haz click en `Siguiente`.  
+	> <Image src={joy6} alt="La calibración de X-plorer en la pagina de 'Calibración de ejes' del deslizante con el cursor en 'Siguiente'." />
+
+8. En la pantalla siguiente, apunta la guitarra hacia arriba, como si estuvieras activando Sobrecarga/Star Power y luego haz click a `Siguiente`.  
+	> <Image src={gtr90} alt="Una X-plorer siendo mantenida a un anuglo de 90 grados." />  
+
+	> <Image src={joy7} alt="La calibración de X-plorer en la pagina de 'Calibración de ejes' de la eje Z con el cursor en 'Siguiente'." />
+
+9. Para terminar, haz click en `Finalizar`.  
+	> <Image src={joy8} alt="El final de calibración." /> 
+
+</Steps>
+## Mapeo
+* Reduce la zonas muertas de las joysticks izquierda y derecha a lo mas bajo.
+
+* **BORRA ESTOS BOTONES**:
+    * Usa el click derecho para borrar botones.
+
+| **RPCS3** | **Guitarra** |
+|:--------:|:-----------:|
+| L2 | Solo Modifier |
+| Right Stick: Up | Effects Selector |
+
+**Map** the following:
+
+| **RPCS3** | **Guitarra** |
+|:---------:|:----------:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| Triángulo | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> direccion: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> direccion: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de <br> direccion: Izquierda</br> | ![D-Pad (Cruceta): Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad (Cruceta): Left") |
+| Botones de <br> direccion: Derecha</br> | ![D-Pad (Cruceta): Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad (Cruceta): Right") |
+| Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Joystick derecho:<br>Abajo</br> | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
+| R1 | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") |
+| START | ![Start](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| SELECT | ![Back](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20360%20Guitar%20Hero%20Xplorer.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<center><Image src={gtr360ghxpmapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://www.youtube.com/@jnackmclain" target="_blank" rel="noopener noreferrer">[Jnack]</a> y <a href="https://www.youtube.com/@KrazzyKlown" target="_blank" rel="noopener noreferrer">[KrazzyKlown]</a>  
+Capturas por <a href="https://www.twitch.tv/ashun_" target="_blank" rel="noopener noreferrer">[Ashun]</a>

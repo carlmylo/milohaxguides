@@ -1,0 +1,151 @@
+---
+title: Xbox 360 Guitar Hero Xplorer
+slug: "en/rb3pc/controllers/guitars/xplorer"
+description: "How to setup Xbox 360 Xplorers on RPCS3."
+tableOfContents: false
+---
+import xplorercontroller from '@assets/rb3/rpcs3/instruments/controller/xplorercontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import joycpl from '@assets/rb3/rpcs3/instruments/setup/gen/joycpl.png';
+import joy1 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy1.png';
+import joy2 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy2.png';
+import joy3 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy3.png';
+import joy4 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy4.png';
+import joy5 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy5.png';
+import joy6 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy6.png';
+import joy7 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy7.png';
+import joy8 from '@assets/rb3/rpcs3/instruments/setup/xplorer/joy8.png';
+import gtr45 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr45.png';
+import gtr90 from '@assets/rb3/rpcs3/instruments/setup/xplorer/gtr90.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import gtr360ghxpmapping from '@assets/rb3/rpcs3/instruments/maps/gtr360ghxpmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={xplorercontroller} alt="Controller" /></center>
+
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+
+* This controller requires advanced configuration.
+* Looking to mod your guitar?
+	* You can get the <a href="https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods" target="_blank" rel="noopener noreferrer">[RetroCultMods Revival Kit]</a>.
+		* <a href="https://www.etsy.com/listing/1830743563" target="_blank" rel="noopener noreferrer">[Alternative Etsy link]</a>
+	* You can get the <a href="https://www.etsy.com/listing/1710908167" target="_blank" rel="noopener noreferrer">[PhunkyCustoms Solderless RGB GH Controller Mod Kit]</a>.
+
+<details>
+<summary>How do I map my guitar?</summary>
+**Click on the `Pads` icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Rock Band |
+
+### Initial Setup
+* For the best experience:
+<Steps>
+1. Go to the Start menu and look for `Set up USB game controllers`, then open it.  
+	> <Image src={joycpl} alt="Windows showing the search results of joy.cpl." />
+
+2. Select `Guitar Hero X-plorer` then click on `Properties`.  
+	> <Image src={joy1} alt="Windows's Game Controllers Setup showing a list of installed game controllers." />
+
+3. Go to the `Settings` tab.  
+	> <Image src={joy2} alt="The X-plorer's properties with a cursor over the 'Settings' tab." />
+
+4. Hold the guitar at a 45 degree angle. This is halfway between a neck at level and full tilt.  
+	> <Image src={gtr45} alt="An X-plorer being held at a 45 degree angle." />
+
+5. While holding the guitar at this angle, click `Calibrate`.  
+	> <Image src={joy3} alt="The X-plorer's properties with the cursor over 'Calibrate'." />
+
+6. Click `Next` on the D-Pad screen with no buttons held.  
+	> <Image src={joy5} alt="Game Device Calibration on the 'Find Center Point' with the cursor on 'Next'." />
+
+7. On the next screen, press the whammy all the way in then release it, then click `Next`.  
+	> <Image src={joy6} alt="Game Device Calibration on the 'Axis Calibration' for the slider axis with the cursor on 'Next'." />
+
+8. On the next screen, move the guitar to full tilt position and then click `Next`.  
+	> <Image src={gtr90} alt="An X-plorer being held at a 90 degree angle." />  
+
+	> <Image src={joy7} alt="Game Device Calibration on the 'Axis Calibration' for the Z axis with the cursor on 'Next'." />
+
+9. After that, click on `Finish`.  
+	> <Image src={joy8} alt="The end of the Game Device Calibration." />  
+
+</Steps>
+## Mappings
+* Set the deadzones for left and right sticks to the lowest possible level.
+
+* **UNMAP** THE FOLLOWING:
+    * Use Right Click to unmap a button.
+
+| **RPCS3** | **Guitar** |
+|:--------:|:-----------:|
+| L2 | Solo Modifier |
+| Right Stick: Up | Effects Selector |
+
+* **Map** the following:
+
+| **RPCS3** | **Guitar** |
+|:---------:|:----------:|
+| Cross | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| Circle | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| Square | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| Triangle | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| L1 | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| D-Pad: Up | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| D-Pad: Down | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") |
+| D-Pad: Left | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") |
+| D-Pad: Right | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") |
+| Right Stick: <br/> Left/Right | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| Right Stick: Down | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
+| R1 | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") |
+| Start | ![Start](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| Select | ![Back](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
+
+## Profile
+
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20360%20Guitar%20Hero%20Xplorer.7z)
+
+<details>
+<summary>How do I use profiles?</summary>
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+> <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+> <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
+</details>
+
+<center><Image src={gtr360ghxpmapping} alt="Mapping" /></center>
+
+[[Back to Controllers]](../../main/)
+
+Mapped by <a href="https://www.youtube.com/@jnackmclain" target="_blank" rel="noopener noreferrer">[Jnack]</a> and <a href="https://www.youtube.com/@KrazzyKlown" target="_blank" rel="noopener noreferrer">[KrazzyKlown]</a>  
+Screenshots by <a href="https://www.twitch.tv/ashun_" target="_blank" rel="noopener noreferrer">[Ashun]</a>
