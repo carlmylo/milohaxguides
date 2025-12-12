@@ -11,9 +11,14 @@ import crkdlpcontroller from '@assets/rb3/rpcs3/instruments/controller/crkdlpcon
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/ogneck.png';
+import platpc from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platpc.png';
+import mode8 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/mode8.png';
+import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm81.png';
+import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm82.png';
 import gtrcrkdlp8mapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdlp8mapping.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
 import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/soloneck.png';
+import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platp3.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
@@ -55,16 +60,20 @@ This is so you can change configuration profiles in case you want to play other 
 | Guitar | Rock Band |
 
 <Steps>
-1. After connecting your guitar, switch the "Platform" selector to the "PC" mode.
-2. Set the "Mode" switch to "Mode 8".
-3. Enjoy!
+1. After connecting your guitar, switch the "Platform" selector to the "PC" mode.  
+	> <Image src={platpc} alt="The platform selector on a CRKD Les Paul. It is set to 'PC'." />
+
+2. Set the "Mode" switch to "Mode 8".  
+	> <Image src={mode8} alt="The mode selector on a CRKD Les Paul. It is set to '8'." />
+
+3. Map your guitar.
 </Steps>
 
 #### CRKD App Setup
 
-![The first page of the CRKD CTRL application. The guitar is configured for PC and it's set to Mode 8.](https://rb3pc.milohax.org/images/instruments/xtra/crkdlp/pcm81.png "CRKD CTRL")  
+<Image src={pcm81} alt="The first page of the CRKD CTRL application. The guitar is configured for PC and it's set to Mode 8." />  
 
-![The second page of the CRKD CTRL application.](https://rb3pc.milohax.org/images/instruments/xtra/crkdlp/pcm82.png "CRKD CTRL")  
+<Image src={pcm82} alt="The second page of the CRKD CTRL application." />  
 
 #### Mapping
 
@@ -109,6 +118,7 @@ Do NOT map this instrument via the `Pads` menu!
 
 <Steps>
 1. After connecting your guitar, switch the "Platform" selector to the "P3" mode.
+	> <Image src={platp3} alt="The platform selector on a CRKD Les Paul. It is set to 'PC'." />
 2. Enjoy!
 </Steps>
 </TabItem>
