@@ -1,26 +1,25 @@
 ---
-title: Guitarras de Guitar Hero para Xbox 360
-slug: "es/rb3pc/controllers/guitars/360gh"
-description: "Como configurar guitarras de Guitar Hero para Xbox 360 en RPCS3."
+title: Xbox 360 Rock Band Guitars
+slug: "es/rb3pc/controllers/guitars/360rb"
+description: "How to setup Xbox 360 Rock Band guitars on RPCS3."
 tableOfContents: false
 ---
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
-import ghgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/ghgtrscontroller.png';
+import rbgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rbgtrscontroller.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
-import gtr360ghmapping from '@assets/rb3/rpcs3/instruments/maps/gtr360ghmapping.png';
+import gtrxboxrbmapping from '@assets/rb3/rpcs3/instruments/maps/gtrxboxrbmapping.png';
 import { Steps } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 <center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={ghgtrscontroller} alt="Control" /></center>
+<center><Image src={rbgtrscontroller} alt="Control" /></center>
 
 <Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
     Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
-<Aside>El sensor de ladeo (Tilt) no funciona correctamente.</Aside>
 * Esta guitarra **requiere un Receptor USB Inalámbrico Gamepad PC Adaptador Para Xbox 360 para conectarse a la computadora.**  
 ![Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360](/milohaxguides/assets/instruments/adapters/360.png "Receptor USB inalámbrico Gamepad PC adaptador para Xbox 360")
 	¿Necesitas uno?
@@ -28,10 +27,6 @@ import { Image } from 'astro:assets';
 	* <a href="https://rolllimitless.com/xbox-360-wireless-receiver/" target="_blank" rel="noopener noreferrer">[Compra uno de Roll Limitless]</a>
 	* <a href="https://www.amazon.com/dp/B076GZFLR3" target="_blank" rel="noopener noreferrer">[Compra uno de Amazon]</a>
 	* ¡Mayoría de los Receptores USB Inalámbrico Gamepad PC Adaptador Para Xbox 360 funcionan!
-* ¿Quieres modear tu guitarra?
-	* Puedes comprar el <a href="https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods" target="_blank" rel="noopener noreferrer">[KIT DE REVITALIZACIÓN SIN SOLDADURA para controladores de Guitar Hero de RetroCultMods]</a>.
-		* <a href="https://www.etsy.com/listing/1830743563" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
-	* Puedes comprar un <a href="https://www.etsy.com/listing/1710908167" target="_blank" rel="noopener noreferrer">[Kit de modificación de controlador RGB GH sin soldadura PhunkyCustoms]</a>.
 
 <details>
 <summary>¿Como configuro mi guitarra?</summary>
@@ -51,29 +46,22 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 
 | Clase de dispositivo | Subclase de dispositivo |
 |:------------:|:--------------:|
-| Guitarra | Guitar Hero |
+| Guitarra | Rock Band |
 
 ## Mapeo
-Por defecto, XInput ya tiene mayoría de las cosas configuradas correctamente. Solo tienes que ajustar esto:
+Guitarras viejas pueden tener problemas con las palancas de whammy que puede crear dificultades cuando las mapeas. **Si pasa, haz click en `Filtrar ruido` para mapear correctamente.**  
+Para usar el switch de efectos correctamente, necesitas sostener la tecla ALT y hacer click en Joystick derecho: Arriba y igual con Joystick derecho: Abajo.
 
-* ¡**BORRA ESTOS BOTONES** o tus solos de guitarra van a auto-rasguear (auto-strum)!  
-Usa el click derecho para borrar botones.
-
-| **RPCS3** | **XInput** | **Guitarra** |
-|:--------:|:-----------:|:-----------:|
-| L2 | ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/360/lt.png "Gatillo Izquierdo") | Modificador de solo |
-
-* ¡**Cambia esto** o los trastes amarillos y azules estarán invertidos!
+Por defecto, XInput tiene mayoría de las cosas configuradas correctamente. Solo necesitas ajustar esto:
 
 | **RPCS3** | **XInput** | **Guitarra** |
 |:--------:|:-----------:|:-----------:|
-| Cuadrado | ![Botón Y](/milohaxguides/assets/instruments/buttons/360/y.png "Botón Y") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") | 
-| Triángulo | ![Botón X](/milohaxguides/assets/instruments/buttons/360/x.png "Botón X") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| R1 | ![Joystick derecho](/milohaxguides/assets/instruments/buttons/360/rs.png "Joystick derecho") | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") | 
+| L2 | ![Botón de Joystick derecho](/milohaxguides/assets/instruments/buttons/360/rsc.png "Botón de Joystick derecho") | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") | 
+| Joystick derecho | ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/360/lt.png "Gatillo Izquierdo") | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") |
 
-Los instrumentos de Guitar Hero **pueden ser problemáticos para mapear. Si tratas de asignar un botón y todo sale con `U+`, haz click en `Filtrar ruido`** en el lado izquierdo abajo de la ventana de configuración **y luego intenta mapear otra vez**.
-
-## Perfil
-[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20360%20Guitar%20Hero%20Guitar.7z)
+#### Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Guitar.7z)
 
 <details>
 <summary>¿Como uso perfiles?</summary>
@@ -95,9 +83,7 @@ La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración ad
 
 <details>
 <summary>Mapeo avanzado</summary>
-Puedes configurar ladeo (Tilt) pero es complicado y también va a funcionar como SELECT. Tienes que usar `Filtrar ruido` hasta que la configuración de controles detecte el giróscopo (sensor de ladeo) correcto. Es recomendado no molestar con esto y mejor modear la guitarra.
-	* Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
-
+#### Mapeo
 | **RPCS3** | **Guitarra** |
 |:---:|:---:|
 | Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
@@ -110,13 +96,15 @@ Puedes configurar ladeo (Tilt) pero es complicado y también va a funcionar como
 | Botones de <br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
 | Botones de <br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
 | Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
-| Select<br>(No se recomienda)</br> | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo Vertical") |
-| START | ![Start](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
-| SELECT | ![Back](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| Joystick derecho:<br>Arriba _y_ abajo</br> | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") |
+| L2  | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") |
+| START | ![Plus](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| SELECT | ![Minus](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
 | Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
 </details>
 
-<center><Image src={gtr360ghmapping} alt="Mapeo" /></center>
+<center><Image src={gtrxboxrbmapping} alt="Mapeo" /></center>
 
 [[Regresar a la lista de instrumentos]](../../main/)
 
