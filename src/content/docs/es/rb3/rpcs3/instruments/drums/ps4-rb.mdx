@@ -10,21 +10,17 @@ sidebar:
   label: PS4 Rock Band 4
 ---
 import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drmsxomapping from '@assets/rb3/rpcs3/instruments/maps/drmsxomapping.png';
-import pydl from '@assets/rb3/rpcs3/advanced/rpc/pydl.png';
-import pyinstall from '@assets/rb3/rpcs3/advanced/rpc/pyinstall.png';
-import mina1 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina1.png';
-import mina2 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina2.png';
-import mina3 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina3.png';
-import mina4 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina4.png';
-import mina5 from '@assets/rb3/rpcs3/instruments/setup/rb4/mina5.png';
-import ps41 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps41.png';
-import ps42 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps42.png';
-import ps43 from '@assets/rb3/rpcs3/instruments/setup/rb4/ps43.png';
+import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
+import vigembusinstall from '@assets/rb3/rpcs3/instruments/setup/rb4/vigembusinstall.png';
+import clipperdownload from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperdownload.png';
+import ps4syncdrums from '@assets/rb3/rpcs3/instruments/setup/rb4/ps4syncdrums.png';
+import clipperopen from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperopen.png';
+import clipperrun from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperrun.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
 import { Image } from 'astro:assets';
@@ -34,8 +30,8 @@ import { Image } from 'astro:assets';
 
 <Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
     Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
-
-* Requiere que descargues y uses los archivos de <a href="https://github.com/yanagiragi/Minatsuki/" target="_blank" rel="noopener noreferrer">[Minatsuki]</a> y <a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus" target="_blank" rel="noopener noreferrer">[Minatsuki-Pro-Drums-Plus]</a>.
+* Necesitas descargar y ejecutar **<a href="https://github.com/Rosalie241/clipper/releases" target="_blank" rel="noopener noreferrer">[clipper]</a>**.
+    * Clipper requiere una instalación de <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a>.
 * Necesitas un un receptor de Bluetooth para conectar esta batería a tu computadora.
     * La latencia puede ser un problema dependiendo de tu receptor de Bluetooth. Puede ser difícil encontrar una calibración buena.
 * Funciona **con o sin** platillos PRO.
@@ -62,103 +58,84 @@ Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.
 |:------------:|:--------------:|
 | Batería | Rock Band Pro |
 
-### Configuración inicial
-Primero, vamos a descargar la versión mas actual de <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">[Python 3]</a>.  
-<a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">[Haz click aquí para ir a la pagina de Python 3]</a>.  
-<a href="https://www.python.org/downloads" target="_blank" rel="noopener noreferrer"><Image src={pydl} alt="La pagina de descarga para Python. El cursor esta sobre 'Download Python 3.12.6.'" /></a>
+## Configuración inicial
+<Steps>
+1. Instala <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a> si no lo haz hecho.  
+    > <Image src={vigembusinstall} alt="El instalador de ViGEmBus con el cursor sobre 'Install'." />
 
-Cuando termine, abre el instalador.  
-En el instalador:  
-1. Activa <span title="Agregar python.exe a PATH (ruta)">"<code>Add python.exe to PATH</code>"</span>
-2. Click <span title="Instalar ahora">"<code>Install now</code>"</span>  
-<Image src={pyinstall} alt="El instalador de Python. 'Add Python.exe to PATH' ha sido resaltado e activado y el cursor esta sobre 'Install now.'" />
+2. Descarga la versión mas actual de <a href="https://github.com/Rosalie241/clipper/releases" target="_blank" rel="noopener noreferrer">[clipper]</a>.
+    > <Image src={clipperdownload} alt="La pagina de lanzamientos de Clipper en GitHub. El cursor esta sobre 'clipper.exe' bajo de 'Assets'." />
+</Steps>
 
-Ahora, ve al <a href="https://github.com/yanagiragi/Minatsuki" target="_blank" rel="noopener noreferrer">[Github de Minatsuki]</a> y descarga el ZIP que contiene el código.  
-<a href="https://github.com/yanagiragi/Minatsuki/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer"><Image src={mina1} alt="La pagina de Minatsuki. El botón de 'Code' fue presionado y el cursor esta sobre la opción de 'Download ZIP.'" /></a>
-Extrae el archivo `.zip` a una carpeta.  
+## Uso
+<Steps>
+1. Sincroniza tu batería al receptor de Bluetooth de tu computadora.  
+    > <Image src={ps4syncdrums} alt="El apartado de Bluetoooth de Windows mostrando una batería de Mad Catz de Rock Band 4.." />
 
-Después de eso, ve al <a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus" target="_blank" rel="noopener noreferrer">[Github de Minatsuki-Pro-Drums-Plus]</a> y descarga el ZIP que contiene el código.  
-<a href="https://github.com/stefman69/Minatsuki-Pro-Drums-Plus/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer"><Image src={mina2} alt="La pagina de Minatsuki-Pro-Drums-Plus'. El botón de 'Code' fue presionado y el cursor esta sobre la opción de 'Download ZIP.'" /></a>
+2. Haz doble click en `clipper`.  
+    > <Image src={clipperopen} alt="La aplicación de Clipper con un cursor resaltándola." />
 
-Combina los archivos de Minatsuki-Pro-Drums-Plus con los archivos de Minatsuki.  
-Después de eso, haz click arriba en la barra de direcciónes del Explorador de archivos y escribe `cmd`. Presiona Enter.  
-<Image src={mina3} alt="Una carpeta que tiene los archivos de Minatsuki y Minatsuki-Pro-Drums-Plus combinados. La barra de direcciónes dice 'cmd'." />
-
-
-En el intérprete de comandos, escribe `pip install -r requirements.txt` y presiona Enter.
-<Image src={mina4} alt="El intérprete de comandos de Windows. El comando de 'pip install -r requirements.txt' fue escrito y se descargaron los requisitos." />
-
-Después de que se instale eso, escribe `pip install vgamepad` y presiona Enter.  
-<Image src={mina5} alt="El intérprete de comandos de Windows. El comando de 'pip install vgamepad' fue escrito y se descargo" />
-
-Puede ser que también necesitas instalar ViGEm Bus. Puedes descargar esto de <a href="https://vigembusdriver.com/download/" target="_blank" rel="noopener noreferrer">[aquí]</a>.
-
-### Uso
-Sincroniza tu batería al receptor de Bluetooth de tu computadora.
-<Image src={ps41} alt="El menu de Windows para dispositivos de Bluetooth. Muestra una batería de Mad Catz para Rock Band 4." />
-
-Haz doble click en `main_xinput.py`.  
-<Image src={ps42} alt="La carpeta que tiene los archivos de Minatsuki y Minatsuki-Pro-Drums-Plus combinados. El cursor esta sobre el archivo de 'main_xinput.py' y esta elegido" />
-
-Cuando se abra el intérprete de comandos, escribe el numero de tu batería y presiona Enter. Aveces, la batería sale varias veces pero no hay problema. Solo elige una y presiona Enter.  
-<Image src={ps43} alt="El intérprete de comandos de Windows con la script de 'main_xinput.py' abierta. Muestra la batería de Rock Band 4 y otros controles. Un numero de la batería esta escrito y Enter fue presionado." />
-
-Minimiza este programa. **Asegúrate que se quede abierto mientras estas jugando**.
+3. Esto abre un intérprete de comandos. **Asegúrate que se quede abierto mientras estas jugando.** Puedes minimizarlo, si quieres.
+    > <Image src={clipperrun} alt="Un intérprete de comandos esperando un dispositivo." />
+</Steps>
 
 ## Mapeo
-Solo necesitas elegir la información de control correcta (Handler, Device y Device Class/Type).
+Por defecto, XInput tiene mayoría de las cosas configuradas correctamente. Solo necesitas ajustar esto:
 
-<center><Image src={drmsxomapping} alt="Mapeo" /></center>
+| **RPCS3** | **XInput** | **Batería** |
+|:--------:|:-----------:|:-----------:|
+| R1 | ![Palanca izquierda presionada](/milohaxguides/assets/instruments/buttons/360/lsc.png "Palanca izquierda presionada") | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") | 
+| L3 | ![Palanca derecha presionada](/milohaxguides/assets/instruments/buttons/360/rsc.png "Palanca derecha presionada") | Modificador de parches | 
+| R3 | ![Botón Bumper Derecho](/milohaxguides/assets/instruments/buttons/360/rb.png "Botón Bumper Derecho") | Modificador de platillos |
 
+* Baterías de Rock Band mandan mas de un botón a la vez. Por ejemplo, el Parche Amarillo manda `B` y `Palanca izquierda presionada` (que se convierten a `Circle` y `L3`.) Toma en cuenta que esto se requiere para que funcionen los platillos correctamente.
+    * Se recomienda un mando de Xbox para mapear todo y después que cambies el XInput Device a tu batería de Rock Band para Xbox 360.
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Drums.7z)
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
 
 <details>
-<summary>"No quiero usar Python."</summary>
+<summary>Mapeo avanzado</summary>
+* Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
 
-Si no quieres usar Python, los platillos no funcionaran y tendrás una experiencia peor.
-
-## Información de control
-| Controladores | Dispositivos |
-|:---:|:---:|
-| MMJoystick | Joystick |
-
-| Clase de dispositivo | Subclase de dispositivo |
-|:---:|:---:|
-| Batería | Rock Band Pro |
-
-## Mapeo
-|**RPCS3**|**Batería de Rock Band**|
+| **RPCS3** | **Batería de Rock Band** |
 |:---:|:---:|
 | Cruz/Equis | ![Parche Verde](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Parche Verde") |
 | Círculo | ![Parche Rojo](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Parche Rojo") |
 | Cuadrado | ![Parche Azul](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Parche Azul") |
 | Triángulo | ![Parche Amarillo](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Parche Amarillo") |
+| R3 | Modificador de platillos |
+| Botones de <br> dirección: Arriba</br> | Modificador de platillo amarillo |
+| Botones de <br> dirección: Abajo</br> | Modificador de platillo azul |
+| L3 | Modificador de parches |
 | L1 | ![Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Pedal") |
-| Cruz/Equis | ![Botón Cross (Cruz)](/milohaxguides/assets/instruments/buttons//ps4/x.png "Botón Cross (Cruz)") |
-| Círculo | ![Botón Circle (Circulo)](/milohaxguides/assets/instruments/buttons//ps4/o.png "Botón Circle (Circulo)") |
-| Cuadrado | ![Botón Square (Cuadro)](/milohaxguides/assets/instruments/buttons//ps4/s.png "Botón Square (Cuadro)") |
-| Triángulo | ![Botón Triangle (Triangulo)](/milohaxguides/assets/instruments/buttons//ps4/t.png "Botón Triangle (Triangulo)") |
-| Botones de dirección | ![Cruceta](/milohaxguides/assets/instruments/buttons//ps4/dp.png "Cruceta") |
-| START | ![Botón de Options](/milohaxguides/assets/instruments/buttons//ps4/opt.png "Botón de Options") |
-| SELECT | ![Botón de Share](/milohaxguides/assets/instruments/buttons//ps4/shr.png "Botón de Share") |
+| R1 | ![Pedal segundo](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Pedal segundo") |
+| Cruz/Equis | ![Botón A](/milohaxguides/assets/instruments/buttons/360/a.png "Botón A") |
+| Círculo | ![Botón B](/milohaxguides/assets/instruments/buttons/360/b.png "Botón B") |
+| Cuadrado | ![Botón X](/milohaxguides/assets/instruments/buttons/360/x.png "Botón X") |
+| Triángulo | ![Botón Y](/milohaxguides/assets/instruments/buttons/360/y.png "Botón Y") |
+| Botones de dirección | ![Cruceta](/milohaxguides/assets/instruments/buttons/xbox/dp.png "Cruceta") |
 | Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
-
-## Perfil
-
-[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Drums.7z)
-<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
-
-Después de descargar el perfil,
-
-1. Extrae el archivo .7z.
-2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
-><Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
-
-3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
-><Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
-
-La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
-
 </details>
+
+<center><Image src={drmsxinputrbmapping} alt="Mapeo" /></center>
 
 [[Regresar a la lista de instrumentos]](../../main/)
 

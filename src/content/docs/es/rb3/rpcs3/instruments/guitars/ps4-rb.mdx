@@ -1,0 +1,150 @@
+---
+title: "Guitarras de Rock Band 4/Fortnite Festival para PlayStation 4"
+slug: "es/rb3pc/controllers/guitars/ps4rb"
+description: "Como configurar tu guitarra de Rock Band 4/Fortnite Festival para PS4 en RPCS3."
+tableOfContents: false
+---
+import rb4gtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4gtrscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import gtrps4rbmapping from '@assets/rb3/rpcs3/instruments/maps/gtrps4rbmapping.png';
+import vigembusinstall from '@assets/rb3/rpcs3/instruments/setup/rb4/vigembusinstall.png';
+import clipperdownload from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperdownload.png';
+import ps4syncdrums from '@assets/rb3/rpcs3/instruments/setup/rb4/ps4syncdrums.png';
+import clipperopen from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperopen.png';
+import clipperrun from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperrun.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/ps4.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={rb4gtrscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* Necesitas descargar y ejecutar **<a href="https://github.com/Rosalie241/clipper/releases" target="_blank" rel="noopener noreferrer">[clipper]</a>**.
+    * Clipper requiere una instalación de <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a>.
+* La latencia de las Jaguars y las Stratocasters es muy variable. Puede ser difícil calibrar por esto.
+* La PDP Riffmaster requiere su receptor propio.  
+	![Receptor de PDP Riffmaster](/milohaxguides/assets/instruments/buttons/xbox/riffrec.png "Receptor de PDP Riffmaster")
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| XInput | Mando XInput |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Rock Band |
+
+## Configuración inicial
+<Steps>
+1. Instala <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a> si no lo haz hecho.  
+    > <Image src={vigembusinstall} alt="El instalador de ViGEmBus con el cursor sobre 'Install'." />
+
+2. Descarga la versión mas actual de <a href="https://github.com/Rosalie241/clipper/releases" target="_blank" rel="noopener noreferrer">[clipper]</a>.
+    > <Image src={clipperdownload} alt="La pagina de lanzamientos de Clipper en GitHub. El cursor esta sobre 'clipper.exe' bajo de 'Assets'." />
+</Steps>
+
+## Uso
+* **Si estas usando una Jaguar o Stratocaster, sincroniza tu guitarra al receptor de Bluetooth de tu computadora.**
+    > <Image src={ps4syncdrums} alt="El apartado de Bluetoooth de Windows mostrando una guitarra de Rock Band 4." />
+* **Si esas usando una Riffmaster, conecta el receptor a tu computadora.**
+
+<Steps>
+1. Haz doble click en `clipper`.  
+    > <Image src={clipperopen} alt="La aplicación de Clipper con un cursor resaltándola." />
+
+2. Esto abre un intérprete de comandos. **Asegúrate que se quede abierto mientras estas jugando.** Puedes minimizarlo, si quieres.
+    > <Image src={clipperrun} alt="Un intérprete de comandos esperando un dispositivo." />
+</Steps>
+
+## Mapeo
+Por defecto, XInput tiene mayoría de las cosas configuradas correctamente. Solo necesitas ajustar esto:
+
+| **RPCS3** | **XInput** | **Guitarra** |
+|:--------:|:-----------:|:-----------:|
+| R1 | ![Joystick derecho](/milohaxguides/assets/instruments/buttons/360/rs.png "Joystick derecho") | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") | 
+| L2 | ![Botón de Joystick derecho](/milohaxguides/assets/instruments/buttons/360/rsc.png "Botón de Joystick derecho") | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") |
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Guitar.7z)
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<details>
+<summary>Mapeo avanzado</summary>
+| **RPCS3** | **Guitarra** |
+|:---:|:---:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| Triángulo | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de <br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
+| Botones de <br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
+| Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Joystick derecho:<br>Arriba _y_ abajo</br> | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") |
+| L2 | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") |
+| START | ![Plus](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| SELECT | ![Minus](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
+</details>
+<center><Image src={gtrps4rbmapping} alt="Mapeo" /></center>
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a> and [[LysiX]](https://www.youtube.com/channel/UC1RaK6pSok879gogdeBlszw)

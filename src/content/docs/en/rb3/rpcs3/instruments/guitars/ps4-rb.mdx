@@ -1,21 +1,14 @@
 ---
-title: "PlayStation 4 Rock Band 4 Drums"
-slug: "en/rb3pc/controllers/drums/ps4rb"
-description: "How to setup PS4 Rock Band drums on RPCS3."
+title: "PlayStation 4 Rock Band 4/Fortnite Festival Guitars"
+slug: "en/rb3pc/controllers/guitars/ps4rb"
+description: "How to setup PS4 Rock Band 4/Fortnite Festival guitars on RPCS3."
 tableOfContents: false
-prev: false
-next: false
-sidebar:
-  order: 5
-  label: PS4 Rock Band 4
 ---
-import { Aside } from '@astrojs/starlight/components';
-import { Steps } from '@astrojs/starlight/components';
-import rb4drmscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4drmscontroller.png';
+import rb4gtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4gtrscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
+import gtrps4rbmapping from '@assets/rb3/rpcs3/instruments/maps/gtrps4rbmapping.png';
 import vigembusinstall from '@assets/rb3/rpcs3/instruments/setup/rb4/vigembusinstall.png';
 import clipperdownload from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperdownload.png';
 import ps4syncdrums from '@assets/rb3/rpcs3/instruments/setup/rb4/ps4syncdrums.png';
@@ -23,22 +16,22 @@ import clipperopen from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperopen.png
 import clipperrun from '@assets/rb3/rpcs3/instruments/setup/rb4/clipperrun.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
 <center><img src="/milohaxguides/assets/instruments/logos/ps4.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={rb4drmscontroller} alt="Controller" /></center>
+<center><Image src={rb4gtrscontroller} alt="Controller" /></center>
 
 <Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
 * Requires downloading and running **<a href="https://github.com/Rosalie241/clipper/releases" target="_blank" rel="noopener noreferrer">[clipper]</a>**.
     * Clipper requires installing <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a>.
-* You need a Bluetooth receiver to connect these drums to your computer.
-    * Latency may be an issue depending on your Bluetooth receiver. This may make it difficult to calibrate.
-* Works **with or without** the Pro Cymbal expansions.
-    * Make sure to configure which cymbals are connected within Rock Band 3.
-        * `Menu > Options > Drum Options`
+* Latency on Jaguars and Stratocasters may be an issue depending on your Bluetooth receiver. This may make it difficult to calibrate.
+* PDP Riffmaster guitars require their respective dongle.  
+	![PDP Riffmaster Wireless Receiver](/milohaxguides/assets/instruments/buttons/xbox/riffrec.png "PDP Riffmaster Wireless Receiver")
 
 <details>
-<summary>How do I map my drums?</summary>
+<summary>How do I map my guitar?</summary>
 **Click on the `Pads` icon at the top of RPCS3**.  
 <Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
 
@@ -56,7 +49,7 @@ Follow the instructions and/or match the assignments below.
 
 | Device Class | Device Subtype |
 |:------------:|:--------------:|
-| Drums | Rock Band Pro |
+| Guitar | Rock Band |
 
 ## Setting Up
 <Steps>
@@ -67,31 +60,27 @@ Follow the instructions and/or match the assignments below.
     > <Image src={clipperdownload} alt="The release page for Clipper on GitHub. The cursor is over 'clipper.exe' under 'Assets'." />
 </Steps>
 ## Usage
+* **If you're using a Jaguar or a Stratocaster guitar, synchronize your guitar to your Bluetooth receiver.**  
+> <Image src={ps4syncdrums} alt="Windows' Bluetooth devices showing a Mad Catz Rock Band 4 Drum Set." />
+* **If you're using a Riffmaster guitar, connect the receiver to your computer.**
 <Steps>
-1. Synchronize your drums to your computer’s Bluetooth receiver.  
-    > <Image src={ps4syncdrums} alt="Windows' Bluetooth devices showing a Mad Catz Rock Band 4 Drum Set." />
-
-2. Double click `Clipper` file to open it.
+1. Double click `Clipper` file to open it.
     > <Image src={clipperopen} alt="The clipper executable with a cursor over it." />
 
-3. A command line window will open. **Make sure it stays running in the background**. You can minimize it if you want to.
+2. A command line window will open. **Make sure it stays running in the background**. You can minimize it if you want to.
     > <Image src={clipperrun} alt="A command line showing clipper is running and waiting for a device." />
 </Steps>
 
 ## Mapping
+
 By default, XInput has most things bound correctly. You only need to remap the following:
 
-| **RPCS3** | **XInput** | **Drums** |
+| **RPCS3** | **XInput** | **Guitar** |
 |:--------:|:-----------:|:-----------:|
-| R1 | ![Left Stick Click](/milohaxguides/assets/instruments/buttons/360/lsc.png "Left Stick Click") | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Second Foot Pedal") | 
-| L3 | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | Pad Modifier | 
-| R3 | ![Right Bumper](/milohaxguides/assets/instruments/buttons/360/rb.png "Right Bumper") | Cymbal Modifier |
-
-* Rock Band Drums send multiple button presses out at once. For example, a Red pad will send `B` and `Right Stick Click` (which translates to “`Circle`” and “`L3`”.) Keep in mind these are needed to the emulator to tell your cymbals apart.
-    * It's strongly suggested to bind an Xbox controller like the Mapping screenshot below then swapping the Device to your PS4 Rock Band Drums.
-
+| R1 | ![Right Stick](/milohaxguides/assets/instruments/buttons/360/rs.png "Right Stick") | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") | 
+| L2 | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") |
 ## Profile
-[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS4%20Rock%20Band%20Guitar.7z)
 
 <details>
 <summary>How do I use profiles?</summary>
@@ -112,30 +101,28 @@ Most of the time, these controller profiles should work out of the box. If they 
 
 <details>
 <summary>Advanced Mapping</summary>
-* To bind multiple buttons to one RPCS3 button, hold Shift then click on the RPCS3 button you want to assign multiple buttons to.
-
-| **RPCS3** | **Rock Band Drums** |
+| **RPCS3** | **Guitar** |
 |:---:|:---:|
-| Cross | ![Green Pad](/milohaxguides/assets/instruments/buttons/drums/rb/gp.png "Green Pad") |
-| Circle | ![Red Pad](/milohaxguides/assets/instruments/buttons/drums/rb/rp.png "Red Pad") |
-| Square | ![Blue Pad](/milohaxguides/assets/instruments/buttons/drums/rb/bp.png "Blue Pad") |
-| Triangle | ![Yellow Pad](/milohaxguides/assets/instruments/buttons/drums/rb/yp.png "Yellow Pad") |
-| R3 | Cymbal Modifier |
-| D-Pad: Up | Yellow Cymbal Modifier |
-| D-Pad: Down | Blue Cymbal Modifier |
-| L3 | Pad Modifier |
-| L1 | ![Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp.png "Foot Pedal") |
-| R1 | ![Second Foot Pedal](/milohaxguides/assets/instruments/buttons/drums/rb/kp2.png "Second Foot Pedal") |
-| Cross | ![A Button](/milohaxguides/assets/instruments/buttons/360/a.png "A Button") |
-| Circle | ![B Button](/milohaxguides/assets/instruments/buttons/360/b.png "B Button") |
-| Square | ![X Button](/milohaxguides/assets/instruments/buttons/360/x.png "X Button") |
-| Triangle | ![Y Button](/milohaxguides/assets/instruments/buttons/360/y.png "Y Button") |
-| D-Pad | ![D-Pad](/milohaxguides/assets/instruments/buttons/xbox/dp.png "D-Pad") |
-| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/drums/rb/home.png "Home") |
+| Cross | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| Circle | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| Square | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| Triangle | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| L1 | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| D-Pad: Up | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| D-Pad: Down | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") |
+| D-Pad: Left | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") |
+| D-Pad: Right | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") |
+| Right Stick:<br>Left/Right</br> | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| Right Stick:<br>Up _and_ Down</br> | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
+| L2 | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") |
+| R1 | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") |
+| Start | ![Plus](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| Select | ![Minus](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
 </details>
 
-<center><Image src={drmsxinputrbmapping} alt="Mapping" /></center>
+<center><Image src={gtrps4rbmapping} alt="Mapping" /></center>
 
 [[Back to Controllers]](../../main/)
 
-Mapped by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>
+Mapped by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a> and [[LysiX]](https://www.youtube.com/channel/UC1RaK6pSok879gogdeBlszw)
