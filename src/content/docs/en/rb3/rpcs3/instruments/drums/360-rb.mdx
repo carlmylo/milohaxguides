@@ -15,7 +15,7 @@ import x360RBDrums from '@assets/rb3/rpcs3/instruments/controller/360rbdrmscontr
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import drmsxboxrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxboxrbmapping.png';
+import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
 import { Image } from 'astro:assets';
@@ -75,26 +75,25 @@ By default, XInput has most things bound correctly. You only need to remap the f
 * Rock Band Drums send multiple button presses out at once. For example, a Red pad will send `B` and `Right Stick Click` (which translates to `Circle` and `L3`.) Keep in mind these are needed to the emulator to tell your cymbals apart.
 	* It's strongly suggested to bind an Xbox controller like the Mapping screenshot below then swapping the Device to your Xbox 360 Rock Band Drums.
 
-<center><Image src={drmsxboxrbmapping} alt="Mapping" /></center>
+<center><Image src={drmsxinputrbmapping} alt="Mapping" /></center>
+
+## Profile
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
 
 <details>
-<summary>Profile</summary>
-[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Drums.7z)
+<summary>How do I use profiles?</summary>
 
 <Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
 
 After downloading the profile,
 
-<Steps>
 1. Extract the .7z file.
-
 2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
-    <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
-3. After that, you can select the profile in the **“Pads”** menu.  
-    <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
-  
-</Steps>
+3. After that, you can select the profile in the `Pads` menu.  
+><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
 Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
 </details>
 
