@@ -1,0 +1,111 @@
+---
+title: Gibson SG de Guitar Hero para PlayStation 2
+slug: "es/rb3pc/controllers/guitars/ps2gh"
+description: "Como configurar SGs de Guitar Hero para PS2 en RPCS3."
+tableOfContents: false
+---
+import ps2sgcontroller from '@assets/rb3/rpcs3/instruments/controller/ps2sgcontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
+import gtrps2ghsgmapping from '@assets/rb3/rpcs3/instruments/maps/gtrps2ghsgmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/ps2.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={ps2sgcontroller} alt="Control" /></center>
+
+## NOTES
+<Aside>El sensor de ladeo puede variar desde no confiable a completamente inútil.</Aside>
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* Verificamos esto solo con el adaptador "OSTENT PS1 PS2 To PC USB 2.0 Control Adapter Converter For Sony PS2 Wired Control" (Numero de modelo/SKU: 014800). Otros adaptadores pueden tener problemas.
+* <a href="https://www.x360ce.com/" target="_blank" rel="noopener noreferrer">[X360CE]</a> puede ayudar a adaptadores problemáticos para que funcionen mejor.
+* Es recomendado comprar otro adaptador.
+	* Compra uno <a href="https://shop.retrocultmods.com/products/ps2-adapter-for-guitar-drum-dancepad-and-gamepad-controllers" target="_blank" rel="noopener noreferrer">[de RetroCultMods]</a>
+		* <a href="https://www.etsy.com/listing/4309870670" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+	* Compra el <a href="https://www.etsy.com/listing/1397089947" target="_blank" rel="noopener noreferrer">[Blue Indigo]</a>.
+* ¿Quieres modear tu guitarra?
+	* Puedes comprar el <a href="https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods" target="_blank" rel="noopener noreferrer">[KIT DE REVITALIZACIÓN SIN SOLDADURA para controladores de Guitar Hero de RetroCultMods]</a>.
+		* <a href="https://www.etsy.com/listing/1830743563" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+	* Puedes comprar un <a href="https://www.etsy.com/listing/1710908167" target="_blank" rel="noopener noreferrer">[Kit de modificación de controlador RGB GH sin soldadura PhunkyCustoms]</a>.
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Guitar Hero |
+
+## Mapeo
+¡**BORRA ESTOS BOTONES** o tus solos de guitarra van a auto-rasguear (auto-strum)!  
+Usa el click derecho para borrar botones.
+
+| **RPCS3** | **Guitarra** |
+|:--------:|:-----------:|
+| L2 | Modificador de solo |
+
+**Mapea** esto:
+
+* Es posible que necesites usar `Filtrar ruido` para mapear, depende a tu suerte. Aveces, al adaptador dice que estas sosteniendo los botones de dirección.
+* El sensor de ladeo (Tilt) puede ser configurado pero es muy complicado. Vas a necesitar experimentar con el botón de `Filtrar ruido` hasta que pesque el sensor de ladeo correctamente. Es recomendado no hacer esto y que actives sobrecarga con el botón.
+	* Para mapear mas de una cosa por botón, sostén el Shift (Mayús) y haz click al botón a cual le quieras agregar mas de una cosa.
+
+| **RPCS3** | **Guitarra** |
+|:------------------:|:---------------------:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| Triángulo | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Joystick derecho:<br>Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Joystick derecho:<br>Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo Vertical") |
+| START | ![Botón Start](/milohaxguides/assets/instruments/buttons/ps3/sta.png "Botón Start") |
+| SELECT | ![Botón Select](/milohaxguides/assets/instruments/buttons/ps3/sel.png "Botón Select") |
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/PS2%20Guitar%20Hero%20SG%20Guitar.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<center><Image src={gtrps2ghsgmapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por [noom]
