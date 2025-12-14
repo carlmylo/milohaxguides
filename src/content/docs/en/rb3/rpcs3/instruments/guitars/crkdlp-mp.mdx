@@ -1,0 +1,128 @@
+---
+title: "CRKD Les Paul (Multi-platform)"
+slug: "en/rb3pc/controllers/guitars/crkdlpmp"
+description: "How to connect and configure CRKD Les Paul (multi-platform) on RPCS3."
+tableOfContents: false
+---
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import crkdlpcontroller from '@assets/rb3/rpcs3/instruments/controller/crkdlpcontroller.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/ogneck.png';
+import platpc from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platpc.png';
+import mode8 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/mode8.png';
+import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm81.png';
+import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm82.png';
+import gtrcrkdlp8mapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdlp8mapping.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/soloneck.png';
+import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platp3.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/crkd.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={crkdlpcontroller} alt="Controller" /></center>
+
+<Aside>**Make sure your guitar and receiver are on <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[the latest firmware]</a>!**</Aside>
+* CRKD Les Paul guitars can be connected wirelessly via its respective dongle, Bluetooth, and wired via USB. For Bluetooth, you need a Bluetooth receiver to connect to your computer.
+	* Dongle or wired USB are the recommended methods.
+
+There are two ways to configure this guitar. Pick depending on whichever neck you have.
+
+<Tabs>
+  <TabItem label="OG Fret Neck">
+<Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* This is the recommended configuration for users with the stock "OG" neck.  
+<Image src={ogneck} alt="The 'OG' neck for CRKD guitars. There are no solo buttons and the buttons extrude from the neck." />
+
+<details>
+<summary>How do I map my guitar?</summary>
+
+**Click on the Pads icon at the top of RPCS3**.
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window. 
+This is so you can change configuration profiles in case you want to play other games.
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />Follow the instructions and/or match the assignments below.
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+#### Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| XInput | XInput Pad |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Rock Band |
+
+<Steps>
+1. After connecting your guitar, switch the "Platform" selector to the "PC" mode.  
+	> <Image src={platpc} alt="The platform selector on a CRKD Les Paul. It is set to 'PC'." />
+
+2. Set the "Mode" switch to "Mode 8".  
+	> <Image src={mode8} alt="The mode selector on a CRKD Les Paul. It is set to '8'." />
+
+3. Map your guitar.
+</Steps>
+
+#### CRKD App Setup
+
+<Image src={pcm81} alt="The first page of the CRKD CTRL application. The guitar is configured for PC and it's set to Mode 8." />  
+
+<Image src={pcm82} alt="The second page of the CRKD CTRL application." />  
+
+#### Mapping
+
+By default, XInput has most things bound correctly. You only need to remap the following:
+
+* **Map** the following:
+
+| **RPCS3** | **XInput** | **Guitar** |
+|:--------:|:-----------:|:-----------:|
+| R1 | ![Right Stick](/milohaxguides/assets/instruments/buttons/360/rs.png "Right Stick") | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") | 
+
+<center><Image src={gtrcrkdlp8mapping} alt="Mapping" /></center>
+
+## Profile
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/CRKD%20Les%20Paul%20Guitar.7z)
+
+<details>
+<summary>How do I use profiles?</summary>
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+> <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+> <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
+</details>
+</TabItem>
+  <TabItem label="Solo Fret Neck">
+<Aside type="caution"><Image src={rpcs3nomap} alt="A warning that says not to map this controller!" />  
+Do NOT map this instrument via the `Pads` menu!
+</Aside>
+<Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
+* This is the recommended configuration for users with the "Solo" neck.  
+<Image src={soloneck} alt="The 'Solo' neck for CRKD guitars. It has solo buttons closer to the body and the buttons are flush within the neck." />
+
+<Steps>
+1. After connecting your guitar, switch the "Platform" selector to the "P3" mode.
+	> <Image src={platp3} alt="The platform selector on a CRKD Les Paul. It is set to 'P3'." />
+2. Enjoy!
+</Steps>
+</TabItem>
+</Tabs>
+
+[[Back to Controllers]](../../main/)
+
+Research by <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

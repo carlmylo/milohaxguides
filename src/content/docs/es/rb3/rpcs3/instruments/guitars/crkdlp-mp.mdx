@@ -1,0 +1,155 @@
+---
+title: "CRKD Les Paul (Multi-platform)"
+slug: "es/rb3pc/controllers/guitars/crkdlpmp"
+description: "Como configurar tu Les Paul por CRKD en RPCS3 (versión multiplat)."
+tableOfContents: false
+---
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
+import crkdlpcontroller from '@assets/rb3/rpcs3/instruments/controller/crkdlpcontroller.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import ogneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/ogneck.png';
+import platpc from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platpc.png';
+import mode8 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/mode8.png';
+import pcm81 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm81.png';
+import pcm82 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/pcm82.png';
+import gtrcrkdlp8mapping from '@assets/rb3/rpcs3/instruments/maps/gtrcrkdlp8mapping.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import soloneck from '@assets/rb3/rpcs3/instruments/setup/crkdlp/soloneck.png';
+import platp3 from '@assets/rb3/rpcs3/instruments/setup/crkdlp/platp3.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/crkd.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={crkdlpcontroller} alt="Control" /></center>
+
+<Aside>**Asegúrate que guitarra y receptor estén en <a href="https://crkd.gg/pages/firmware" target="_blank" rel="noopener noreferrer">[la firmware mas actual]</a>!**</Aside>
+* Guitarras CRKD Les Pauls pueden ser conectadas por USB o su propio receptor receptor inalámbrico o Bluetooth. Para Bluetooth, necesitas un receptor de Bluetooth para tu computadora.
+    * Receptor inalámbrico o cable de USB son los métodos recomendados.
+
+Hay dos maneras para configurar esta guitarra. Elige depende de cual mástil tienes.
+
+<Tabs>
+  <TabItem label="Mastil 'OG'">
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* Esto es la configuración recomendada para usuarios del mastil "OG".
+
+<Image src={ogneck} alt="Un mástil 'OG' para guitarras de CRKD. No hay botones de solo y los botones están extruyendo." />
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+
+#### Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| XInput | Mando XInput |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Rock Band |
+
+<Steps>
+1. Después de conectar tu guitarra, cambia el switch de "Plataforma" a "PC".  
+    > <Image src={platpc} alt="El selector de plataforma de la Les Paul. Esta puesto en la posición de 'PC'." />
+
+2. Cambia el modo de control a posición 8.  
+    > <Image src={mode8} alt="El selector de modo de control en una Les Paul de CRKD. Esta puesto en posición '8'." />
+
+3. Configura tu guitarra.
+</Steps>
+
+#### Configuración de la app de CRKD
+
+<Image src={pcm81} alt="La primera pagina de la aplicación CRKD CTRL. La guitarra esta configurada para PC y esta puesta en modo 8." />  
+
+<Image src={pcm82} alt="La segunda pagina de la aplicación CRKD CTRL." />  
+
+#### Mapeo
+Por defecto, XInput tiene mayoría de las cosas configuradas correctamente. Solo necesitas ajustar esto:
+
+* **Mapea** esto:
+
+| **RPCS3** | **XInput** | **Guitarra** |
+|:--------:|:-----------:|:-----------:|
+| R1 | ![Joystick derecho](/milohaxguides/assets/instruments/buttons/360/rs.png "Joystick derecho") | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") | 
+
+<center><Image src={gtrcrkdlp8mapping} alt="Mapeo" /></center>
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/CRKD%20Les%20Paul%20Guitar.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<details>
+<summary>Mapeo avanzado</summary>
+#### Mapeo
+| **RPCS3** | **Guitarra** |
+|:---:|:---:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| Triángulo | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de <br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
+| Botones de <br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
+| Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Joystick derecho:<br>Arriba _y_ abajo</br> | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") |
+| L2  | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") |
+| START | ![Plus](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
+| SELECT | ![Minus](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
+| Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
+</details>
+</TabItem>
+  <TabItem label="Mastil 'Solo'">
+* Esto es la configuración recomendada para los usuarios del mástil "Solo".  
+<Image src={soloneck} alt="Un mástil 'Solo' para guitarras de CRKD. No hay botones de solo y los botones están extruyendo. Los trastes están al ras del mástil. Tiene botones cercas del cuero y cercas del clavijero." />
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+<Steps>
+1. Después de conectar tu guitarra, cambia el switch de "Plataforma" a "P3".
+    > <Image src={platp3} alt="TEl selector de plataforma de la Les Paul. Esta puesto en la posición de 'P3'." />
+2. ¡Disfruta!
+</Steps>
+</TabItem>
+</Tabs>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>
