@@ -1,0 +1,63 @@
+---
+title: Unknown Guitar Controller
+slug: "en/rb3pc/controllers/guitars/generic"
+description: "General mapping for unknown guitars on RPCS3."
+tableOfContents: false
+---
+import mystcontrollers from '@assets/rb3/rpcs3/instruments/controller/mystcontrollers.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/myst.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={mystcontrollers} alt="Controller" /></center>
+
+* This is for people who have guitars that aren’t listed. You will have to play around with Handlers and Device Class/Device Subtype until it works.
+
+<details>
+<summary>How do I map my guitar?</summary>
+**Click on the `Pads` icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| Unknown | Unknown |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Unknown |
+
+
+## Mapping: 
+ 
+**Some guitar controllers** (most notably Guitar Hero controllers) misbehave and **refuse to map sometimes. If you try mapping a button and get `U+`, click `Filter Noise`** at the bottom left of the controller configuration window **then try mapping**.
+
+| **RPCS3** | **PS/Wii Rock Band** | **Xbox Rock Band** | **Guitar Hero** |
+|:------------------:|:---------------------:|:---------------------:|:-----------------------:|
+| Cross | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| Circle | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| Square | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| Triangle | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| L1 | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| D-Pad: Up | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| D-Pad: Down | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") |
+| D-Pad: Left | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") |
+| D-Pad: Right | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") |
+| Right Stick: <br/> Left/Right <br/> | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| Right Stick:<br>Up/Down</br> | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") | | |
+| L2 | | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") | |
+| L2 | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") | | |
+| L3 | | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") | |
+| R1 | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") | Does not work |
+
+[[Back to Controllers]](../../main/)

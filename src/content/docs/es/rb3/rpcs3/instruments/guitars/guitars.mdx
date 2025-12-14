@@ -1,0 +1,61 @@
+---
+title: Guitarra desconocida
+slug: "es/rb3pc/controllers/guitars/generic"
+description: "Mapeo general para guitarras desconocidas en RPCS3."
+tableOfContents: false
+---
+import mystcontrollers from '@assets/rb3/rpcs3/instruments/controller/mystcontrollers.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegendes.png';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/myst.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={mystcontrollers} alt="Control" /></center>
+
+* Esta pagina es para guitarras desconocidas. Trata diferente controladores hasta que tu guitarra funcione.
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| Desconocido | Desconocido |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Desconocido |
+
+
+## Mapeo: 
+**Ciertos instrumentos** (principalmente los de Guitar Hero) **son problemáticas para mapear. Si tratas de asignar un botón y todo sale con `U+`, haz click en `Filtrar ruido`** en el lado izquierdo abajo de la ventana de configuración **y luego intenta mapear otra vez**.
+
+| **RPCS3** | **PS/Wii Rock Band** | **Xbox Rock Band** | **Guitar Hero** |
+|:------------------:|:---------------------:|:---------------------:|:-----------------------:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| Triángulo | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de<br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de<br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de<br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
+| Botones de<br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
+| Joystick derecho:<br>Izquierda/Derecha </br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Joystick derecho:<br>Arriba/abajo</br> | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") | | |
+| L2 | | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") | |
+| L2 | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") | | |
+| L3 | | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") | |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") | No funciona |
+
+[[Regresar a la lista de instrumentos]](../../main/)
