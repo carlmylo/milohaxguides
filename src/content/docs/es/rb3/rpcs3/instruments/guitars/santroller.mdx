@@ -1,0 +1,54 @@
+---
+title: Santroller Powered Guitars
+slug: "es/rb3pc/controllers/guitars/santroller"
+description: "How to connect and configure your guitar using Santroller on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import sancontroller from '@assets/rb3/rpcs3/instruments/controller/sancontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import initgtr from '@assets/rb3/rpcs3/instruments/setup/santroller/initgtres.png';
+import consetgtr from '@assets/rb3/rpcs3/instruments/setup/santroller/consetgtres.png';
+import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesanes.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/santroller.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={sancontroller} alt="Control" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+	Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* **Tu configurador de Santroller puede tener ajustes diferentes, depende de como fue modeada tu guitarra/adaptador de guitarra**. Si compraste tu guitarra pre-modeada o un adaptador prefabricado, pregúntale, al vendedor para mas información.
+
+## Configuración
+<Aside>Antes de empezar, **termina la emulación de Rock Band 3 en RPCS3**.</Aside>
+
+Asegúrate de <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[descargar la versión actual de Santroller]</a>.
+
+Después de eso, abre Santroller.
+
+En la pantalla de inicio de Santroller, elije el `Dispositivo a programar`, `Método de Conexión` y `Control a Emular` depende de que tipo de modificación tienes.  
+En las capturas, fue un `Raspberry Pi Pico`, `Adaptador USB` y `Guitarra de Rock Band`.  
+Después de eso, haz click en `Configurar`.  
+<Image src={initgtr} alt="La pantalla inicial de Santroller. 'Dispositivo a programar' esta en 'Raspberry Pi Pico', 'Método de Conexión' esta en 'Adaptador USB' y 'Control a Emular' esta en 'Guitarra de Rock Band'." />
+
+Haz estos cambios a `Ajustes de Control`:
+* Cambia `Control a Emular` a `Guitarra de Rock Band`
+* Activa `Usar 'Passthrough' por USB con RPCS3`
+<Image src={consetgtr} alt="Los ajustes de control en Santroller. Tiene los ajustes de arriba aplicados." />
+
+**¡ASEGÚRATE DE HACER CLICK EN `Guardar Ajustes` ANTES DE CERRAR EL PROGRAMA O PERDERÁS TUS CAMBIOS!**  
+<Image src={savesan} alt="Santroller con el cursor sobre 'Guardar Ajustes'." />
+
+Cuando termines, cierra Santroller.
+
+¡Ahora puedes abrir Rock Band 3!
+
+<Aside type="caution">**¡¡¡Asegúrate que Santroller no este abierto cuando inicies Rock Band 3!!! Si esta abierto Santroller cuando inicies Rock Band 3, ¡el modo 'Passthrough' no se activara y tu guitarra no funcionara!!!**</Aside>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado by <a href="https://www.youtube.com/@Lynxeption" target="_blank" rel="noopener noreferrer">[Lynxeption]</a>, <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a> y <a href="https://www.youtube.com/@teamOceanman343/videos" target="_blank" rel="noopener noreferrer">[SquidBoy425 (Team Oceanman)]</a>.  
+Gracias a <a href="https://twitter.com/amphobius" target="_blank" rel="noopener noreferrer">[@amphobius]</a> por capturas adicionales.

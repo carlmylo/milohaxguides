@@ -1,0 +1,107 @@
+---
+title: Nintendo Wii Guitar Hero Les Paul Guitars (Raphnet)
+slug: "en/rb3pc/controllers/guitars/wiighlpraph"
+description: "How to setup Nintendo Wii Les Pauls on RPCS3."
+tableOfContents: false
+---
+import wiilpcontroller from '@assets/rb3/rpcs3/instruments/controller/wiilpcontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
+import gtrwiilpmapping from '@assets/rb3/rpcs3/instruments/maps/gtrwiilpmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
+
+<center><Image src={wiilpcontroller} alt="Controller" /></center>
+
+## NOTES
+<Aside>Please don't buy new Raphnets in 2025. They are no longer the go-to solution.</Aside>
+<Aside>Tilt doesn't work on this controller.</Aside>
+* This was tested with a Raphnet "Classic controller to USB adapter".
+	* If the controller doesn't work at all, try installing <a href="https://www.raphnet-tech.com/products/adapter_manager/index.php" target="_blank" rel="noopener noreferrer">[Raphnet's management tool]</a>.
+* It is strongly recommended to get a V3 adapter instead.
+	* <a href="https://shop.retrocultmods.com/products/v3-wii-adapter-for-clone-hero-and-rb4-rock-band-4" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (RCM Shop).]</a>
+	* <a href="https://www.etsy.com/listing/1536358024/" target="_blank" rel="noopener noreferrer">[Buy one from Etsy.]</a>
+* Looking to mod your guitar?
+	* You can get the <a href="https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods" target="_blank" rel="noopener noreferrer">[RetroCultMods Revival Kit]</a>.
+		* <a href="https://www.etsy.com/listing/1830743563" target="_blank" rel="noopener noreferrer">[Alternative Etsy link]</a>
+	* You can get the <a href="https://www.etsy.com/listing/1710908167" target="_blank" rel="noopener noreferrer">[PhunkyCustoms Solderless RGB GH Controller Mod Kit]</a>.
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
+
+<details>
+<summary>How do I map my guitar?</summary>
+**Click on the `Pads` icon at the top of RPCS3**.  
+<Image src={rpcs3pad} alt="The Pads menu in RPCS3." />
+
+It’s suggested to create a new configuration by clicking `Add Configuration` at the top right of the `Pads` window.  
+This is so you can change configuration profiles in case you want to play other games.  
+<Image src={rpcs3padprofadd} alt="The top right of RPCS3's Pads window. 'Add Configuration' is being clicked on by the mouse cursor" />
+Follow the instructions and/or match the assignments below.  
+<Image src={padlegend} alt="The instrument page being used as a as a mapping reference for RPCS3." /></details>
+
+## Pad Information
+
+| Handlers | Devices |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Device Class | Device Subtype |
+|:------------:|:--------------:|
+| Guitar | Guitar Hero |
+
+## Mappings
+
+**UNMAP THE FOLLOWING** or guitar solos will auto-strum!  
+* Use Right Click to unmap a button.
+
+| **RPCS3** | **Guitar** |
+|:--------:|:-----------:|
+| L2 | Solo Modifier |
+
+**Map** the following:
+* Guitar Hero controllers tend to misbehave and **refuse to map sometimes. If you try mapping a button and always get `U+` or something similar, click `Filter Noise`** at the bottom left of the controller configuration window **then try mapping**.
+
+| **RPCS3**          | **Controller** |
+|:------------------:|:---------------------:|
+| Cross | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
+| Circle | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
+| Square | ![Yellow Fret](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Yellow Fret") |
+| Triangle | ![Blue Fret](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Blue Fret") |
+| L1 | ![Orange Fret](/milohaxguides/assets/instruments/buttons/guitars/of.png "Orange Fret") |
+| D-Pad: Up | ![Strumbar Up](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Strumbar Up") |
+| D-Pad: Down | ![Strumbar Down](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Strumbar Down") |
+| Right Stick: <br/> Left/Right | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
+| Start | ![Plus](/milohaxguides/assets/instruments/buttons//wii/plu.png "Plus") |
+| Select | ![Minus](/milohaxguides/assets/instruments/buttons//wii/min.png "Minus") |
+| PS Button | ![Home](/milohaxguides/assets/instruments/buttons/guitars/home.png "Home") |
+
+## Profile
+[[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Wii%20Guitar%20Hero%20Les%20Paul%20Guitar%20(Raphnet).7z)
+
+<details>
+<summary>How do I use profiles?</summary>
+
+<Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
+
+After downloading the profile,
+
+1. Extract the .7z file.
+2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
+> <Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
+
+3. After that, you can select the profile in the **“Pads”** menu.  
+> <Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
+
+Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
+</details>
+
+<center><Image src={gtrwiilpmapping} alt="Mapping" /></center>
+
+[[Back to Controllers]](../../main/)
+
+Mapped by <a href="https://www.youtube.com/channel/UCC5SlXPlnlGwBG7w6mvfx8g" target="_blank" rel="noopener noreferrer">[GamerPerson22]</a>

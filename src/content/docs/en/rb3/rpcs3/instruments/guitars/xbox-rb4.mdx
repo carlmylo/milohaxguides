@@ -1,31 +1,35 @@
 ---
-title: Xbox 360 Rock Band Guitars
-slug: "en/rb3pc/controllers/guitars/360rb"
-description: "How to setup Xbox 360 Rock Band guitars on RPCS3."
+title: "Xbox One Rock Band 4/Fortnite Festival Guitars"
+slug: "en/rb3pc/controllers/guitars/xbrb4"
+description: "How to setup Xbox One Rock Band 4/Fortnite Festival guitars on RPCS3."
 tableOfContents: false
 ---
+import { Aside } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import rb4gtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rb4gtrscontroller.png';
 import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pad.png';
 import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofadd.png';
 import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
-import rbgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rbgtrscontroller.png';
+import gameinput from '@assets/rb3/rpcs3/instruments/setup/rb4/gameinput.png';
+import gtrxomapping from '@assets/rb3/rpcs3/instruments/maps/gtrxomapping.png';
+import drmsxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/drmsxinputrbmapping.png';
 import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
 import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofile.png';
-import gtrxinputrbmapping from '@assets/rb3/rpcs3/instruments/maps/gtrxinputrbmapping.png';
-import { Steps } from '@astrojs/starlight/components';
-import { Aside } from '@astrojs/starlight/components';
 import { Image } from 'astro:assets';
 
-<center><img src="/milohaxguides/assets/instruments/logos/360.png" alt="Platform" title="Platform"></img></center>
-<center><Image src={rbgtrscontroller} alt="Controller" /></center>
+<center><img src="/milohaxguides/assets/instruments/logos/xbx.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={rb4gtrscontroller} alt="Controller" /></center>
 
 <Aside>RPCN Menus (for sending or accepting online invites) _may_ cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
-* This instrument **requires an Xbox 360 Wireless Gaming Receiver for Windows to connect to your computer.**  
-![Xbox 360 Wireless Gaming Receiver for Windows](/milohaxguides/assets/instruments/adapters/360.png "Xbox 360 Wireless Gaming Receiver for Windows")
-	Need one?
-	* <a href="https://shop.retrocultmods.com/products/360-wireless-receiver-for-controllers-guitars-etc" target="_blank" rel="noopener noreferrer">[Buy one from RetroCultMods (RCM Shop)]</a>
-	* <a href="https://rolllimitless.com/xbox-360-wireless-receiver/" target="_blank" rel="noopener noreferrer">[Buy one from Roll Limitless]</a>
-	* <a href="https://www.amazon.com/dp/B076GZFLR3" target="_blank" rel="noopener noreferrer">[Buy one from Amazon]</a>
-	* Please note that any generic Xbox 360 Wireless Gaming Receiver should work fine!
+* Requires installing and running **<a href="https://github.com/TheNathannator/RB4InstrumentMapper/" target="_blank" rel="noopener noreferrer">[RB4InstrumentMapper]</a>** along with its dependencies.
+* **Linux** users can install <a href="https://github.com/dlundqvist/xone" target="_blank" rel="noopener noreferrer">[`xone` kernel drivers]</a> to use Xbox One peripherals.
+* This profile works for Xbox One Fender Stratocaster, Fender Jaguar, and PDP Riffmaster guitars.
+	* Fender Stratocaster and Fender Jaguar guitars require a Microsoft Xbox Wireless Adapter.  
+	![Microsoft Xbox Wireless Adapter for Windows 10](/milohaxguides/assets/instruments/adapters/xbone.png "Microsoft Xbox Wireless Adapter for Windows 10")  
+	* PDP Riffmaster guitars require their respective dongle.  
+	![PDP Riffmaster Wireless Receiver](/milohaxguides/assets/instruments/buttons/xbox/riffrec.png "PDP Riffmaster Wireless Receiver")  
+* If you have a Jaguar guitar, you may need to install a [[firmware update]](https://bit.ly/2UHzonU) to connect it to the receiver. [[Click here for more information]](https://bit.ly/2UHzonU).
+* RPCN Menus (for sending or accepting online invites) may cause a softlock. You may need an alternative input method to navigate these menus, such as [[a typing keyboard or a gamepad]](https://rb3pc.milohax.org/ctrls#gamepads).
 
 <details>
 <summary>How do I map my guitar?</summary>
@@ -48,25 +52,35 @@ Follow the instructions and/or match the assignments below.
 |:------------:|:--------------:|
 | Guitar | Rock Band |
 
-## Mapping
+## Additional Setup
 
-Older guitars may develop problematic whammy bars which cause issues while mapping. **You may have to Filter Noise to map correctly.**  
-To bind the effects switch, you must hold ALT then click the Right Stick: Up and Right Stick: Down.
+Please refer to RB4InstrumentMapper's documentation.  
+[[Click here to go there]](https://github.com/TheNathannator/RB4InstrumentMapper/blob/main/README.md).
 
-By default, XInput has most things bound correctly. You only need to remap the following:
+<details>
+<summary>**Having issues with your Xbox One instrument?**</summary>
 
-| **RPCS3** | **XInput** | **Guitar** |
-|:--------:|:-----------:|:-----------:|
-| R1 | ![Right Stick](/milohaxguides/assets/instruments/buttons/360/rs.png "Right Stick") | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") | 
-| L2 | ![Right Stick Click](/milohaxguides/assets/instruments/buttons/360/rsc.png "Right Stick Click") | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") | 
-| Right Stick | ![Left Trigger](/milohaxguides/assets/instruments/buttons/360/lt.png "Left Trigger") | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
+1. Go to `Start` > `Settings`  > `Apps` > `Installed apps`
+2. Look for `Microsoft GameInput` and uninstall the latest version.  
+Please note that it may reinstall itself after a reboot. We are looking for better solutions.  
 
-## Profile
+<Image src={gameinput} alt="Microsoft GameInput, being evil and being installed without the user's consent." />
+</details>
+
+## Mapping:
+
+### Controller Emulation Mode: ViGEmBus (RPCS3 compatibility)
+
+This is the recommended mode and should not require any mapping. You simply need to assign the Handler, Device, and Device Class/Type.
+
+<center><Image src={gtrxomapping} alt="Mapping" /></center> 
+
+<details>
+<summary>Advanced Mapping</summary>
 
 [[Download Profile]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Xbox%20Rock%20Band%20Guitar.7z)
 
-<details>
-<summary>How do I use profiles?</summary>
+This is not suggested as it requires lots of manual mapping. You should instead use **ViGEmBus (RPCS3 compatibility)**.
 
 <Aside type="caution">This is not recommended if you're using multiple controllers at once.</Aside>
 
@@ -76,15 +90,14 @@ After downloading the profile,
 2. Drag the `input_configs` folder into the `configs` folder where you have RPCS3 in.  
 ><Image src={instrepoinstall} alt="Installing a configuration profile from the Instrument Repo" />
 
-3. After that, you can select the profile in the `Pads` menu.  
+3. After that, you can select the profile in the **“Pads”** menu.  
 ><Image src={rpcs3padprofile} alt="RPCS3's Gamepad Settings, showing the cursor over a profile." />
 
 Most of the time, these controller profiles should work out of the box. If they don’t, try changing the controller listed in `Devices`, next to the `Refresh` button until it receives an input. You can edit this while the game is running.
-</details>
 
-<details>
-<summary>Advanced Mapping</summary>
-| **RPCS3** | **Guitar** |
+#### Bindings
+
+| **RPCS3** | **Controller** |
 |:---:|:---:|
 | Cross | ![Green Fret](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Green Fret") |
 | Circle | ![Red Fret](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Red Fret") |
@@ -96,15 +109,15 @@ Most of the time, these controller profiles should work out of the box. If they 
 | D-Pad: Left | ![D-Pad: Left](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "D-Pad: Left") |
 | D-Pad: Right | ![D-Pad: Right](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "D-Pad: Right") |
 | Right Stick:<br>Left/Right</br> | ![Whammy Bar](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Whammy Bar") |
-| Right Stick:<br>Up _and_ Down</br> | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
+| Right Stick:<br>Up _or_ Down</br> | ![Effects Switch](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Effects Switch") |
 | L2 | ![Solo Buttons](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Solo Buttons") |
 | R1 | ![Tilt](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Tilt") |
 | Start | ![Plus](/milohaxguides/assets/instruments/buttons/360/start.png "Start") |
 | Select | ![Minus](/milohaxguides/assets/instruments/buttons/360/back.png "Back") |
 | PS Button | ![Home](/milohaxguides/assets/instruments/buttons/360/home.png "Home") |
-</details>
 
-<center><Image src={gtrxinputrbmapping} alt="Mapping" /></center>
+![Mapping](https://rb3pc.milohax.org/images/instruments/maps/gtrxinputrbmapping.png "Mapping")
+</details>
 
 [[Back to Controllers]](../../main/)
 

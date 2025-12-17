@@ -1,0 +1,140 @@
+---
+title: Nintendo Wii Guitar Hero Guitars (WiitarThing)
+slug: "es/rb3pc/controllers/guitars/wiitar"
+description: "How to setup Nintendo Wii Guitar Hero guitars using WiitarThing on RPCS3."
+tableOfContents: false
+---
+import wiighgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/wiighgtrscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import wiitarsyncbut from '@assets/rb3/rpcs3/instruments/setup/wiitar/wiitarsyncbut.png';
+import wiimotesync12 from '@assets/rb3/rpcs3/instruments/setup/wiitar/wiimotesync12.gif';
+import wiimotesyncbut from '@assets/rb3/rpcs3/instruments/setup/wiitar/wiimotesyncbut.gif';
+import wiitarconnectbut from '@assets/rb3/rpcs3/instruments/setup/wiitar/wiitarconnectbut.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
+import gtrwiiwtarmapping from '@assets/rb3/rpcs3/instruments/maps/gtrwiiwtarmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
+
+<center><Image src={wiighgtrscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+<Aside>El sensor de ladeo (Tilt) no funciona correctamente.</Aside>
+* **Necesitas instalar <a href="https://github.com/TheNathannator/WiitarThing" target="_blank" rel="noopener noreferrer">[WiitarThing]</a>**.
+    * WiitarThing requiere una instalación de <a href="https://github.com/nefarius/ViGEmBus/releases/download/v1.22.0/ViGEmBus_1.22.0_x64_x86_arm64.exe" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a>.
+* **Esta configuración requiere que un receptor de Bluetooth**.
+* ¿Quieres modear tu guitarra?
+    * Puedes comprar el <a href="https://shop.retrocultmods.com/products/revival-kit-for-guitar-hero-controllers-by-retrocultmods" target="_blank" rel="noopener noreferrer">[KIT DE REVITALIZACIÓN SIN SOLDADURA para controladores de Guitar Hero de RetroCultMods]</a>.
+        * <a href="https://www.etsy.com/listing/1830743563" target="_blank" rel="noopener noreferrer">[Enlace de Etsy]</a>
+    * Puedes comprar un <a href="https://www.etsy.com/listing/1710908167" target="_blank" rel="noopener noreferrer">[Kit de modificación de controlador RGB GH sin soldadura PhunkyCustoms]</a>.
+
+## Configuración inicial
+1. Después de instalar <a href="https://github.com/TheNathannator/WiitarThing/releases" target="_blank" rel="noopener noreferrer">[WiitarThing]</a> con <a href="https://github.com/nefarius/ViGEmBus/releases" target="_blank" rel="noopener noreferrer">[ViGEmBus]</a>, abre WiiTarThing.
+
+2. Haz click en el botón de **`[SYNC]`** en la parte izquierda hacia arriba.  
+<Image src={wiitarsyncbut} alt="WiitarThing con el cursor sobre el botón rojo de 'SYNC'." />
+
+3. Presiona el botón rojo de `SYNC` atras de tu control de Wii<sup>a</sup> o presiona `1+2`<sup>b</sup> al mismo tiempo. Es posible que necesitaras intentar esto varias veces.  
+* A:<Image src={wiimotesync12} alt="Un control de Wii con los botones de 1 y 2 siendo resaltado." />  
+* B:<Image src={wiimotesyncbut} alt="Un control de Wii con el botón de 'SYNC' de atrás siendo resaltado." />
+
+4. Cuando se sincronice, haz click en **`[CONNECT]`**.  
+<Image src={wiitarconnectbut} alt="WiitarThing con el cursor sobre el botón rojo de 'CONNECT'." />
+
+5. Configura tu guitarra.
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| XInput | Mando XInput |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Guitar Hero |
+
+## Mapeo
+Por defecto, XInput ya tiene mayoría de las cosas configuradas correctamente. Solo tienes que ajustar esto:
+
+* ¡**BORRA ESTOS BOTONES** o tus solos de guitarra van a auto-rasguear (auto-strum)!  
+    * Usa el click derecho para borrar botones.
+
+
+| **RPCS3** | **XInput** | **Guitarra** |
+|:--------:|:-----------:|:-----------:|
+| L2 | ![Gatillo Izquierdo](/milohaxguides/assets/instruments/buttons/360/lt.png "Gatillo Izquierdo") | Modificador de solo |
+
+* ¡**Cambia esto** o los trastes amarillos y azules estarán invertidos!
+
+| **RPCS3** | **XInput** | **Guitarra** |
+|:--------:|:-----------:|:-----------:|
+| Cuadrado | ![Botón Y](/milohaxguides/assets/instruments/buttons/360/y.png "Botón Y") | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") | 
+| Triángulo | ![Botón X](/milohaxguides/assets/instruments/buttons/360/x.png "Botón X") | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+
+Los instrumentos de Guitar Hero **pueden ser problemáticos para mapear. Si tratas de asignar un botón y todo sale con `U+`, haz click en `Filtrar ruido`** en el lado izquierdo abajo de la ventana de configuración **y luego intenta mapear otra vez**.
+
+
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Nintendo%20Wii%20Guitar%20Hero%20Wiitar%20Thing.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+<details>
+<summary>Mapeo avanzado</summary>
+#### Mapeo
+| **RPCS3** | **Guitarra** |
+|:---:|:---:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| Triángulo | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de <br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
+| Botones de <br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
+| Joystick derecho: <br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| SELECT | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo Vertical") |
+| SELECT | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo Horizontal") |
+| START | ![Plus](/milohaxguides/assets/instruments/buttons//wii/plu.png "Plus") |
+| SELECT | ![min](/milohaxguides/assets/instruments/buttons//wii/back.png "Minus") |
+| Botón PS | ![Home](/milohaxguides/assets/instruments/buttons//wii/home.png "Home") |
+</details>
+
+<center><Image src={gtrwiiwtarmapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a>

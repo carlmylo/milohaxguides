@@ -1,0 +1,57 @@
+---
+title: RetroCultMods V3 Adapter Guitars
+slug: "es/rb3pc/controllers/guitars/rcmv3"
+description: "How to connect and configure a guitar connected via V3 Wii/USB Adapter RCM on RPCS3."
+tableOfContents: false
+---
+import { Aside } from '@astrojs/starlight/components';
+import wiighgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/wiighgtrscontroller.png';
+import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
+import seldevv3 from '@assets/rb3/rpcs3/instruments/setup/rcm/seldevv3es.png';
+import conset from '@assets/rb3/rpcs3/instruments/setup/rcm/consetes.png';
+import savev3 from '@assets/rb3/rpcs3/instruments/setup/rcm/savev3es.png';
+import { Image } from 'astro:assets';
+
+<center><img src="/milohaxguides/assets/instruments/logos/rcm.png" alt="Platform" title="Platform"></img></center>
+<center><Image src={wiighgtrscontroller} alt="Control" /></center>
+
+<Aside type="caution"><Image src={rpcs3nomap} alt="Una advertencia que dice que no mapeés este instrumento por el menu de 'Pads'." />  
+¡NO mapeés este instrumento por el menú de `Mandos`!
+</Aside>
+<Aside type="caution">Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) causan que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+
+* **¡Esta pagina es específicamente para el <a href="https://www.etsy.com/listing/1536358024/" target="_blank" rel="noopener noreferrer">[Adaptador de guitarra V3 por RetroCultMods]</a>!** Verifica que tu recibo de venta fue de <a href="https://shop.retrocultmods.com/" target="_blank" rel="noopener noreferrer">[el sitio propio de RetroCultMods]</a> o <a href="https://www.etsy.com/shop/RetroCultMods" target="_blank" rel="noopener noreferrer">[su tienda de Etsy]</a>.
+    * Puedes usar esta pagina con los adaptadores V1 y V2 Wii pero no tendrás ladeo (Tilt).
+
+## Configuración
+<Aside>Antes de empezar, **termina la emulación de Rock Band 3 en RPCS3**.</Aside>
+
+Asegúrate de <a href="https://retrocultmods.com/programming-tool/" target="_blank" rel="noopener noreferrer">[descarga la versión actual de "RCM Programming Tool"]</a>.
+
+Después de eso, abre "RCM Programming Tool".
+
+En la pantalla de inicio de "RCM Programming Tool", cambia el `Dispositivo Seleccionado` al adaptador que estas usando.  
+En este ejemplo, es el `V3 Adapter`, así que `V3 Adapter - Guitar (PS2/Emulation)` fue elegido.  
+Después de eso, haz click en `Configurar`.
+<Image src={seldevv3} alt="La pantalla inicial de 'RCM Programming Tool'. 'Dispositivo Seleccionado' esta en 'V3 Adapter - Guitar (PS2/Emulation)' y el cursor esta en Configurar." />
+
+Haz estos cambios a `Ajustes de Control`:
+* Activa `Usar 'Passthrough' por USB con RPCS3`
+<Image src={conset} alt="Los ajustes de control en Santroller. Tiene los ajustes de arriba aplicados." />
+
+Se recomienda que calibres tu palanca de whammy. Esta mas para abajo en "RCM Programming Tool".
+
+**¡ASEGÚRATE DE HACER CLICK EN `Guardar Ajustes` ANTES DE CERRAR EL PROGRAMA O PERDERÁS TUS CAMBIOS!**  
+<Image src={savev3} alt="Santroller con el cursor sobre 'Guardar Ajustes'." />
+
+Cuando termines, cierra "RCM Programming Tool".
+
+¡Ahora puedes abrir Rock Band 3!
+
+<Aside type="caution">**¡¡¡Asegúrate que "RCM Programming Tool" no este abierto cuando inicies Rock Band 3!!! Si esta abierto "RCM Programming Tool" cuando inicies Rock Band 3, ¡el modo 'Passthrough' no se activara y tu batería no funcionara!!!**</Aside>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Investigado by <a href="https://www.youtube.com/@Lynxeption" target="_blank" rel="noopener noreferrer">[Lynxeption]</a>, <a href="https://gonakillya.neocities.org" target="_blank" rel="noopener noreferrer">[gonakil1ya]</a> y <a href="https://www.youtube.com/@teamOceanman343/videos" target="_blank" rel="noopener noreferrer">[SquidBoy425 (Team Oceanman)]</a>.  
+Gracias a <a href="https://twitter.com/amphobius" target="_blank" rel="noopener noreferrer">[@amphobius]</a> por capturas adicionales.

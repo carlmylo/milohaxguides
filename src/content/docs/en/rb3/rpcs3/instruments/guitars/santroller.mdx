@@ -1,19 +1,14 @@
 ---
-title: Santroller Powered Drums
-slug: "en/rb3pc/controllers/drums/santroller"
-description: "How to connect and configure your drums using Santroller on RPCS3."
+title: Santroller Powered Guitars
+slug: "en/rb3pc/controllers/guitars/santroller"
+description: "How to connect and configure your guitar using Santroller on RPCS3."
 tableOfContents: false
-prev: false
-next: false
-sidebar:
-  order: 2
-  label: Santroller
 ---
 import { Aside } from '@astrojs/starlight/components';
 import sancontroller from '@assets/rb3/rpcs3/instruments/controller/sancontroller.png';
 import rpcs3nomap from '@assets/rb3/rpcs3/instruments/maps/rpcs3nomap.png';
-import initdrms from '@assets/rb3/rpcs3/instruments/setup/santroller/initdrms.png';
-import consetdrums from '@assets/rb3/rpcs3/instruments/setup/santroller/consetdrums.png';
+import initgtr from '@assets/rb3/rpcs3/instruments/setup/santroller/initgtr.png';
+import consetgtr from '@assets/rb3/rpcs3/instruments/setup/santroller/consetgtr.png';
 import savesan from '@assets/rb3/rpcs3/instruments/setup/santroller/savesan.png';
 import { Image } from 'astro:assets';
 
@@ -24,26 +19,28 @@ import { Image } from 'astro:assets';
 Do NOT map this instrument via the `Pads` menu!
 </Aside>
 <Aside type="caution">RPCN Menus (for sending or accepting online invites) **will** cause a softlock. You will need an alternative input method to navigate these menus, such as a <a href="../../main#gamepads" target="_blank" rel="noopener noreferrer">[typing keyboard or a gamepad.]</a></Aside>
-* **Please note that your Santroller Configurator may have different settings, depending on how your drums were connected/modded.**  
-If you purchased your drums pre-modded or adapter pre-made, contact the seller for more information.
+
+* **Please note that your Santroller Configurator may have different settings, depending on how your guitar was modded.** If you purchased your guitar pre-modded, contact the seller for more information.
 
 ## Setup
-<Aside>Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
+<Aside type="caution">Before starting, **make sure you stop Rock Band 3**'s emulation in RPCS3.</Aside>
 
-Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.  
-After that, start up Santroller.
+If you haven't initialized your controller yet, start up Santroller.
 
-In the start screen, select your `Device to program`, `Connection Method`, and `Device to Emulate`. This will depend on what device you're using for your drums.  
-In the tutorial screenshots, it was a `Raspberry Pi Pico`, `USB Adapter`, and `Rock Band Drums`  respectively.  
+Be sure to <a href="https://github.com/santroller/santroller/releases/latest" target="_blank" rel="noopener noreferrer">[download the latest version of Santroller]</a>.
+
+In the start screen, select your `Device to program`, `Connection Method`, and `Device to Emulate`. This will depend on what device you're using for your guitar. In the tutorial screenshots, it was a `Raspberry Pi Pico`, `USB Adapter`, and `Rock Band Guitar`  respectively.  
 After selecting your options, click on `Configure`.
 
-<Image src={initdrms} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Rock Band Drums'." />
+<Image src={initgtr} alt="Santroller's initial screen. 'Device to program' is set to 'Raspberry Pi Pico', 'Connection Method' is set to 'USB Adapter', and 'Device to Emulate' is set to 'Rock Band Guitar'." />
 
 In `Controller Settings`, change the following:
-* Set `Device to Emulate` to `Rock Band Drums`
+* Set `Device to Emulate` to `Rock Band Guitar`
 * Enable `Use USB Passthrough with RPCS3`
 
-<Image src={consetdrums} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
+<Image src={consetgtr} alt="Santroller's Controller Settings. The settings reflect exactly what is above." />
+
+It's also suggested you calibrate your Whammy to have the best experience. Scroll down to the Whammy section and calibrate it.
 
 **MAKE SURE YOU CLICK ON `Save Settings` before closing the program or you will lose progress!**
 
@@ -53,7 +50,7 @@ When you're done, close Santroller.
 
 You can now launch Rock Band 3!
 
-<Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your drums will not connect!!!</Aside>
+<Aside type="caution">**Make sure Santroller is closed before starting Rock Band 3**!!! Having Santroller open while launching Rock Band 3 will cause passthrough to fail, which means your guitar will not connect!!!</Aside>
 
 [[Back to Controllers]](../../main/)
 

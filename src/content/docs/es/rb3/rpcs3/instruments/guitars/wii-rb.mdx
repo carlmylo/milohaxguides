@@ -1,0 +1,93 @@
+---
+title: Nintendo Wii Rock Band Guitars
+slug: "es/rb3pc/controllers/guitars/wiirb"
+description: "How to setup Nintendo Wii Rock Band guitars on RPCS3."
+tableOfContents: false
+---
+import rbgtrscontroller from '@assets/rb3/rpcs3/instruments/controller/rbgtrscontroller.png';
+import rpcs3pad from '@assets/rb3/rpcs3/instruments/rpcs3pades.png';
+import rpcs3padprofadd from '@assets/rb3/rpcs3/instruments/rpcs3padprofaddes.png';
+import padlegend from '@assets/rb3/rpcs3/instruments/padlegend.png';
+import instrepoinstall from '@assets/rb3/rpcs3/instruments/instrepoinstall.gif';
+import rpcs3padprofile from '@assets/rb3/rpcs3/instruments/rpcs3padprofilees.png';
+import gtrwiirbmapping from '@assets/rb3/rpcs3/instruments/maps/gtrwiirbmapping.png';
+import { Steps } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<div align="center"> ![Nintendo Wii](/milohaxguides/assets/instruments/logos/wii.png "Nintendo Wii")</div>
+
+<center><Image src={rbgtrscontroller} alt="Control" /></center>
+
+<Aside>Menús de RPCN (para aceptar y mandar invitaciones para jugar en linea) pueden causar que el juego se quede atorado.  
+    Necesitas tener otra manera de controlar estos menús, como <a href="../../main#mandos" target="_blank" rel="noopener noreferrer">[un teclado de PC o un mando estándar.]</a></Aside>
+* El switch de efectos esta se restablece a la posición del medio, así que siempre estarás en Flanger.
+	* Puedes borrar los botones mapeados a Joystick derecho: Arriba/Abajo para no activarlo por accidente.
+	* Alternativamente, puedes cambiar Subclase de dispositivo a Guitarra: Guitar Hero para deshabilitar los efectos completamente. Esto requiere que inviertas el mapeo de botones con los trastes azules y amarillos.
+
+<details>
+<summary>¿Como configuro mi guitarra?</summary>
+**Haz click en el icono de `Mandos` hacia arriba de RPCS3**.  
+<Image src={rpcs3pad} alt="El icono de Pads en RPCS3." />
+
+Recomendamos crear una configuración nueva con el botón de `Nueva` hacia arriba y a la derecha de pantalla de `Mandos`.  
+Esto es por si juegas otros juegos en RPCS3 que no usen instrumentos.  
+<Image src={rpcs3padprofadd} alt="Hacia arriba y a la derecha de la pantalla de 'Pads' en RPCS3. El cursor esta sobre 'Add Configuration'." />
+Sigue las instrucciones y/o copia el mapeo de la lista para tu instrumento.  
+<Image src={padlegend} alt="La pagina de un instrumento siendo usado como referencia." /></details>
+
+## Información de control
+| Controladores | Dispositivos |
+|:--------:|:-------:|
+| MMJoystick | Joystick |
+
+| Clase de dispositivo | Subclase de dispositivo |
+|:------------:|:--------------:|
+| Guitarra | Rock Band |
+
+## Mapeo
+| **RPCS3** | **Guitarra** |
+|:------------------:|:---------------------:|
+| Cruz/Equis | ![Traste Verde](/milohaxguides/assets/instruments/buttons/guitars/gf.png "Traste Verde") |
+| Círculo | ![Traste Rojo](/milohaxguides/assets/instruments/buttons/guitars/rf.png "Traste Rojo") |
+| Cuadrado | ![Traste Azul](/milohaxguides/assets/instruments/buttons/guitars/bf.png "Traste Azul") |
+| Triángulo | ![Traste Amarillo](/milohaxguides/assets/instruments/buttons/guitars/yf.png "Traste Amarillo") |
+| L1 | ![Traste Naranja](/milohaxguides/assets/instruments/buttons/guitars/of.png "Traste Naranja") |
+| Botones de <br> dirección: Arriba</br> | ![Rasgueo para arriba](/milohaxguides/assets/instruments/buttons/guitars/sbu.png "Rasgueo para arriba") |
+| Botones de <br> dirección: Abajo</br> | ![Rasgueo hacia abajo](/milohaxguides/assets/instruments/buttons/guitars/sbd.png "Rasgueo hacia abajo") |
+| Botones de <br> dirección: Izquierda</br> | ![Botones de dirección: Izquierda](/milohaxguides/assets/instruments/buttons/guitars/dpl.png "Botones de dirección: Izquierda") |
+| Botones de <br> dirección: Derecha</br> | ![Botones de dirección: Derecha](/milohaxguides/assets/instruments/buttons/guitars/dpr.png "Botones de dirección: Derecha") |
+| Joystick derecho:<br>Izquierda/Derecha</br> | ![Palanca de whammy](/milohaxguides/assets/instruments/buttons/guitars/wb.png "Palanca de whammy") |
+| Joystick derecho: <br/> Arriba/Abajo | ![Switch de efectos](/milohaxguides/assets/instruments/buttons/guitars/fx.png "Switch de efectos") |
+| L2 | ![Botones de solo](/milohaxguides/assets/instruments/buttons/guitars/solo.png "Botones de solo") |
+| R1 | ![Ladeo](/milohaxguides/assets/instruments/buttons/guitars/ts.gif "Ladeo") |
+| START | ![Plus](/milohaxguides/assets/instruments/buttons//wii/plu.png "Plus") |
+| SELECT | ![Minus](/milohaxguides/assets/instruments/buttons//wii/min.png "Minus") |
+| Botón PS | ![Home](/milohaxguides/assets/instruments/buttons/guitars/home.png "Home") |
+
+## Perfil
+[[Descargar perfil]](https://github.com/hmxmilohax/rb3-pc/raw/refs/heads/main/downloads/instrument-repo/Wii%20Rock%20Band%20Guitar.7z)
+
+<details>
+<summary>¿Como uso perfiles?</summary>
+
+<Aside type="caution">Esto no se recomienda si estas conectando mas de un instrumento a la vez.</Aside>
+
+Después de descargar el perfil,
+<Steps>
+1. Extrae el archivo .7z.
+
+2. Arrastra la carpeta `input_configs` a la carpeta de `configs` en la carpeta donde tienes RPCS3.  
+    <Image src={instrepoinstall} alt="Instalando un perfil de la pagina de instrumentos." />
+
+3. Después de eso, puedes elegir el perfil en el menú de `Mandos`.  
+    <Image src={rpcs3padprofile} alt="Gamepad Settings dentro de RPCS3 con el cursor sobre un perfil." />
+</Steps>
+La mayoría del tiempo, estos perfiles funcionan sin necesitar configuración adicional. Por si acaso no, cambia el control en `Dispositivos`, al lado del botón de `Actualizar` hasta que funcione. Puedes cambiar esto mientras el juego esté abierto.
+</details>
+
+<center><Image src={gtrwiirbmapping} alt="Mapeo" /></center>
+
+[[Regresar a la lista de instrumentos]](../../main/)
+
+Mapeado por <a href="www.twitch.tv/carlmylo" target="_blank" rel="noopener noreferrer">[Carl Mylo]</a>
